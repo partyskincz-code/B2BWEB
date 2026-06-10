@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { LanguageProvider } from "@/lib/i18n";
+import { translations } from "@/lib/translations";
 
 export const metadata: Metadata = {
   title: {
@@ -42,7 +44,7 @@ export const metadata: Metadata = {
       description: "Výroba dočasných tetováček, samolepek a pohlednic na míru pro firmy a eventy",
       url: "https://b2b.partyskin.cz",
       telephone: "+420600000000",
-      email: "b2b@partyskin.cz",
+      email: "partyskincz@gmail.com",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Praha",
@@ -69,9 +71,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
+        <LanguageProvider translations={translations}>
+          <Navigation />
+          <main>{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

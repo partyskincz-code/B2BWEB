@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, Star, Filter } from "lucide-react";
+import { ArrowRight, Instagram } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 function FadeUp({
   children,
@@ -30,166 +31,86 @@ function FadeUp({
   );
 }
 
-// ─────────────────────────────────────────────────
-// Data
-// ─────────────────────────────────────────────────
-const filters = ["Vše", "Tetovačky", "Samolepky", "Pohlednice", "Kompletní řešení"];
-const segmentFilters = ["Firmy", "Svatby", "Festivaly", "Školy", "Velkoobchod"];
-
-const galleryItems = [
-  {
-    id: 1,
-    image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
-    title: "Festival Rock for People",
-    client: "Stage Factory",
-    type: "Tetovačky",
-    segment: "Festivaly",
-    desc: "5 000 ks tetováček s festivalovým logem pro návštěvníky.",
-  },
-  {
-    id: 2,
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
-    title: "Svatba Novákových",
-    client: "Soukromý zákazník",
-    type: "Kompletní řešení",
-    segment: "Svatby",
-    desc: "Personalizované tetovačky + pohlednice pro 150 hostů.",
-  },
-  {
-    id: 3,
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80",
-    title: "TechCorp Teambuilding",
-    client: "TechCorp s.r.o.",
-    type: "Tetovačky",
-    segment: "Firmy",
-    desc: "Firemní tetovačky s logem pro 300 zaměstnanců.",
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
-    title: "Mixit — letní edice",
-    client: "Mixit",
-    type: "Samolepky",
-    segment: "Firmy",
-    desc: "10 000 ks tvarových samolepek na sezónní packaging.",
-  },
-  {
-    id: 5,
-    image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
-    title: "Vánoční přání Sephora",
-    client: "Sephora CZ",
-    type: "Pohlednice",
-    segment: "Firmy",
-    desc: "Personalizované pohlednice pro věrnostní zákazníky.",
-  },
-  {
-    id: 6,
-    image: "https://images.unsplash.com/photo-1594708767771-a5d9e239b7f9?w=600&q=80",
-    title: "Škola v přírodě — ZŠ Vinohrady",
-    client: "ZŠ Vinohrady Praha",
-    type: "Tetovačky",
-    segment: "Školy",
-    desc: "Bezpečné dětské tetovačky s motivy přírody pro školu v přírodě.",
-  },
-  {
-    id: 7,
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80",
-    title: "Narozeninová party",
-    client: "Soukromý zákazník",
-    type: "Kompletní řešení",
-    segment: "Svatby",
-    desc: "Kompletní sada — tetovačky, samolepky a pozvánky.",
-  },
-  {
-    id: 8,
-    image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80",
-    title: "HračkyPlus — velkoobchod",
-    client: "HračkyPlus s.r.o.",
-    type: "Tetovačky",
-    segment: "Velkoobchod",
-    desc: "Pravidelné dodávky dětských tetováček do sítě prodejen.",
-  },
-  {
-    id: 9,
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80",
-    title: "PR kampaň Seznam.cz",
-    client: "Seznam.cz",
-    type: "Samolepky",
-    segment: "Firmy",
-    desc: "Brandingové samolepky pro PR kampaň s dosah 50 000 ks.",
-  },
-  {
-    id: 10,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
-    title: "Dětský festival Pohádková",
-    client: "Pohádková s.r.o.",
-    type: "Tetovačky",
-    segment: "Festivaly",
-    desc: "Pohádkové motivy pro dětský festival — 3 000 ks.",
-  },
-  {
-    id: 11,
-    image: "https://images.unsplash.com/photo-1464047736614-af63643285bf?w=600&q=80",
-    title: "Valentýnská edice",
-    client: "Knihkupectví Luxor",
-    type: "Pohlednice",
-    segment: "Firmy",
-    desc: "Valentýnské pohlednice pro zákazníky v síti prodejen.",
-  },
-  {
-    id: 12,
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80",
-    title: "Konference Future of AI",
-    client: "AI Society CZ",
-    type: "Kompletní řešení",
-    segment: "Firmy",
-    desc: "Tetovačky + samolepky + jmenovky pro 800 účastníků konference.",
-  },
-];
-
-const testimonials = [
-  {
-    text: "PartySkin nám zachránil festival — dodali 5 000 tetováček za 4 dny a kvalita byla skvělá. Příště jinak nejdeme.",
-    author: "Tomáš Veselý",
-    role: "Production Manager, Stage Factory",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80",
-  },
-  {
-    text: "Objednali jsme tetovačky pro firemní teambuilding poprvé. Celý proces byl překvapivě jednoduchý a výsledek překonal očekávání.",
-    author: "Martina Procházková",
-    role: "HR Manager, TechCorp s.r.o.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=100&q=80",
-  },
-  {
-    text: "Samolepky na packaging jsou luxusní. Zákazníci se ptají, kde je bereme. Teď objednáváme každý kvartál.",
-    author: "Radek Mixa",
-    role: "Founder, Mixit",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80",
-  },
-];
-
-const stats = [
-  { value: "500+", label: "Spokojených zákazníků" },
-  { value: "98%", label: "Zákazníků se vrátí" },
-  { value: "1M+", label: "Vyrobených kusů" },
-  { value: "5 ★", label: "Průměrné hodnocení" },
-];
-
-// ─────────────────────────────────────────────────
-// Page
-// ─────────────────────────────────────────────────
 export default function ReferencePage() {
-  const [activeFilter, setActiveFilter] = useState("Vše");
-  const [activeSegment, setActiveSegment] = useState<string | null>(null);
+  const { lang } = useLanguage();
 
-  const filteredItems = galleryItems.filter((item) => {
-    const typeMatch = activeFilter === "Vše" || item.type === activeFilter;
-    const segmentMatch = !activeSegment || item.segment === activeSegment;
-    return typeMatch && segmentMatch;
-  });
+  const photos = [
+    {
+      src: "/realizace-prebal-b2b-a5.jpg",
+      title:
+        lang === "en"
+          ? "got2b — Branded tattoo sheet A5"
+          : lang === "sk"
+          ? "got2b — Brandované tetovačky A5"
+          : "got2b — Brandované tetovačky A5",
+      desc:
+        lang === "en"
+          ? "Custom A5 sheet with rainbow motifs and full got2b branding. Full-colour print including white ink."
+          : lang === "sk"
+          ? "Zákazkový A5 arch s dúhovými motívmi a plným brandingom got2b. Plnofarebná tlač vrátane bielej."
+          : "Zakázková A5 tetovačka s duhovou tematikou a plným brandingem got2b. Plnobarevný tisk včetně bílé barvy.",
+    },
+    {
+      src: "/realizace-prebal-b2b-a5-zadni.jpg",
+      title:
+        lang === "en"
+          ? "got2b — Custom packaging, back"
+          : lang === "sk"
+          ? "got2b — Obal na mieru, zadná strana"
+          : "got2b — Zakázkový obal, zadní strana",
+      desc:
+        lang === "en"
+          ? "Back of the branded packaging with instructions and brand story printed directly on the cover."
+          : lang === "sk"
+          ? "Zadná strana brandovaného obalu — návod a brand story priamo na obale."
+          : "Zadní strana brandovaného obalu — návod na použití a brand story přímo na přebalu.",
+    },
+    {
+      src: "/realizace-detske-prebal-a6.jpg",
+      title:
+        lang === "en"
+          ? "Children's tattoos A6 — wholesale collection"
+          : lang === "sk"
+          ? "Detské tetovačky A6 — veľkoobchodná kolekcia"
+          : "Dětské tetovačky A6 — velkoobchodní kolekce",
+      desc:
+        lang === "en"
+          ? "Series of A6 children's tattoo sheets in themed designs — space, animals, nature. Cellophane + paper cover."
+          : lang === "sk"
+          ? "Séria A6 detských archov v tematických dizajnoch — vesmír, zvieratká, príroda. Celofán + papierový prebal."
+          : "Série A6 dětských archů v tematických designech — vesmír, zvířátka, příroda. Celofán + papírový přebal.",
+    },
+    {
+      src: "/realizace-prebal-a5.jpg",
+      title:
+        lang === "en"
+          ? "Easter edition A5 — seasonal tattoos"
+          : lang === "sk"
+          ? "Veľkonočná edícia A5 — sezónne tetovačky"
+          : "Velikonoční edice A5 — sezónní tetovačky",
+      desc:
+        lang === "en"
+          ? "Easter-themed A5 sheet with bunny, chick and flower motifs. Kraft paper cover + cellophane."
+          : lang === "sk"
+          ? "Veľkonočný A5 arch s motívmi zajačika, kuriatka a kvetín. Kraft papier + celofán."
+          : "Velikonoční A5 arch s motivy zajíčka, kuřátka a květin. Přebal z kraftového papíru + celofánové balení.",
+    },
+    {
+      src: "/realizace-papirovy-prebal.jpg",
+      title:
+        lang === "en"
+          ? "Unicorn tattoos — paper + cellophane packaging"
+          : lang === "sk"
+          ? "Jednorožcové tetovačky — papier + celofán"
+          : "Tetovačky s jednorožci — papírový + celofánový obal",
+      desc:
+        lang === "en"
+          ? "Children's tattoo sheet with unicorn motifs in a combination of paper cover and sealed cellophane bag."
+          : lang === "sk"
+          ? "Detský arch s motívmi jednorožcov — papierový prebal a zatavené celofánové vrecko."
+          : "Dětský arch s motivy jednorožců v kombinaci papírový přebal + zatavený celofánový sáček.",
+    },
+  ];
 
   return (
     <>
@@ -197,159 +118,135 @@ export default function ReferencePage() {
       <section className="pt-28 pb-16 bg-gray-50">
         <div className="container-pad">
           <FadeUp className="max-w-2xl">
-            <span className="tag mb-4">Reference</span>
+            <span className="tag mb-4">
+              {lang === "en" ? "Portfolio" : lang === "sk" ? "Portfólio" : "Portfolio"}
+            </span>
             <h1 className="text-5xl md:text-6xl font-display font-extrabold text-brand-secondary mt-3 mb-5 leading-tight">
-              Naše práce mluví za nás
+              {lang === "en"
+                ? "Our work"
+                : lang === "sk"
+                ? "Naše realizácie"
+                : "Naše realizace"}
             </h1>
             <p className="text-gray-500 text-lg leading-relaxed">
-              Přes 500 spokojených zákazníků od firem přes festivaly až po soukromé akce.
-              Prohlédněte si ukázky realizací.
+              {lang === "en"
+                ? "A selection of products and packaging we have produced. More inspiration on our Instagram."
+                : lang === "sk"
+                ? "Výber produktov a obalov, ktoré sme vyrobili. Viac inšpirácie na našom Instagrame."
+                : "Výběr produktů a obalů, které jsme vyrobili. Více inspirace na našem Instagramu."}
             </p>
           </FadeUp>
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-10 bg-white border-b border-gray-100">
-        <div className="container-pad">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, i) => (
-              <FadeUp key={stat.label} delay={i * 0.07}>
-                <div className="text-center">
-                  <p className="text-4xl font-display font-extrabold text-brand-primary mb-1">
-                    {stat.value}
-                  </p>
-                  <p className="text-gray-400 text-sm">{stat.label}</p>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
+      {/* Photo grid */}
       <section className="section-pad bg-white">
         <div className="container-pad">
-          {/* Filters */}
-          <FadeUp className="mb-10">
-            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <div className="flex items-center gap-2 text-gray-500 text-sm font-medium">
-                <Filter size={16} />
-                <span>Filtrovat:</span>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {filters.map((f) => (
-                  <button
-                    key={f}
-                    onClick={() => setActiveFilter(f)}
-                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
-                      activeFilter === f
-                        ? "bg-brand-primary text-white"
-                        : "bg-gray-100 text-gray-600 hover:bg-brand-light hover:text-brand-primary"
-                    }`}
-                  >
-                    {f}
-                  </button>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {segmentFilters.map((s) => (
-                  <button
-                    key={s}
-                    onClick={() => setActiveSegment(activeSegment === s ? null : s)}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
-                      activeSegment === s
-                        ? "border-brand-primary bg-brand-light text-brand-primary"
-                        : "border-gray-200 text-gray-500 hover:border-brand-primary/30"
-                    }`}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </FadeUp>
-
-          {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredItems.map((item, i) => (
-              <FadeUp key={item.id} delay={i * 0.05}>
+            {photos.map((photo, i) => (
+              <FadeUp key={photo.src} delay={i * 0.07}>
                 <div className="group bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover">
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative aspect-[4/3] overflow-hidden">
                     <Image
-                      src={item.image}
-                      alt={item.title}
+                      src={photo.src}
+                      alt={photo.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
-                    <div className="absolute top-3 left-3 flex gap-2">
-                      <span className="tag text-xs">{item.type}</span>
-                    </div>
-                    <div className="absolute top-3 right-3">
-                      <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-white/90 text-gray-600">
-                        {item.segment}
-                      </span>
-                    </div>
                   </div>
                   <div className="p-5">
-                    <h3 className="font-display font-bold text-brand-secondary text-base mb-1">
-                      {item.title}
+                    <h3 className="font-display font-bold text-brand-secondary text-base mb-2">
+                      {photo.title}
                     </h3>
-                    <p className="text-xs text-gray-400 mb-2">{item.client}</p>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">{photo.desc}</p>
                   </div>
                 </div>
               </FadeUp>
             ))}
           </div>
-
-          {filteredItems.length === 0 && (
-            <div className="text-center py-20 text-gray-400">
-              <p className="text-lg">Pro tuto kombinaci filtrů nejsou zatím záznamy.</p>
-            </div>
-          )}
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Social & Web preview */}
       <section className="section-pad bg-gray-50">
         <div className="container-pad">
-          <FadeUp className="text-center mb-12">
-            <span className="tag mb-4">Hodnocení</span>
-            <h2 className="text-4xl font-display font-extrabold text-brand-secondary mt-3 mb-4">
-              Zákazníci o nás
+          <FadeUp className="text-center mb-10">
+            <h2 className="text-3xl font-display font-extrabold text-brand-secondary mb-3">
+              {lang === "en"
+                ? "Follow us & visit our e-shop"
+                : lang === "sk"
+                ? "Sledujte nás a navštívte e-shop"
+                : "Sledujte nás a navštivte e-shop"}
             </h2>
+            <p className="text-gray-500 text-base max-w-lg mx-auto">
+              {lang === "en"
+                ? "See more inspiration on Instagram or browse ready-made designs on our e-shop."
+                : lang === "sk"
+                ? "Viac inšpirácie nájdete na Instagrame alebo hotové motívy na našom e-shope."
+                : "Více inspirace najdete na Instagramu nebo hotové motivy v našem e-shopu."}
+            </p>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <FadeUp key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm h-full flex flex-col">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(t.rating)].map((_, j) => (
-                      <Star key={j} size={16} className="fill-brand-gold text-brand-gold" />
-                    ))}
-                  </div>
-                  <p className="text-gray-600 text-sm leading-relaxed italic flex-1 mb-6">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full overflow-hidden relative flex-shrink-0">
-                      <Image
-                        src={t.image}
-                        alt={t.author}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-brand-secondary text-sm">{t.author}</p>
-                      <p className="text-gray-400 text-xs">{t.role}</p>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {/* Instagram card */}
+            <FadeUp delay={0.05}>
+              <a
+                href="https://www.instagram.com/partyskin.cz/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl overflow-hidden border border-gray-100 bg-white card-hover"
+              >
+                <div className="h-36 bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center">
+                  <svg viewBox="0 0 24 24" className="w-16 h-16 fill-white opacity-90" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
                 </div>
-              </FadeUp>
-            ))}
+                <div className="p-5">
+                  <p className="font-display font-bold text-brand-secondary text-base mb-1">@partyskin.cz</p>
+                  <p className="text-gray-500 text-sm mb-3">
+                    {lang === "en"
+                      ? "Inspiration, behind the scenes and finished pieces."
+                      : lang === "sk"
+                      ? "Inšpirácia, zákulisie a hotové realizácie."
+                      : "Inspirace, zákulisí a hotové realizace."}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#ee2a7b] group-hover:underline">
+                    {lang === "en" ? "View profile →" : lang === "sk" ? "Zobraziť profil →" : "Zobrazit profil →"}
+                  </span>
+                </div>
+              </a>
+            </FadeUp>
+
+            {/* E-shop card */}
+            <FadeUp delay={0.1}>
+              <a
+                href={lang === "sk" ? "https://www.partyskin.sk" : "https://www.partyskin.cz"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl overflow-hidden border border-gray-100 bg-white card-hover"
+              >
+                <div className="h-36 bg-brand-secondary flex items-center justify-center gap-3">
+                  <span className="font-display font-bold text-3xl text-white">Party</span>
+                  <span className="font-display font-bold text-3xl text-brand-primary">Skin</span>
+                </div>
+                <div className="p-5">
+                  <p className="font-display font-bold text-brand-secondary text-base mb-1">
+                    {lang === "sk" ? "partyskin.sk" : "partyskin.cz"}
+                  </p>
+                  <p className="text-gray-500 text-sm mb-3">
+                    {lang === "en"
+                      ? "Hundreds of ready-made designs. Order from 1 piece, quick delivery."
+                      : lang === "sk"
+                      ? "Stovky hotových motívov. Objednajte od 1 kusu, rýchle doručenie."
+                      : "Stovky hotových motivů. Objednejte od 1 kusu, rychlé doručení."}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-primary group-hover:underline">
+                    {lang === "en" ? "Visit e-shop →" : lang === "sk" ? "Navštíviť e-shop →" : "Navštívit e-shop →"}
+                  </span>
+                </div>
+              </a>
+            </FadeUp>
           </div>
         </div>
       </section>
@@ -359,13 +256,25 @@ export default function ReferencePage() {
         <div className="container-pad text-center">
           <FadeUp>
             <h2 className="text-4xl font-display font-extrabold text-brand-secondary mb-4">
-              Chcete být naší další referencí?
+              {lang === "en"
+                ? "Want to create something together?"
+                : lang === "sk"
+                ? "Chcete niečo vytvoriť spolu?"
+                : "Chcete vytvořit něco společně?"}
             </h2>
             <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
-              Poptejte nás a přidejte se k přes 500 spokojených zákazníkům.
+              {lang === "en"
+                ? "Send us your idea or logo and we'll prepare a quote and recommendation."
+                : lang === "sk"
+                ? "Pošlite nám váš nápad alebo logo a pripravíme ponuku a odporúčanie."
+                : "Pošlete nám váš nápad nebo logo a připravíme nabídku a doporučení formátu."}
             </p>
             <Link href="/kontakt" className="btn-primary text-base px-8 py-4">
-              Poptat výrobu
+              {lang === "en"
+                ? "Get a quote"
+                : lang === "sk"
+                ? "Dopytujte výrobu"
+                : "Nezávazně poptat"}
               <ArrowRight size={18} className="ml-2" />
             </Link>
           </FadeUp>

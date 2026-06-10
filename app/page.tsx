@@ -7,8 +7,6 @@ import { motion, useInView } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle2,
-  Zap,
-  Shield,
   Package,
   Star,
   ChevronRight,
@@ -17,17 +15,13 @@ import {
   Music,
   GraduationCap,
   Store,
-  Clock,
-  Award,
   Gift,
   Infinity,
   RefreshCw,
   MapPin,
 } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
-// ─────────────────────────────────────────────────
-// Animation helpers
-// ─────────────────────────────────────────────────
 function FadeUp({
   children,
   delay = 0,
@@ -52,196 +46,211 @@ function FadeUp({
   );
 }
 
-// ─────────────────────────────────────────────────
-// Data
-// ─────────────────────────────────────────────────
-const products = [
-  {
-    id: "tetovacky",
-    title: "Dočasné tetovačky",
-    subtitle: "Nalepovací — transfer",
-    description:
-      "Váš logo, motiv nebo design na kůži zákazníků. Certifikovaná výroba, bezpečné pro děti i dospělé.",
-    price: "od 8 Kč / ks",
-    minQty: "bez minimálního množství",
-    image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
-    tag: "Bestseller",
-    href: "/produkty#tetovacky",
-  },
-  {
-    id: "samolepky",
-    title: "Samolepky na míru",
-    subtitle: "Vlastní tvar & materiál",
-    description:
-      "Tvarové samolepky pro branding, packaging a merch. Voděodolné, UV odolné materiály.",
-    price: "od 4 Kč / ks",
-    minQty: "bez minimálního množství",
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
-    tag: "Populární",
-    href: "/produkty#samolepky",
-  },
-  {
-    id: "pohlednice",
-    title: "Pohlednice a přání",
-    subtitle: "Personalizovaný tisk",
-    description:
-      "Pohlednice s vlastním motivem pro eventy, dárkové akce nebo firemní promo. Tisk od 50 ks.",
-    price: "od 12 Kč / ks",
-    minQty: "bez minimálního množství",
-    image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
-    tag: "Nové",
-    href: "/produkty#pohlednice",
-  },
-  {
-    id: "kompletni",
-    title: "Kompletní řešení",
-    subtitle: "Na klíč pro váš event",
-    description:
-      "Balíčky pro firemní eventy, teambuildingy, svatby nebo festivaly. Jeden dodavatel, vše vyřešeno.",
-    price: "Individuální cena",
-    minQty: "Dle rozsahu",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80",
-    tag: "Oblíbené",
-    href: "/produkty#kompletni",
-  },
-];
-
-const usps = [
-  {
-    icon: MapPin,
-    title: "Česká výroba",
-    desc: "Vyrábíme v Čechách. Podporujeme lokální ekonomiku a zaměstnáváme maminky na mateřské.",
-  },
-  {
-    icon: Gift,
-    title: "Vzorky zdarma",
-    desc: "Před objednávkou si vyzkoušejte kvalitu. Vzorky posíláme zdarma, bez závazků.",
-  },
-  {
-    icon: Infinity,
-    title: "Bez minimálního množství",
-    desc: "Objednejte 1 nebo 10 000 kusů. Žádné minimální množství, žádné podmínky.",
-  },
-  {
-    icon: RefreshCw,
-    title: "Doobjednávka kdykoliv",
-    desc: "Došly tetovačky? Doobjednejte klidně 10 kusů za stejnou cenu — bez minimálního množství.",
-  },
-];
-
-const segments = [
-  {
-    icon: Building2,
-    title: "Firmy a značky",
-    desc: "Firemní merch, promo kampaně, veletrhy a konference. Váš brand přesně tam, kde ho zákazníci uvidí.",
-    cta: "Prozkoumat",
-    href: "/produkty#firmy",
-    color: "bg-blue-50",
-    iconColor: "text-blue-600",
-  },
-  {
-    icon: Heart,
-    title: "Svatby a oslavy",
-    desc: "Personalizované tetovačky pro hosty, samolepky na přání, tematické doplňky pro nezapomenutelný den.",
-    cta: "Prozkoumat",
-    href: "/produkty#svatby",
-    color: "bg-pink-50",
-    iconColor: "text-brand-primary",
-  },
-  {
-    icon: Music,
-    title: "Festivaly a akce",
-    desc: "Merch pro promotéry, brandingové materiály, tetovačky jako zábava pro návštěvníky.",
-    cta: "Prozkoumat",
-    href: "/produkty#festivaly",
-    color: "bg-purple-50",
-    iconColor: "text-purple-600",
-  },
-  {
-    icon: GraduationCap,
-    title: "Školy a děti",
-    desc: "Bezpečné certifikované tetovačky pro školy v přírodě, dětské slavnosti a párty.",
-    cta: "Prozkoumat",
-    href: "/produkty#skoly",
-    color: "bg-green-50",
-    iconColor: "text-green-600",
-  },
-  {
-    icon: Store,
-    title: "Velkoobchod",
-    desc: "Pravidelné dodávky pro maloobchodní řetězce, e-shopy a prodejny hraček.",
-    cta: "Prozkoumat",
-    href: "/produkty#obchody",
-    color: "bg-orange-50",
-    iconColor: "text-orange-600",
-  },
-];
-
-const steps = [
-  {
-    num: "01",
-    title: "Pošlete poptávku",
-    desc: "Vyplňte formulář nebo nám napište email. Potřebujeme jen typ produktu, množství a termín.",
-  },
-  {
-    num: "02",
-    title: "Návrh do 24 hodin",
-    desc: "Náš grafik připraví vizualizaci nebo zpracuje váš design. Schvalujete online, jednoduše.",
-  },
-  {
-    num: "03",
-    title: "Výroba & dodání",
-    desc: "Spustíme výrobu a doručíme přímo k vám. Standardně do 5–7 pracovních dní od schválení.",
-  },
-];
-
-const testimonials = [
-  {
-    text: "Spolupráce s PartySkin byla naprosto bezproblémová. Tetovačky s naším logem byly hit na firemním teambuildinku.",
-    author: "Jan Novák",
-    role: "Marketing Manager, TechCorp s.r.o.",
-    rating: 5,
-  },
-  {
-    text: "Objednali jsme tetovačky a samolepky pro festival. Kvalita překonala očekávání, dodání přesně včas.",
-    author: "Petra Horáčková",
-    role: "Event Producer, Stage Factory",
-    rating: 5,
-  },
-  {
-    text: "Pro naši svatbu jsme dostali krásné personalizované tetovačky pro hosty. Všichni se bavili a chtěli vědět, kde jsme je sehnali.",
-    author: "Lucie Malá",
-    role: "Nevěsta, Praha",
-    rating: 5,
-  },
-];
-
-const clientLogos = [
-  "TechCorp", "Stage Factory", "Mixit", "Sephora CZ", "Seznam.cz", "Škoda Auto",
-];
-
-// ─────────────────────────────────────────────────
-// Page
-// ─────────────────────────────────────────────────
 export default function HomePage() {
+  const { t, lang } = useLanguage();
+
+  const products = [
+    {
+      id: "tetovacky",
+      title: lang === "cs" ? "Dočasné tetovačky" : lang === "en" ? "Temporary Tattoos" : "Dočasné tetovačky",
+      subtitle: lang === "cs" ? "Nalepovací — transfer" : lang === "en" ? "Stick-on transfer" : "Nalepovací — transfer",
+      description: lang === "cs"
+        ? "Váš logo, motiv nebo design na kůži zákazníků. Certifikovaná výroba, bezpečné pro děti i dospělé."
+        : lang === "en"
+        ? "Your logo, motif or design on customers' skin. Certified production, safe for children and adults."
+        : "Váš logo, motív alebo dizajn na koži zákazníkov. Certifikovaná výroba, bezpečné pre deti aj dospelých.",
+      price: lang === "en" ? "from €0.30 / pc" : "od 8 Kč / ks",
+      minQty: t("usp.3.title"),
+      image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
+      tag: lang === "en" ? "Bestseller" : "Bestseller",
+      href: "/produkty#tetovacky",
+    },
+    {
+      id: "samolepky",
+      title: lang === "cs" ? "Samolepky na míru" : lang === "en" ? "Custom Stickers" : "Samolepky na mieru",
+      subtitle: lang === "cs" ? "Vlastní tvar & materiál" : lang === "en" ? "Custom shape & material" : "Vlastný tvar & materiál",
+      description: lang === "cs"
+        ? "Tvarové samolepky pro branding, packaging a merch. Voděodolné, UV odolné materiály."
+        : lang === "en"
+        ? "Die-cut stickers for branding, packaging and merch. Waterproof, UV-resistant materials."
+        : "Tvarové samolepky pre branding, packaging a merch. Vodoodolné, UV odolné materiály.",
+      price: lang === "en" ? "from €0.15 / pc" : "od 4 Kč / ks",
+      minQty: t("usp.3.title"),
+      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
+      tag: lang === "en" ? "Popular" : lang === "sk" ? "Populárne" : "Populární",
+      href: "/produkty#samolepky",
+    },
+    {
+      id: "pohlednice",
+      title: lang === "cs" ? "Pohlednice a přání" : lang === "en" ? "Postcards & Cards" : "Pohľadnice a priania",
+      subtitle: lang === "cs" ? "Personalizovaný tisk" : lang === "en" ? "Personalised print" : "Personalizovaná tlač",
+      description: lang === "cs"
+        ? "Pohlednice s vlastním motivem pro eventy, dárkové akce nebo firemní promo. Tisk od 50 ks."
+        : lang === "en"
+        ? "Postcards with your own motif for events, gift occasions or corporate promo. Print from 50 pcs."
+        : "Pohľadnice s vlastným motívom pre eventy, darčekové akcie alebo firemné promo. Tlač od 50 ks.",
+      price: lang === "en" ? "from €0.45 / pc" : "od 12 Kč / ks",
+      minQty: t("usp.3.title"),
+      image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
+      tag: lang === "en" ? "New" : lang === "sk" ? "Nové" : "Nové",
+      href: "/produkty#pohlednice",
+    },
+    {
+      id: "kompletni",
+      title: lang === "cs" ? "Kompletní řešení" : lang === "en" ? "Complete Solution" : "Kompletné riešenie",
+      subtitle: lang === "cs" ? "Na klíč pro váš event" : lang === "en" ? "Turnkey for your event" : "Na kľúč pre váš event",
+      description: lang === "cs"
+        ? "Balíčky pro firemní eventy, teambuildingy, svatby nebo festivaly. Jeden dodavatel, vše vyřešeno."
+        : lang === "en"
+        ? "Packages for corporate events, team buildings, weddings or festivals. One supplier, everything sorted."
+        : "Balíčky pre firemné eventy, teambuildingy, svadby alebo festivaly. Jeden dodávateľ, všetko vyriešené.",
+      price: lang === "en" ? "Individual price" : "Individuální cena",
+      minQty: lang === "cs" ? "Dle rozsahu" : lang === "en" ? "By scope" : "Podľa rozsahu",
+      image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80",
+      tag: lang === "en" ? "Recommended" : lang === "sk" ? "Odporúčame" : "Oblíbené",
+      href: "/produkty#kompletni",
+    },
+  ];
+
+  const usps = [
+    { icon: MapPin, title: t("usp.1.title"), desc: t("usp.1.desc") },
+    { icon: Gift, title: t("usp.2.title"), desc: t("usp.2.desc") },
+    { icon: Infinity, title: t("usp.3.title"), desc: t("usp.3.desc") },
+    { icon: RefreshCw, title: t("usp.4.title"), desc: t("usp.4.desc") },
+  ];
+
+  const segments = [
+    {
+      icon: Building2,
+      title: lang === "cs" ? "Firmy a značky" : lang === "en" ? "Companies & brands" : "Firmy a značky",
+      desc: lang === "cs"
+        ? "Firemní merch, promo kampaně, veletrhy a konference. Váš brand přesně tam, kde ho zákazníci uvidí."
+        : lang === "en"
+        ? "Corporate merch, promo campaigns, trade fairs and conferences. Your brand exactly where customers see it."
+        : "Firemný merch, promo kampane, veľtrhy a konferencie. Váš brand presne tam, kde ho zákazníci uvidia.",
+      cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
+      href: "/produkty#firmy",
+      color: "bg-blue-50",
+      iconColor: "text-blue-600",
+    },
+    {
+      icon: Heart,
+      title: lang === "cs" ? "Svatby a oslavy" : lang === "en" ? "Weddings & celebrations" : "Svadby a oslavy",
+      desc: lang === "cs"
+        ? "Personalizované tetovačky pro hosty, samolepky na přání, tematické doplňky pro nezapomenutelný den."
+        : lang === "en"
+        ? "Personalised tattoos for guests, custom stickers, themed accessories for an unforgettable day."
+        : "Personalizované tetovačky pre hostí, samolepky na prianie, tematické doplnky pre nezabudnuteľný deň.",
+      cta: lang === "en" ? "Shop now" : lang === "sk" ? "Nakúpiť online" : "Nakoupit online",
+      href: lang === "sk" ? "https://www.partyskin.sk" : "https://www.partyskin.cz",
+      external: true,
+      color: "bg-pink-50",
+      iconColor: "text-brand-primary",
+    },
+    {
+      icon: Music,
+      title: lang === "cs" ? "Festivaly a akce" : lang === "en" ? "Festivals & events" : "Festivaly a akcie",
+      desc: lang === "cs"
+        ? "Merch pro promotéry, brandingové materiály, tetovačky jako zábava pro návštěvníky."
+        : lang === "en"
+        ? "Merch for promoters, branding materials, tattoos as entertainment for visitors."
+        : "Merch pre promotorov, brandingové materiály, tetovačky ako zábava pre návštevníkov.",
+      cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
+      href: "/produkty#festivaly",
+      color: "bg-purple-50",
+      iconColor: "text-purple-600",
+    },
+    {
+      icon: GraduationCap,
+      title: lang === "cs" ? "Školy a děti" : lang === "en" ? "Schools & children" : "Školy a deti",
+      desc: lang === "cs"
+        ? "Bezpečné certifikované tetovačky pro školy v přírodě, dětské slavnosti a párty."
+        : lang === "en"
+        ? "Safe certified tattoos for outdoor schools, children's celebrations and parties."
+        : "Bezpečné certifikované tetovačky pre školy v prírode, detské slávnosti a párty.",
+      cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
+      href: "/produkty#skoly",
+      color: "bg-green-50",
+      iconColor: "text-green-600",
+    },
+    {
+      icon: Store,
+      title: lang === "cs" ? "Velkoobchod" : lang === "en" ? "Wholesale" : "Veľkoobchod",
+      desc: lang === "cs"
+        ? "Pravidelné dodávky pro maloobchodní řetězce, e-shopy a prodejny hraček."
+        : lang === "en"
+        ? "Regular deliveries for retail chains, e-shops and toy stores."
+        : "Pravidelné dodávky pre maloobchodné reťazce, e-shopy a predajne hračiek.",
+      cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
+      href: "/produkty#obchody",
+      color: "bg-orange-50",
+      iconColor: "text-orange-600",
+    },
+  ];
+
+  const testimonials = [
+    {
+      text: lang === "en"
+        ? "Working with PartySkin was absolutely seamless. Tattoos with our logo were a hit at our corporate team building."
+        : lang === "sk"
+        ? "Spolupráca s PartySkin bola absolútne bezproblémová. Tetovačky s naším logom boli hitom na firemnom teambuildingu."
+        : "Spolupráce s PartySkin byla naprosto bezproblémová. Tetovačky s naším logem byly hit na firemním teambuildinku.",
+      author: "Jan Novák",
+      role: lang === "en" ? "Marketing Manager, TechCorp s.r.o." : "Marketing Manager, TechCorp s.r.o.",
+      rating: 5,
+    },
+    {
+      text: lang === "en"
+        ? "We ordered tattoos and stickers for the festival. Quality exceeded expectations, delivery exactly on time."
+        : lang === "sk"
+        ? "Objednali sme tetovačky a samolepky pre festival. Kvalita prekonala očakávania, dodanie presne včas."
+        : "Objednali jsme tetovačky a samolepky pro festival. Kvalita překonala očekávání, dodání přesně včas.",
+      author: "Petra Horáčková",
+      role: lang === "en" ? "Event Producer, Stage Factory" : "Event Producer, Stage Factory",
+      rating: 5,
+    },
+    {
+      text: lang === "en"
+        ? "For our wedding we got beautiful personalised tattoos for guests. Everyone had fun and wanted to know where we got them."
+        : lang === "sk"
+        ? "Pre našu svadbu sme dostali krásne personalizované tetovačky pre hostí. Všetci sa bavili a chceli vedieť, kde sme ich zohnali."
+        : "Pro naši svatbu jsme dostali krásné personalizované tetovačky pro hosty. Všichni se bavili a chtěli vědět, kde jsme je sehnali.",
+      author: "Lucie Malá",
+      role: lang === "en" ? "Bride, Prague" : lang === "sk" ? "Nevesta, Praha" : "Nevěsta, Praha",
+      rating: 5,
+    },
+  ];
+
+  const eventTypes = lang === "en"
+    ? ["Corporate event", "Team building", "Festival", "Trade fair", "Conference", "Wedding", "Brand launch", "Children's party", "Sports event"]
+    : lang === "sk"
+    ? ["Firemný event", "Teambuilding", "Festival", "Veľtrh", "Konferencia", "Svadba", "Brand launch", "Detská párty", "Športová akcia"]
+    : ["Firemní event", "Teambuilding", "Festival", "Veletrh", "Konference", "Svatba", "Brand launch", "Dětská party", "Sportovní akce"];
+
+  const clientLogos = ["TechCorp", "Stage Factory", "Mixit", "Sephora CZ", "Seznam.cz", "Škoda Auto"];
+
   return (
     <>
-      {/* ═══════════════════════════════════════════
-          HERO
-      ═══════════════════════════════════════════ */}
+      {/* ═══ HERO ═══ */}
       <section className="relative min-h-screen flex items-center overflow-hidden hero-gradient">
-        {/* Background pattern */}
         <div className="absolute inset-0 dot-pattern opacity-20" />
-
-        {/* Background image overlay */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&q=80"
-            alt="Event promo materiály"
+            src="/hero.png"
+            alt="Lidé na firemním eventu s dočasnými tetovačkami"
             fill
-            className="object-cover opacity-15"
+            className="object-cover object-top"
             priority
           />
+          {/* Dark gradient so text stays readable */}
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/85 via-brand-secondary/50 to-transparent" />
+        </div>
+        {/* Tattoo stamp overlay */}
+        <div className="absolute bottom-24 right-8 sm:right-16 opacity-70 rotate-[-8deg] select-none pointer-events-none">
+          <div className="border-[3px] border-brand-primary/80 rounded-xl px-4 py-2 text-center">
+            <p className="text-brand-primary font-display font-extrabold text-lg sm:text-2xl tracking-widest leading-none">partyskin.cz</p>
+            <p className="text-brand-primary/70 text-[9px] font-semibold tracking-[0.2em] uppercase mt-0.5">temporary tattoos</p>
+          </div>
         </div>
 
         <div className="relative z-10 container-pad w-full pt-24 pb-20">
@@ -252,8 +261,8 @@ export default function HomePage() {
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white leading-[1.05] mb-6 text-balance"
             >
-              Váš brand na kůži.{" "}
-              <span className="text-brand-primary">Doslova.</span>
+              {t("hero.h1a")}{" "}
+              <span className="text-brand-primary">{t("hero.h1b")}</span>
             </motion.h1>
 
             <motion.p
@@ -262,8 +271,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="text-xl text-white/75 mb-10 max-w-xl leading-relaxed"
             >
-              Kompletní promo materiály na jednom místě — dočasné tetovačky, samolepky
-              a pohlednice na míru. Pro firmy, eventy, svatby i festivaly.
+              {t("hero.sub")}
             </motion.p>
 
             <motion.div
@@ -273,22 +281,21 @@ export default function HomePage() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link href="/kontakt" className="btn-primary text-base px-8 py-4 gap-2">
-                Poptat výrobu zdarma
+                {t("hero.cta.primary")}
                 <ArrowRight size={18} />
               </Link>
               <Link href="/produkty" className="btn-outline border-white text-white hover:bg-white hover:text-brand-secondary text-base px-8 py-4">
-                Zobrazit produkty
+                {t("hero.cta.secondary")}
               </Link>
             </motion.div>
 
-            {/* Trust badges */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-wrap items-center gap-6 mt-12"
             >
-              {["Česká výroba", "Vzorky zdarma", "Možné doobjednat bez minimálního množství"].map((badge) => (
+              {[t("hero.badge.1"), t("hero.badge.2"), t("hero.badge.3")].map((badge) => (
                 <div key={badge} className="flex items-center gap-2 text-white/70 text-sm">
                   <CheckCircle2 size={16} className="text-brand-primary" />
                   {badge}
@@ -298,21 +305,18 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-white/40 text-xs uppercase tracking-widest">Scrollujte</span>
+          <span className="text-white/40 text-xs uppercase tracking-widest">{t("hero.scroll")}</span>
           <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
         </motion.div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          USP — 4 ikony
-      ═══════════════════════════════════════════ */}
+      {/* ═══ USP ═══ */}
       <section className="py-16 bg-white border-b border-gray-100">
         <div className="container-pad">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
@@ -322,9 +326,7 @@ export default function HomePage() {
                   <div className="w-11 h-11 rounded-xl bg-brand-primary/10 flex items-center justify-center">
                     <usp.icon size={22} className="text-brand-primary" />
                   </div>
-                  <h3 className="font-display font-bold text-brand-secondary text-base">
-                    {usp.title}
-                  </h3>
+                  <h3 className="font-display font-bold text-brand-secondary text-base">{usp.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{usp.desc}</p>
                 </div>
               </FadeUp>
@@ -333,38 +335,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          STORYTELLING — kompletní B2B řešení pro eventy
-      ═══════════════════════════════════════════ */}
+      {/* ═══ STORYTELLING ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Text side */}
             <FadeUp delay={0.1}>
-              <span className="tag mb-4">Kompletní B2B řešení</span>
+              <span className="tag mb-4">{t("story.tag")}</span>
               <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-5 leading-tight">
-                Jeden dodavatel.{" "}
-                <span className="text-brand-primary">Celý event vyřešen.</span>
+                {t("story.h2a")}{" "}
+                <span className="text-brand-primary">{t("story.h2b")}</span>
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Ať plánujete firemní večírek pro 50 lidí nebo festival pro 10 000 —
-                PartySkin pokryje veškeré promo materiály od A do Z. Grafika, výroba,
-                balení, dodání. Jeden kontakt. Vše pod kontrolou.
-              </p>
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">{t("story.p1")}</p>
 
-              {/* Event type chips */}
               <div className="flex flex-wrap gap-2 mb-8">
-                {[
-                  "Firemní event",
-                  "Teambuilding",
-                  "Festival",
-                  "Veletrh",
-                  "Konference",
-                  "Svatba",
-                  "Brand launch",
-                  "Dětská party",
-                  "Sportovní akce",
-                ].map((type) => (
+                {eventTypes.map((type) => (
                   <span
                     key={type}
                     className="px-3 py-1.5 rounded-full bg-brand-light text-brand-secondary text-xs font-semibold border border-brand-primary/15"
@@ -375,12 +359,7 @@ export default function HomePage() {
               </div>
 
               <div className="space-y-3">
-                {[
-                  "Cenová nabídka do 24 hodin",
-                  "Grafický návrh do 48 hodin",
-                  "Dodání po celé Evropě do 10 dní, express po domluvě",
-                  "Jeden kontakt po celou dobu projektu",
-                ].map((item) => (
+                {[t("story.check.1"), t("story.check.2"), t("story.check.3"), t("story.check.4")].map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-brand-primary flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
@@ -389,7 +368,6 @@ export default function HomePage() {
               </div>
             </FadeUp>
 
-            {/* Image side */}
             <FadeUp delay={0.2}>
               <div className="relative">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
@@ -400,10 +378,9 @@ export default function HomePage() {
                     className="object-cover"
                   />
                 </div>
-                {/* Floating stat */}
                 <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl p-5 border border-gray-100">
                   <p className="text-3xl font-display font-extrabold text-brand-primary leading-none mb-1">500+</p>
-                  <p className="text-xs text-gray-500 font-medium">akcí úspěšně<br/>zásobeno materiálem</p>
+                  <p className="text-xs text-gray-500 font-medium">{t("story.stat")}</p>
                 </div>
               </div>
             </FadeUp>
@@ -411,90 +388,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          VÝHODY — vzorky, bez minima, doobjednávka
-      ═══════════════════════════════════════════ */}
+      {/* ═══ VÝHODY ═══ */}
       <section className="py-16 bg-brand-light">
         <div className="container-pad">
           <FadeUp className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-secondary mb-3">
-              Vyzkoušejte. Objednejte. Doobjednejte.
+              {t("vyhody.h2")}
             </h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto">
-              Tři výhody, které vám dají jistotu od prvního vzorku až po poslední kus.
-            </p>
+            <p className="text-gray-500 text-lg max-w-xl mx-auto">{t("vyhody.sub")}</p>
           </FadeUp>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* Vzorky */}
-            <FadeUp delay={0.08}>
-              <div className="bg-white rounded-2xl p-8 border border-brand-primary/10 h-full flex flex-col card-hover">
-                <div className="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-5">
-                  <Gift size={26} className="text-brand-primary" />
+            {[
+              { icon: Gift, titleKey: "vyhody.1.title", descKey: "vyhody.1.desc", ctaKey: "vyhody.1.cta" },
+              { icon: Infinity, titleKey: "vyhody.2.title", descKey: "vyhody.2.desc", ctaKey: "vyhody.2.cta" },
+              { icon: RefreshCw, titleKey: "vyhody.3.title", descKey: "vyhody.3.desc", ctaKey: "vyhody.3.cta" },
+            ].map((card, i) => (
+              <FadeUp key={card.titleKey} delay={i * 0.08}>
+                <div className="bg-white rounded-2xl p-8 border border-brand-primary/10 h-full flex flex-col card-hover">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-5">
+                    <card.icon size={26} className="text-brand-primary" />
+                  </div>
+                  <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">{t(card.titleKey)}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{t(card.descKey)}</p>
+                  <Link href="/kontakt" className="text-sm font-semibold text-brand-primary flex items-center gap-1 hover:gap-2 transition-all">
+                    {t(card.ctaKey)} <ArrowRight size={15} />
+                  </Link>
                 </div>
-                <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">
-                  Vzorky zdarma
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">
-                  Než se rozhodnete, pošleme vám fyzické vzorky zdarma. Osaháte si materiál, zkontrolujete tisk — a teprve pak objednáte. Žádné překvapení při převzetí.
-                </p>
-                <Link href="/kontakt" className="text-sm font-semibold text-brand-primary flex items-center gap-1 hover:gap-2 transition-all">
-                  Požádat o vzorky <ArrowRight size={15} />
-                </Link>
-              </div>
-            </FadeUp>
-
-            {/* Bez minima */}
-            <FadeUp delay={0.16}>
-              <div className="bg-white rounded-2xl p-8 border border-brand-primary/10 h-full flex flex-col card-hover">
-                <div className="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-5">
-                  <Infinity size={26} className="text-brand-primary" />
-                </div>
-                <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">
-                  Bez minimálního množství
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">
-                  10 kusů na rodinnou oslavu nebo 5 000 na festival — oboje zvládneme. Objednáte přesně tolik, kolik potřebujete. Žádné zbytečné zásoby, žádné umělé limity.
-                </p>
-                <Link href="/kontakt" className="text-sm font-semibold text-brand-primary flex items-center gap-1 hover:gap-2 transition-all">
-                  Zjistit cenu <ArrowRight size={15} />
-                </Link>
-              </div>
-            </FadeUp>
-
-            {/* Doobjednávka */}
-            <FadeUp delay={0.24}>
-              <div className="bg-white rounded-2xl p-8 border border-brand-primary/10 h-full flex flex-col card-hover">
-                <div className="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-5">
-                  <RefreshCw size={26} className="text-brand-primary" />
-                </div>
-                <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">
-                  Doobjednávka kdykoliv
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">
-                  Tetovačky šly na výbornou? Váš design máme uložený — doobjednejte kdykoliv, třeba jen 5 kusů. Stejná cena, stejná kvalita, výroba startuje okamžitě.
-                </p>
-                <Link href="/kontakt" className="text-sm font-semibold text-brand-primary flex items-center gap-1 hover:gap-2 transition-all">
-                  Doobjednat <ArrowRight size={15} />
-                </Link>
-              </div>
-            </FadeUp>
+              </FadeUp>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          PRODUKTY grid
-      ═══════════════════════════════════════════ */}
+      {/* ═══ PRODUKTY GRID ═══ */}
       <section className="section-pad bg-gray-50">
         <div className="container-pad">
           <FadeUp className="text-center mb-14">
-            <span className="tag mb-4">Naše nabídka</span>
+            <span className="tag mb-4">{t("products.tag")}</span>
             <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-4">
-              Kompletní promo materiály
+              {t("products.h2")}
             </h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto">
-              Nejsme jen tetovačky. Jsme váš partner pro celý brand experience.
-            </p>
+            <p className="text-gray-500 text-lg max-w-xl mx-auto">{t("products.sub")}</p>
           </FadeUp>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -502,39 +436,23 @@ export default function HomePage() {
               <FadeUp key={product.id} delay={i * 0.1}>
                 <Link href={product.href} className="group block">
                   <div className="bg-white rounded-2xl overflow-hidden card-hover border border-gray-100 h-full flex flex-col">
-                    {/* Image */}
                     <div className="relative h-52 overflow-hidden">
-                      <Image
-                        src={product.image}
-                        alt={product.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      />
+                      <Image src={product.image} alt={product.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                       <div className="absolute top-3 left-3">
                         <span className="tag text-xs">{product.tag}</span>
                       </div>
                     </div>
-                    {/* Content */}
                     <div className="p-5 flex flex-col flex-1">
-                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                        {product.subtitle}
-                      </p>
-                      <h3 className="font-display font-bold text-brand-secondary text-lg mb-2">
-                        {product.title}
-                      </h3>
-                      <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">
-                        {product.description}
-                      </p>
+                      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{product.subtitle}</p>
+                      <h3 className="font-display font-bold text-brand-secondary text-lg mb-2">{product.title}</h3>
+                      <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">{product.description}</p>
                       <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                         <div>
                           <p className="text-brand-primary font-bold text-base">{product.price}</p>
                           <p className="text-gray-400 text-xs">{product.minQty}</p>
                         </div>
                         <div className="w-9 h-9 rounded-xl bg-brand-light flex items-center justify-center group-hover:bg-brand-primary transition-colors duration-200">
-                          <ChevronRight
-                            size={18}
-                            className="text-brand-primary group-hover:text-white transition-colors"
-                          />
+                          <ChevronRight size={18} className="text-brand-primary group-hover:text-white transition-colors" />
                         </div>
                       </div>
                     </div>
@@ -546,94 +464,129 @@ export default function HomePage() {
 
           <FadeUp className="text-center mt-10">
             <Link href="/produkty" className="btn-ghost">
-              Zobrazit celou nabídku
+              {t("products.cta")}
               <ArrowRight size={18} className="ml-2" />
             </Link>
           </FadeUp>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          USE-CASES — segmenty
-      ═══════════════════════════════════════════ */}
+      {/* ═══ SEGMENTY ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
           <FadeUp className="text-center mb-14">
-            <span className="tag mb-4">Pro koho pracujeme</span>
+            <span className="tag mb-4">{t("segments.tag")}</span>
             <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-4">
-              Od firemního eventu po dětskou oslavu
+              {t("segments.h2")}
             </h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto">
-              Máme zkušenosti s každým typem akce. Víme, co funguje.
-            </p>
+            <p className="text-gray-500 text-lg max-w-xl mx-auto">{t("segments.sub")}</p>
           </FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {segments.map((seg, i) => (
-              <FadeUp key={seg.title} delay={i * 0.08}>
-                <Link href={seg.href} className="group block">
-                  <div
-                    className={`${seg.color} rounded-2xl p-7 card-hover h-full flex flex-col`}
-                  >
-                    <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-5 shadow-sm`}>
-                      <seg.icon size={24} className={seg.iconColor} />
-                    </div>
-                    <h3 className="font-display font-bold text-brand-secondary text-xl mb-2">
-                      {seg.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-5">
-                      {seg.desc}
-                    </p>
-                    <div className="flex items-center text-sm font-semibold text-brand-primary gap-1 group-hover:gap-2 transition-all">
-                      {seg.cta}
-                      <ChevronRight size={16} />
-                    </div>
+            {segments.map((seg, i) => {
+              const cardInner = (
+                <div className={`${seg.color} rounded-2xl p-7 card-hover h-full flex flex-col`}>
+                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-5 shadow-sm">
+                    <seg.icon size={24} className={seg.iconColor} />
                   </div>
-                </Link>
-              </FadeUp>
-            ))}
+                  <h3 className="font-display font-bold text-brand-secondary text-xl mb-2">{seg.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-5">{seg.desc}</p>
+                  <div className="flex items-center text-sm font-semibold text-brand-primary gap-1 group-hover:gap-2 transition-all">
+                    {seg.cta}
+                    <ChevronRight size={16} />
+                  </div>
+                </div>
+              );
+              return (
+                <FadeUp key={seg.title} delay={i * 0.08}>
+                  {seg.external ? (
+                    <a href={seg.href} target="_blank" rel="noopener noreferrer" className="group block">
+                      {cardInner}
+                    </a>
+                  ) : (
+                    <Link href={seg.href} className="group block">
+                      {cardInner}
+                    </Link>
+                  )}
+                </FadeUp>
+              );
+            })}
           </div>
+
+          {/* B2C e-shop banner */}
+          <FadeUp className="mt-8">
+            <div className="rounded-2xl bg-gradient-to-r from-brand-light to-pink-50 border border-brand-primary/15 overflow-hidden flex flex-col sm:flex-row items-stretch">
+              {/* Image */}
+              <div className="relative w-full sm:w-52 h-40 sm:h-auto flex-shrink-0">
+                <Image
+                  src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&q=80"
+                  alt="Tetovačky pro každou oslavu"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Text + CTA */}
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-5 px-8 py-6 flex-1">
+                <div>
+                  <p className="font-display font-bold text-brand-secondary text-lg leading-snug mb-2">
+                    {lang === "en"
+                      ? "Tattoos for every celebration"
+                      : lang === "sk"
+                      ? "Tetovačky pre každú oslavu"
+                      : "Tetovačky pro každou oslavu"}
+                  </p>
+                  <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
+                    {lang === "en"
+                      ? "Small quantities, quick ordering and hundreds of ready-made designs. Pick your favourite directly in our e-shop."
+                      : lang === "sk"
+                      ? "Malé množstvo, rýchle objednanie a stovky hotových motívov. Vyberte si svoje obľúbené priamo v našom e-shope."
+                      : "Malé množství, rychlé objednání a stovky hotových motivů. Vyberte si své oblíbené přímo v našem e-shopu."}
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <a
+                    href={lang === "sk" ? "https://www.partyskin.sk" : "https://www.partyskin.cz"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary text-sm px-5 py-2.5 whitespace-nowrap"
+                  >
+                    {lang === "en"
+                      ? "Choose your tattoos"
+                      : lang === "sk"
+                      ? "Vybrať si tetovačky"
+                      : "Vybrat si tetovačky"}
+                    <ArrowRight size={15} className="ml-1.5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </FadeUp>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          JAK TO FUNGUJE — 3 kroky
-      ═══════════════════════════════════════════ */}
+      {/* ═══ PROCES ═══ */}
       <section className="section-pad bg-brand-secondary relative overflow-hidden">
-        {/* Background accent */}
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-primary/10 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl" />
 
         <div className="relative z-10 container-pad">
           <FadeUp className="text-center mb-14">
-            <span className="tag bg-white/10 text-white border border-white/20 mb-4">
-              Proces
-            </span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white mt-3 mb-4">
-              Od nápadu k výrobě za 5 dní
-            </h2>
-            <p className="text-white/60 text-lg max-w-xl mx-auto">
-              Tři jednoduché kroky. Žádná byrokracie, žádné čekání.
-            </p>
+            <span className="tag bg-white/10 text-white border border-white/20 mb-4">{t("process.tag")}</span>
+            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white mt-3 mb-4">{t("process.h2")}</h2>
+            <p className="text-white/60 text-lg max-w-xl mx-auto">{t("process.sub")}</p>
           </FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Connector line */}
             <div className="hidden md:block absolute top-12 left-[calc(16.66%+1.5rem)] right-[calc(16.66%+1.5rem)] h-px bg-gradient-to-r from-transparent via-brand-primary/40 to-transparent" />
-
-            {steps.map((step, i) => (
-              <FadeUp key={step.num} delay={i * 0.15}>
+            {(["1", "2", "3"] as const).map((num, i) => (
+              <FadeUp key={num} delay={i * 0.15}>
                 <div className="relative text-center">
-                  <div className="w-24 h-24 rounded-full bg-brand-primary/10 border border-brand-primary/30 flex flex-col items-center justify-center mx-auto mb-6 relative">
-                    <span className="text-xs text-brand-primary/60 font-semibold tracking-widest uppercase">
-                      Krok
-                    </span>
-                    <span className="text-3xl font-display font-extrabold text-brand-primary leading-none">
-                      {step.num}
-                    </span>
+                  <div className="w-24 h-24 rounded-full bg-brand-primary/10 border border-brand-primary/30 flex flex-col items-center justify-center mx-auto mb-6">
+                    <span className="text-xs text-brand-primary/60 font-semibold tracking-widest uppercase">{t("process.step")}</span>
+                    <span className="text-3xl font-display font-extrabold text-brand-primary leading-none">0{num}</span>
                   </div>
-                  <h3 className="font-display font-bold text-white text-xl mb-3">{step.title}</h3>
-                  <p className="text-white/55 text-sm leading-relaxed max-w-xs mx-auto">{step.desc}</p>
+                  <h3 className="font-display font-bold text-white text-xl mb-3">{t(`process.${num}.title`)}</h3>
+                  <p className="text-white/55 text-sm leading-relaxed max-w-xs mx-auto">{t(`process.${num}.desc`)}</p>
                 </div>
               </FadeUp>
             ))}
@@ -641,58 +594,50 @@ export default function HomePage() {
 
           <FadeUp className="text-center mt-12">
             <Link href="/jak-to-funguje" className="btn-primary">
-              Zjistit více o procesu
+              {t("process.cta")}
               <ArrowRight size={18} className="ml-2" />
             </Link>
           </FadeUp>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          REFERENCE / TESTIMONIALS
-      ═══════════════════════════════════════════ */}
+      {/* ═══ TESTIMONIALS ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
           <FadeUp className="text-center mb-14">
-            <span className="tag mb-4">Reference</span>
+            <span className="tag mb-4">{t("testimonials.tag")}</span>
             <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-4">
-              Co říkají naši zákazníci
+              {t("testimonials.h2")}
             </h2>
           </FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {testimonials.map((t, i) => (
+            {testimonials.map((testimonial, i) => (
               <FadeUp key={i} delay={i * 0.1}>
                 <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100 h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
-                    {[...Array(t.rating)].map((_, j) => (
+                    {[...Array(testimonial.rating)].map((_, j) => (
                       <Star key={j} size={16} className="fill-brand-gold text-brand-gold" />
                     ))}
                   </div>
-                  <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5 italic">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
+                  <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5 italic">&ldquo;{testimonial.text}&rdquo;</p>
                   <div>
-                    <p className="font-semibold text-brand-secondary text-sm">{t.author}</p>
-                    <p className="text-gray-400 text-xs mt-0.5">{t.role}</p>
+                    <p className="font-semibold text-brand-secondary text-sm">{testimonial.author}</p>
+                    <p className="text-gray-400 text-xs mt-0.5">{testimonial.role}</p>
                   </div>
                 </div>
               </FadeUp>
             ))}
           </div>
 
-          {/* Client logos */}
           <FadeUp>
             <div className="border-t border-gray-100 pt-10">
               <p className="text-center text-gray-400 text-sm uppercase tracking-widest mb-8">
-                Důvěřují nám
+                {lang === "en" ? "Trusted by" : lang === "sk" ? "Dôverujú nám" : "Důvěřují nám"}
               </p>
               <div className="flex flex-wrap justify-center items-center gap-8">
                 {clientLogos.map((logo) => (
-                  <div
-                    key={logo}
-                    className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-200"
-                  >
+                  <div key={logo} className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-200">
                     {logo}
                   </div>
                 ))}
@@ -702,37 +647,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          GALERIE TEASER
-      ═══════════════════════════════════════════ */}
+      {/* ═══ GALERIE ═══ */}
       <section className="section-pad bg-gray-50">
         <div className="container-pad">
           <FadeUp className="text-center mb-10">
-            <span className="tag mb-4">Naše práce</span>
+            <span className="tag mb-4">{t("gallery.tag")}</span>
             <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-4">
-              Ukázky realizací
+              {t("gallery.h2")}
             </h2>
           </FadeUp>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { url: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&q=80", alt: "Festival tetovačky" },
-              { url: "https://images.unsplash.com/photo-1583195764036-cddc2d23a826?w=400&q=80", alt: "Firemní merch" },
-              { url: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&q=80", alt: "Svatební tetovačky" },
-              { url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80", alt: "Event branding" },
-              { url: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80", alt: "Dětská party" },
-              { url: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=400&q=80", alt: "Samolepky" },
-              { url: "https://images.unsplash.com/photo-1464047736614-af63643285bf?w=400&q=80", alt: "Pohlednice" },
-              { url: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&q=80", alt: "Teambuilding" },
+              { url: "/realizace-prebal-b2b-a5.jpg", alt: "got2b brandované tetovačky A5" },
+              { url: "/realizace-detske-prebal-a6.jpg", alt: "Dětské tetovačky A6 kolekce" },
+              { url: "/realizace-prebal-a5.jpg", alt: "Velikonoční edice A5" },
+              { url: "/realizace-papirovy-prebal.jpg", alt: "Tetovačky s jednorožci" },
+              { url: "/realizace-prebal-b2b-a5-zadni.jpg", alt: "got2b obal zadní strana" },
+              { url: "/realizace-prebal-b2b-a5.jpg", alt: "Zakázková B2B výroba" },
+              { url: "/realizace-detske-prebal-a6.jpg", alt: "Dětské tetovačky balení" },
+              { url: "/realizace-prebal-a5.jpg", alt: "Sezónní edice tetovačky" },
             ].map((img, i) => (
               <FadeUp key={i} delay={i * 0.05}>
                 <div className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer">
-                  <Image
-                    src={img.url}
-                    alt={img.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  <Image src={img.url} alt={img.alt} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/20 transition-all duration-300" />
                 </div>
               </FadeUp>
@@ -741,16 +679,14 @@ export default function HomePage() {
 
           <FadeUp className="text-center mt-10">
             <Link href="/reference" className="btn-ghost">
-              Zobrazit celou galerii
+              {t("gallery.cta")}
               <ArrowRight size={18} className="ml-2" />
             </Link>
           </FadeUp>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════
-          CTA — Kontaktní formulář inline
-      ═══════════════════════════════════════════ */}
+      {/* ═══ CTA ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
           <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 relative overflow-hidden">
@@ -759,15 +695,10 @@ export default function HomePage() {
 
             <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
               <div className="max-w-lg">
-                <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white mb-4 leading-tight">
-                  Připraveni začít?
-                </h2>
-                <p className="text-white/80 text-lg leading-relaxed mb-6">
-                  Popište nám vaší akci a my se ozveme do 24 hodin s nabídkou přímo na míru.
-                  Bez závazků, bez skrytých poplatků.
-                </p>
+                <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white mb-4 leading-tight">{t("cta.h2")}</h2>
+                <p className="text-white/80 text-lg leading-relaxed mb-6">{t("cta.p")}</p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  {["Rychlá odpověď", "Bezplatný návrh", "Flexibilní množství"].map((item) => (
+                  {[t("cta.badge.1"), t("cta.badge.2"), t("cta.badge.3")].map((item) => (
                     <div key={item} className="flex items-center gap-2 text-white/80 text-sm">
                       <CheckCircle2 size={16} className="text-white/60 flex-shrink-0" />
                       {item}
@@ -784,22 +715,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats bar */}
+      {/* ═══ STATS ═══ */}
       <section className="py-12 bg-brand-secondary">
         <div className="container-pad">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: "500+", label: "Spokojených klientů" },
-              { value: "50 000+", label: "Tetováček ročně" },
-              { value: "5 dní", label: "Průměrná výroba" },
-              { value: "100%", label: "EU certifikace" },
-            ].map((stat, i) => (
-              <FadeUp key={stat.label} delay={i * 0.08}>
+            {(["1", "2", "3", "4"] as const).map((num, i) => (
+              <FadeUp key={num} delay={i * 0.08}>
                 <div className="text-center">
-                  <p className="text-4xl font-display font-extrabold text-brand-primary mb-1">
-                    {stat.value}
-                  </p>
-                  <p className="text-white/50 text-sm">{stat.label}</p>
+                  <p className="text-4xl font-display font-extrabold text-brand-primary mb-1">{t(`stats.${num}.value`)}</p>
+                  <p className="text-white/50 text-sm">{t(`stats.${num}.label`)}</p>
                 </div>
               </FadeUp>
             ))}
@@ -810,50 +734,26 @@ export default function HomePage() {
   );
 }
 
-// ─────────────────────────────────────────────────
-// Quick contact form (inline)
-// ─────────────────────────────────────────────────
 function QuickContactForm() {
+  const { t } = useLanguage();
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
-        alert("Děkujeme! Ozveme se vám do 24 hodin.");
+        alert(t("form.success"));
       }}
       className="flex flex-col gap-3"
     >
-      <p className="font-display font-bold text-brand-secondary text-lg mb-1">
-        Poptejte zdarma
-      </p>
-      <input
-        type="text"
-        placeholder="Jméno a firma"
-        required
-        className="input-field text-sm"
-      />
-      <input
-        type="email"
-        placeholder="E-mail"
-        required
-        className="input-field text-sm"
-      />
-      <input
-        type="tel"
-        placeholder="Telefon"
-        className="input-field text-sm"
-      />
-      <textarea
-        placeholder="Popište váš záměr... (typ produktu, počet ks, termín)"
-        rows={3}
-        className="input-field text-sm resize-none"
-      />
+      <p className="font-display font-bold text-brand-secondary text-lg mb-1">{t("form.title")}</p>
+      <input type="text" placeholder={t("form.name")} required className="input-field text-sm" />
+      <input type="email" placeholder={t("form.email")} required className="input-field text-sm" />
+      <input type="tel" placeholder={t("form.phone")} className="input-field text-sm" />
+      <textarea placeholder={t("form.message")} rows={3} className="input-field text-sm resize-none" />
       <button type="submit" className="btn-primary w-full mt-1">
-        Odeslat poptávku
+        {t("form.submit")}
         <ArrowRight size={16} className="ml-2" />
       </button>
-      <p className="text-gray-400 text-xs text-center">
-        Ozveme se do 24 hodin. Žádný spam.
-      </p>
+      <p className="text-gray-400 text-xs text-center">{t("form.note")}</p>
     </form>
   );
 }
