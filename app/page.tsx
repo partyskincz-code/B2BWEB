@@ -686,6 +686,43 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══ PODPORUJEME ═══ */}
+      <section className="py-14 bg-white border-t border-gray-100">
+        <div className="container-pad">
+          <FadeUp className="flex flex-col sm:flex-row items-center gap-8 max-w-3xl mx-auto">
+            <div className="flex-shrink-0 text-center sm:text-left">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">
+                {lang === "en" ? "We support" : lang === "sk" ? "Podporujeme" : "Podporujeme"}
+              </p>
+            </div>
+            <div className="w-px h-10 bg-gray-200 hidden sm:block flex-shrink-0" />
+            <a
+              href="https://www.amalthea.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 rounded-2xl border border-gray-100 hover:border-brand-primary/30 bg-gray-50 hover:bg-brand-light/30 transition-all px-6 py-4 w-full sm:w-auto"
+            >
+              <div className="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
+                <span className="text-brand-primary font-display font-extrabold text-lg">a</span>
+              </div>
+              <div>
+                <p className="font-display font-bold text-brand-secondary text-base group-hover:text-brand-primary transition-colors">
+                  Amalthea z.s.
+                </p>
+                <p className="text-gray-400 text-xs mt-0.5">
+                  {lang === "en"
+                    ? "Supporting children and families in need"
+                    : lang === "sk"
+                    ? "Podpora detí a rodín v núdzi"
+                    : "Pomoc dětem a rodinám, které to potřebují"}
+                </p>
+              </div>
+              <span className="ml-auto text-gray-300 group-hover:text-brand-primary transition-colors text-lg">→</span>
+            </a>
+          </FadeUp>
+        </div>
+      </section>
+
       {/* ═══ CTA ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
