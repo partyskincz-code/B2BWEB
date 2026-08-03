@@ -190,33 +190,11 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      text: lang === "en"
-        ? "Working with PartySkin was absolutely seamless. Tattoos with our logo were a hit at our corporate team building."
-        : lang === "sk"
-        ? "Spolupráca s PartySkin bola absolútne bezproblémová. Tetovačky s naším logom boli hitom na firemnom teambuildingu."
-        : "Spolupráce s PartySkin byla naprosto bezproblémová. Tetovačky s naším logem byly hit na firemním teambuildinku.",
-      author: "Jan Novák",
-      role: lang === "en" ? "Marketing Manager, TechCorp s.r.o." : "Marketing Manager, TechCorp s.r.o.",
-      rating: 5,
-    },
-    {
-      text: lang === "en"
-        ? "We ordered tattoos and stickers for the festival. Quality exceeded expectations, delivery exactly on time."
-        : lang === "sk"
-        ? "Objednali sme tetovačky a samolepky pre festival. Kvalita prekonala očakávania, dodanie presne včas."
-        : "Objednali jsme tetovačky a samolepky pro festival. Kvalita překonala očekávání, dodání přesně včas.",
-      author: "Petra Horáčková",
-      role: lang === "en" ? "Event Producer, Stage Factory" : "Event Producer, Stage Factory",
-      rating: 5,
-    },
-    {
-      text: lang === "en"
-        ? "For our wedding we got beautiful personalised tattoos for guests. Everyone had fun and wanted to know where we got them."
-        : lang === "sk"
-        ? "Pre našu svadbu sme dostali krásne personalizované tetovačky pre hostí. Všetci sa bavili a chceli vedieť, kde sme ich zohnali."
-        : "Pro naši svatbu jsme dostali krásné personalizované tetovačky pro hosty. Všichni se bavili a chtěli vědět, kde jsme je sehnali.",
-      author: "Lucie Malá",
-      role: lang === "en" ? "Bride, Prague" : lang === "sk" ? "Nevesta, Praha" : "Nevěsta, Praha",
+      text: "Tetovačky jdou na odbyt a dětem se líbí. Zvlášť když dorazí na komentovanou prohlídku dětský tábor, tak chtějí tetování skoro všechny děti. Je to skvělý sortiment a ještě jednou děkujeme, že jste nám tuto možnost nabídli.",
+      author: "Ing. Renáta Kněžínková",
+      role: lang === "en" ? "Environmental programmes, Ekocentrum Vydra Třeboň" : lang === "sk" ? "Environmentálne programy, Ekocentrum Vydra Třeboň" : "Environmentální programy, Ekocentrum Vydra Třeboň",
+      website: "https://www.ekocentrumvydra.cz",
+      websiteLabel: "ekocentrumvydra.cz",
       rating: 5,
     },
   ];
@@ -227,7 +205,7 @@ export default function HomePage() {
     ? ["Firemný event", "Teambuilding", "Festival", "Veľtrh", "Konferencia", "Svadba", "Brand launch", "Detská párty", "Športová akcia"]
     : ["Firemní event", "Teambuilding", "Festival", "Veletrh", "Konference", "Svatba", "Brand launch", "Dětská party", "Sportovní akce"];
 
-  const clientLogos = ["TechCorp", "Stage Factory", "Mixit", "Sephora CZ", "Seznam.cz", "Škoda Auto"];
+  const clientLogos = ["Ekocentrum Vydra", "Mixit", "Sephora CZ", "Seznam.cz", "Škoda Auto"];
 
   return (
     <>
@@ -611,19 +589,29 @@ export default function HomePage() {
             </h2>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="flex justify-center mb-16">
             {testimonials.map((testimonial, i) => (
-              <FadeUp key={i} delay={i * 0.1}>
-                <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100 h-full flex flex-col">
+              <FadeUp key={i} delay={i * 0.1} className="w-full max-w-2xl">
+                <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, j) => (
                       <Star key={j} size={16} className="fill-brand-gold text-brand-gold" />
                     ))}
                   </div>
-                  <p className="text-gray-700 text-sm leading-relaxed flex-1 mb-5 italic">&ldquo;{testimonial.text}&rdquo;</p>
+                  <p className="text-gray-700 text-base leading-relaxed flex-1 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
                   <div>
                     <p className="font-semibold text-brand-secondary text-sm">{testimonial.author}</p>
                     <p className="text-gray-400 text-xs mt-0.5">{testimonial.role}</p>
+                    {"website" in testimonial && (
+                      <a
+                        href={testimonial.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand-primary text-xs mt-1 inline-block hover:underline"
+                      >
+                        {testimonial.websiteLabel}
+                      </a>
+                    )}
                   </div>
                 </div>
               </FadeUp>
