@@ -190,6 +190,18 @@ export default function HomePage() {
 
   const testimonials = [
     {
+      text: "Realizace byla velmi rychlá a tetovačky dorazily už nastříhané – to nám při krátkém termínu výrazně usnadnilo práci. Krásné syté barvy, kvalitní pigment, skvělá aplikace. Rádi si objednáme znovu.",
+      author: "Mgr. Alena Ryšavá, MBA",
+      role: lang === "en" ? "PR & Marketing Manager, HK Mladí Draci Šumperk" : lang === "sk" ? "PR & marketingová manažérka, HK Mladí Draci Šumperk" : "PR a marketingová manažerka, HK Mladí Draci Šumperk",
+      rating: 5,
+    },
+    {
+      text: "Jsme moc spokojení, rádi využijeme vašich služeb znovu.",
+      author: "Mgr. Anna Lazorová",
+      role: lang === "en" ? "NaZemi" : "NaZemi",
+      rating: 5,
+    },
+    {
       text: "Tetovačky jdou na odbyt a dětem se líbí. Zvlášť když dorazí na komentovanou prohlídku dětský tábor, tak chtějí tetování skoro všechny děti. Je to skvělý sortiment a ještě jednou děkujeme, že jste nám tuto možnost nabídli.",
       author: "Ing. Renáta Kněžínková",
       role: lang === "en" ? "Environmental programmes, Ekocentrum Vydra Třeboň" : lang === "sk" ? "Environmentálne programy, Ekocentrum Vydra Třeboň" : "Environmentální programy, Ekocentrum Vydra Třeboň",
@@ -206,6 +218,8 @@ export default function HomePage() {
     : ["Firemní event", "Teambuilding", "Festival", "Veletrh", "Konference", "Svatba", "Brand launch", "Dětská party", "Sportovní akce"];
 
   const clientLogos = [
+    { name: "HK Mladí Draci Šumperk", url: "" },
+    { name: "NaZemi", url: "https://nazemi.cz" },
     { name: "Ekocentrum Vydra", url: "https://www.ekocentrumvydra.cz" },
   ];
 
@@ -591,10 +605,10 @@ export default function HomePage() {
             </h2>
           </FadeUp>
 
-          <div className="flex justify-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {testimonials.map((testimonial, i) => (
-              <FadeUp key={i} delay={i * 0.1} className="w-full max-w-2xl">
-                <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col">
+              <FadeUp key={i} delay={i * 0.1}>
+                <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100 h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, j) => (
                       <Star key={j} size={16} className="fill-brand-gold text-brand-gold" />
@@ -626,17 +640,26 @@ export default function HomePage() {
                 {lang === "en" ? "Trusted by" : lang === "sk" ? "Dôverujú nám" : "Důvěřují nám"}
               </p>
               <div className="flex flex-wrap justify-center items-center gap-8">
-                {clientLogos.map((logo) => (
-                  <a
-                    key={logo.name}
-                    href={logo.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-200"
-                  >
-                    {logo.name}
-                  </a>
-                ))}
+                {clientLogos.map((logo) =>
+                  logo.url ? (
+                    <a
+                      key={logo.name}
+                      href={logo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-200"
+                    >
+                      {logo.name}
+                    </a>
+                  ) : (
+                    <div
+                      key={logo.name}
+                      className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm"
+                    >
+                      {logo.name}
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </FadeUp>
