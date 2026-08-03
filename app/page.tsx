@@ -205,7 +205,9 @@ export default function HomePage() {
     ? ["Firemný event", "Teambuilding", "Festival", "Veľtrh", "Konferencia", "Svadba", "Brand launch", "Detská párty", "Športová akcia"]
     : ["Firemní event", "Teambuilding", "Festival", "Veletrh", "Konference", "Svatba", "Brand launch", "Dětská party", "Sportovní akce"];
 
-  const clientLogos = ["Ekocentrum Vydra", "Mixit", "Sephora CZ", "Seznam.cz", "Škoda Auto"];
+  const clientLogos = [
+    { name: "Ekocentrum Vydra", url: "https://www.ekocentrumvydra.cz" },
+  ];
 
   return (
     <>
@@ -625,9 +627,15 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap justify-center items-center gap-8">
                 {clientLogos.map((logo) => (
-                  <div key={logo} className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-200">
-                    {logo}
-                  </div>
+                  <a
+                    key={logo.name}
+                    href={logo.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-200"
+                  >
+                    {logo.name}
+                  </a>
                 ))}
               </div>
             </div>
