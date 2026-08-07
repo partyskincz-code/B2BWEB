@@ -202,9 +202,9 @@ export default function HomePage() {
       rating: 5,
     },
     {
-      text: "Tetovačky jdou na odbyt a dětem se líbí. Zvlášť když dorazí na komentovanou prohlídku dětský tábor, tak chtějí tetování skoro všechny děti. Je to skvělý sortiment a ještě jednou děkujeme, že jste nám tuto možnost nabídli.",
-      author: "Ing. Renáta Kněžínková",
-      role: lang === "en" ? "Environmental programmes, Ekocentrum Vydra Třeboň" : lang === "sk" ? "Environmentálne programy, Ekocentrum Vydra Třeboň" : "Environmentální programy, Ekocentrum Vydra Třeboň",
+      text: "V neuvěřitelně krátkém čase nám báječné ženy z PartySkin.cz připravily a dodaly dočasné tetovačky s obrázky našich stálých obyvatel, které jsou opravdu krásné a skvěle drží! Dělají tak radost malým návštěvníkům naší Expozice zvířat s příběhem, kteří se nákupem téhle drobnosti rozhodnou podpořit péči o živočichy v naší záchranné stanici. Děkujeme týmu PartySkin.cz za super spolupráci a podporu!",
+      author: lang === "en" ? "Záchranná stanice Vydra Třeboň" : lang === "sk" ? "Záchranná stanica Vydra Třeboň" : "Záchranná stanice Vydra Třeboň",
+      role: lang === "en" ? "Animal rescue station, Třeboň" : lang === "sk" ? "Záchranná stanica živočíchov, Třeboň" : "Záchranná stanice živočichů, Třeboň",
       website: "https://www.ekocentrumvydra.cz",
       websiteLabel: "ekocentrumvydra.cz",
       rating: 5,
