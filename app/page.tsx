@@ -190,23 +190,43 @@ export default function HomePage() {
 
   const testimonials = [
     {
+      text: "Spolupráce byla od začátku do konce naprosto profesionální – trpělivost při zapracování připomínek, ochota i rychlá komunikace. Spolehlivého partnera pro zakázková dočasná tetování můžeme s čistým svědomím doporučit.",
+      author: "Mgr. Alena Dolinová",
+      org: "Gepard Express, SE",
+      orgFull: "Gepard Express / Úzkokolejka Jindřichův Hradec",
+      website: "",
+      logo: "",
+      initials: "GE",
+      rating: 5,
+    },
+    {
       text: "Realizace byla velmi rychlá a tetovačky dorazily už nastříhané – to nám při krátkém termínu výrazně usnadnilo práci. Krásné syté barvy, kvalitní pigment, skvělá aplikace. Rádi si objednáme znovu.",
       author: "Mgr. Alena Ryšavá, MBA",
-      role: lang === "en" ? "PR & Marketing Manager, HK Mladí Draci Šumperk" : lang === "sk" ? "PR & marketingová manažérka, HK Mladí Draci Šumperk" : "PR a marketingová manažerka, HK Mladí Draci Šumperk",
+      org: "HK Mladí Draci Šumperk",
+      orgFull: "HK Mladí Draci Šumperk",
+      website: "",
+      logo: "",
+      initials: "HK",
+      rating: 5,
+    },
+    {
+      text: "V neuvěřitelně krátkém čase nám báječné ženy z PartySkin.cz připravily a dodaly dočasné tetovačky s obrázky našich stálých obyvatel, které jsou opravdu krásné a skvěle drží! Dělají tak radost malým návštěvníkům naší Expozice zvířat s příběhem, kteří se nákupem téhle drobnosti rozhodnou podpořit péči o živočichy v naší záchranné stanici. Děkujeme týmu PartySkin.cz za super spolupráci a podporu!",
+      author: lang === "en" ? "Záchranná stanice Vydra Třeboň" : "Záchranná stanice Vydra Třeboň",
+      org: "Ekocentrum Vydra",
+      orgFull: "Záchranná stanice Vydra, Třeboň",
+      website: "https://www.ekocentrumvydra.cz",
+      logo: "",
+      initials: "EV",
       rating: 5,
     },
     {
       text: "Jsme moc spokojení, rádi využijeme vašich služeb znovu.",
       author: "Mgr. Anna Lazorová",
-      role: lang === "en" ? "NaZemi" : "NaZemi",
-      rating: 5,
-    },
-    {
-      text: "V neuvěřitelně krátkém čase nám báječné ženy z PartySkin.cz připravily a dodaly dočasné tetovačky s obrázky našich stálých obyvatel, které jsou opravdu krásné a skvěle drží! Dělají tak radost malým návštěvníkům naší Expozice zvířat s příběhem, kteří se nákupem téhle drobnosti rozhodnou podpořit péči o živočichy v naší záchranné stanici. Děkujeme týmu PartySkin.cz za super spolupráci a podporu!",
-      author: lang === "en" ? "Záchranná stanice Vydra Třeboň" : lang === "sk" ? "Záchranná stanica Vydra Třeboň" : "Záchranná stanice Vydra Třeboň",
-      role: lang === "en" ? "Animal rescue station, Třeboň" : lang === "sk" ? "Záchranná stanica živočíchov, Třeboň" : "Záchranná stanice živočichů, Třeboň",
-      website: "https://www.ekocentrumvydra.cz",
-      websiteLabel: "ekocentrumvydra.cz",
+      org: "NaZemi",
+      orgFull: "NaZemi",
+      website: "https://nazemi.cz",
+      logo: "/logo-nazemi.jpg",
+      initials: "NZ",
       rating: 5,
     },
   ];
@@ -218,9 +238,10 @@ export default function HomePage() {
     : ["Firemní event", "Teambuilding", "Festival", "Veletrh", "Konference", "Svatba", "Brand launch", "Dětská party", "Sportovní akce"];
 
   const clientLogos = [
+    { name: "Gepard Express", url: "" },
     { name: "HK Mladí Draci Šumperk", url: "" },
+    { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
     { name: "NaZemi", url: "https://nazemi.cz" },
-    { name: "Ekocentrum Vydra", url: "https://www.ekocentrumvydra.cz" },
   ];
 
   return (
@@ -596,7 +617,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ TESTIMONIALS ═══ */}
-      <section className="section-pad bg-white">
+      <section className="section-pad bg-brand-light/40">
         <div className="container-pad">
           <FadeUp className="text-center mb-14">
             <span className="tag mb-4">{t("testimonials.tag")}</span>
@@ -605,29 +626,55 @@ export default function HomePage() {
             </h2>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {testimonials.map((testimonial, i) => (
               <FadeUp key={i} delay={i * 0.1}>
-                <div className="bg-gray-50 rounded-2xl p-7 border border-gray-100 h-full flex flex-col">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, j) => (
-                      <Star key={j} size={16} className="fill-brand-gold text-brand-gold" />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 text-base leading-relaxed flex-1 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
-                  <div>
-                    <p className="font-semibold text-brand-secondary text-sm">{testimonial.author}</p>
-                    <p className="text-gray-400 text-xs mt-0.5">{testimonial.role}</p>
-                    {"website" in testimonial && (
-                      <a
-                        href={testimonial.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-brand-primary text-xs mt-1 inline-block hover:underline"
-                      >
-                        {testimonial.websiteLabel}
-                      </a>
-                    )}
+                <div className="bg-white rounded-2xl border border-brand-primary/20 h-full flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                  {/* top accent bar */}
+                  <div className="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" />
+                  <div className="p-7 flex flex-col flex-1">
+                    {/* logo + stars */}
+                    <div className="flex items-center gap-4 mb-5">
+                      {testimonial.logo ? (
+                        <div className="w-12 h-12 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0 bg-white flex items-center justify-center">
+                          <Image src={testimonial.logo} alt={testimonial.org} width={48} height={48} className="object-contain" />
+                        </div>
+                      ) : (
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center flex-shrink-0">
+                          <span className="text-white font-display font-extrabold text-sm">{testimonial.initials}</span>
+                        </div>
+                      )}
+                      <div>
+                        <p className="font-display font-bold text-brand-secondary text-sm leading-tight">{testimonial.org}</p>
+                        <div className="flex gap-0.5 mt-1">
+                          {[...Array(testimonial.rating)].map((_, j) => (
+                            <Star key={j} size={13} className="fill-brand-gold text-brand-gold" />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    {/* quote */}
+                    <div className="relative flex-1 mb-5">
+                      <span className="absolute -top-2 -left-1 text-5xl font-display text-brand-primary/20 leading-none select-none">&ldquo;</span>
+                      <p className="text-gray-700 text-sm leading-relaxed pl-5 italic">{testimonial.text}</p>
+                    </div>
+                    {/* author */}
+                    <div className="border-t border-gray-100 pt-4 flex items-center justify-between">
+                      <div>
+                        <p className="font-semibold text-brand-secondary text-sm">{testimonial.author}</p>
+                        <p className="text-gray-400 text-xs mt-0.5">{testimonial.orgFull}</p>
+                      </div>
+                      {testimonial.website && (
+                        <a
+                          href={testimonial.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-brand-primary text-xs hover:underline flex-shrink-0 ml-3"
+                        >
+                          {testimonial.website.replace("https://www.", "").replace("https://", "")}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </FadeUp>
