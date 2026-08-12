@@ -21,14 +21,16 @@ const cs: Record<string, string> = {
   "hero.scroll": "Scrollujte",
 
   // USPs
-  "usp.1.title": "Česká výroba",
-  "usp.1.desc": "Vyrábíme v Čechách. Podporujeme lokální ekonomiku a zaměstnáváme maminky na mateřské.",
+  "usp.1.title": "Navrhujeme v ČR",
+  "usp.1.desc": "Každý projekt řídíme osobně z Česka — od briefu až po dodání. Certifikované materiály bezpečné pro děti i dospělé.",
   "usp.2.title": "Vzorky zdarma",
   "usp.2.desc": "Před objednávkou si vyzkoušejte kvalitu. Vzorky posíláme zdarma, bez závazků.",
   "usp.3.title": "Bez minimálního množství",
   "usp.3.desc": "Objednejte 1 nebo 10 000 kusů. Žádné minimální množství, žádné podmínky.",
   "usp.4.title": "Doobjednávka kdykoliv",
   "usp.4.desc": "Váš design máme uložený — doobjednejte jakékoliv množství bez závazků. Žádné minimální množství, žádné podmínky.",
+  "usp.5.title": "Výroba 10–15 dní",
+  "usp.5.desc": "Standardní lead time od schválení grafiky po dodání je 10–15 pracovních dní. Spěcháte? Zeptejte se nás.",
 
   // Storytelling
   "story.tag": "Kompletní B2B řešení",
@@ -163,14 +165,16 @@ const en: Record<string, string> = {
   "hero.scroll": "Scroll",
 
   // USPs
-  "usp.1.title": "Czech production",
-  "usp.1.desc": "We produce in the Czech Republic. Supporting local economy, employing moms on maternity leave.",
+  "usp.1.title": "Designed in Czechia",
+  "usp.1.desc": "Every project is personally managed from Czechia — from brief to delivery. Certified materials safe for the whole family.",
   "usp.2.title": "Free samples",
   "usp.2.desc": "Try the quality before ordering. We send samples for free, no commitment.",
   "usp.3.title": "No minimum order",
   "usp.3.desc": "Order 1 or 10,000 pieces. No minimum quantity, no conditions.",
   "usp.4.title": "Reorder anytime",
   "usp.4.desc": "Your design is saved — reorder any quantity without commitment. No minimum, no conditions.",
+  "usp.5.title": "10–15 day turnaround",
+  "usp.5.desc": "Standard lead time from artwork approval to delivery is 10–15 working days. In a rush? Ask us.",
 
   // Storytelling
   "story.tag": "Complete B2B solution",
@@ -305,14 +309,16 @@ const sk: Record<string, string> = {
   "hero.scroll": "Scrollujte",
 
   // USPs
-  "usp.1.title": "Česká výroba",
-  "usp.1.desc": "Vyrábame v Česku. Podporujeme lokálnu ekonomiku a zamestnávame mamičky na materskej.",
+  "usp.1.title": "Navrhujeme v ČR",
+  "usp.1.desc": "Každý projekt riadime osobne z Česka — od briefu až po dodanie. Certifikované materiály bezpečné pre celú rodinu.",
   "usp.2.title": "Vzorky zdarma",
   "usp.2.desc": "Pred objednávkou si vyskúšajte kvalitu. Vzorky posielame zdarma, bez záväzkov.",
   "usp.3.title": "Bez minimálneho množstva",
   "usp.3.desc": "Objednajte 1 alebo 10 000 kusov. Žiadne minimálne množstvo, žiadne podmienky.",
   "usp.4.title": "Doobjednávka kedykoľvek",
   "usp.4.desc": "Váš dizajn máme uložený — doobjednajte akékoľvek množstvo bez záväzkov. Žiadne minimum, žiadne podmienky.",
+  "usp.5.title": "Výroba 10–15 dní",
+  "usp.5.desc": "Štandardný lead time od schválenia grafiky po doručenie je 10–15 pracovných dní. Ponáhľate sa? Opýtajte sa nás.",
 
   // Storytelling
   "story.tag": "Kompletné B2B riešenie",

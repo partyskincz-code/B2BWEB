@@ -18,7 +18,8 @@ import {
   Gift,
   Infinity,
   RefreshCw,
-  MapPin,
+  ShieldCheck,
+  Clock,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
@@ -113,10 +114,11 @@ export default function HomePage() {
   ];
 
   const usps = [
-    { icon: MapPin, title: t("usp.1.title"), desc: t("usp.1.desc") },
+    { icon: ShieldCheck, title: t("usp.1.title"), desc: t("usp.1.desc") },
     { icon: Gift, title: t("usp.2.title"), desc: t("usp.2.desc") },
     { icon: Infinity, title: t("usp.3.title"), desc: t("usp.3.desc") },
     { icon: RefreshCw, title: t("usp.4.title"), desc: t("usp.4.desc") },
+    { icon: Clock, title: t("usp.5.title"), desc: t("usp.5.desc") },
   ];
 
   const segments = [
@@ -332,17 +334,21 @@ export default function HomePage() {
       </section>
 
       {/* ═══ USP ═══ */}
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="container-pad">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+      <section className="py-20 bg-brand-secondary overflow-hidden relative">
+        {/* subtle background texture */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none" style={{backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px"}} />
+        <div className="container-pad relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-white/10 rounded-3xl overflow-hidden">
             {usps.map((usp, i) => (
-              <FadeUp key={usp.title} delay={i * 0.08}>
-                <div className="flex flex-col items-start gap-3 p-5 rounded-2xl hover:bg-brand-light transition-colors duration-200">
-                  <div className="w-11 h-11 rounded-xl bg-brand-primary/10 flex items-center justify-center">
-                    <usp.icon size={22} className="text-brand-primary" />
+              <FadeUp key={usp.title} delay={i * 0.1}>
+                <div className="group flex flex-col gap-5 p-8 lg:p-10 bg-brand-secondary hover:bg-white/5 transition-colors duration-300 h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center group-hover:bg-brand-primary/30 transition-colors duration-300">
+                    <usp.icon size={26} className="text-brand-primary" />
                   </div>
-                  <h3 className="font-display font-bold text-brand-secondary text-base">{usp.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{usp.desc}</p>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-display font-bold text-white text-lg leading-tight">{usp.title}</h3>
+                    <p className="text-white/60 text-sm leading-relaxed">{usp.desc}</p>
+                  </div>
                 </div>
               </FadeUp>
             ))}
