@@ -249,34 +249,50 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden hero-gradient">
-        <div className="absolute inset-0 dot-pattern opacity-20" />
-        <div className="absolute inset-0">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-light">
+        {/* Subtle dot texture on light background */}
+        <div className="absolute inset-0 dot-pattern opacity-40" />
+
+        {/* Right-side photo */}
+        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[58%] pointer-events-none">
           <Image
             src="/hero.png"
             alt="Lidé na firemním eventu s dočasnými tetovačkami"
             fill
-            className="object-cover object-top"
+            className="object-cover object-center"
             priority
           />
-          {/* Dark gradient so text stays readable */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-secondary/85 via-brand-secondary/50 to-transparent" />
+          {/* Blend left edge into brand-light */}
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-light via-brand-light/55 lg:via-brand-light/20 to-transparent" />
+          {/* Subtle warm tint */}
+          <div className="absolute inset-0 bg-brand-primary/10" />
         </div>
-        {/* Tattoo stamp overlay */}
-        <div className="absolute bottom-24 right-8 sm:right-16 opacity-70 rotate-[-8deg] select-none pointer-events-none">
-          <div className="border-[3px] border-brand-primary/80 rounded-xl px-4 py-2 text-center">
-            <p className="text-brand-primary font-display font-extrabold text-lg sm:text-2xl tracking-widest leading-none">partyskin.cz</p>
+
+        {/* Stamp — bottom right of photo */}
+        <div className="absolute bottom-20 right-6 sm:right-14 opacity-80 rotate-[-6deg] select-none pointer-events-none hidden sm:block">
+          <div className="border-[3px] border-brand-primary rounded-xl px-4 py-2 text-center bg-white/10 backdrop-blur-sm">
+            <p className="text-brand-primary font-display font-extrabold text-xl tracking-widest leading-none">partyskin.cz</p>
             <p className="text-brand-primary/70 text-[9px] font-semibold tracking-[0.2em] uppercase mt-0.5">temporary tattoos</p>
           </div>
         </div>
 
-        <div className="relative z-10 container-pad w-full pt-24 pb-20">
-          <div className="max-w-3xl">
+        {/* Left-side content */}
+        <div className="relative z-10 container-pad w-full pt-28 pb-20">
+          <div className="max-w-xl lg:max-w-[46%]">
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-5"
+            >
+              PartySkin B2B
+            </motion.p>
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold text-white leading-[1.05] mb-6 text-balance"
+              className="text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-display font-extrabold text-brand-secondary leading-[1.05] mb-6 text-balance"
             >
               {t("hero.h1a")}{" "}
               <span className="text-brand-primary">{t("hero.h1b")}</span>
@@ -286,7 +302,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="text-xl text-white/75 mb-10 max-w-xl leading-relaxed"
+              className="text-lg text-brand-secondary/65 mb-10 leading-relaxed"
             >
               {t("hero.sub")}
             </motion.p>
@@ -301,7 +317,7 @@ export default function HomePage() {
                 {t("hero.cta.primary")}
                 <ArrowRight size={18} />
               </Link>
-              <Link href="/produkty" className="btn-outline border-white text-white hover:bg-white hover:text-brand-secondary text-base px-8 py-4">
+              <Link href="/produkty" className="btn-outline text-base px-8 py-4">
                 {t("hero.cta.secondary")}
               </Link>
             </motion.div>
@@ -310,11 +326,11 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap items-center gap-6 mt-12"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 mt-12"
             >
               {[t("hero.badge.1"), t("hero.badge.2"), t("hero.badge.3")].map((badge) => (
-                <div key={badge} className="flex items-center gap-2 text-white/70 text-sm">
-                  <CheckCircle2 size={16} className="text-brand-primary" />
+                <div key={badge} className="flex items-center gap-2 text-brand-secondary/60 text-sm">
+                  <CheckCircle2 size={15} className="text-brand-primary shrink-0" />
                   {badge}
                 </div>
               ))}
@@ -328,8 +344,8 @@ export default function HomePage() {
           transition={{ delay: 1, duration: 0.5 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-white/40 text-xs uppercase tracking-widest">{t("hero.scroll")}</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent animate-pulse" />
+          <span className="text-brand-secondary/30 text-xs uppercase tracking-widest">{t("hero.scroll")}</span>
+          <div className="w-px h-8 bg-gradient-to-b from-brand-secondary/30 to-transparent animate-pulse" />
         </motion.div>
       </section>
 
