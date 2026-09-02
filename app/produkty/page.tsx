@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
+const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
+
 function FadeUp({
   children,
   delay = 0,
@@ -474,7 +476,10 @@ export default function ProduktyPage() {
             : lang === "sk"
             ? "Pozrite e-shop partyskin.cz"
             : "Mrkněte na e-shop partyskin.cz",
-        href: "https://www.partyskin.cz",
+        href:
+          lang === "sk"
+            ? `https://www.partyskin.sk${UTM_B2C}`
+            : `https://www.partyskin.cz/docasne-svatebni-tetovani/${UTM_B2C}`,
       },
       products:
         lang === "en"
@@ -522,6 +527,24 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? "Školy a deti"
           : "Školy a děti",
+      extra: {
+        text:
+          lang === "en"
+            ? "Just a few sheets for one class?"
+            : lang === "sk"
+            ? "Len pár archov pre jednu triedu?"
+            : "Jen pár archů pro jednu třídu?",
+        label:
+          lang === "en"
+            ? "Buy children's tattoos in the e-shop"
+            : lang === "sk"
+            ? "Kúpte detské tetovačky v e-shope"
+            : "Kupte dětské tetovačky v e-shopu",
+        href:
+          lang === "sk"
+            ? `https://www.partyskin.sk${UTM_B2C}`
+            : `https://www.partyskin.cz/docasne-tetovani-pro-deti/${UTM_B2C}`,
+      },
       products:
         lang === "en"
           ? ["Certified children's tattoos", "Stickers for rewards", "Postcards from trips"]

@@ -9,10 +9,10 @@ export default function OchranaOsobnichUdajuPage() {
 
           <section>
             <h2 className="text-xl font-display font-bold text-brand-secondary mb-3">I. Základní ustanovení</h2>
-            <p>Správcem osobních údajů je Ing. Anastázie Zemanová, IČO: 17432898, se sídlem Družstevní 343/2, Jindřichův Hradec, 37701.</p>
+            <p>Správcem osobních údajů je Jana Budínová, IČO: 21135886, se sídlem Riegrova 570, Třeboň II, 379 01 Třeboň.</p>
             <p><strong>Kontaktní údaje:</strong></p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>Adresa: Riegrova 570, Třeboň 37901</li>
+              <li>Adresa: Riegrova 570, Třeboň II, 379 01 Třeboň</li>
               <li>E-mail: objednavky@partyskin.cz</li>
               <li>Telefon: +420 724 874 274</li>
             </ul>

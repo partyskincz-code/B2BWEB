@@ -23,6 +23,8 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
+const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
+
 function FadeUp({
   children,
   delay = 0,
@@ -144,7 +146,10 @@ export default function HomePage() {
         ? "Personalised tattoos for guests, custom stickers, themed accessories for an unforgettable day."
         : "Personalizované tetovačky pre hostí, samolepky na prianie, tematické doplnky pre nezabudnuteľný deň.",
       cta: lang === "en" ? "Shop now" : lang === "sk" ? "Nakúpiť online" : "Nakoupit online",
-      href: lang === "sk" ? "https://www.partyskin.sk" : "https://www.partyskin.cz",
+      href:
+        lang === "sk"
+          ? `https://www.partyskin.sk${UTM_B2C}`
+          : `https://www.partyskin.cz/docasne-svatebni-tetovani/${UTM_B2C}`,
       external: true,
       color: "bg-pink-50",
       iconColor: "text-brand-primary",
@@ -271,8 +276,14 @@ export default function HomePage() {
         {/* Stamp — bottom right of photo */}
         <div className="absolute bottom-20 right-6 sm:right-14 opacity-80 rotate-[-6deg] select-none pointer-events-none hidden sm:block">
           <div className="border-[3px] border-brand-primary rounded-xl px-4 py-2 text-center bg-white/10 backdrop-blur-sm">
-            <p className="text-brand-primary font-display font-extrabold text-xl tracking-widest leading-none">partyskin.cz</p>
-            <p className="text-brand-primary/70 text-[9px] font-semibold tracking-[0.2em] uppercase mt-0.5">temporary tattoos</p>
+            <Image
+              src="/logo-partyskin.png"
+              alt="PartySkin"
+              width={391}
+              height={238}
+              className="h-10 w-auto mx-auto opacity-90"
+            />
+            <p className="text-brand-secondary/70 text-[9px] font-semibold tracking-[0.2em] uppercase mt-1">temporary tattoos</p>
           </div>
         </div>
 

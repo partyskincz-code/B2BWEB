@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
+const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
+
 function FadeUp({
   children,
   delay = 0,
@@ -617,6 +619,57 @@ export default function KontaktPage() {
                   </h2>
                 </div>
                 <ContactForm />
+              </div>
+
+              <div className="mt-6 bg-brand-light border border-brand-primary/20 rounded-2xl p-6">
+                <h3 className="font-display font-bold text-brand-secondary text-base mb-2">
+                  {lang === "en"
+                    ? "Ordering just a few pieces for yourself?"
+                    : lang === "sk"
+                    ? "Objednávate len pár kusov pre seba?"
+                    : "Objednáváte jen pár kusů pro sebe?"}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  {lang === "en"
+                    ? "You don't have to wait for a quote. Pick a ready-made design or upload your own photo or logo in our consumer e-shop and order straight away."
+                    : lang === "sk"
+                    ? "Nemusíte čakať na ponuku. Vyberte si hotový motív alebo nahrajte vlastnú fotku či logo v našom e-shope a objednajte ihneď."
+                    : "Nemusíte čekat na nabídku. Vyberte si hotový motiv nebo nahrajte vlastní fotku či logo v našem e-shopu a objednejte hned."}
+                </p>
+                <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+                  <a
+                    href={
+                      lang === "sk"
+                        ? `https://www.partyskin.sk${UTM_B2C}`
+                        : `https://www.partyskin.cz${UTM_B2C}`
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-primary hover:underline"
+                  >
+                    {lang === "en"
+                      ? "Ready-made designs →"
+                      : lang === "sk"
+                      ? "Hotové motívy →"
+                      : "Hotové motivy →"}
+                  </a>
+                  <a
+                    href={
+                      lang === "sk"
+                        ? `https://www.partyskin.sk${UTM_B2C}`
+                        : `https://www.partyskin.cz/tetovani-na-miru-z-fotky-a-loga/${UTM_B2C}`
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-primary hover:underline"
+                  >
+                    {lang === "en"
+                      ? "Tattoos from your own photo or logo →"
+                      : lang === "sk"
+                      ? "Tetovačky z vlastnej fotky či loga →"
+                      : "Tetovačky z vlastní fotky nebo loga →"}
+                  </a>
+                </div>
               </div>
             </FadeUp>
 

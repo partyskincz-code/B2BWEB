@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     "tetovačky svatba",
     "B2B tetovačky",
   ],
-  authors: [{ name: "PartySkin s.r.o." }],
+  authors: [{ name: "PartySkin" }],
   openGraph: {
     type: "website",
     locale: "cs_CZ",
-    url: "https://b2b.partyskin.cz",
+    url: "https://www.makethemoment.cz",
     siteName: "PartySkin B2B",
     title: "PartySkin B2B — Váš brand na kůži. Doslova.",
     description:
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
       "@type": "LocalBusiness",
       name: "PartySkin B2B",
       description: "Výroba dočasných tetováček, samolepek a pohlednic na míru pro firmy a eventy",
-      url: "https://b2b.partyskin.cz",
-      telephone: "+420600000000",
+      url: "https://www.makethemoment.cz",
+      telephone: "+420724874274",
       email: "objednavky@partyskin.cz",
       address: {
         "@type": "PostalAddress",
@@ -51,6 +51,13 @@ export const metadata: Metadata = {
         addressCountry: "CZ",
       },
       priceRange: "CZK",
+      sameAs: [
+        "https://www.partyskin.cz",
+        "https://www.partyskin.sk",
+        "https://www.instagram.com/partyskin.cz/",
+        "https://www.facebook.com/partyskincz/",
+        "https://www.linkedin.com/company/partyskin",
+      ],
     }),
   },
 };

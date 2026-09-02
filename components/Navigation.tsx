@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useLanguage, type Lang } from "@/lib/i18n";
@@ -49,13 +50,17 @@ export default function Navigation() {
       <div className="container-pad">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 font-display font-bold text-xl">
-            <span className={`transition-colors duration-300 ${isLight ? "text-brand-secondary" : "text-white"}`}>
-              Party
-            </span>
-            <span className="text-brand-primary">Skin</span>
-            <span className={`text-xs font-medium px-2 py-0.5 rounded-full ml-1 transition-colors duration-300 ${
-              isLight ? "bg-brand-light text-brand-primary" : "bg-white/20 text-white"
+          <Link href="/" className="flex items-center gap-2.5" aria-label="PartySkin B2B">
+            <Image
+              src="/logo-partyskin.png"
+              alt="PartySkin"
+              width={391}
+              height={238}
+              priority
+              className="h-9 md:h-11 w-auto transition-opacity duration-300"
+            />
+            <span className={`text-xs font-medium px-2 py-0.5 rounded-full transition-colors duration-300 ${
+              "bg-brand-light text-brand-primary"
             }`}>
               B2B
             </span>
@@ -70,9 +75,7 @@ export default function Navigation() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   pathname === link.href
                     ? "text-brand-primary bg-brand-light"
-                    : isLight
-                    ? "text-gray-600 hover:text-brand-primary hover:bg-brand-light"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    : "text-gray-600 hover:text-brand-primary hover:bg-brand-light"
                 }`}
               >
                 {link.label}
@@ -84,7 +87,7 @@ export default function Navigation() {
           <div className="hidden md:flex items-center gap-3">
             {/* Language switcher */}
             <div className={`flex items-center rounded-lg overflow-hidden border transition-colors duration-300 ${
-              isLight ? "border-gray-200" : "border-white/20"
+              "border-gray-200"
             }`}>
               {LANGS.map(({ code, label }) => (
                 <button
@@ -93,9 +96,7 @@ export default function Navigation() {
                   className={`px-2.5 py-1.5 text-xs font-bold transition-all duration-200 ${
                     lang === code
                       ? "bg-brand-primary text-white"
-                      : isLight
-                      ? "text-gray-500 hover:text-brand-primary hover:bg-brand-light"
-                      : "text-white/60 hover:text-white hover:bg-white/10"
+                      : "text-gray-500 hover:text-brand-primary hover:bg-brand-light"
                   }`}
                 >
                   {label}
@@ -111,7 +112,7 @@ export default function Navigation() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              isLight ? "text-gray-700 hover:bg-gray-100" : "text-white hover:bg-white/10"
+              "text-gray-700 hover:bg-gray-100"
             }`}
             aria-label="Otevřít menu"
           >

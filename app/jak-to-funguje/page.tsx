@@ -411,10 +411,10 @@ export default function JakToFunguePage() {
           : "Jaký je minimální počet kusů?",
       a:
         lang === "en"
-          ? "Temporary tattoos have no minimum quantity — even 1 piece can be ordered. For postcards the minimum is 50 pcs, for stickers 100 pcs. For complete packages the minimum is set individually."
+          ? "Temporary tattoos have no minimum quantity — even 1 piece can be ordered. For postcards the minimum is 50 pcs, for stickers 100 pcs. For complete packages the minimum is set individually. If you only need a few pieces for yourself, you don't have to wait for a quote — order directly in our consumer e-shop partyskin.cz."
           : lang === "sk"
-          ? "Dočasné tetovačky nemajú žiadne minimálne množstvo — objednať možno aj 1 kus. Pri pohľadniciach je minimum 50 ks, pri samolepkách 100 ks. Pre kompletné balíčky sa minimum stanovuje individuálne."
-          : "Dočasné tetovačky nemají žádné minimální množství — objednat lze i 1 kus. U pohlednic je minimum 50 ks, u samolepek 100 ks. Pro kompletní balíčky se minimum stanovuje individuálně.",
+          ? "Dočasné tetovačky nemajú žiadne minimálne množstvo — objednať možno aj 1 kus. Pri pohľadniciach je minimum 50 ks, pri samolepkách 100 ks. Pre kompletné balíčky sa minimum stanovuje individuálne. Ak potrebujete len pár kusov pre seba, nemusíte čakať na ponuku — nakúpite rovno v našom e-shope partyskin.sk."
+          : "Dočasné tetovačky nemají žádné minimální množství — objednat lze i 1 kus. U pohlednic je minimum 50 ks, u samolepek 100 ks. Pro kompletní balíčky se minimum stanovuje individuálně. Pokud potřebujete jen pár kusů pro sebe, nemusíte čekat na nabídku — nakoupíte rovnou v našem e-shopu partyskin.cz.",
     },
     {
       q:

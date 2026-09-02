@@ -76,10 +76,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="font-display font-bold text-2xl text-white">Party</span>
-              <span className="font-display font-bold text-2xl text-brand-primary">Skin</span>
-              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-white/10 text-white/80 ml-1">B2B</span>
+            <div className="flex items-center gap-2.5 mb-4">
+              <Image
+                src="/logo-partyskin-white.png"
+                alt="PartySkin"
+                width={391}
+                height={238}
+                className="h-12 w-auto"
+              />
+              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-white/10 text-white/80">B2B</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs mb-6">
               {lang === "en"
