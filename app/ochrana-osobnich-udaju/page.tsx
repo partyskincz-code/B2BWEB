@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ochrana osobních údajů",
+  description: "Zásady zpracování osobních údajů PartySkin B2B.",
+  robots: { index: false, follow: true },
+};
+
 export default function OchranaOsobnichUdajuPage() {
   return (
     <div className="pt-28 pb-20 bg-white">

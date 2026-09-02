@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Obchodní podmínky",
+  description: "Obchodní podmínky PartySkin B2B.",
+  robots: { index: false, follow: true },
+};
+
 export default function ObchodniPodminkyPage() {
   return (
     <div className="pt-28 pb-20 bg-white">
