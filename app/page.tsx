@@ -85,13 +85,13 @@ export default function HomePage() {
     },
     {
       id: "pohlednice",
-      title: lang === "cs" ? "Pohlednice a přání" : lang === "en" ? "Postcards & Cards" : "Pohľadnice a priania",
-      subtitle: lang === "cs" ? "Personalizovaný tisk" : lang === "en" ? "Personalised print" : "Personalizovaná tlač",
+      title: lang === "cs" ? "Tiskoviny na míru" : lang === "en" ? "Custom Print" : "Tlačoviny na mieru",
+      subtitle: lang === "cs" ? "Pohlednice, pozvánky, vizitky" : lang === "en" ? "Postcards, invitations, cards" : "Pohľadnice, pozvánky, vizitky",
       description: lang === "cs"
-        ? "Pohlednice s vlastním motivem pro eventy, dárkové akce nebo firemní promo. Tisk od 50 ks."
+        ? "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším motivem — pro eventy, dárkové akce i firemní promo. Tisk od 50 ks."
         : lang === "en"
-        ? "Postcards with your own motif for events, gift occasions or corporate promo. Print from 50 pcs."
-        : "Pohľadnice s vlastným motívom pre eventy, darčekové akcie alebo firemné promo. Tlač od 50 ks.",
+        ? "Postcards, greeting cards, invitations, place cards and business cards with your artwork — for events, gifting and corporate promo. Print from 50 pcs."
+        : "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším motívom — pre eventy, darčekové akcie aj firemné promo. Tlač od 50 ks.",
       price: lang === "en" ? "from €0.45 / pc" : "od 12 Kč / ks",
       minQty: t("usp.3.title"),
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",

@@ -231,10 +231,10 @@ export default function ProduktyPage() {
           : "Nové",
       title:
         lang === "en"
-          ? "Custom Postcards & Cards"
+          ? "Custom Print — Postcards, Invitations, Cards"
           : lang === "sk"
-          ? "Pohľadnice a priania na mieru"
-          : "Pohlednice a přání na míru",
+          ? "Tlačoviny na mieru — pohľadnice, pozvánky, vizitky"
+          : "Tiskoviny na míru — pohlednice, pozvánky, vizitky",
       subtitle:
         lang === "en"
           ? "Personalised print with your own motif"
@@ -243,10 +243,10 @@ export default function ProduktyPage() {
           : "Personalizovaný tisk s vlastním motivem",
       description:
         lang === "en"
-          ? "Postcards and greeting cards with your design for corporate promo, gift campaigns or personalised communication. Professional paper, vivid colours, production from 50 pcs."
+          ? "Postcards, greeting cards, invitations, place cards and business cards with your design — for corporate promo, gift campaigns or personalised communication. Professional paper, vivid colours, production from 50 pcs."
           : lang === "sk"
-          ? "Pohľadnice a priania s vaším dizajnom pre firemné promo, darčekové akcie alebo personalizovanú komunikáciu. Profesionálny papier, živé farby, výroba od 50 ks."
-          : "Pohlednice a přání s vaším designem pro firemní promo, dárkové akce nebo personalizovanou komunikaci. Profesionální papír, živé barvy, výroba od 50 ks.",
+          ? "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším dizajnom — pre firemné promo, darčekové akcie alebo personalizovanú komunikáciu. Profesionálny papier, živé farby, výroba od 50 ks."
+          : "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším designem — pro firemní promo, dárkové akce nebo personalizovanou komunikaci. Profesionální papír, živé barvy, výroba od 50 ks.",
       price:
         lang === "en"
           ? "from €0.48 / pc"

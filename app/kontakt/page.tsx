@@ -53,7 +53,7 @@ export default function KontaktPage() {
   const productTypes = [
     lang === "en" ? "Temporary tattoos" : "Dočasné tetovačky",
     lang === "en" ? "Stickers" : lang === "sk" ? "Samolepky" : "Samolepky",
-    lang === "en" ? "Postcards" : lang === "sk" ? "Pohľadnice" : "Pohlednice",
+    lang === "en" ? "Print (postcards, invitations, cards)" : lang === "sk" ? "Tlačoviny (pohľadnice, pozvánky, vizitky)" : "Tiskoviny (pohlednice, pozvánky, vizitky)",
     lang === "en"
       ? "Complete solution"
       : lang === "sk"
