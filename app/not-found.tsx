@@ -27,7 +27,7 @@ export default function NotFound() {
           Tuhle stránku jsme nenašli
         </h1>
         <p className="text-gray-600 leading-relaxed mb-8">
-          Odkaz je nejspíš zastaralý nebo obsahuje překlep. Zkuste některou z těchto stránek —
+          Odkaz je nejspíš zastaralý nebo obsahuje překlep. Zkuste některou z těchto stránek ,
           nebo nám rovnou napište, co potřebujete.
         </p>
         <div className="flex flex-wrap gap-3 mb-10">

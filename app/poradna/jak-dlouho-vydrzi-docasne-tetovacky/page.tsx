@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 const data: Clanek = {
   "nadpis": "Jak dlouho vydrží dočasné tetovačky a jak výdrž prodloužit",
-  "perex": "Nejčastější otázka, kterou dostáváme od firem před akcí. Odpověď je 3 až 7 dní — ale rozptyl je velký a dá se s ním pracovat.",
+  "perex": "Nejčastější otázka, kterou dostáváme od firem před akcí. Odpověď je 3 až 7 dní, ale rozptyl je velký a dá se s ním pracovat.",
   "datum": "2. 9. 2026",
   "ctenaMinut": 5,
   "foto": {
@@ -39,11 +39,11 @@ const data: Clanek = {
     {
       "typ": "ul",
       "polozky": [
-        "Místo na těle — paže, lýtko a rameno vydrží nejdéle, ruce a prsty nejkratší dobu",
-        "Tření o oblečení — pod rukávem se tetovačka odře rychleji než na předloktí",
-        "Voda a mýdlo — sprchování výdrž zkracuje, koupání v bazénu ještě víc",
-        "Krémy a oleje — mastný podklad tetovačku uvolňuje",
-        "Pocení a sport — na festivalu v létě počítejte spíš se spodní hranicí"
+        "Místo na těle, paže, lýtko a rameno vydrží nejdéle, ruce a prsty nejkratší dobu",
+        "Tření o oblečení, pod rukávem se tetovačka odře rychleji než na předloktí",
+        "Voda a mýdlo, sprchování výdrž zkracuje, koupání v bazénu ještě víc",
+        "Krémy a oleje, mastný podklad tetovačku uvolňuje",
+        "Pocení a sport, na festivalu v létě počítejte spíš se spodní hranicí"
       ]
     },
     {
@@ -52,11 +52,11 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Kůže musí být čistá a odmaštěná — ideálně otřít mokrým ubrouskem a nechat uschnout. Žádný krém ani opalovací mléko těsně předtím. Tetovačku přiložte, přitiskněte mokrým hadříkem a nechte deset až patnáct vteřin působit, teprve pak papír opatrně sloupněte."
+      "text": "Kůže musí být čistá a odmaštěná, ideálně otřít mokrým ubrouskem a nechat uschnout. Žádný krém ani opalovací mléko těsně předtím. Tetovačku přiložte, přitiskněte mokrým hadříkem a nechte deset až patnáct vteřin působit, teprve pak papír opatrně sloupněte."
     },
     {
       "typ": "tip",
-      "text": "Nejčastější chyba je netrpělivost — když se papír strhne po pěti vteřinách, motiv se přenese jen zčásti. Deset vteřin je minimum, dvacet je jistota."
+      "text": "Nejčastější chyba je netrpělivost, když se papír strhne po pěti vteřinách, motiv se přenese jen zčásti. Deset vteřin je minimum, dvacet je jistota."
     },
     {
       "typ": "h2",
@@ -78,7 +78,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Vodou a mýdlem, u odolnějších motivů dětským olejem, odličovacím mlékem nebo obyčejným krémem — nechte chvíli působit a setřete. Nedrhněte hrubě, kůže to nemá ráda a není to potřeba."
+      "text": "Vodou a mýdlem, u odolnějších motivů dětským olejem, odličovacím mlékem nebo obyčejným krémem, nechte chvíli působit a setřete. Nedrhněte hrubě, kůže to nemá ráda a není to potřeba."
     },
     {
       "typ": "h2",
@@ -94,7 +94,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Když rozdáváte tetovačky na eventu, vyplatí se mít návod přímo na přebalu — lidé se pak neptají a výsledek vypadá líp. Tisk na rubovou stranu archu nebo na přebal děláme běžně, je to malý náklad s velkým efektem."
+      "text": "Když rozdáváte tetovačky na eventu, vyplatí se mít návod přímo na přebalu, lidé se pak neptají a výsledek vypadá líp. Tisk na rubovou stranu archu nebo na přebal děláme běžně, je to malý náklad s velkým efektem."
     }
   ],
   "dalsi": [

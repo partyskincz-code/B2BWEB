@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import ClanekLayout, { type Clanek } from "@/components/ClanekLayout";
 
 export const metadata: Metadata = {
-  title: "Jaký formát tetovaček zvolit — A4, A5, A6 nebo A7",
+  title: "Jaký formát tetovaček zvolit, A4, A5, A6 nebo A7",
   description:
     "Srovnání formátů archů dočasných tetovaček podle použití a ceny. Co se vyplatí na veletrh, co na festival a co jako dárek pro klienty.",
   alternates: { canonical: "/poradna/jaky-format-tetovacek-zvolit" },
   openGraph: {
     type: "article",
-    title: "Jaký formát tetovaček zvolit — A4, A5, A6 nebo A7 | PartySkin B2B",
+    title: "Jaký formát tetovaček zvolit, A4, A5, A6 nebo A7 | PartySkin B2B",
     description: "Srovnání formátů archů dočasných tetovaček podle použití a ceny. Co se vyplatí na veletrh, co na festival a co jako dárek pro klienty.",
     url: "/poradna/jaky-format-tetovacek-zvolit",
     images: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 const data: Clanek = {
   "nadpis": "Jaký formát tetovaček zvolit: A4, A5, A6 nebo A7",
-  "perex": "Formát archu rozhoduje o ceně víc než cokoli jiného — mezi A7 a A4 je pětinásobný rozdíl. Tady je, co se kde vyplatí a proč největší arch není vždycky nejlepší volba.",
+  "perex": "Formát archu rozhoduje o ceně víc než cokoli jiného, mezi A7 a A4 je pětinásobný rozdíl. Tady je, co se kde vyplatí a proč největší arch není vždycky nejlepší volba.",
   "datum": "2. 9. 2026",
   "ctenaMinut": 4,
   "foto": {
@@ -39,10 +39,10 @@ const data: Clanek = {
     {
       "typ": "ul",
       "polozky": [
-        "A7 — nejmenší, od 11 Kč/ks při velkém nákladu. Jeden až tři menší motivy. Ideální na rozdávání ve velkém.",
-        "A6 — od 19 Kč/ks. Nejčastější volba u firemních akcí, vejde se do kapsy i do obálky.",
-        "A5 — od 29 Kč/ks. Prostor pro sadu motivů, funguje jako dárek.",
-        "A4 — od 59 Kč/ks. Velká sada nebo jeden výrazný motiv, hodí se jako pozornost pro klíčové klienty."
+        "A7, nejmenší, od 11 Kč/ks při velkém nákladu. Jeden až tři menší motivy. Ideální na rozdávání ve velkém.",
+        "A6, od 19 Kč/ks. Nejčastější volba u firemních akcí, vejde se do kapsy i do obálky.",
+        "A5, od 29 Kč/ks. Prostor pro sadu motivů, funguje jako dárek.",
+        "A4, od 59 Kč/ks. Velká sada nebo jeden výrazný motiv, hodí se jako pozornost pro klíčové klienty."
       ]
     },
     {
@@ -71,7 +71,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Děti chtějí vybírat. Arch s víc motivy funguje líp než jeden velký obrázek — dítě si vybere a zbytek si nechá na příště. A5 s přebalem navíc vypadá jako dárek, ne jako reklama."
+      "text": "Děti chtějí vybírat. Arch s víc motivy funguje líp než jeden velký obrázek, dítě si vybere a zbytek si nechá na příště. A5 s přebalem navíc vypadá jako dárek, ne jako reklama."
     },
     {
       "typ": "h2",
@@ -87,7 +87,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Záleží na velikosti jednotlivých motivů, ale orientačně: na A7 jeden až tři menší, na A6 tři až šest, na A5 šest až deset, na A4 klidně patnáct. Čím víc motivů, tím menší každý z nich — a pod zhruba dva centimetry začínají detaily v tisku mizet."
+      "text": "Záleží na velikosti jednotlivých motivů, ale orientačně: na A7 jeden až tři menší, na A6 tři až šest, na A5 šest až deset, na A4 klidně patnáct. Čím víc motivů, tím menší každý z nich, a pod zhruba dva centimetry začínají detaily v tisku mizet."
     },
     {
       "typ": "tip",

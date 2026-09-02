@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -84,7 +84,7 @@ const data: Prilezitost = {
     },
     {
       "q": "Zvládnete velký objem během sezóny?",
-      "a": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně měsíc dopředu, výroba trvá 5–20 pracovních dní."
+      "a": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně měsíc dopředu, výroba trvá 10–15 pracovních dní."
     }
   ],
   "ctaTitul": "Chystáte festival nebo venkovní akci?",
@@ -134,7 +134,7 @@ const faqSchema = {
       "name": "Zvládnete velký objem během sezóny?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně měsíc dopředu, výroba trvá 5–20 pracovních dní."
+        "text": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně měsíc dopředu, výroba trvá 10–15 pracovních dní."
       }
     }
   ]

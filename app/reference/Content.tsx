@@ -83,10 +83,10 @@ export default function ReferencePage() {
       src: "/realizace-prebal-b2b-a5.jpg",
       title:
         lang === "en"
-          ? "got2b — Branded tattoo sheet A5"
+          ? "got2b, Branded tattoo sheet A5"
           : lang === "sk"
-          ? "got2b — Brandované tetovačky A5"
-          : "got2b — Brandované tetovačky A5",
+          ? "got2b, Brandované tetovačky A5"
+          : "got2b, Brandované tetovačky A5",
       desc:
         lang === "en"
           ? "Custom A5 sheet with rainbow motifs and full got2b branding. Full-colour print including white ink."
@@ -98,40 +98,40 @@ export default function ReferencePage() {
       src: "/realizace-prebal-b2b-a5-zadni.jpg",
       title:
         lang === "en"
-          ? "got2b — Custom packaging, back"
+          ? "got2b, Custom packaging, back"
           : lang === "sk"
-          ? "got2b — Obal na mieru, zadná strana"
-          : "got2b — Zakázkový obal, zadní strana",
+          ? "got2b, Obal na mieru, zadná strana"
+          : "got2b, Zakázkový obal, zadní strana",
       desc:
         lang === "en"
           ? "Back of the branded packaging with instructions and brand story printed directly on the cover."
           : lang === "sk"
-          ? "Zadná strana brandovaného obalu — návod a brand story priamo na obale."
-          : "Zadní strana brandovaného obalu — návod na použití a brand story přímo na přebalu.",
+          ? "Zadná strana brandovaného obalu, návod a brand story priamo na obale."
+          : "Zadní strana brandovaného obalu, návod na použití a brand story přímo na přebalu.",
     },
     {
       src: "/realizace-detske-prebal-a6.jpg",
       title:
         lang === "en"
-          ? "Children's tattoos A6 — wholesale collection"
+          ? "Children's tattoos A6, wholesale collection"
           : lang === "sk"
-          ? "Detské tetovačky A6 — veľkoobchodná kolekcia"
-          : "Dětské tetovačky A6 — velkoobchodní kolekce",
+          ? "Detské tetovačky A6, veľkoobchodná kolekcia"
+          : "Dětské tetovačky A6, velkoobchodní kolekce",
       desc:
         lang === "en"
-          ? "Series of A6 children's tattoo sheets in themed designs — space, animals, nature. Cellophane + paper cover."
+          ? "Series of A6 children's tattoo sheets in themed designs, space, animals, nature. Cellophane + paper cover."
           : lang === "sk"
-          ? "Séria A6 detských archov v tematických dizajnoch — vesmír, zvieratká, príroda. Celofán + papierový prebal."
-          : "Série A6 dětských archů v tematických designech — vesmír, zvířátka, příroda. Celofán + papírový přebal.",
+          ? "Séria A6 detských archov v tematických dizajnoch, vesmír, zvieratká, príroda. Celofán + papierový prebal."
+          : "Série A6 dětských archů v tematických designech, vesmír, zvířátka, příroda. Celofán + papírový přebal.",
     },
     {
       src: "/realizace-prebal-a5.jpg",
       title:
         lang === "en"
-          ? "Easter edition A5 — seasonal tattoos"
+          ? "Easter edition A5, seasonal tattoos"
           : lang === "sk"
-          ? "Veľkonočná edícia A5 — sezónne tetovačky"
-          : "Velikonoční edice A5 — sezónní tetovačky",
+          ? "Veľkonočná edícia A5, sezónne tetovačky"
+          : "Velikonoční edice A5, sezónní tetovačky",
       desc:
         lang === "en"
           ? "Easter-themed A5 sheet with bunny, chick and flower motifs. Kraft paper cover + cellophane."
@@ -143,15 +143,15 @@ export default function ReferencePage() {
       src: "/realizace-papirovy-prebal.jpg",
       title:
         lang === "en"
-          ? "Unicorn tattoos — paper + cellophane packaging"
+          ? "Unicorn tattoos, paper + cellophane packaging"
           : lang === "sk"
-          ? "Jednorožcové tetovačky — papier + celofán"
-          : "Tetovačky s jednorožci — papírový + celofánový obal",
+          ? "Jednorožcové tetovačky, papier + celofán"
+          : "Tetovačky s jednorožci, papírový + celofánový obal",
       desc:
         lang === "en"
           ? "Children's tattoo sheet with unicorn motifs in a combination of paper cover and sealed cellophane bag."
           : lang === "sk"
-          ? "Detský arch s motívmi jednorožcov — papierový prebal a zatavené celofánové vrecko."
+          ? "Detský arch s motívmi jednorožcov, papierový prebal a zatavené celofánové vrecko."
           : "Dětský arch s motivy jednorožců v kombinaci papírový přebal + zatavený celofánový sáček.",
     },
   ];
@@ -354,7 +354,7 @@ export default function ReferencePage() {
                     <div key={i} className="relative overflow-hidden">
                       <Image
                         src={src}
-                        alt="Realizace PartySkin — dočasné tetovačky a přebaly na míru"
+                        alt="Realizace PartySkin, dočasné tetovačky a přebaly na míru"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 768px) 33vw, 16vw"

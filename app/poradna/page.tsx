@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Drobecky from "@/components/Drobecky";
 
 export const metadata: Metadata = {
-  title: "Poradna — jak na dočasné tetovačky a promo materiály",
+  title: "Poradna, jak na dočasné tetovačky a promo materiály",
   description:
     "Praktické návody k dočasným tetovačkám: jak připravit podklady pro tisk, jaký formát archu zvolit a jak dlouho tetovačky vydrží na kůži.",
   alternates: { canonical: "/poradna" },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

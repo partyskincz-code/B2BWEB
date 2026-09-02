@@ -19,7 +19,7 @@ import { useLanguage } from "@/lib/i18n";
 
 const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
 
-// Veřejný klíč Web3Forms — je určený do klientského kódu, umožňuje pouze
+// Veřejný klíč Web3Forms, je určený do klientského kódu, umožňuje pouze
 // odeslání na schránku nastavenou v účtu. Ve Vercelu se dá přebít proměnnou
 // NEXT_PUBLIC_WEB3FORMS_KEY (např. po rotaci klíče).
 const WEB3FORMS_KEY =
@@ -199,7 +199,7 @@ export default function KontaktPage() {
         data.append("from_name", "makethemoment.cz");
         data.append(
           "subject",
-          `Nová poptávka z webu — ${selectedSegment ?? "neuvedeno"}` +
+          `Nová poptávka z webu, ${selectedSegment ?? "neuvedeno"}` +
             (selectedProducts.length ? `, ${selectedProducts.join(", ")}` : "")
         );
         data.append("Segment", selectedSegment ?? "neuvedeno");
@@ -282,7 +282,7 @@ export default function KontaktPage() {
 
     return (
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* honeypot — hidden from users, filled only by bots */}
+        {/* honeypot, hidden from users, filled only by bots */}
         <input
           type="checkbox"
           name="botcheck"
@@ -694,10 +694,10 @@ export default function KontaktPage() {
                 </div>
                 <p className="text-white/75 text-sm leading-relaxed mb-4">
                   {lang === "en"
-                    ? "Our team takes care of every inquiry personally. Don't hesitate to write — even with just a rough idea. We'll get back to you the same day."
+                    ? "Our team takes care of every inquiry personally. Don't hesitate to write, even with just a rough idea. We'll get back to you the same day."
                     : lang === "sk"
-                    ? "Každý dopyt vybavujeme osobne. Neváhajte napísať — aj keď máte zatiaľ len hrubú predstavu. Ozveme sa ešte ten deň."
-                    : "Každou poptávku vyřizujeme osobně. Neváhejte napsat — i s jen hrubou představou. Ozveme se ještě ten den."}
+                    ? "Každý dopyt vybavujeme osobne. Neváhajte napísať, aj keď máte zatiaľ len hrubú predstavu. Ozveme sa ešte ten deň."
+                    : "Každou poptávku vyřizujeme osobně. Neváhejte napsat, i s jen hrubou představou. Ozveme se ještě ten den."}
                 </p>
                 <a
                   href="mailto:objednavky@partyskin.cz"
@@ -777,10 +777,10 @@ export default function KontaktPage() {
                     {lang === "en" ? "Tip:" : lang === "sk" ? "Tip:" : "Tip:"}
                   </strong>{" "}
                   {lang === "en"
-                    ? "The more you tell us in the first message, the more accurate offer you'll get. Don't be afraid to just share an idea — we'll help."
+                    ? "The more you tell us in the first message, the more accurate offer you'll get. Don't be afraid to just share an idea, we'll help."
                     : lang === "sk"
-                    ? "Čím viac nám poviete v prvom e-maile, tým presnejšiu ponuku dostanete. Nebojte sa napísať len nápad — poradíme."
-                    : "Čím více nám toho sdělíte v prvním emailu, tím přesnější nabídku dostanete. Nebojte se napsat i jen nápad — poradíme."}
+                    ? "Čím viac nám poviete v prvom e-maile, tým presnejšiu ponuku dostanete. Nebojte sa napísať len nápad, poradíme."
+                    : "Čím více nám toho sdělíte v prvním emailu, tím přesnější nabídku dostanete. Nebojte se napsat i jen nápad, poradíme."}
                 </p>
               </div>
             </FadeUp>

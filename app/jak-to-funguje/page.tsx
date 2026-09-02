@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import Content from "./Content";
 
 export const metadata: Metadata = {
-  title: "Jak probíhá zakázka — od poptávky po dodání",
+  title: "Jak probíhá zakázka, od poptávky po dodání",
   description:
-    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5–20 pracovních dní. Časté otázky a záruky.",
+    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 10–15 pracovních dní. Časté otázky a záruky.",
   alternates: {
     canonical: "/jak-to-funguje",
   },
   openGraph: {
-    title: "Jak probíhá zakázka — od poptávky po dodání | PartySkin B2B",
+    title: "Jak probíhá zakázka, od poptávky po dodání | PartySkin B2B",
     description:
-      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5–20 pracovních dní. Časté otázky a záruky.",
+      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 10–15 pracovních dní. Časté otázky a záruky.",
     url: "/jak-to-funguje",
     images: [
       {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -34,7 +34,7 @@ const faqSchema = {
       "name": "Jaký je minimální počet kusů?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dočasné tetovačky nemají žádné minimální množství — objednat lze i 1 kus. U pohlednic je minimum 50 ks, u samolepek 100 ks. Pro kompletní balíčky se minimum stanovuje individuálně."
+        "text": "Dočasné tetovačky nemají žádné minimální množství, objednat lze i 1 kus. U samolepek je minimum 100 ks. Pro kompletní balíčky se minimum stanovuje individuálně."
       }
     },
     {
@@ -50,7 +50,7 @@ const faqSchema = {
       "name": "Jak mám připravit podklady pro tisk?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ideálně dodejte soubory ve vektorovém formátu (.AI, .EPS, .SVG) nebo PDF ve vysokém rozlišení (min. 300 DPI). Přijímáme i JPEG a PNG — upozorníme vás, pokud by kvalita nestačila pro tisk."
+        "text": "Ideálně dodejte soubory ve vektorovém formátu (.AI, .EPS, .SVG) nebo PDF ve vysokém rozlišení (min. 300 DPI). Přijímáme i JPEG a PNG, upozorníme vás, pokud by kvalita nestačila pro tisk."
       }
     },
     {

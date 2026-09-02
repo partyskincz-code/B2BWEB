@@ -92,10 +92,10 @@ export default function ProduktyPage() {
           : "Bez minimálního množství",
       deliveryTime:
         lang === "en"
-          ? "5–20 business days"
+          ? "10–15 business days"
           : lang === "sk"
-          ? "5–20 pracovných dní"
-          : "5–20 pracovních dní",
+          ? "10–15 pracovných dní"
+          : "10–15 pracovních dní",
       image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
       cta:
         lang === "en"
@@ -157,10 +157,10 @@ export default function ProduktyPage() {
           : "Vlastní tvar, velikost, materiál",
       description:
         lang === "en"
-          ? "Die-cut stickers for branding, packaging and merchandise. Available in various materials — gloss, matte, transparent, waterproof. Production from 100 pcs."
+          ? "Die-cut stickers for branding, packaging and merchandise. Available in various materials, gloss, matte, transparent, waterproof. Production from 100 pcs."
           : lang === "sk"
-          ? "Tvarové samolepky pre branding, packaging a merchandise. Dostupné v rôznych materiáloch — lesklé, matné, priehľadné, voděodolné. Výroba od 100 ks."
-          : "Tvarové samolepky pro branding, packaging a merchandise. Dostupné v různých materiálech — lesklé, matné, průhledné, voděodolné. Výroba od 100 ks.",
+          ? "Tvarové samolepky pre branding, packaging a merchandise. Dostupné v rôznych materiáloch, lesklé, matné, priehľadné, voděodolné. Výroba od 100 ks."
+          : "Tvarové samolepky pro branding, packaging a merchandise. Dostupné v různých materiálech, lesklé, matné, průhledné, voděodolné. Výroba od 100 ks.",
       price:
         lang === "en"
           ? "from €0.16 / pc"
@@ -175,10 +175,10 @@ export default function ProduktyPage() {
           : "Min. 100 ks",
       deliveryTime:
         lang === "en"
-          ? "5–20 business days"
+          ? "10–15 business days"
           : lang === "sk"
-          ? "5–20 pracovných dní"
-          : "5–20 pracovních dní",
+          ? "10–15 pracovných dní"
+          : "10–15 pracovních dní",
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
       features:
         lang === "en"
@@ -231,10 +231,10 @@ export default function ProduktyPage() {
           : "Nové",
       title:
         lang === "en"
-          ? "Custom Print — Postcards, Invitations, Cards"
+          ? "Custom Print, Postcards, Invitations, Cards"
           : lang === "sk"
-          ? "Tlačoviny na mieru — pohľadnice, pozvánky, vizitky"
-          : "Tiskoviny na míru — pohlednice, pozvánky, vizitky",
+          ? "Tlačoviny na mieru, pohľadnice, pozvánky, vizitky"
+          : "Tiskoviny na míru, pohlednice, pozvánky, vizitky",
       subtitle:
         lang === "en"
           ? "Personalised print with your own motif"
@@ -243,10 +243,10 @@ export default function ProduktyPage() {
           : "Personalizovaný tisk s vlastním motivem",
       description:
         lang === "en"
-          ? "Postcards, greeting cards, invitations, place cards and business cards with your design — for corporate promo, gift campaigns or personalised communication. Professional paper, vivid colours, production from 50 pcs."
+          ? "Postcards, greeting cards, invitations, place cards and business cards with your design, for corporate promo, gift campaigns or personalised communication. Professional paper, vivid colours, we print from a single piece."
           : lang === "sk"
-          ? "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším dizajnom — pre firemné promo, darčekové akcie alebo personalizovanú komunikáciu. Profesionálny papier, živé farby, výroba od 50 ks."
-          : "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším designem — pro firemní promo, dárkové akce nebo personalizovanou komunikaci. Profesionální papír, živé barvy, výroba od 50 ks.",
+          ? "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším dizajnom, pre firemné promo, darčekové akcie alebo personalizovanú komunikáciu. Profesionálny papier, živé farby, tlačíme už od jedného kusu."
+          : "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším designem, pro firemní promo, dárkové akce nebo personalizovanou komunikaci. Profesionální papír, živé barvy, tiskneme už od jednoho kusu.",
       price:
         lang === "en"
           ? "from €0.48 / pc"
@@ -257,14 +257,14 @@ export default function ProduktyPage() {
         lang === "en"
           ? "Min. 50 pcs"
           : lang === "sk"
-          ? "Min. 50 ks"
-          : "Min. 50 ks",
+          ? "Bez minima"
+          : "Bez minima",
       deliveryTime:
         lang === "en"
-          ? "5–20 business days"
+          ? "10–15 business days"
           : lang === "sk"
-          ? "5–20 pracovných dní"
-          : "5–20 pracovních dní",
+          ? "10–15 pracovných dní"
+          : "10–15 pracovních dní",
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
       features:
         lang === "en"
@@ -329,10 +329,10 @@ export default function ProduktyPage() {
           : "Balíčky pro firemní eventy, teambuildingy, svatby a festivaly",
       description:
         lang === "en"
-          ? "Stop juggling multiple suppliers. Get a complete promo package from us — tattoos, stickers and postcards — all with a unified design, delivered on time."
+          ? "Stop juggling multiple suppliers. Get a complete promo package from us, tattoos, stickers and postcards, all with a unified design, delivered on time."
           : lang === "sk"
-          ? "Neriešte logistiku s viacerými dodávateľmi. U nás dostanete kompletný promo balíček — tetovačky, samolepky aj pohľadnice — všetko s jednotným dizajnom, v stanovenom termíne."
-          : "Neřešte logistiku s více dodavateli. U nás dostanete kompletní promo balíček — tetovačky, samolepky i pohlednice — vše s jednotným designem, ve stanoveném termínu.",
+          ? "Neriešte logistiku s viacerými dodávateľmi. U nás dostanete kompletný promo balíček, tetovačky, samolepky aj pohľadnice, všetko s jednotným dizajnom, v stanovenom termíne."
+          : "Neřešte logistiku s více dodavateli. U nás dostanete kompletní promo balíček, tetovačky, samolepky i pohlednice, vše s jednotným designem, ve stanoveném termínu.",
       price:
         lang === "en"
           ? "Individual quote"
@@ -355,7 +355,7 @@ export default function ProduktyPage() {
       features:
         lang === "en"
           ? [
-              "One supplier for everything — no coordination issues",
+              "One supplier for everything, no coordination issues",
               "Unified design across all products",
               "Full graphic brief processing from A to Z",
               "Dedicated project manager for your order",
@@ -366,7 +366,7 @@ export default function ProduktyPage() {
             ]
           : lang === "sk"
           ? [
-              "Jeden dodávateľ pre všetko — žiadne koordinačné problémy",
+              "Jeden dodávateľ pre všetko, žiadne koordinačné problémy",
               "Jednotný dizajn naprieč všetkými produktmi",
               "Grafické spracovanie briefu od A do Z",
               "Projektový manažér pre vašu zákazku",
@@ -376,7 +376,7 @@ export default function ProduktyPage() {
               "Referenčné zľavy pre opakované zákazky",
             ]
           : [
-              "Jeden dodavatel pro vše — žádné koordinační problémy",
+              "Jeden dodavatel pro vše, žádné koordinační problémy",
               "Jednotný design napříč všemi produkty",
               "Grafické zpracování briefu od A do Z",
               "Projektový manažer pro vaši zakázku",
@@ -418,29 +418,29 @@ export default function ProduktyPage() {
           : "Firmy a značky",
       intro:
         lang === "en"
-          ? "Want people to take your brand home with them? Tell us what you're planning — a conference, a trade fair, a team building day or a product launch — and we'll suggest what makes sense. No minimum order, even for a small event."
+          ? "Want people to take your brand home with them? Tell us what you're planning, a conference, a trade fair, a team building day or a product launch, and we'll suggest what makes sense. No minimum order, even for a small event."
           : lang === "sk"
-          ? "Chcete, aby si ľudia vašu značku odniesli domov? Povedzte nám, čo chystáte — konferenciu, veľtrh, teambuilding alebo uvedenie produktu — a my navrhneme, čo dáva zmysel. Bez minimálneho odberu, aj na malú akciu."
-          : "Chcete, aby si lidi vaši značku odnesli domů? Řekněte nám, co chystáte — konferenci, veletrh, teambuilding nebo uvedení produktu — a my navrhneme, co dává smysl. Bez minimálního odběru, i na malý event.",
+          ? "Chcete, aby si ľudia vašu značku odniesli domov? Povedzte nám, čo chystáte, konferenciu, veľtrh, teambuilding alebo uvedenie produktu, a my navrhneme, čo dáva zmysel. Bez minimálneho odberu, aj na malú akciu."
+          : "Chcete, aby si lidi vaši značku odnesli domů? Řekněte nám, co chystáte, konferenci, veletrh, teambuilding nebo uvedení produktu, a my navrhneme, co dává smysl. Bez minimálního odběru, i na malý event.",
       cta:
         lang === "en" ? "Let's talk it through" : lang === "sk" ? "Poďme to prebrať" : "Pojďme to probrat",
       products:
         lang === "en"
           ? [
-              "Logo tattoos — the fastest way onto people's skin",
-              "Packaging stickers — let the parcel speak before it's opened",
-              "Postcards for clients — a thank-you that arrives by post",
+              "Logo tattoos, the fastest way onto people's skin",
+              "Packaging stickers, let the parcel speak before it's opened",
+              "Postcards for clients, a thank-you that arrives by post",
             ]
           : lang === "sk"
           ? [
-              "Tetovačky s logom — najrýchlejšia cesta ľuďom na kožu",
-              "Samolepky na packaging — nech balíček niečo povie ešte pred otvorením",
-              "Pohľadnice a priania pre klientov — poďakovanie, ktoré príde poštou",
+              "Tetovačky s logom, najrýchlejšia cesta ľuďom na kožu",
+              "Samolepky na packaging, nech balíček niečo povie ešte pred otvorením",
+              "Pohľadnice a priania pre klientov, poďakovanie, ktoré príde poštou",
             ]
           : [
-              "Tetovačky s logem — nejrychlejší cesta lidem na kůži",
-              "Samolepky na packaging — ať balíček něco řekne ještě před otevřením",
-              "Pohlednice a přání pro klienty — poděkování, které přijde poštou",
+              "Tetovačky s logem, nejrychlejší cesta lidem na kůži",
+              "Samolepky na packaging, ať balíček něco řekne ještě před otevřením",
+              "Pohlednice a přání pro klienty, poděkování, které přijde poštou",
             ],
       image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80",
     },
@@ -455,10 +455,10 @@ export default function ProduktyPage() {
           : "Svatby a oslavy",
       intro:
         lang === "en"
-          ? "A wedding, a party, a baby shower or a hen do? Tattoos for guests (kids love them most), name cards, postcards and stickers for decorations — all in one style, with your names on them."
+          ? "A wedding, a party, a baby shower or a hen do? Tattoos for guests (kids love them most), name cards, postcards and stickers for decorations, all in one style, with your names on them."
           : lang === "sk"
-          ? "Svadba, oslava, baby shower alebo rozlúčka? Tetovačky pre hostí (deti ich milujú najviac), menovky, pohľadnice aj samolepky na dekorácie — všetko v jednom štýle a s menami."
-          : "Svatba, oslava, baby shower nebo rozlučka? Tetovačky pro hosty (děti je milují nejvíc), jmenovky, pohlednice i samolepky na dekorace — všechno v jednom stylu a se jmény.",
+          ? "Svadba, oslava, baby shower alebo rozlúčka? Tetovačky pre hostí (deti ich milujú najviac), menovky, pohľadnice aj samolepky na dekorácie, všetko v jednom štýle a s menami."
+          : "Svatba, oslava, baby shower nebo rozlučka? Tetovačky pro hosty (děti je milují nejvíc), jmenovky, pohlednice i samolepky na dekorace, všechno v jednom stylu a se jmény.",
       cta:
         lang === "en"
           ? "Request a custom solution"
@@ -486,20 +486,20 @@ export default function ProduktyPage() {
       products:
         lang === "en"
           ? [
-              "Tattoos for guests — with your motif, date or initials",
-              "Postcards and name cards — matched to your invitations",
-              "Stickers for decorations — bottles, gifts, welcome bags",
+              "Tattoos for guests, with your motif, date or initials",
+              "Postcards and name cards, matched to your invitations",
+              "Stickers for decorations, bottles, gifts, welcome bags",
             ]
           : lang === "sk"
           ? [
-              "Tetovačky pre hostí — s vaším motívom, dátumom alebo iniciálami",
-              "Pohľadnice a menovky — zladené so svadobným oznámením",
-              "Samolepky na dekorácie — na fľaše, darčeky, welcome bag",
+              "Tetovačky pre hostí, s vaším motívom, dátumom alebo iniciálami",
+              "Pohľadnice a menovky, zladené so svadobným oznámením",
+              "Samolepky na dekorácie, na fľaše, darčeky, welcome bag",
             ]
           : [
-              "Tetovačky pro hosty — s vaším motivem, datem nebo iniciálami",
-              "Pohlednice a jmenovky — sladěné se svatebním oznámením",
-              "Samolepky na dekorace — na lahve, dárky, welcome bag",
+              "Tetovačky pro hosty, s vaším motivem, datem nebo iniciálami",
+              "Pohlednice a jmenovky, sladěné se svatebním oznámením",
+              "Samolepky na dekorace, na lahve, dárky, welcome bag",
             ],
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
     },
@@ -738,10 +738,10 @@ export default function ProduktyPage() {
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               {lang === "en"
-                ? "The final price depends on format, quantity and packaging. The table below is indicative — we will always prepare an exact calculation for you individually, free of charge and without obligation."
+                ? "The final price depends on format, quantity and packaging. The table below is indicative, we will always prepare an exact calculation for you individually, free of charge and without obligation."
                 : lang === "sk"
-                ? "Konečná cena závisí od formátu, množstva a balenia. Tabuľka nižšie je orientačná — presnú kalkuláciu vám pripravíme vždy individuálne, zdarma a bez záväzkov."
-                : "Konečná cena závisí na formátu, množství a balení. Tabulka níže je orientační — přesnou kalkulaci vám připravíme vždy individuálně, zdarma a bez závazků."}
+                ? "Konečná cena závisí od formátu, množstva a balenia. Tabuľka nižšie je orientačná, presnú kalkuláciu vám pripravíme vždy individuálne, zdarma a bez záväzkov."
+                : "Konečná cena závisí na formátu, množství a balení. Tabulka níže je orientační, přesnou kalkulaci vám připravíme vždy individuálně, zdarma a bez závazků."}
             </p>
           </FadeUp>
 
@@ -846,10 +846,10 @@ export default function ProduktyPage() {
               </h3>
               <p className="text-gray-500 leading-relaxed mb-6 max-w-2xl">
                 {lang === "en"
-                  ? "For a wedding, a kids' party or a hen do you don't need a quote at all. Pick a ready-made design in our e-shop or upload your own photo — order straight away, even a single sheet, and it's with you in 2–3 days."
+                  ? "For a wedding, a kids' party or a hen do you don't need a quote at all. Pick a ready-made design in our e-shop or upload your own photo, order straight away, even a single sheet, and it's with you in 2–3 days."
                   : lang === "sk"
-                  ? "Na svadbu, detskú párty alebo rozlúčku nemusíte nič dopytovať. V našom e-shope si vyberiete z hotových motívov alebo nahráte vlastnú fotku — objednáte hneď, pokojne jediný arch, a do 2–3 dní to máte doma."
-                  : "Na svatbu, dětskou párty nebo rozlučku nemusíte nic poptávat. V našem e-shopu si vyberete z hotových motivů nebo nahrajete vlastní fotku — objednáte hned, klidně jediný arch, a do 2–3 dnů to máte doma."}
+                  ? "Na svadbu, detskú párty alebo rozlúčku nemusíte nič dopytovať. V našom e-shope si vyberiete z hotových motívov alebo nahráte vlastnú fotku, objednáte hneď, pokojne jediný arch, a do 2–3 dní to máte doma."
+                  : "Na svatbu, dětskou párty nebo rozlučku nemusíte nic poptávat. V našem e-shopu si vyberete z hotových motivů nebo nahrajete vlastní fotku, objednáte hned, klidně jediný arch, a do 2–3 dnů to máte doma."}
               </p>
               <div className="flex gap-4 flex-wrap">
                 <a
@@ -859,10 +859,10 @@ export default function ProduktyPage() {
                   className="btn-primary gap-2"
                 >
                   {lang === "en"
-                    ? "partyskin.cz — Czech e-shop"
+                    ? "partyskin.cz, Czech e-shop"
                     : lang === "sk"
-                    ? "partyskin.cz — český e-shop"
-                    : "partyskin.cz — český e-shop"}{" "}
+                    ? "partyskin.cz, český e-shop"
+                    : "partyskin.cz, český e-shop"}{" "}
                   <ArrowRight size={16} />
                 </a>
                 <a
@@ -872,10 +872,10 @@ export default function ProduktyPage() {
                   className="btn-outline gap-2"
                 >
                   {lang === "en"
-                    ? "partyskin.sk — Slovak e-shop"
+                    ? "partyskin.sk, Slovak e-shop"
                     : lang === "sk"
-                    ? "partyskin.sk — slovenský e-shop"
-                    : "partyskin.sk — slovenský e-shop"}{" "}
+                    ? "partyskin.sk, slovenský e-shop"
+                    : "partyskin.sk, slovenský e-shop"}{" "}
                   <ArrowRight size={16} />
                 </a>
               </div>

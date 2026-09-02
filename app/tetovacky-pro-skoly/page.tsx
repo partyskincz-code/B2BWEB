@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const data: Prilezitost = {
   "tag": "Školy a dětské akce",
   "h1": "Tetovačky a samolepky pro školy a dětské akce",
-  "perex": "Dětský den, příměstský tábor, sportovní den nebo odměna za vysvědčení. Naše tetovačky odpovídají normě EN 71 a jsou certifikované pro děti od tří let — a děti je milují víc než jakoukoli jinou odměnu.",
+  "perex": "Dětský den, příměstský tábor, sportovní den nebo odměna za vysvědčení. Naše tetovačky odpovídají normě EN 71 a jsou certifikované pro děti od tří let, a děti je milují víc než jakoukoli jinou odměnu.",
   "produkty": [
     {
       "title": "Certifikované dětské tetovačky",
@@ -41,7 +41,7 @@ const data: Prilezitost = {
   ],
   "duvody": [
     "Certifikace podle normy EN 71, bezpečné pro děti od 3 let",
-    "Bez minimálního množství — vyrobíme i pro jednu třídu",
+    "Bez minimálního množství, vyrobíme i pro jednu třídu",
     "Tetovačka se sundá vodou a mýdlem nebo dětským olejem",
     "Motivy navrhneme podle tématu akce, i z dětské kresby",
     "Výdrž 3–7 dní, takže odměna vydrží až do víkendu"
@@ -50,7 +50,7 @@ const data: Prilezitost = {
     "src": "/realizace-detske-prebal-a6.jpg",
     "alt": "Dětské tetovačky v přebalu A6"
   },
-  "fotoPopis": "Dětský formát A6 v přebalu — malá věc, kterou si dítě odnese domů a ukáže rodičům. U školních akcí to funguje líp než diplom.",
+  "fotoPopis": "Dětský formát A6 v přebalu, malá věc, kterou si dítě odnese domů a ukáže rodičům. U školních akcí to funguje líp než diplom.",
   "ceny": [
     {
       "format": "A7 (nejmenší)",

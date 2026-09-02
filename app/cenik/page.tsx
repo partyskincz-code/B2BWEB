@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -33,7 +33,7 @@ const tetovacky = [
 
 const dalsi = [
   { produkt: "Samolepky na míru", cena: "od 4 Kč / ks", minimum: "od 100 ks", pozn: "Tvarový řez, voděodolné a UV odolné materiály." },
-  { produkt: "Tiskoviny — pohlednice, pozvánky, vizitky", cena: "od 12 Kč / ks", minimum: "od 50 ks", pozn: "Profesionální papír, plnobarevný tisk." },
+  { produkt: "Tiskoviny, pohlednice, pozvánky, vizitky", cena: "od 12 Kč / ks", minimum: "od 1 ks", pozn: "Profesionální papír, plnobarevný tisk." },
   { produkt: "Kompletní řešení pro akci", cena: "individuální", minimum: "dle rozsahu", pozn: "Balíček tetovaček, samolepek a tiskovin v jednom stylu." },
 ];
 
@@ -46,10 +46,10 @@ const vCene = [
 ];
 
 const zvlast = [
-  "Balení — přebal na míru, sáčky, balení po sériích",
+  "Balení, přebal na míru, sáčky, balení po sériích",
   "Tisk na rubovou stranu (návod, kontakt, QR kód)",
   "Expresní výroba mimo standardní termín",
-  "Doprava — PPL, DPD nebo spedice u velkých zásilek",
+  "Doprava, PPL, DPD nebo spedice u velkých zásilek",
 ];
 
 const faq = [
@@ -71,7 +71,7 @@ const faq = [
   },
   {
     q: "Jak se dá cena snížit?",
-    a: "Největší vliv má množství — mezi náklady 100 kusů a 1 000 kusů je rozdíl zhruba třetina ceny za kus. Druhý nejsilnější faktor je formát: A7 vyjde na třetinu ceny A5. Pomůže i standardní balení místo přebalu na míru.",
+    a: "Největší vliv má množství, mezi náklady 100 kusů a 1 000 kusů je rozdíl zhruba třetina ceny za kus. Druhý nejsilnější faktor je formát: A7 vyjde na třetinu ceny A5. Pomůže i standardní balení místo přebalu na míru.",
   },
 ];
 
@@ -107,7 +107,7 @@ const cenikSchema = {
     { "@type": "Offer", name: "Dočasné tetovačky A5", priceCurrency: "CZK", price: "29", description: "Cena za kus při nákladu od 1 000 ks, včetně DPH." },
     { "@type": "Offer", name: "Dočasné tetovačky A4", priceCurrency: "CZK", price: "59", description: "Cena za kus při nákladu od 1 000 ks, včetně DPH." },
     { "@type": "Offer", name: "Samolepky na míru", priceCurrency: "CZK", price: "4", description: "Cena za kus, minimum 100 ks, včetně DPH." },
-    { "@type": "Offer", name: "Tiskoviny na míru", priceCurrency: "CZK", price: "12", description: "Cena za kus, minimum 50 ks, včetně DPH." },
+    { "@type": "Offer", name: "Tiskoviny na míru", priceCurrency: "CZK", price: "12", description: "Cena za kus, tiskneme už od jednoho kusu, včetně DPH." },
   ],
 };
 
@@ -176,7 +176,7 @@ export default function Page() {
             <Info size={18} className="text-brand-primary flex-shrink-0 mt-0.5" />
             <p>
               Všechny ceny jsou <strong className="text-brand-secondary">včetně DPH</strong> a platí za jeden kus bez balení.
-              U tetovaček nemáme minimální množství — vyrobíme i jeden arch.
+              U tetovaček nemáme minimální množství, vyrobíme i jeden arch.
             </p>
           </div>
 

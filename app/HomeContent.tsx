@@ -56,7 +56,7 @@ export default function HomePage() {
     {
       id: "tetovacky",
       title: lang === "cs" ? "Dočasné tetovačky" : lang === "en" ? "Temporary Tattoos" : "Dočasné tetovačky",
-      subtitle: lang === "cs" ? "Nalepovací — transfer" : lang === "en" ? "Stick-on transfer" : "Nalepovací — transfer",
+      subtitle: lang === "cs" ? "Nalepovací, transfer" : lang === "en" ? "Stick-on transfer" : "Nalepovací, transfer",
       description: lang === "cs"
         ? "Váš logo, motiv nebo design na kůži zákazníků. Certifikovaná výroba, bezpečné pro děti i dospělé."
         : lang === "en"
@@ -88,10 +88,10 @@ export default function HomePage() {
       title: lang === "cs" ? "Tiskoviny na míru" : lang === "en" ? "Custom Print" : "Tlačoviny na mieru",
       subtitle: lang === "cs" ? "Pohlednice, pozvánky, vizitky" : lang === "en" ? "Postcards, invitations, cards" : "Pohľadnice, pozvánky, vizitky",
       description: lang === "cs"
-        ? "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším motivem — pro eventy, dárkové akce i firemní promo. Tisk od 50 ks."
+        ? "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším motivem, pro eventy, dárkové akce i firemní promo. Tiskneme už od jednoho kusu."
         : lang === "en"
-        ? "Postcards, greeting cards, invitations, place cards and business cards with your artwork — for events, gifting and corporate promo. Print from 50 pcs."
-        : "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším motívom — pre eventy, darčekové akcie aj firemné promo. Tlač od 50 ks.",
+        ? "Postcards, greeting cards, invitations, place cards and business cards with your artwork, for events, gifting and corporate promo. We print from a single piece."
+        : "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším motívom, pre eventy, darčekové akcie aj firemné promo. Tlačíme už od jedného kusu.",
       price: lang === "en" ? "from €0.45 / pc" : "od 12 Kč / ks",
       minQty: t("usp.3.title"),
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
@@ -274,7 +274,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-brand-primary/10" />
         </div>
 
-        {/* Stamp — bottom right of photo */}
+        {/* Stamp, bottom right of photo */}
         <div className="absolute bottom-20 right-6 sm:right-14 opacity-80 rotate-[-6deg] select-none pointer-events-none hidden sm:block">
           <div className="border-[3px] border-brand-primary rounded-xl px-4 py-2 text-center bg-white/10 backdrop-blur-sm">
             <Image

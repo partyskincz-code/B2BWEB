@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 
 const data: Clanek = {
   "nadpis": "Jak připravit podklady pro tisk dočasných tetovaček",
-  "perex": "Nejčastější důvod, proč se zakázka zdrží, nejsou termíny výroby, ale podklady. Tady je všechno, co potřebujete vědět, než nám pošlete soubor — a co dělat, když žádný nemáte.",
+  "perex": "Nejčastější důvod, proč se zakázka zdrží, nejsou termíny výroby, ale podklady. Tady je všechno, co potřebujete vědět, než nám pošlete soubor, a co dělat, když žádný nemáte.",
   "datum": "2. 9. 2026",
   "ctenaMinut": 4,
   "foto": {
@@ -38,11 +38,11 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Ideální podklad je vektorový soubor — .AI, .EPS, .SVG nebo PDF s vektory. Vektor jde zvětšit na jakoukoli velikost bez ztráty kvality, takže z jednoho souboru vyrobíme tetovačku na arch A7 i A4."
+      "text": "Ideální podklad je vektorový soubor, .AI, .EPS, .SVG nebo PDF s vektory. Vektor jde zvětšit na jakoukoli velikost bez ztráty kvality, takže z jednoho souboru vyrobíme tetovačku na arch A7 i A4."
     },
     {
       "typ": "p",
-      "text": "Když vektor nemáte, přijmeme i JPEG nebo PNG. Podmínka je rozlišení alespoň 300 DPI ve velikosti, ve které se bude tisknout. Fotka z webu o šířce 600 pixelů na arch A5 nestačí — na tisku bude rozmazaná. Pokud kvalita nebude dostačovat, upozorníme vás dřív, než pustíme výrobu."
+      "text": "Když vektor nemáte, přijmeme i JPEG nebo PNG. Podmínka je rozlišení alespoň 300 DPI ve velikosti, ve které se bude tisknout. Fotka z webu o šířce 600 pixelů na arch A5 nestačí, na tisku bude rozmazaná. Pokud kvalita nebude dostačovat, upozorníme vás dřív, než pustíme výrobu."
     },
     {
       "typ": "h2",
@@ -54,7 +54,7 @@ const data: Clanek = {
     },
     {
       "typ": "tip",
-      "text": "Když v návrhu potřebujete něco záměrně průhledného — třeba jemný stín nebo efekt tetování „do kůže\" — napište nám to. Bílou v těch místech vynecháme."
+      "text": "Když v návrhu potřebujete něco záměrně průhledného, třeba jemný stín nebo efekt tetování „do kůže\", napište nám to. Bílou v těch místech vynecháme."
     },
     {
       "typ": "h2",
@@ -62,7 +62,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Tetovačka se přenáší otiskem, takže se motiv na archu tiskne zrcadlově. Tohle za vás uděláme my — vy pošlete grafiku normálně, čitelně. Nezrcadlete ji dopředu, jinak by na kůži skončila obráceně."
+      "text": "Tetovačka se přenáší otiskem, takže se motiv na archu tiskne zrcadlově. Tohle za vás uděláme my, vy pošlete grafiku normálně, čitelně. Nezrcadlete ji dopředu, jinak by na kůži skončila obráceně."
     },
     {
       "typ": "h2",
@@ -71,10 +71,10 @@ const data: Clanek = {
     {
       "typ": "ul",
       "polozky": [
-        "Formát archu — A4, A5, A6 nebo A7 (nebo aspoň představu, jak velké mají jednotlivé motivy být)",
+        "Formát archu, A4, A5, A6 nebo A7 (nebo aspoň představu, jak velké mají jednotlivé motivy být)",
         "Počet kusů, i orientačně",
         "Termín akce, ať víme, kolik máme času",
-        "Jestli chcete tisk i na rubovou stranu — návod, kontakt nebo QR kód",
+        "Jestli chcete tisk i na rubovou stranu, návod, kontakt nebo QR kód",
         "Jestli má být arch nastříhaný na jednotlivé motivy"
       ]
     },
@@ -88,7 +88,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Funguje to i s dětskou kresbou — stačí ji vyfotit na rovném světle nebo naskenovat. U škol a dětských akcí je to nejoblíbenější varianta."
+      "text": "Funguje to i s dětskou kresbou, stačí ji vyfotit na rovném světle nebo naskenovat. U škol a dětských akcí je to nejoblíbenější varianta."
     },
     {
       "typ": "h2",
@@ -99,7 +99,7 @@ const data: Clanek = {
       "polozky": [
         "Vektor, nebo rastr v 300 DPI ve finální velikosti",
         "Písma převedená do křivek, nebo font přiložený zvlášť",
-        "Barvy v CMYK, pokud je řešíte — jinak si je převedeme sami",
+        "Barvy v CMYK, pokud je řešíte, jinak si je převedeme sami",
         "Motiv neupravujte zrcadlově",
         "Nechte kolem motivu trochu prostoru, ať se dá vystřihnout"
       ]

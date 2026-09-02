@@ -65,7 +65,7 @@ export default function Footer() {
             <div key={i} className="relative flex-1 min-w-0 aspect-square overflow-hidden">
               <Image
                 src={src}
-                alt="Ukázka realizace PartySkin — tetovačky a přebaly na míru"
+                alt="Ukázka realizace PartySkin, tetovačky a přebaly na míru"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="12.5vw"

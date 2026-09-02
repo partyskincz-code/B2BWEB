@@ -18,7 +18,7 @@ export default function ObchodniPodminkyPage() {
           <section>
             <h2 className="text-xl font-display font-bold text-brand-secondary mb-3">1. Úvodní ustanovení</h2>
             <p>Prodávající je Jana Budínová, se sídlem Riegrova 570, Třeboň II, 379 01 Třeboň, IČO: 21135886. Kontaktní adresa: Riegrova 570, Třeboň II, 379 01 Třeboň, tel.: 724 874 274, e-mail: objednavky@partyskin.cz.</p>
-            <p>Kupujícím je spotřebitel — osoba, která při uzavírání a plnění smlouvy nejedná v rámci své obchodní nebo jiné podnikatelské činnosti nebo v rámci samostatného výkonu svého povolání.</p>
+            <p>Kupujícím je spotřebitel, osoba, která při uzavírání a plnění smlouvy nejedná v rámci své obchodní nebo jiné podnikatelské činnosti nebo v rámci samostatného výkonu svého povolání.</p>
             <p>Tyto obchodní podmínky tvoří nedílnou součást kupní smlouvy. Prodávající je oprávněn podmínky kdykoli změnit; změna se nevztahuje na již uzavřené smlouvy.</p>
           </section>
 

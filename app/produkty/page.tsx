@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Content from "./Content";
 
 export const metadata: Metadata = {
-  title: "Tetovačky, samolepky a tiskoviny na míru — ceník",
+  title: "Tetovačky, samolepky a tiskoviny na míru, ceník",
   description:
     "Dočasné tetovačky od 8 Kč, samolepky od 4 Kč, tiskoviny od 12 Kč za kus. Formáty A4 až A7, certifikované materiály, ceník ke stažení.",
   alternates: {
     canonical: "/produkty",
   },
   openGraph: {
-    title: "Tetovačky, samolepky a tiskoviny na míru — ceník | PartySkin B2B",
+    title: "Tetovačky, samolepky a tiskoviny na míru, ceník | PartySkin B2B",
     description:
       "Dočasné tetovačky od 8 Kč, samolepky od 4 Kč, tiskoviny od 12 Kč za kus. Formáty A4 až A7, certifikované materiály, ceník ke stažení.",
     url: "/produkty",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

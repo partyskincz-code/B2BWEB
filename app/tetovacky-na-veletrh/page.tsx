@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B — dočasné tetovačky a promo materiály na míru",
+        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const data: Prilezitost = {
   "tag": "Veletrhy a konference",
   "h1": "Promo materiály na veletrh a konferenci",
-  "perex": "U stánku rozhoduje, jestli si návštěvník něco odnese a jestli si to nechá. Propiska skončí v šuplíku — tetovačka s vaším logem se nalepí a chodí po veletrhu za vás.",
+  "perex": "U stánku rozhoduje, jestli si návštěvník něco odnese a jestli si to nechá. Propiska skončí v šuplíku, tetovačka s vaším logem se nalepí a chodí po veletrhu za vás.",
   "produkty": [
     {
       "title": "Tetovačky s logem",
@@ -32,7 +32,7 @@ const data: Prilezitost = {
     },
     {
       "title": "Vizitky a pozvánky",
-      "text": "Tiskoviny ve stejném vizuálním stylu jako zbytek stánku — pozvánky na after party, vizitky obchodníků, jmenovky."
+      "text": "Tiskoviny ve stejném vizuálním stylu jako zbytek stánku, pozvánky na after party, vizitky obchodníků, jmenovky."
     },
     {
       "title": "Samolepky na notebook",
@@ -41,7 +41,7 @@ const data: Prilezitost = {
   ],
   "duvody": [
     "Malé formáty A6 a A7 se rozdávají nejsnáz a nejvíc se použijí",
-    "Jeden dodavatel na tetovačky, samolepky i tiskoviny — jeden vizuální styl",
+    "Jeden dodavatel na tetovačky, samolepky i tiskoviny, jeden vizuální styl",
     "Kalkulace do 24 hodin, grafický návrh do 24 hodin od briefu",
     "Vyrobíme i malou sérii na jednorázový veletrh",
     "Doručení na adresu nebo rovnou do areálu výstaviště"
@@ -50,7 +50,7 @@ const data: Prilezitost = {
     "src": "/realizace-papirovy-prebal.jpg",
     "alt": "Papírový přebal s tetovačkami na míru"
   },
-  "fotoPopis": "Přebal na míru z tetovačky udělá dárek, ne leták. Návštěvník si ho strčí do kapsy a doma ho otevře — tam teprve vaše značka zabere.",
+  "fotoPopis": "Přebal na míru z tetovačky udělá dárek, ne leták. Návštěvník si ho strčí do kapsy a doma ho otevře, tam teprve vaše značka zabere.",
   "ceny": [
     {
       "format": "A7 (nejmenší)",
@@ -65,7 +65,7 @@ const data: Prilezitost = {
     {
       "format": "Vizitky a pozvánky",
       "cena": "12 Kč",
-      "pozn": "od 50 ks"
+      "pozn": "od 1 ks"
     },
     {
       "format": "Samolepky",
@@ -84,7 +84,7 @@ const data: Prilezitost = {
     },
     {
       "q": "Zvládnete i malou sérii na jeden veletrh?",
-      "a": "Ano. Minimální množství nemáme, u tetovaček vyrobíme i jeden arch. U tiskovin je minimum 50 kusů."
+      "a": "Ano. Minimální množství nemáme, u tetovaček vyrobíme i jeden arch. Tiskoviny vyrobíme také od jednoho kusu."
     }
   ],
   "ctaTitul": "Chystáte stánek na veletrh?",
@@ -134,7 +134,7 @@ const faqSchema = {
       "name": "Zvládnete i malou sérii na jeden veletrh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ano. Minimální množství nemáme, u tetovaček vyrobíme i jeden arch. U tiskovin je minimum 50 kusů."
+        "text": "Ano. Minimální množství nemáme, u tetovaček vyrobíme i jeden arch. Tiskoviny vyrobíme také od jednoho kusu."
       }
     }
   ]

@@ -89,10 +89,10 @@ export default function JakToFunguePage() {
         lang === "en" ? "Day 1" : lang === "sk" ? "Deň 1" : "Den 1",
       description:
         lang === "en"
-          ? "Fill in the form or send us an email. Product type, rough quantity and event date are enough — no finished design needed."
+          ? "Fill in the form or send us an email. Product type, rough quantity and event date are enough, no finished design needed."
           : lang === "sk"
-          ? "Vyplňte formulár alebo nám napíšte e-mail. Stačí typ produktu, približné množstvo a termín akcie — hotový dizajn mať nemusíte."
-          : "Vyplňte formulář nebo nám napište e-mail. Stačí typ produktu, přibližné množství a termín akce — hotový design mít nemusíte.",
+          ? "Vyplňte formulár alebo nám napíšte e-mail. Stačí typ produktu, približné množstvo a termín akcie, hotový dizajn mať nemusíte."
+          : "Vyplňte formulář nebo nám napište e-mail. Stačí typ produktu, přibližné množství a termín akce, hotový design mít nemusíte.",
       details:
         lang === "en"
           ? [
@@ -165,25 +165,25 @@ export default function JakToFunguePage() {
         lang === "en" ? "Day 3–4" : lang === "sk" ? "Deň 3–4" : "Den 3–4",
       description:
         lang === "en"
-          ? "We send the visualisation by email — you approve it by replying. Then we invoice or take a deposit and start production."
+          ? "We send the visualisation by email, you approve it by replying. Then we invoice or take a deposit and start production."
           : lang === "sk"
-          ? "Vizualizáciu vám pošleme e-mailom — schválite ju odpoveďou. Potom vystavíme faktúru alebo zálohu a spúšťame výrobu."
-          : "Vizualizaci vám pošleme e-mailem — schválíte ji odpovědí. Potom vystavíme fakturu nebo zálohu a spouštíme výrobu.",
+          ? "Vizualizáciu vám pošleme e-mailom, schválite ju odpoveďou. Potom vystavíme faktúru alebo zálohu a spúšťame výrobu."
+          : "Vizualizaci vám pošleme e-mailem, schválíte ji odpovědí. Potom vystavíme fakturu nebo zálohu a spouštíme výrobu.",
       details:
         lang === "en"
           ? [
-              "Approval by email — no forms",
+              "Approval by email, no forms",
               "Payment by transfer or card",
               "Invoice within 1 business day",
             ]
           : lang === "sk"
           ? [
-              "Schválenie e-mailom — žiadne formuláre",
+              "Schválenie e-mailom, žiadne formuláre",
               "Platba prevodom alebo kartou",
               "Faktúra do 1 pracovného dňa",
             ]
           : [
-              "Schválení e-mailem — žádné formuláře",
+              "Schválení e-mailem, žádné formuláře",
               "Platba převodem nebo kartou",
               "Faktura do 1 pracovního dne",
             ],
@@ -200,7 +200,7 @@ export default function JakToFunguePage() {
       title:
         lang === "en" ? "Production" : lang === "sk" ? "Výroba" : "Výroba",
       duration:
-        lang === "en" ? "5–20 business days" : lang === "sk" ? "5–20 pracovných dní" : "5–20 pracovních dní",
+        lang === "en" ? "10–15 business days" : lang === "sk" ? "10–15 pracovných dní" : "10–15 pracovních dní",
       description:
         lang === "en"
           ? "Production runs in a certified facility and we keep you posted. Every batch is checked before dispatch."
@@ -343,10 +343,10 @@ export default function JakToFunguePage() {
           : "Express výroba",
       desc:
         lang === "en"
-          ? "Need it within 48 hours? We offer express production for a surcharge — availability confirmed individually."
+          ? "Need it within 48 hours? We offer express production for a surcharge, availability confirmed individually."
           : lang === "sk"
-          ? "Potrebujete do 48 hodín? Ponúkame express výrobu za príplatok — dostupnosť overujeme individuálne."
-          : "Potřebujete do 48 hodin? Nabízíme express výrobu za příplatek — dostupnost ověřujeme individuálně.",
+          ? "Potrebujete do 48 hodín? Ponúkame express výrobu za príplatok, dostupnosť overujeme individuálne."
+          : "Potřebujete do 48 hodin? Nabízíme express výrobu za příplatek, dostupnost ověřujeme individuálně.",
     },
   ];
 
@@ -360,10 +360,10 @@ export default function JakToFunguePage() {
           : "Jaký je minimální počet kusů?",
       a:
         lang === "en"
-          ? "Temporary tattoos have no minimum quantity — even 1 piece can be ordered. For postcards the minimum is 50 pcs, for stickers 100 pcs. For complete packages the minimum is set individually. If you only need a few pieces for yourself, you don't have to wait for a quote — order directly in our consumer e-shop partyskin.cz."
+          ? "Temporary tattoos have no minimum quantity, even 1 piece can be ordered. For stickers the minimum is 100 pcs. For complete packages the minimum is set individually. If you only need a few pieces for yourself, you don't have to wait for a quote, order directly in our consumer e-shop partyskin.cz."
           : lang === "sk"
-          ? "Dočasné tetovačky nemajú žiadne minimálne množstvo — objednať možno aj 1 kus. Pri pohľadniciach je minimum 50 ks, pri samolepkách 100 ks. Pre kompletné balíčky sa minimum stanovuje individuálne. Ak potrebujete len pár kusov pre seba, nemusíte čakať na ponuku — nakúpite rovno v našom e-shope partyskin.sk."
-          : "Dočasné tetovačky nemají žádné minimální množství — objednat lze i 1 kus. U pohlednic je minimum 50 ks, u samolepek 100 ks. Pro kompletní balíčky se minimum stanovuje individuálně. Pokud potřebujete jen pár kusů pro sebe, nemusíte čekat na nabídku — nakoupíte rovnou v našem e-shopu partyskin.cz.",
+          ? "Dočasné tetovačky nemajú žiadne minimálne množstvo, objednať možno aj 1 kus. Pri samolepkách je minimum 100 ks. Pre kompletné balíčky sa minimum stanovuje individuálne. Ak potrebujete len pár kusov pre seba, nemusíte čakať na ponuku, nakúpite rovno v našom e-shope partyskin.sk."
+          : "Dočasné tetovačky nemají žádné minimální množství, objednat lze i 1 kus. U samolepek je minimum 100 ks. Pro kompletní balíčky se minimum stanovuje individuálně. Pokud potřebujete jen pár kusů pro sebe, nemusíte čekat na nabídku, nakoupíte rovnou v našem e-shopu partyskin.cz.",
     },
     {
       q:
@@ -388,10 +388,10 @@ export default function JakToFunguePage() {
           : "Jak mám připravit podklady pro tisk?",
       a:
         lang === "en"
-          ? "Ideally supply vector files (.AI, .EPS, .SVG) or high-resolution PDF (min. 300 DPI). We also accept JPEG/PNG — we will let you know if the quality is insufficient for printing."
+          ? "Ideally supply vector files (.AI, .EPS, .SVG) or high-resolution PDF (min. 300 DPI). We also accept JPEG/PNG, we will let you know if the quality is insufficient for printing."
           : lang === "sk"
-          ? "Ideálne dodajte súbory vo vektorovom formáte (.AI, .EPS, .SVG) alebo PDF vo vysokom rozlíšení (min. 300 DPI). Prijímame aj JPEG/PNG — upozorníme vás, ak by kvalita nestačila pre tlač."
-          : "Ideálně dodejte soubory ve vektorovém formátu (.AI, .EPS, .SVG) nebo PDF ve vysokém rozlišení (min. 300 DPI). Přijímáme i JPEG/PNG — upozorníme vás, pokud by kvalita nestačila pro tisk.",
+          ? "Ideálne dodajte súbory vo vektorovom formáte (.AI, .EPS, .SVG) alebo PDF vo vysokom rozlíšení (min. 300 DPI). Prijímame aj JPEG/PNG, upozorníme vás, ak by kvalita nestačila pre tlač."
+          : "Ideálně dodejte soubory ve vektorovém formátu (.AI, .EPS, .SVG) nebo PDF ve vysokém rozlišení (min. 300 DPI). Přijímáme i JPEG/PNG, upozorníme vás, pokud by kvalita nestačila pro tisk.",
     },
     {
       q:
@@ -486,7 +486,7 @@ export default function JakToFunguePage() {
           : "Grafický návrh",
     },
     {
-      value: lang === "en" ? "5–20 days" : lang === "sk" ? "5–20 dní" : "5–20 dní",
+      value: lang === "en" ? "10–15 days" : lang === "sk" ? "10–15 dní" : "10–15 dní",
       label:
         lang === "en"
           ? "Standard production"
@@ -526,7 +526,7 @@ export default function JakToFunguePage() {
                 ? "From first contact to delivery. Simple process, fast production, no stress."
                 : lang === "sk"
                 ? "Od prvého kontaktu po doručenie. Jednoduchý proces, rýchla výroba, žiadny stres."
-                : "Od prvního emailu po doručení na vaší akci — víte přesně, co se kdy děje. Žádné překvapení, žádné čekání."}
+                : "Od prvního emailu po doručení na vaší akci, víte přesně, co se kdy děje. Žádné překvapení, žádné čekání."}
             </p>
           </FadeUp>
         </div>
@@ -671,10 +671,10 @@ export default function JakToFunguePage() {
             </h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto">
               {lang === "en"
-                ? "Didn't find the answer? Write to us — we reply within 24 hours."
+                ? "Didn't find the answer? Write to us, we reply within 24 hours."
                 : lang === "sk"
-                ? "Nenašli ste odpoveď? Napíšte nám — ozveme sa do 24 hodín."
-                : "Nenašli odpověď? Napište nám — ozveme se do 24 hodin."}
+                ? "Nenašli ste odpoveď? Napíšte nám, ozveme sa do 24 hodín."
+                : "Nenašli odpověď? Napište nám, ozveme se do 24 hodin."}
             </p>
           </FadeUp>
 
