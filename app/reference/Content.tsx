@@ -48,7 +48,7 @@ export default function ReferencePage() {
       author: "Mgr. Alena Ryšavá, MBA",
       org: "HK Mladí Draci Šumperk",
       orgFull: "HK Mladí Draci Šumperk",
-      website: "",
+      website: "https://www.hkmdsumperk.cz",
       initials: "HK",
     },
     {
@@ -73,7 +73,7 @@ export default function ReferencePage() {
     { name: "got2b", url: "" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
     { name: "Gepard Express", url: "" },
-    { name: "HK Mladí Draci Šumperk", url: "" },
+    { name: "HK Mladí Draci Šumperk", url: "https://www.hkmdsumperk.cz" },
     { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
     { name: "NaZemi", url: "https://nazemi.cz" },
   ];
@@ -189,15 +189,26 @@ export default function ReferencePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {photos.map((photo, i) => (
               <FadeUp key={photo.src} delay={i * 0.07}>
-                <div className="group bg-white rounded-2xl overflow-hidden border border-gray-100 card-hover">
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 h-full"
+                >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={photo.src}
-                      alt={photo.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+                    <motion.div
+                      className="absolute inset-0"
+                      whileHover={{ scale: 1.12 }}
+                      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                    >
+                      <Image
+                        src={photo.src}
+                        alt={photo.title}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </motion.div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-secondary/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   <div className="p-5">
                     <h3 className="font-display font-bold text-brand-secondary text-base mb-2">
@@ -205,7 +216,7 @@ export default function ReferencePage() {
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{photo.desc}</p>
                   </div>
-                </div>
+                </motion.div>
               </FadeUp>
             ))}
           </div>
@@ -238,7 +249,11 @@ export default function ReferencePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
             {reference.map((r, i) => (
               <FadeUp key={r.org} delay={i * 0.06}>
-                <figure className="h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-7">
+                <motion.figure
+                  whileHover={{ y: -6 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 22 }}
+                  className="h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-7 hover:border-brand-primary/30 hover:shadow-lg transition-[border-color,box-shadow] duration-300"
+                >
                   <blockquote className="text-gray-600 leading-relaxed mb-6 flex-1">&bdquo;{r.text}&ldquo;</blockquote>
                   <figcaption className="flex items-center gap-3 pt-5 border-t border-gray-100">
                     <div className="w-11 h-11 rounded-full bg-brand-light flex items-center justify-center flex-shrink-0">
@@ -260,7 +275,7 @@ export default function ReferencePage() {
                       )}
                     </div>
                   </figcaption>
-                </figure>
+                </motion.figure>
               </FadeUp>
             ))}
           </div>
@@ -269,24 +284,30 @@ export default function ReferencePage() {
             <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 text-center">
               {lang === "en" ? "Some of our clients" : lang === "sk" ? "Niektorí z našich klientov" : "Někteří z našich klientů"}
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-              {klienti.map((k) =>
-                k.url ? (
-                  <a
-                    key={k.name}
-                    href={k.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-display font-bold text-gray-300 hover:text-brand-primary transition-colors"
-                  >
-                    {k.name}
-                  </a>
-                ) : (
-                  <span key={k.name} className="font-display font-bold text-gray-300">
-                    {k.name}
-                  </span>
-                )
-              )}
+            <div className="relative overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+              <motion.div
+                className="flex items-center gap-x-12 whitespace-nowrap"
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ duration: 26, ease: "linear", repeat: Infinity }}
+              >
+                {[...klienti, ...klienti].map((k, i) =>
+                  k.url ? (
+                    <a
+                      key={`${k.name}-${i}`}
+                      href={k.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-display font-bold text-lg text-gray-300 hover:text-brand-primary transition-colors flex-shrink-0"
+                    >
+                      {k.name}
+                    </a>
+                  ) : (
+                    <span key={`${k.name}-${i}`} className="font-display font-bold text-lg text-gray-300 flex-shrink-0">
+                      {k.name}
+                    </span>
+                  )
+                )}
+              </motion.div>
             </div>
           </FadeUp>
         </div>
