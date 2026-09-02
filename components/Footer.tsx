@@ -27,6 +27,7 @@ export default function Footer() {
       { href: "/produkty#kompletni", label: lang === "en" ? "Complete Solution" : lang === "sk" ? "Kompletné riešenie" : "Kompletní řešení" },
     ],
     sluzby: [
+      { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
       { href: "/jak-to-funguje", label: lang === "en" ? "How it works" : lang === "sk" ? "Ako to funguje" : "Jak to funguje" },
       { href: "/reference", label: lang === "en" ? "References & gallery" : lang === "sk" ? "Referencie a galéria" : "Reference a galerie" },
       { href: "/kontakt", label: lang === "en" ? "Inquiry form" : lang === "sk" ? "Dopytový formulár" : "Poptávkový formulář" },
