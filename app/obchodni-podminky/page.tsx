@@ -9,7 +9,7 @@ export default function ObchodniPodminkyPage() {
 
           <section>
             <h2 className="text-xl font-display font-bold text-brand-secondary mb-3">1. Úvodní ustanovení</h2>
-            <p>Prodávající je Ing. Anastázie Zemanová, se sídlem Družstevní 343/2, Jindřichův Hradec, IČO: 17432898. Kontaktní adresa: Riegrova 570, Třeboň 37901, tel.: 724 874 274, e-mail: partyskincz@gmail.com.</p>
+            <p>Prodávající je Ing. Anastázie Zemanová, se sídlem Družstevní 343/2, Jindřichův Hradec, IČO: 17432898. Kontaktní adresa: Riegrova 570, Třeboň 37901, tel.: 724 874 274, e-mail: objednavky@partyskin.cz.</p>
             <p>Kupujícím je spotřebitel — osoba, která při uzavírání a plnění smlouvy nejedná v rámci své obchodní nebo jiné podnikatelské činnosti nebo v rámci samostatného výkonu svého povolání.</p>
             <p>Tyto obchodní podmínky tvoří nedílnou součást kupní smlouvy. Prodávající je oprávněn podmínky kdykoli změnit; změna se nevztahuje na již uzavřené smlouvy.</p>
           </section>
@@ -37,7 +37,7 @@ export default function ObchodniPodminkyPage() {
 
           <section>
             <h2 className="text-xl font-display font-bold text-brand-secondary mb-3">6. Reklamace a vadné zboží</h2>
-            <p>Reklamaci lze uplatnit do 24 měsíců od převzetí zboží. Personalizované zboží nelze vyměnit ani vrátit. Reklamaci zasílejte e-mailem na partyskincz@gmail.com s fotodokumentací. Prodávající rozhodne o reklamaci do 30 dnů.</p>
+            <p>Reklamaci lze uplatnit do 24 měsíců od převzetí zboží. Personalizované zboží nelze vyměnit ani vrátit. Reklamaci zasílejte e-mailem na objednavky@partyskin.cz s fotodokumentací. Prodávající rozhodne o reklamaci do 30 dnů.</p>
           </section>
 
           <section>

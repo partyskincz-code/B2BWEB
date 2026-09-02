@@ -89,9 +89,9 @@ export default function Footer() {
                 : "Spolehlivý partner pro zakázkovou výrobu dočasných tetovaček, samolepek a pohlednic. Od několika kusů až po velké kampaně. Rychlá komunikace, osobní přístup a řešení na míru každému projektu."}
             </p>
             <div className="space-y-3">
-              <a href="mailto:partyskincz@gmail.com" className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
+              <a href="mailto:objednavky@partyskin.cz" className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                 <Mail size={16} className="text-brand-primary flex-shrink-0" />
-                partyskincz@gmail.com
+                objednavky@partyskin.cz
               </a>
               <a href="tel:+420724874274" className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                 <Phone size={16} className="text-brand-primary flex-shrink-0" />

@@ -90,8 +90,8 @@ export default function KontaktPage() {
     {
       icon: Mail,
       label: "E-mail",
-      value: "partyskincz@gmail.com",
-      href: "mailto:partyskincz@gmail.com",
+      value: "objednavky@partyskin.cz",
+      href: "mailto:objednavky@partyskin.cz",
     },
     {
       icon: MapPin,
@@ -158,6 +158,8 @@ export default function KontaktPage() {
   // ─── Inline form component (defined inside page to access lang) ───
   function ContactForm() {
     const [submitted, setSubmitted] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [error, setError] = useState<string | null>(null);
     const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
     const [selectedSegment, setSelectedSegment] = useState<string | null>(null);
 
@@ -167,9 +169,58 @@ export default function KontaktPage() {
       );
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const errorText =
+      lang === "en"
+        ? "The inquiry could not be sent. Please write to us directly at objednavky@partyskin.cz."
+        : lang === "sk"
+        ? "Dopyt sa nepodarilo odoslať. Napíšte nám prosím priamo na objednavky@partyskin.cz."
+        : "Poptávku se nepodařilo odeslat. Napište nám prosím přímo na objednavky@partyskin.cz.";
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      setSubmitted(true);
+      const form = e.currentTarget;
+      const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+      setError(null);
+      setSending(true);
+      try {
+        if (!accessKey) throw new Error("Missing NEXT_PUBLIC_WEB3FORMS_KEY");
+
+        const data = new FormData(form);
+        data.append("access_key", accessKey);
+        data.append("from_name", "makethemoment.cz");
+        data.append(
+          "subject",
+          `Nová poptávka z webu — ${selectedSegment ?? "neuvedeno"}` +
+            (selectedProducts.length ? `, ${selectedProducts.join(", ")}` : "")
+        );
+        data.append("Segment", selectedSegment ?? "neuvedeno");
+        data.append(
+          "Produkty",
+          selectedProducts.length ? selectedProducts.join(", ") : "neuvedeno"
+        );
+        data.append("Jazyk webu", lang);
+
+        const email = data.get("email");
+        if (typeof email === "string" && email) data.append("replyto", email);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: data,
+        });
+        const json = await res.json().catch(() => null);
+        if (!res.ok || !json?.success) throw new Error("Web3Forms rejected the submission");
+
+        form.reset();
+        setSelectedProducts([]);
+        setSelectedSegment(null);
+        setSubmitted(true);
+      } catch (err) {
+        console.error("Contact form submit failed:", err);
+        setError(errorText);
+      } finally {
+        setSending(false);
+      }
     };
 
     if (submitted) {
@@ -223,6 +274,15 @@ export default function KontaktPage() {
 
     return (
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* honeypot — hidden from users, filled only by bots */}
+        <input
+          type="checkbox"
+          name="botcheck"
+          className="hidden"
+          style={{ display: "none" }}
+          tabIndex={-1}
+          autoComplete="off"
+        />
         {/* Contact details */}
         <div>
           <h3 className="font-display font-bold text-brand-secondary text-lg mb-4">
@@ -244,6 +304,7 @@ export default function KontaktPage() {
               </label>
               <input
                 type="text"
+                name="Jméno a příjmení"
                 required
                 placeholder={
                   lang === "en"
@@ -265,6 +326,7 @@ export default function KontaktPage() {
               </label>
               <input
                 type="text"
+                name="Firma"
                 placeholder={
                   lang === "en"
                     ? "TechCorp Ltd."
@@ -286,6 +348,7 @@ export default function KontaktPage() {
               </label>
               <input
                 type="email"
+                name="email"
                 required
                 placeholder={
                   lang === "en"
@@ -307,6 +370,7 @@ export default function KontaktPage() {
               </label>
               <input
                 type="tel"
+                name="Telefon"
                 placeholder="+420 600 000 000"
                 className="input-field"
               />
@@ -401,7 +465,7 @@ export default function KontaktPage() {
                   ? "Odhadované množstvo"
                   : "Odhadované množství"}
               </label>
-              <select className="input-field">
+              <select name="Množství" className="input-field">
                 <option value="">
                   {lang === "en" ? "Select..." : "Vyberte..."}
                 </option>
@@ -424,6 +488,7 @@ export default function KontaktPage() {
               </label>
               <input
                 type="date"
+                name="Termín akce"
                 className="input-field"
                 min={new Date().toISOString().split("T")[0]}
               />
@@ -440,6 +505,7 @@ export default function KontaktPage() {
               <span className="text-brand-primary">*</span>
             </label>
             <textarea
+              name="Popis záměru"
               required
               rows={5}
               placeholder={
@@ -468,15 +534,34 @@ export default function KontaktPage() {
               ? "Ozveme sa do 24 hodín."
               : "Ozveme se do 24 hodin."}
           </p>
-          <button type="submit" className="btn-primary whitespace-nowrap gap-2">
+          <button
+            type="submit"
+            disabled={sending}
+            className="btn-primary whitespace-nowrap gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+          >
             <Send size={16} />
-            {lang === "en"
+            {sending
+              ? lang === "en"
+                ? "Sending…"
+                : lang === "sk"
+                ? "Odosielam…"
+                : "Odesílám…"
+              : lang === "en"
               ? "Send inquiry"
               : lang === "sk"
               ? "Odoslať dopyt"
               : "Odeslat poptávku"}
           </button>
         </div>
+
+        {error && (
+          <p
+            role="alert"
+            className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3"
+          >
+            {error}
+          </p>
+        )}
       </form>
     );
   }
@@ -556,11 +641,11 @@ export default function KontaktPage() {
                     : "Každou poptávku vyřizujeme osobně. Neváhejte napsat — i s jen hrubou představou. Ozveme se ještě ten den."}
                 </p>
                 <a
-                  href="mailto:partyskincz@gmail.com"
+                  href="mailto:objednavky@partyskin.cz"
                   className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold text-sm px-4 py-2.5 rounded-xl hover:bg-brand-primary/90 transition-colors w-full justify-center"
                 >
                   <Mail size={15} />
-                  partyskincz@gmail.com
+                  objednavky@partyskin.cz
                 </a>
               </div>
 
@@ -656,9 +741,9 @@ export default function KontaktPage() {
                 : "Raději voláte nebo píšete přímo?"}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:partyskincz@gmail.com" className="btn-primary gap-2">
+              <a href="mailto:objednavky@partyskin.cz" className="btn-primary gap-2">
                 <Mail size={18} />
-                partyskincz@gmail.com
+                objednavky@partyskin.cz
               </a>
             </div>
           </FadeUp>

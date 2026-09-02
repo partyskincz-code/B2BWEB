@@ -393,7 +393,16 @@ export default function ProduktyPage() {
     },
   ];
 
-  const segments = [
+  const segments: {
+    id: string;
+    icon: typeof Building2;
+    title: string;
+    intro?: string;
+    cta?: string;
+    extra?: { text: string; label: string; href: string };
+    products: string[];
+    image: string;
+  }[] = [
     {
       id: "firmy",
       icon: Building2,
@@ -403,12 +412,32 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? "Firmy a značky"
           : "Firmy a značky",
+      intro:
+        lang === "en"
+          ? "Want people to take your brand home with them? Tell us what you're planning — a conference, a trade fair, a team building day or a product launch — and we'll suggest what makes sense. No minimum order, even for a small event."
+          : lang === "sk"
+          ? "Chcete, aby si ľudia vašu značku odniesli domov? Povedzte nám, čo chystáte — konferenciu, veľtrh, teambuilding alebo uvedenie produktu — a my navrhneme, čo dáva zmysel. Bez minimálneho odberu, aj na malú akciu."
+          : "Chcete, aby si lidi vaši značku odnesli domů? Řekněte nám, co chystáte — konferenci, veletrh, teambuilding nebo uvedení produktu — a my navrhneme, co dává smysl. Bez minimálního odběru, i na malý event.",
+      cta:
+        lang === "en" ? "Let's talk it through" : lang === "sk" ? "Poďme to prebrať" : "Pojďme to probrat",
       products:
         lang === "en"
-          ? ["Logo tattoos", "Stickers for packaging", "Postcards for B2B clients"]
+          ? [
+              "Logo tattoos — the fastest way onto people's skin",
+              "Packaging stickers — let the parcel speak before it's opened",
+              "Postcards for clients — a thank-you that arrives by post",
+            ]
           : lang === "sk"
-          ? ["Tetovačky s logom", "Samolepky na packaging", "Pohľadnice pre B2B klientov"]
-          : ["Tetovačky s logem", "Samolepky na packaging", "Pohlednice pro B2B klienty"],
+          ? [
+              "Tetovačky s logom — najrýchlejšia cesta ľuďom na kožu",
+              "Samolepky na packaging — nech balíček niečo povie ešte pred otvorením",
+              "Pohľadnice a priania pre klientov — poďakovanie, ktoré príde poštou",
+            ]
+          : [
+              "Tetovačky s logem — nejrychlejší cesta lidem na kůži",
+              "Samolepky na packaging — ať balíček něco řekne ještě před otevřením",
+              "Pohlednice a přání pro klienty — poděkování, které přijde poštou",
+            ],
       image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80",
     },
     {
@@ -420,12 +449,51 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? "Svadby a oslavy"
           : "Svatby a oslavy",
+      intro:
+        lang === "en"
+          ? "A wedding, a party, a baby shower or a hen do? Tattoos for guests (kids love them most), name cards, postcards and stickers for decorations — all in one style, with your names on them."
+          : lang === "sk"
+          ? "Svadba, oslava, baby shower alebo rozlúčka? Tetovačky pre hostí (deti ich milujú najviac), menovky, pohľadnice aj samolepky na dekorácie — všetko v jednom štýle a s menami."
+          : "Svatba, oslava, baby shower nebo rozlučka? Tetovačky pro hosty (děti je milují nejvíc), jmenovky, pohlednice i samolepky na dekorace — všechno v jednom stylu a se jmény.",
+      cta:
+        lang === "en"
+          ? "Request a custom solution"
+          : lang === "sk"
+          ? "Dopytovať riešenie na mieru"
+          : "Poptat řešení na míru",
+      extra: {
+        text:
+          lang === "en"
+            ? "Want ready-made tattoos with no waiting?"
+            : lang === "sk"
+            ? "Chcete hotové tetovačky hneď a bez čakania?"
+            : "Chcete hotové tetovačky hned a bez čekání?",
+        label:
+          lang === "en"
+            ? "Visit our shop partyskin.cz"
+            : lang === "sk"
+            ? "Pozrite e-shop partyskin.cz"
+            : "Mrkněte na e-shop partyskin.cz",
+        href: "https://www.partyskin.cz",
+      },
       products:
         lang === "en"
-          ? ["Tattoos for guests", "Postcards and name cards", "Stickers for decorations"]
+          ? [
+              "Tattoos for guests — with your motif, date or initials",
+              "Postcards and name cards — matched to your invitations",
+              "Stickers for decorations — bottles, gifts, welcome bags",
+            ]
           : lang === "sk"
-          ? ["Tetovačky pre hostí", "Pohľadnice a menovky", "Samolepky na dekorácie"]
-          : ["Tetovačky pro hosty", "Pohlednice a jmenovky", "Samolepky na dekorace"],
+          ? [
+              "Tetovačky pre hostí — s vaším motívom, dátumom alebo iniciálami",
+              "Pohľadnice a menovky — zladené so svadobným oznámením",
+              "Samolepky na dekorácie — na fľaše, darčeky, welcome bag",
+            ]
+          : [
+              "Tetovačky pro hosty — s vaším motivem, datem nebo iniciálami",
+              "Pohlednice a jmenovky — sladěné se svatebním oznámením",
+              "Samolepky na dekorace — na lahve, dárky, welcome bag",
+            ],
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
     },
     {
@@ -886,6 +954,9 @@ export default function ProduktyPage() {
                     </div>
                     <h3 className="font-display font-bold text-white text-lg">{seg.title}</h3>
                   </div>
+                  {seg.intro && (
+                    <p className="text-white/60 text-sm leading-relaxed mb-4">{seg.intro}</p>
+                  )}
                   <ul className="space-y-2 mb-5">
                     {seg.products.map((p) => (
                       <li key={p} className="flex items-center gap-2 text-white/60 text-sm">
@@ -898,13 +969,27 @@ export default function ProduktyPage() {
                     href="/kontakt"
                     className="text-sm font-semibold text-brand-primary hover:text-white flex items-center gap-1 transition-colors"
                   >
-                    {lang === "en"
-                      ? "Request a solution"
-                      : lang === "sk"
-                      ? "Dopytovať riešenie"
-                      : "Poptat řešení"}{" "}
+                    {seg.cta ??
+                      (lang === "en"
+                        ? "Request a solution"
+                        : lang === "sk"
+                        ? "Dopytovať riešenie"
+                        : "Poptat řešení")}{" "}
                     <ArrowRight size={14} />
                   </Link>
+                  {seg.extra && (
+                    <p className="mt-4 pt-4 border-t border-white/10 text-white/50 text-sm leading-relaxed">
+                      {seg.extra.text}{" "}
+                      <a
+                        href={seg.extra.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-brand-primary hover:text-white transition-colors"
+                      >
+                        {seg.extra.label} →
+                      </a>
+                    </p>
+                  )}
                 </div>
               </FadeUp>
             ))}

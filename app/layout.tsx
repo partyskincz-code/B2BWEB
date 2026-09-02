@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       description: "Výroba dočasných tetováček, samolepek a pohlednic na míru pro firmy a eventy",
       url: "https://b2b.partyskin.cz",
       telephone: "+420600000000",
-      email: "partyskincz@gmail.com",
+      email: "objednavky@partyskin.cz",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Praha",

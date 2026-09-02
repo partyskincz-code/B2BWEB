@@ -10,9 +10,9 @@ const cs: Record<string, string> = {
   "nav.cta": "Poptat výrobu",
 
   // Hero
-  "hero.h1a": "Malý detail.",
-  "hero.h1b": "Velký efekt.",
-  "hero.sub": "Dočasné tetovačky, samolepky a pohlednice na míru pro firmy, agentury a eventy. Od několika kusů až po velké kampaně.",
+  "hero.h1a": "Tetovačky na míru.",
+  "hero.h1b": "A promo, co k nim sedí.",
+  "hero.sub": "Dočasné tetovačky s vaším logem nebo motivem — a k nim samolepky, pohlednice a kompletní promo řešení pro firmy, agentury a eventy. Od několika kusů až po velké kampaně.",
   "hero.cta.primary": "Nezávazně poptat",
   "hero.cta.secondary": "Prohlédnout produkty",
   "hero.badge.1": "Bez minimálního množství objednávky",
@@ -59,7 +59,7 @@ const cs: Record<string, string> = {
   // Produkty sekce
   "products.tag": "Naše nabídka",
   "products.h2": "Kompletní promo materiály",
-  "products.sub": "Nejsme jen tetovačky. Jsme váš partner pro celý brand experience.",
+  "products.sub": "Tetovačky umíme nejlíp. K nim přidáme samolepky, pohlednice i kompletní řešení pro celou akci.",
   "products.cta": "Zobrazit celou nabídku",
 
   // Segmenty
@@ -154,9 +154,9 @@ const en: Record<string, string> = {
   "nav.cta": "Get a quote",
 
   // Hero
-  "hero.h1a": "Small detail.",
-  "hero.h1b": "Big impact.",
-  "hero.sub": "Custom temporary tattoos, stickers and postcards for companies, agencies and events. From a few pieces to large campaigns.",
+  "hero.h1a": "Custom temporary tattoos.",
+  "hero.h1b": "And the promo to match.",
+  "hero.sub": "Temporary tattoos with your logo or artwork — plus stickers, postcards and complete promo solutions for companies, agencies and events. From a few pieces to large campaigns.",
   "hero.cta.primary": "Get a quote",
   "hero.cta.secondary": "View products",
   "hero.badge.1": "No minimum order quantity",
@@ -203,7 +203,7 @@ const en: Record<string, string> = {
   // Produkty sekce
   "products.tag": "Our offer",
   "products.h2": "Complete promo materials",
-  "products.sub": "We're not just tattoos. We're your partner for the entire brand experience.",
+  "products.sub": "Tattoos are what we do best. Stickers, postcards and complete solutions come with them.",
   "products.cta": "View full range",
 
   // Segmenty
@@ -298,9 +298,9 @@ const sk: Record<string, string> = {
   "nav.cta": "Dopytovať výrobu",
 
   // Hero
-  "hero.h1a": "Malý detail.",
-  "hero.h1b": "Veľký efekt.",
-  "hero.sub": "Dočasné tetovačky, samolepky a pohľadnice na mieru pre firmy, agentúry a eventy. Od niekoľkých kusov až po veľké kampane.",
+  "hero.h1a": "Tetovačky na mieru.",
+  "hero.h1b": "A promo, čo k nim sedí.",
+  "hero.sub": "Dočasné tetovačky s vaším logom alebo motívom — a k nim samolepky, pohľadnice a kompletné promo riešenia pre firmy, agentúry a eventy. Od niekoľkých kusov až po veľké kampane.",
   "hero.cta.primary": "Nezáväzne dopytovať",
   "hero.cta.secondary": "Prehliadnuť produkty",
   "hero.badge.1": "Bez minimálneho množstva objednávky",
@@ -347,7 +347,7 @@ const sk: Record<string, string> = {
   // Produkty sekce
   "products.tag": "Naša ponuka",
   "products.h2": "Kompletné promo materiály",
-  "products.sub": "Nie sme len tetovačky. Sme váš partner pre celý brand experience.",
+  "products.sub": "Tetovačky vieme najlepšie. K nim pridáme samolepky, pohľadnice aj kompletné riešenie pre celú akciu.",
   "products.cta": "Zobraziť celú ponuku",
 
   // Segmenty

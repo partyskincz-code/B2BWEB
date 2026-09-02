@@ -13,7 +13,7 @@ export default function OchranaOsobnichUdajuPage() {
             <p><strong>Kontaktní údaje:</strong></p>
             <ul className="list-disc pl-5 space-y-1">
               <li>Adresa: Riegrova 570, Třeboň 37901</li>
-              <li>E-mail: partyskincz@gmail.com</li>
+              <li>E-mail: objednavky@partyskin.cz</li>
               <li>Telefon: +420 724 874 274</li>
             </ul>
             <p className="mt-3">Správce zpracovává informace o identifikovatelných fyzických osobách prostřednictvím přímých identifikátorů jako jsou jména, identifikační čísla, lokační data nebo síťové identifikátory.</p>
