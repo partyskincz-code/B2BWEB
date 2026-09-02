@@ -752,10 +752,13 @@ export default function ProduktyPage() {
                   <th className="text-left px-6 py-4 font-semibold text-brand-secondary">
                     {lang === "en" ? "Format" : lang === "sk" ? "Formát" : "Formát"}
                   </th>
-                  <th className="px-6 py-4 font-semibold text-brand-secondary text-center">1–5 ks</th>
-                  <th className="px-6 py-4 font-semibold text-brand-secondary text-center">20–49 ks</th>
-                  <th className="px-6 py-4 font-semibold text-brand-secondary text-center">100–499 ks</th>
-                  <th className="px-6 py-4 font-semibold text-brand-secondary text-center">1 000+ ks</th>
+                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">1–5 ks</th>
+                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">6–19 ks</th>
+                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">20–49 ks</th>
+                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">50–99 ks</th>
+                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">100–499 ks</th>
+                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">500–999 ks</th>
+                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">1 000+ ks</th>
                 </tr>
               </thead>
               <tbody>
@@ -767,10 +770,10 @@ export default function ProduktyPage() {
                         : lang === "sk"
                         ? "A7 (najmenší)"
                         : "A7 (nejmenší)",
-                    prices: ["35 Kč", "22 Kč", "15 Kč", "11 Kč"],
+                    prices: ["35 Kč", "27 Kč", "22 Kč", "18 Kč", "15 Kč", "13 Kč", "11 Kč"],
                   },
-                  { format: "A6", prices: ["55 Kč", "35 Kč", "25 Kč", "19 Kč"] },
-                  { format: "A5", prices: ["95 Kč", "59 Kč", "39 Kč", "29 Kč"] },
+                  { format: "A6", prices: ["55 Kč", "45 Kč", "35 Kč", "29 Kč", "25 Kč", "22 Kč", "19 Kč"] },
+                  { format: "A5", prices: ["95 Kč", "75 Kč", "59 Kč", "45 Kč", "39 Kč", "35 Kč", "29 Kč"] },
                   {
                     format:
                       lang === "en"
@@ -778,13 +781,13 @@ export default function ProduktyPage() {
                         : lang === "sk"
                         ? "A4 (najväčší)"
                         : "A4 (největší)",
-                    prices: ["179 Kč", "119 Kč", "79 Kč", "59 Kč"],
+                    prices: ["179 Kč", "149 Kč", "119 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"],
                   },
                 ].map((row, i) => (
                   <tr key={row.format} className={`border-b border-gray-50 last:border-0 ${i % 2 === 1 ? "bg-gray-50/60" : ""}`}>
-                    <td className="px-6 py-4 font-medium text-brand-secondary">{row.format}</td>
+                    <td className="px-3 py-4 font-medium text-brand-secondary whitespace-nowrap">{row.format}</td>
                     {row.prices.map((price, j) => (
-                      <td key={j} className="px-6 py-4 text-center text-gray-600">{price}</td>
+                      <td key={j} className="px-3 py-4 text-center text-gray-600 whitespace-nowrap">{price}</td>
                     ))}
                   </tr>
                 ))}

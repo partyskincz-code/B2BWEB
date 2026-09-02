@@ -24,11 +24,20 @@ export const metadata: Metadata = {
   },
 };
 
+const hladiny = ["1–5 ks", "6–19 ks", "20–49 ks", "50–99 ks", "100–499 ks", "500–999 ks", "1 000+ ks"];
+
 const tetovacky = [
-  { format: "A7 (nejmenší)", ceny: ["35 Kč", "22 Kč", "15 Kč", "11 Kč"] },
-  { format: "A6", ceny: ["55 Kč", "35 Kč", "25 Kč", "19 Kč"] },
-  { format: "A5", ceny: ["95 Kč", "59 Kč", "39 Kč", "29 Kč"] },
-  { format: "A4 (největší)", ceny: ["179 Kč", "119 Kč", "79 Kč", "59 Kč"] },
+  { format: "A4 (největší)", ceny: ["179 Kč", "149 Kč", "119 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"] },
+  { format: "A5", ceny: ["95 Kč", "75 Kč", "59 Kč", "45 Kč", "39 Kč", "35 Kč", "29 Kč"] },
+  { format: "A6", ceny: ["55 Kč", "45 Kč", "35 Kč", "29 Kč", "25 Kč", "22 Kč", "19 Kč"] },
+  { format: "A7 (nejmenší)", ceny: ["35 Kč", "27 Kč", "22 Kč", "18 Kč", "15 Kč", "13 Kč", "11 Kč"] },
+];
+
+const baleni = [
+  { typ: "Bez balení", priplatek: "základní cena", pozn: "Volné archy." },
+  { typ: "S papírovým přebalem", priplatek: "+10 Kč / ks", pozn: "Přebal na míru, možnost tisku návodu na rub." },
+  { typ: "S celofánem", priplatek: "+3 Kč / ks", pozn: "Zatavený celofánový sáček." },
+  { typ: "Papír + celofán", priplatek: "+13 Kč / ks", pozn: "Kombinace obojího, nejlepší jako dárek." },
 ];
 
 const dalsi = [
@@ -38,7 +47,7 @@ const dalsi = [
 ];
 
 const vCene = [
-  "Grafické zpracování vašeho loga nebo motivu",
+  "Základní úprava vašeho loga nebo motivu pro tisk",
   "Digitální vizualizace na reálném produktu před výrobou",
   "Jedno kolo úprav návrhu",
   "Plnobarevný tisk včetně bílé barvy",
@@ -46,10 +55,11 @@ const vCene = [
 ];
 
 const zvlast = [
-  "Balení, přebal na míru, sáčky, balení po sériích",
-  "Tisk na rubovou stranu (návod, kontakt, QR kód)",
-  "Expresní výroba mimo standardní termín",
-  "Doprava, PPL, DPD nebo spedice u velkých zásilek",
+  "Balení, papírový přebal +10 Kč/ks, celofán +3 Kč/ks, kombinace +13 Kč/ks",
+  "Tisk na rubovou stranu (text, logo, věnování, QR kód), +10 % z ceny zakázky",
+  "Kusový ořez archu, 50 Kč / ks A4",
+  "Grafické zpracování nad rámec základní úpravy, 500 Kč / hod",
+  "Doprava po ČR, 99 Kč",
 ];
 
 const faq = [
@@ -140,24 +150,39 @@ export default function Page() {
             <table className="w-full text-sm">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-4 text-left font-semibold text-brand-secondary">Formát</th>
-                  <th className="px-6 py-4 text-center font-semibold text-brand-secondary">1–5 ks</th>
-                  <th className="px-6 py-4 text-center font-semibold text-brand-secondary">20–49 ks</th>
-                  <th className="px-6 py-4 text-center font-semibold text-brand-secondary">100–499 ks</th>
-                  <th className="px-6 py-4 text-center font-semibold text-brand-secondary">1 000+ ks</th>
+                  <th className="px-4 py-4 text-left font-semibold text-brand-secondary whitespace-nowrap">Formát</th>
+                  {hladiny.map((h) => (
+                    <th key={h} className="px-4 py-4 text-center font-semibold text-brand-secondary whitespace-nowrap">
+                      {h}
+                    </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>
                 {tetovacky.map((r, i) => (
                   <tr key={r.format} className={`border-t border-gray-50 ${i % 2 === 1 ? "bg-gray-50/60" : ""}`}>
-                    <td className="px-6 py-4 font-medium text-brand-secondary">{r.format}</td>
+                    <td className="px-4 py-4 font-medium text-brand-secondary whitespace-nowrap">{r.format}</td>
                     {r.ceny.map((c, j) => (
-                      <td key={j} className="px-6 py-4 text-center text-gray-600">{c}</td>
+                      <td key={j} className="px-4 py-4 text-center text-gray-600 whitespace-nowrap">{c}</td>
                     ))}
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <h2 className="text-3xl font-display font-extrabold text-brand-secondary mt-14 mb-3">Balení</h2>
+          <p className="text-gray-500 mb-8">Příplatek za kus k základní ceně tetovaček.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {baleni.map((b) => (
+              <div key={b.typ} className="flex items-start justify-between gap-4 rounded-2xl border border-gray-100 bg-gray-50 p-5">
+                <div>
+                  <p className="font-display font-bold text-brand-secondary">{b.typ}</p>
+                  <p className="text-gray-500 text-sm mt-1">{b.pozn}</p>
+                </div>
+                <p className="font-display font-bold text-brand-primary whitespace-nowrap">{b.priplatek}</p>
+              </div>
+            ))}
           </div>
 
           <h2 className="text-3xl font-display font-extrabold text-brand-secondary mt-14 mb-8">Samolepky a tiskoviny</h2>
@@ -176,7 +201,7 @@ export default function Page() {
             <Info size={18} className="text-brand-primary flex-shrink-0 mt-0.5" />
             <p>
               Všechny ceny jsou <strong className="text-brand-secondary">včetně DPH</strong> a platí za jeden kus bez balení.
-              U tetovaček nemáme minimální množství, vyrobíme i jeden arch.
+              U tetovaček nemáme minimální množství, vyrobíme i jeden arch. Pro objednávky nad 5 000 ks připravíme kalkulaci na míru.
             </p>
           </div>
 
