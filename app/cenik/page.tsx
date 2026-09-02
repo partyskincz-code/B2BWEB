@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
+import Drobecky from "@/components/Drobecky";
 
 export const metadata: Metadata = {
   title: "Ceník reklamních tetovaček, samolepek a tiskovin",
@@ -119,6 +120,7 @@ export default function Page() {
 
       <section className="pt-28 pb-14 bg-brand-light">
         <div className="container-pad max-w-3xl">
+          <Drobecky nazev="Ceník" />
           <span className="tag mb-4">Ceník</span>
           <h1 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-5 leading-tight">
             Kolik stojí reklamní tetovačky a promo materiály

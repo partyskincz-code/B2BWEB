@@ -27,6 +27,7 @@ export default function Footer() {
       { href: "/produkty#kompletni", label: lang === "en" ? "Complete Solution" : lang === "sk" ? "Kompletné riešenie" : "Kompletní řešení" },
     ],
     sluzby: [
+      { href: "/poradna", label: lang === "en" ? "Guides" : lang === "sk" ? "Poradňa" : "Poradna" },
       { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
       { href: "/jak-to-funguje", label: lang === "en" ? "How it works" : lang === "sk" ? "Ako to funguje" : "Jak to funguje" },
       { href: "/reference", label: lang === "en" ? "References & gallery" : lang === "sk" ? "Referencie a galéria" : "Reference a galerie" },
@@ -64,7 +65,7 @@ export default function Footer() {
             <div key={i} className="relative flex-1 min-w-0 aspect-square overflow-hidden">
               <Image
                 src={src}
-                alt=""
+                alt="Ukázka realizace PartySkin — tetovačky a přebaly na míru"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="12.5vw"

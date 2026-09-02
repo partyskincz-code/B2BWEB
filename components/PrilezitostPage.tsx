@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Drobecky from "@/components/Drobecky";
 
 export type Prilezitost = {
   tag: string;
@@ -24,6 +25,7 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
       <section className="pt-28 pb-14 bg-brand-light">
         <div className="container-pad">
           <div className="max-w-3xl">
+            <Drobecky nazev={data.tag} />
             <span className="tag mb-4">{data.tag}</span>
             <h1 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-5 leading-tight">
               {data.h1}

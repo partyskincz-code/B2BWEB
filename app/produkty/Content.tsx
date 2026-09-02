@@ -397,6 +397,7 @@ export default function ProduktyPage() {
 
   const segments: {
     id: string;
+    odkaz?: string;
     icon: typeof Building2;
     title: string;
     intro?: string;
@@ -407,6 +408,7 @@ export default function ProduktyPage() {
   }[] = [
     {
       id: "firmy",
+      odkaz: "/tetovacky-na-firemni-event",
       icon: Building2,
       title:
         lang === "en"
@@ -503,6 +505,7 @@ export default function ProduktyPage() {
     },
     {
       id: "festivaly",
+      odkaz: "/tetovacky-na-festival",
       icon: Music,
       title:
         lang === "en"
@@ -520,6 +523,7 @@ export default function ProduktyPage() {
     },
     {
       id: "skoly",
+      odkaz: "/tetovacky-pro-skoly",
       icon: GraduationCap,
       title:
         lang === "en"
@@ -941,7 +945,7 @@ export default function ProduktyPage() {
                     ))}
                   </ul>
                   <Link
-                    href="/kontakt"
+                    href={seg.odkaz ?? "/kontakt"}
                     className="text-sm font-semibold text-brand-primary hover:text-white flex items-center gap-1 transition-colors"
                   >
                     {seg.cta ??

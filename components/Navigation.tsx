@@ -22,6 +22,7 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: t("nav.home") },
     { href: "/produkty", label: t("nav.products") },
+    { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
     { href: "/jak-to-funguje", label: t("nav.how") },
     { href: "/reference", label: t("nav.references") },
     { href: "/kontakt", label: t("nav.contact") },

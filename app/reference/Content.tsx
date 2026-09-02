@@ -354,7 +354,7 @@ export default function ReferencePage() {
                     <div key={i} className="relative overflow-hidden">
                       <Image
                         src={src}
-                        alt=""
+                        alt="Realizace PartySkin — dočasné tetovačky a přebaly na míru"
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 768px) 33vw, 16vw"
