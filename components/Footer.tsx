@@ -33,10 +33,11 @@ export default function Footer() {
       { href: "/jak-to-funguje#faq", label: lang === "en" ? "FAQ" : lang === "sk" ? "Časté otázky" : "Časté otázky" },
     ],
     segmenty: [
-      { href: "/produkty#firmy", label: lang === "en" ? "Companies & brands" : lang === "sk" ? "Firmy a značky" : "Firmy a značky" },
+      { href: "/tetovacky-na-firemni-event", label: lang === "en" ? "Corporate events" : lang === "sk" ? "Firemné eventy" : "Firemní eventy" },
+      { href: "/tetovacky-na-veletrh", label: lang === "en" ? "Trade fairs" : lang === "sk" ? "Veľtrhy a konferencie" : "Veletrhy a konference" },
       { href: "/produkty#svatby", label: lang === "en" ? "Weddings & celebrations" : lang === "sk" ? "Svadby a oslavy" : "Svatby a oslavy" },
-      { href: "/produkty#festivaly", label: lang === "en" ? "Festivals & events" : lang === "sk" ? "Festivaly a akcie" : "Festivaly a akce" },
-      { href: "/produkty#skoly", label: lang === "en" ? "Schools & children" : lang === "sk" ? "Školy a deti" : "Školy a děti" },
+      { href: "/tetovacky-na-festival", label: lang === "en" ? "Festivals & events" : lang === "sk" ? "Festivaly a akcie" : "Festivaly a akce" },
+      { href: "/tetovacky-pro-skoly", label: lang === "en" ? "Schools & children" : lang === "sk" ? "Školy a deti" : "Školy a děti" },
       { href: "/produkty#obchody", label: lang === "en" ? "Wholesale" : lang === "sk" ? "Veľkoobchod" : "Velkoobchod" },
     ],
   };

@@ -133,7 +133,7 @@ export default function HomePage() {
         ? "Corporate merch, promo campaigns, trade fairs and conferences. Your brand exactly where customers see it."
         : "Firemný merch, promo kampane, veľtrhy a konferencie. Váš brand presne tam, kde ho zákazníci uvidia.",
       cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
-      href: "/produkty#firmy",
+      href: "/tetovacky-na-firemni-event",
       color: "bg-blue-50",
       iconColor: "text-blue-600",
     },
@@ -163,7 +163,7 @@ export default function HomePage() {
         ? "Merch for promoters, branding materials, tattoos as entertainment for visitors."
         : "Merch pre promotorov, brandingové materiály, tetovačky ako zábava pre návštevníkov.",
       cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
-      href: "/produkty#festivaly",
+      href: "/tetovacky-na-festival",
       color: "bg-purple-50",
       iconColor: "text-purple-600",
     },
@@ -176,7 +176,7 @@ export default function HomePage() {
         ? "Safe certified tattoos for outdoor schools, children's celebrations and parties."
         : "Bezpečné certifikované tetovačky pre školy v prírode, detské slávnosti a párty.",
       cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
-      href: "/produkty#skoly",
+      href: "/tetovacky-pro-skoly",
       color: "bg-green-50",
       iconColor: "text-green-600",
     },
