@@ -84,42 +84,35 @@ export default function JakToFunguePage() {
       num: "01",
       icon: MessageSquare,
       title:
-        lang === "en"
-          ? "Inquiry & consultation"
-          : lang === "sk"
-          ? "Dopyt a konzultácia"
-          : "Poptávka a konzultace",
+        lang === "en" ? "Inquiry" : lang === "sk" ? "Dopyt" : "Poptávka",
       duration:
         lang === "en" ? "Day 1" : lang === "sk" ? "Deň 1" : "Den 1",
       description:
         lang === "en"
-          ? "Fill in the online form or send us an email. Tell us the product type, approximate quantity and event date. No finished design needed — we can work from a sketch on paper."
+          ? "Fill in the form or send us an email. Product type, rough quantity and event date are enough — no finished design needed."
           : lang === "sk"
-          ? "Vyplňte online formulár alebo nám napíšte email. Povedzte nám typ produktu, približné množstvo a termín akcie. Nepotrebujete hotový dizajn — poradíme si aj s nápadom na papieri."
-          : "Vyplňte online formulář nebo nám napište email. Sdělte nám typ produktu, přibližné množství a termín akce. Není potřeba mít hotový design — poradíme si i s nápadem na papíru.",
+          ? "Vyplňte formulár alebo nám napíšte e-mail. Stačí typ produktu, približné množstvo a termín akcie — hotový dizajn mať nemusíte."
+          : "Vyplňte formulář nebo nám napište e-mail. Stačí typ produktu, přibližné množství a termín akce — hotový design mít nemusíte.",
       details:
         lang === "en"
           ? [
-              "Form takes 2 minutes to complete",
-              "We reply within 24 hours (usually sooner)",
-              "Free consultation by phone or video call",
-              "We help you choose the right product and format",
+              "We reply within 24 hours",
+              "We help you pick product and format",
+              "Free advice by email or phone",
             ]
           : lang === "sk"
           ? [
-              "Formulár vyplníte za 2 minúty",
-              "Odpovedáme do 24 hodín (zvyčajne skôr)",
-              "Bezplatná konzultácia cez telefón alebo videohovor",
-              "Pomôžeme s výberom produktu aj formátu",
+              "Odpovedáme do 24 hodín",
+              "Poradíme s produktom aj formátom",
+              "Konzultácia e-mailom alebo telefonicky zdarma",
             ]
           : [
-              "Formulář vyplníte za 2 minuty",
-              "Odpovídáme do 24 hodin (obvykle dříve)",
-              "Bezplatná konzultace přes telefon nebo video hovor",
-              "Pomůžeme s výběrem produktu i formátu",
+              "Odpovídáme do 24 hodin",
+              "Poradíme s produktem i formátem",
+              "Konzultace e-mailem nebo telefonicky zdarma",
             ],
-      image:
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80",
+      image: "/realizace-papirovy-prebal.jpg",
+      imageAlt: "Papírový přebal s dočasnými tetovačkami na míru",
       color: "from-blue-500/10 to-blue-600/5",
       iconBg: "bg-blue-100",
       iconColor: "text-blue-600",
@@ -129,46 +122,35 @@ export default function JakToFunguePage() {
       num: "02",
       icon: Palette,
       title:
-        lang === "en"
-          ? "Graphic design"
-          : lang === "sk"
-          ? "Grafický návrh"
-          : "Grafický návrh",
+        lang === "en" ? "Graphic design" : lang === "sk" ? "Grafický návrh" : "Grafický návrh",
       duration:
-        lang === "en"
-          ? "Day 2–3"
-          : lang === "sk"
-          ? "Deň 2–3"
-          : "Den 2–3",
+        lang === "en" ? "Day 2–3" : lang === "sk" ? "Deň 2–3" : "Den 2–3",
       description:
         lang === "en"
-          ? "Our designer processes your design or brief and prepares a visualisation for approval. Includes one round of revisions for free. We work with your files or design from scratch."
+          ? "We turn your artwork or brief into a visualisation on the real product. One round of revisions is free."
           : lang === "sk"
-          ? "Náš grafik spracuje váš dizajn alebo brief a pripraví vizualizáciu na schválenie. Zahŕňa jedno kolo revízií zdarma. Pracujeme s vašimi súbormi alebo navrhujeme od základu."
-          : "Náš grafik zpracuje váš design nebo brief a připraví vizualizaci pro schválení. Zahrnuje jedno kolo revizí zdarma. Pracujeme s vašimi soubory nebo navrhujeme od základu.",
+          ? "Spracujeme váš návrh alebo brief a pošleme vizualizáciu na reálnom produkte. Jedno kolo úprav je zdarma."
+          : "Zpracujeme váš návrh nebo brief a pošleme vizualizaci na reálném produktu. Jedno kolo úprav je zdarma.",
       details:
         lang === "en"
           ? [
-              "Graphic processing within 24 hours of briefing",
-              "Visualisation on the real product",
-              "1 free revision round included",
-              "We accept AI, Illustrator, Photoshop, PDF",
+              "Artwork within 24 hours of the brief",
+              "1 free revision round",
+              "We accept AI, PDF, Illustrator and Photoshop",
             ]
           : lang === "sk"
           ? [
-              "Grafické spracovanie do 24 hodín od briefu",
-              "Vizualizácia na reálnom produkte",
-              "1 kolo revízií zdarma v cene",
-              "Prijímame AI, Illustrator, Photoshop, PDF",
+              "Grafika do 24 hodín od briefu",
+              "1 kolo revízií zdarma",
+              "Prijímame AI, PDF, Illustrator aj Photoshop",
             ]
           : [
-              "Grafické zpracování do 24 hodin od briefu",
-              "Vizualizace na reálném produktu",
-              "1 kolo revizí zdarma v ceně",
-              "Přijímáme AI, Illustrator, Photoshop, PDF",
+              "Grafika do 24 hodin od briefu",
+              "1 kolo revizí zdarma",
+              "Přijímáme AI, PDF, Illustrator i Photoshop",
             ],
-      image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80",
+      image: "/realizace-prebal-b2b-a5-zadni.jpg",
+      imageAlt: "Potištěný přebal s instrukcemi pro klienta",
       color: "from-purple-500/10 to-purple-600/5",
       iconBg: "bg-purple-100",
       iconColor: "text-purple-600",
@@ -178,46 +160,35 @@ export default function JakToFunguePage() {
       num: "03",
       icon: CheckCircle2,
       title:
-        lang === "en"
-          ? "Approval & payment"
-          : lang === "sk"
-          ? "Schválenie a platba"
-          : "Schválení a platba",
+        lang === "en" ? "Approval & payment" : lang === "sk" ? "Schválenie a platba" : "Schválení a platba",
       duration:
-        lang === "en"
-          ? "Day 3–4"
-          : lang === "sk"
-          ? "Deň 3–4"
-          : "Den 3–4",
+        lang === "en" ? "Day 3–4" : lang === "sk" ? "Deň 3–4" : "Den 3–4",
       description:
         lang === "en"
-          ? "Approve the visualisation online — one click. After approval we issue an invoice or accept a deposit. Production starts immediately after payment confirmation."
+          ? "We send the visualisation by email — you approve it by replying. Then we invoice or take a deposit and start production."
           : lang === "sk"
-          ? "Vizualizáciu schválite online — jedným kliknutím. Po schválení vystavíme faktúru alebo prijmeme zálohu. Výroba sa spúšťa okamžite po potvrdení platby."
-          : "Vizualizaci schválíte online — jedním klikem. Po schválení vystavíme fakturu nebo přijmeme zálohu. Výroba se spouští okamžitě po potvrzení platby.",
+          ? "Vizualizáciu vám pošleme e-mailom — schválite ju odpoveďou. Potom vystavíme faktúru alebo zálohu a spúšťame výrobu."
+          : "Vizualizaci vám pošleme e-mailem — schválíte ji odpovědí. Potom vystavíme fakturu nebo zálohu a spouštíme výrobu.",
       details:
         lang === "en"
           ? [
-              "Online approval — no printed forms",
-              "Payment by bank transfer or card",
+              "Approval by email — no forms",
+              "Payment by transfer or card",
               "Invoice within 1 business day",
-              "Production starts immediately after payment",
             ]
           : lang === "sk"
           ? [
-              "Schválenie online — žiadne tlačené formuláre",
+              "Schválenie e-mailom — žiadne formuláre",
               "Platba prevodom alebo kartou",
               "Faktúra do 1 pracovného dňa",
-              "Výroba štartuje ihneď po platbe",
             ]
           : [
-              "Schválení online — žádné tištěné formuláře",
+              "Schválení e-mailem — žádné formuláře",
               "Platba převodem nebo kartou",
               "Faktura do 1 pracovního dne",
-              "Výroba startuje ihned po platbě",
             ],
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+      image: "/realizace-prebal-a5.jpg",
+      imageAlt: "Hotový arch tetovaček v přebalu A5",
       color: "from-green-500/10 to-green-600/5",
       iconBg: "bg-green-100",
       iconColor: "text-green-600",
@@ -227,46 +198,35 @@ export default function JakToFunguePage() {
       num: "04",
       icon: Package,
       title:
-        lang === "en"
-          ? "Production"
-          : lang === "sk"
-          ? "Výroba"
-          : "Výroba",
+        lang === "en" ? "Production" : lang === "sk" ? "Výroba" : "Výroba",
       duration:
-        lang === "en"
-          ? "Day 3–6"
-          : lang === "sk"
-          ? "Deň 3–6"
-          : "Den 3–6",
+        lang === "en" ? "5–20 business days" : lang === "sk" ? "5–20 pracovných dní" : "5–20 pracovních dní",
       description:
         lang === "en"
-          ? "Production takes place in a certified facility. We keep you updated on order status throughout. Quality check before every dispatch."
+          ? "Production runs in a certified facility and we keep you posted. Every batch is checked before dispatch."
           : lang === "sk"
-          ? "Výroba prebieha v certifikovanom závode. Priebežne vás informujeme o stave zákazky. Kontrola kvality pred každou expedíciou."
-          : "Výroba probíhá v certifikovaném závodě. Průběžně vás informujeme o stavu zakázky. Kontrola kvality před každou expedicí.",
+          ? "Výroba prebieha v certifikovanom závode a priebežne vás informujeme. Pred expedíciou kontrolujeme kvalitu."
+          : "Výroba probíhá v certifikovaném závodě a průběžně vás informujeme. Před expedicí kontrolujeme kvalitu.",
       details:
         lang === "en"
           ? [
-              "Certified production — EU standards",
-              "Ongoing production status updates",
-              "100% quality control before dispatch",
-              "Packaging according to your requirements",
+              "Certified production to EU standards",
+              "Ongoing updates on your order",
+              "Packaging to your requirements",
             ]
           : lang === "sk"
           ? [
-              "Certifikovaná výroba — EU normy",
-              "Priebežný update o stave výroby",
-              "100% kontrola kvality pred expedíciou",
+              "Certifikovaná výroba podľa EU noriem",
+              "Priebežný update o stave zákazky",
               "Balenie podľa vašich požiadaviek",
             ]
           : [
-              "Certifikovaná výroba — EU normy",
-              "Průběžný update o stavu výroby",
-              "100% kontrola kvality před expedicí",
-              "Balení dle vašich požadavků",
+              "Certifikovaná výroba dle EU norem",
+              "Průběžný update o stavu zakázky",
+              "Balení podle vašich požadavků",
             ],
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
+      image: "/realizace-prebal-b2b-a5.jpg",
+      imageAlt: "Vytištěné archy tetovaček s logem klienta",
       color: "from-orange-500/10 to-orange-600/5",
       iconBg: "bg-orange-100",
       iconColor: "text-orange-600",
@@ -276,46 +236,35 @@ export default function JakToFunguePage() {
       num: "05",
       icon: Truck,
       title:
-        lang === "en"
-          ? "Delivery"
-          : lang === "sk"
-          ? "Doručenie"
-          : "Dodání",
+        lang === "en" ? "Delivery" : lang === "sk" ? "Doručenie" : "Dodání",
       duration:
-        lang === "en"
-          ? "Day 5–7"
-          : lang === "sk"
-          ? "Deň 5–7"
-          : "Den 5–7",
+        lang === "en" ? "+1–2 days" : lang === "sk" ? "+1–2 dni" : "+1–2 dny",
       description:
         lang === "en"
-          ? "We deliver directly to you or to the event venue. Standard shipping via PPL or DPD, freight forwarding for larger shipments. Tracking number sent automatically."
+          ? "We deliver to you or straight to the event venue. You get the tracking number automatically."
           : lang === "sk"
-          ? "Zásilku doručíme priamo k vám alebo na miesto akcie. Štandardná doprava PPL alebo DPD, pre väčšie zásilky spedícia. Tracking číslo dostanete automaticky."
-          : "Zásilku doručíme přímo k vám nebo na místo akce. Standartní doprava PPL nebo DPD, pro větší zásilky spedice. Tracking číslo dostanete automaticky.",
+          ? "Doručíme k vám alebo rovno na miesto akcie. Tracking číslo dostanete automaticky."
+          : "Doručíme k vám nebo rovnou na místo akce. Tracking číslo dostanete automaticky.",
       details:
         lang === "en"
           ? [
-              "Delivery via PPL, DPD or freight forwarder",
-              "Tracking number sent by email",
-              "Delivery to address or event venue",
-              "Express delivery available for a surcharge",
+              "Delivery by PPL, DPD or freight forwarder",
+              "To your address or straight to the venue",
+              "Express delivery for a surcharge",
             ]
           : lang === "sk"
           ? [
               "Doručenie PPL, DPD alebo spedíciou",
-              "Tracking číslo zasielam emailom",
-              "Doručenie na adresu alebo na miesto akcie",
-              "Express doručenie možné za príplatok",
+              "Na adresu alebo rovno na miesto akcie",
+              "Express doručenie za príplatok",
             ]
           : [
               "Doručení PPL, DPD nebo spedicí",
-              "Tracking číslo zasílám emailem",
-              "Doručení na adresu nebo na místo akce",
-              "Express dodání možné za příplatek",
+              "Na adresu nebo rovnou na místo akce",
+              "Express dodání za příplatek",
             ],
-      image:
-        "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&q=80",
+      image: "/realizace-detske-prebal-a6.jpg",
+      imageAlt: "Dětské tetovačky v přebalu A6 připravené k odeslání",
       color: "from-brand-primary/10 to-brand-accent/5",
       iconBg: "bg-brand-light",
       iconColor: "text-brand-primary",
@@ -537,7 +486,7 @@ export default function JakToFunguePage() {
           : "Grafický návrh",
     },
     {
-      value: lang === "en" ? "3–5 days" : lang === "sk" ? "3–5 dní" : "3–5 dní",
+      value: lang === "en" ? "5–20 days" : lang === "sk" ? "5–20 dní" : "5–20 dní",
       label:
         lang === "en"
           ? "Standard production"
@@ -600,7 +549,7 @@ export default function JakToFunguePage() {
                       <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
                         <Image
                           src={step.image}
-                          alt={step.title}
+                          alt={step.imageAlt}
                           fill
                           className="object-cover"
                         />

@@ -92,10 +92,10 @@ export default function ProduktyPage() {
           : "Bez minimálního množství",
       deliveryTime:
         lang === "en"
-          ? "3–5 business days"
+          ? "5–20 business days"
           : lang === "sk"
-          ? "3–5 pracovných dní"
-          : "3–5 pracovních dní",
+          ? "5–20 pracovných dní"
+          : "5–20 pracovních dní",
       image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
       cta:
         lang === "en"
@@ -175,10 +175,10 @@ export default function ProduktyPage() {
           : "Min. 100 ks",
       deliveryTime:
         lang === "en"
-          ? "3–7 business days"
+          ? "5–20 business days"
           : lang === "sk"
-          ? "3–7 pracovných dní"
-          : "3–7 pracovních dní",
+          ? "5–20 pracovných dní"
+          : "5–20 pracovních dní",
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
       features:
         lang === "en"
@@ -261,10 +261,10 @@ export default function ProduktyPage() {
           : "Min. 50 ks",
       deliveryTime:
         lang === "en"
-          ? "4–6 business days"
+          ? "5–20 business days"
           : lang === "sk"
-          ? "4–6 pracovných dní"
-          : "4–6 pracovních dní",
+          ? "5–20 pracovných dní"
+          : "5–20 pracovních dní",
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
       features:
         lang === "en"
@@ -824,7 +824,8 @@ export default function ProduktyPage() {
 
           {/* B2C eshop links */}
           <FadeUp delay={0.2}>
-            <div className="bg-white rounded-2xl p-8 border border-gray-100">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
               <p className="text-xs text-gray-400 uppercase tracking-widest font-semibold mb-3">
                 {lang === "en"
                   ? "Also for private customers"
@@ -834,86 +835,21 @@ export default function ProduktyPage() {
               </p>
               <h3 className="text-xl font-display font-bold text-brand-secondary mb-3">
                 {lang === "en"
-                  ? "Looking for ready-made temporary tattoos without custom production?"
+                  ? "Planning a party, not a campaign?"
                   : lang === "sk"
-                  ? "Hľadáte hotové dočasné tetovačky bez zákazkovej výroby?"
-                  : "Hledáte hotové dočasné tetovačky bez zakázkové výroby?"}
+                  ? "Chystáte oslavu, nie kampaň?"
+                  : "Chystáte oslavu, ne kampaň?"}
               </h3>
               <p className="text-gray-500 leading-relaxed mb-6 max-w-2xl">
-                {lang === "en" ? (
-                  <>
-                    PartySkin also operates consumer e-shops for private customers in the Czech Republic and Slovakia.
-                    Choose from ready-made designs or have your own custom design made — order immediately,
-                    with no minimum quantity, delivered within 2–3 business days.{" "}
-                    <a
-                      href="https://www.partyskin.cz"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-brand-primary font-medium hover:underline"
-                    >
-                      Custom temporary tattoos
-                    </a>{" "}
-                    are also available through our{" "}
-                    <a
-                      href="https://www.partyskin.sk"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-brand-primary font-medium hover:underline"
-                    >
-                      Slovak temporary tattoo e-shop
-                    </a>.
-                  </>
-                ) : lang === "sk" ? (
-                  <>
-                    PartySkin prevádzkuje aj spotrebiteľské e-shopy pre súkromných zákazníkov v Česku a na Slovensku.
-                    Vyberte si z hotových motívov alebo nechajte vyrobiť vlastný dizajn — objednajte ihneď,
-                    bez minimálneho množstva, s doručením do 2–3 pracovných dní.{" "}
-                    <a
-                      href="https://www.partyskin.cz"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-brand-primary font-medium hover:underline"
-                    >
-                      Dočasné tetovačky na mieru
-                    </a>{" "}
-                    sú dostupné aj cez náš{" "}
-                    <a
-                      href="https://www.partyskin.sk"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-brand-primary font-medium hover:underline"
-                    >
-                      slovenský e-shop s dočasnými tetovačkami
-                    </a>.
-                  </>
-                ) : (
-                  <>
-                    PartySkin provozuje také spotřebitelské e-shopy pro soukromé zákazníky v Česku a na Slovensku.
-                    Vyberte si z hotových motivů nebo nechte vyrobit vlastní design — objednejte ihned,
-                    bez minimálního množství, s doručením do 2–3 pracovních dnů.{" "}
-                    <a
-                      href="https://www.partyskin.cz"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-brand-primary font-medium hover:underline"
-                    >
-                      Dočasné tetovačky na míru
-                    </a>{" "}
-                    jsou dostupné také přes náš{" "}
-                    <a
-                      href="https://www.partyskin.sk"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-brand-primary font-medium hover:underline"
-                    >
-                      slovenský e-shop s dočasnými tetovačkami
-                    </a>.
-                  </>
-                )}
+                {lang === "en"
+                  ? "For a wedding, a kids' party or a hen do you don't need a quote at all. Pick a ready-made design in our e-shop or upload your own photo — order straight away, even a single sheet, and it's with you in 2–3 days."
+                  : lang === "sk"
+                  ? "Na svadbu, detskú párty alebo rozlúčku nemusíte nič dopytovať. V našom e-shope si vyberiete z hotových motívov alebo nahráte vlastnú fotku — objednáte hneď, pokojne jediný arch, a do 2–3 dní to máte doma."
+                  : "Na svatbu, dětskou párty nebo rozlučku nemusíte nic poptávat. V našem e-shopu si vyberete z hotových motivů nebo nahrajete vlastní fotku — objednáte hned, klidně jediný arch, a do 2–3 dnů to máte doma."}
               </p>
               <div className="flex gap-4 flex-wrap">
                 <a
-                  href="https://www.partyskin.cz"
+                  href={`https://www.partyskin.cz${UTM_B2C}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary gap-2"
@@ -926,7 +862,7 @@ export default function ProduktyPage() {
                   <ArrowRight size={16} />
                 </a>
                 <a
-                  href="https://www.partyskin.sk"
+                  href={`https://www.partyskin.sk${UTM_B2C}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline gap-2"
@@ -939,6 +875,22 @@ export default function ProduktyPage() {
                   <ArrowRight size={16} />
                 </a>
               </div>
+              </div>
+
+              <a
+                href={`https://www.partyskin.cz${UTM_B2C}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <Image
+                  src="/eshop-nahled.jpg"
+                  alt="Náhled e-shopu partyskin.cz s kategoriemi tetovaček"
+                  width={1120}
+                  height={682}
+                  className="w-full h-auto"
+                />
+              </a>
             </div>
           </FadeUp>
         </div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | PartySkin B2B",
   },
   description:
-    "Dočasné tetovačky, samolepky a pohlednice na míru pro firmy, eventy, svatby a festivaly. Certifikovaná výroba, vlastní design, dodání do 5 dní. Poptejte zdarma.",
+    "Dočasné tetovačky, samolepky a pohlednice na míru pro firmy, eventy, svatby a festivaly. Certifikovaná výroba, vlastní design, výroba 5–20 pracovních dní. Poptejte zdarma.",
   keywords: [
     "dočasné tetovačky na míru",
     "reklamní tetovačky firmy",

@@ -249,6 +249,7 @@ export default function HomePage() {
     { name: "HK Mladí Draci Šumperk", url: "" },
     { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
     { name: "NaZemi", url: "https://nazemi.cz" },
+    { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
   ];
 
   return (
@@ -418,17 +419,13 @@ export default function HomePage() {
 
             <FadeUp delay={0.2}>
               <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80"
-                    alt="B2B event promo materiály PartySkin"
+                    src="/realizace-prebal-b2b-a5.jpg"
+                    alt="Dočasné tetovačky s logem klienta v brandovaném přebalu A5"
                     fill
                     className="object-cover"
                   />
-                </div>
-                <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl p-5 border border-gray-100">
-                  <p className="text-3xl font-display font-extrabold text-brand-primary leading-none mb-1">500+</p>
-                  <p className="text-xs text-gray-500 font-medium">{t("story.stat")}</p>
                 </div>
               </div>
             </FadeUp>
@@ -788,7 +785,7 @@ export default function HomePage() {
       {/* ═══ PODPORUJEME ═══ */}
       <section className="py-14 bg-white border-t border-gray-100">
         <div className="container-pad">
-          <FadeUp className="flex flex-col sm:flex-row items-center gap-8 max-w-3xl mx-auto">
+          <FadeUp className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-6 max-w-5xl mx-auto">
             <div className="flex-shrink-0 text-center sm:text-left">
               <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">
                 {lang === "en" ? "We support" : lang === "sk" ? "Podporujeme" : "Podporujeme"}
@@ -814,6 +811,29 @@ export default function HomePage() {
                     : lang === "sk"
                     ? "Podpora detí a rodín v núdzi"
                     : "Pomoc dětem a rodinám, které to potřebují"}
+                </p>
+              </div>
+              <span className="ml-auto text-gray-300 group-hover:text-brand-primary transition-colors text-lg">→</span>
+            </a>
+            <a
+              href="https://www.anidef.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-5 rounded-2xl border border-gray-100 hover:border-brand-primary/30 bg-gray-50 hover:bg-brand-light/30 transition-all px-6 py-4 w-full sm:w-auto"
+            >
+              <div className="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
+                <span className="text-brand-primary font-display font-extrabold text-lg">A</span>
+              </div>
+              <div>
+                <p className="font-display font-bold text-brand-secondary text-base group-hover:text-brand-primary transition-colors">
+                  AniDef, z.s.
+                </p>
+                <p className="text-gray-400 text-xs mt-0.5">
+                  {lang === "en"
+                    ? "Shelter for abandoned animals in Žim"
+                    : lang === "sk"
+                    ? "Útulok pre opustené zvieratá v Žime"
+                    : "Útulek pro opuštěná zvířata v Žimu"}
                 </p>
               </div>
               <span className="ml-auto text-gray-300 group-hover:text-brand-primary transition-colors text-lg">→</span>
