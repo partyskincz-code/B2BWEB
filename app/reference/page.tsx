@@ -44,12 +44,101 @@ const referenceBreadcrumb = {
   ]
 };
 
+
+const reviewSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Reference klientů PartySkin B2B",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Review",
+        "reviewBody": "Spolupráce byla od začátku do konce naprosto profesionální – trpělivost při zapracování připomínek, ochota i rychlá komunikace. Spolehlivého partnera pro zakázková dočasná tetování můžeme s čistým svědomím doporučit.",
+        "author": {
+          "@type": "Person",
+          "name": "Mgr. Alena Dolinová"
+        },
+        "itemReviewed": {
+          "@id": "https://www.makethemoment.cz/#organizace"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Gepard Express, SE"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Review",
+        "reviewBody": "Realizace byla velmi rychlá a tetovačky dorazily už nastříhané – to nám při krátkém termínu výrazně usnadnilo práci. Krásné syté barvy, kvalitní pigment, skvělá aplikace. Rádi si objednáme znovu.",
+        "author": {
+          "@type": "Person",
+          "name": "Mgr. Alena Ryšavá, MBA"
+        },
+        "itemReviewed": {
+          "@id": "https://www.makethemoment.cz/#organizace"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "HK Mladí Draci Šumperk"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Review",
+        "reviewBody": "V neuvěřitelně krátkém čase nám báječné ženy z PartySkin.cz připravily a dodaly dočasné tetovačky s obrázky našich stálých obyvatel, které jsou opravdu krásné a skvěle drží!",
+        "author": {
+          "@type": "Person",
+          "name": "Záchranná stanice Vydra Třeboň"
+        },
+        "itemReviewed": {
+          "@id": "https://www.makethemoment.cz/#organizace"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ekocentrum Vydra"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Review",
+        "reviewBody": "Jsme moc spokojení, rádi využijeme vašich služeb znovu.",
+        "author": {
+          "@type": "Person",
+          "name": "Mgr. Anna Lazorová"
+        },
+        "itemReviewed": {
+          "@id": "https://www.makethemoment.cz/#organizace"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "NaZemi"
+        }
+      }
+    }
+  ]
+};
+
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(referenceBreadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       <Content />
     </>

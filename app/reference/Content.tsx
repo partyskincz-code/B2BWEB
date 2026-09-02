@@ -34,6 +34,50 @@ function FadeUp({
 export default function ReferencePage() {
   const { lang } = useLanguage();
 
+  const reference = [
+    {
+      text: "Spolupráce byla od začátku do konce naprosto profesionální – trpělivost při zapracování připomínek, ochota i rychlá komunikace. Spolehlivého partnera pro zakázková dočasná tetování můžeme s čistým svědomím doporučit.",
+      author: "Mgr. Alena Dolinová",
+      org: "Gepard Express, SE",
+      orgFull: "Gepard Express / Úzkokolejka Jindřichův Hradec",
+      website: "",
+      initials: "GE",
+    },
+    {
+      text: "Realizace byla velmi rychlá a tetovačky dorazily už nastříhané – to nám při krátkém termínu výrazně usnadnilo práci. Krásné syté barvy, kvalitní pigment, skvělá aplikace. Rádi si objednáme znovu.",
+      author: "Mgr. Alena Ryšavá, MBA",
+      org: "HK Mladí Draci Šumperk",
+      orgFull: "HK Mladí Draci Šumperk",
+      website: "",
+      initials: "HK",
+    },
+    {
+      text: "V neuvěřitelně krátkém čase nám báječné ženy z PartySkin.cz připravily a dodaly dočasné tetovačky s obrázky našich stálých obyvatel, které jsou opravdu krásné a skvěle drží! Dělají tak radost malým návštěvníkům naší Expozice zvířat s příběhem. Děkujeme týmu PartySkin.cz za super spolupráci a podporu!",
+      author: "Záchranná stanice Vydra Třeboň",
+      org: "Ekocentrum Vydra",
+      orgFull: "Záchranná stanice Vydra, Třeboň",
+      website: "https://www.ekocentrumvydra.cz",
+      initials: "EV",
+    },
+    {
+      text: "Jsme moc spokojení, rádi využijeme vašich služeb znovu.",
+      author: "Mgr. Anna Lazorová",
+      org: "NaZemi",
+      orgFull: "NaZemi",
+      website: "https://nazemi.cz",
+      initials: "NZ",
+    },
+  ];
+
+  const klienti = [
+    { name: "got2b", url: "" },
+    { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
+    { name: "Gepard Express", url: "" },
+    { name: "HK Mladí Draci Šumperk", url: "" },
+    { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
+    { name: "NaZemi", url: "https://nazemi.cz" },
+  ];
+
   const photos = [
     {
       src: "/realizace-prebal-b2b-a5.jpg",
@@ -165,6 +209,86 @@ export default function ReferencePage() {
               </FadeUp>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Reference klientů */}
+      <section className="section-pad bg-white">
+        <div className="container-pad">
+          <FadeUp className="text-center mb-12">
+            <span className="tag mb-4">
+              {lang === "en" ? "What clients say" : lang === "sk" ? "Čo hovoria klienti" : "Co říkají klienti"}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-secondary mt-3 mb-3">
+              {lang === "en"
+                ? "References from real orders"
+                : lang === "sk"
+                ? "Referencie z reálnych zákaziek"
+                : "Reference z reálných zakázek"}
+            </h2>
+            <p className="text-gray-500 max-w-xl mx-auto">
+              {lang === "en"
+                ? "Original wording of our clients, in Czech."
+                : lang === "sk"
+                ? "Pôvodné znenie od našich klientov, v češtine."
+                : "Původní znění od našich klientů."}
+            </p>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+            {reference.map((r, i) => (
+              <FadeUp key={r.org} delay={i * 0.06}>
+                <figure className="h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-7">
+                  <blockquote className="text-gray-600 leading-relaxed mb-6 flex-1">&bdquo;{r.text}&ldquo;</blockquote>
+                  <figcaption className="flex items-center gap-3 pt-5 border-t border-gray-100">
+                    <div className="w-11 h-11 rounded-full bg-brand-light flex items-center justify-center flex-shrink-0">
+                      <span className="font-display font-bold text-brand-primary text-sm">{r.initials}</span>
+                    </div>
+                    <div className="min-w-0">
+                      <p className="font-display font-bold text-brand-secondary text-sm">{r.author}</p>
+                      {r.website ? (
+                        <a
+                          href={r.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-gray-400 text-xs hover:text-brand-primary transition-colors"
+                        >
+                          {r.orgFull} →
+                        </a>
+                      ) : (
+                        <p className="text-gray-400 text-xs">{r.orgFull}</p>
+                      )}
+                    </div>
+                  </figcaption>
+                </figure>
+              </FadeUp>
+            ))}
+          </div>
+
+          <FadeUp>
+            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 text-center">
+              {lang === "en" ? "Some of our clients" : lang === "sk" ? "Niektorí z našich klientov" : "Někteří z našich klientů"}
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+              {klienti.map((k) =>
+                k.url ? (
+                  <a
+                    key={k.name}
+                    href={k.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-display font-bold text-gray-300 hover:text-brand-primary transition-colors"
+                  >
+                    {k.name}
+                  </a>
+                ) : (
+                  <span key={k.name} className="font-display font-bold text-gray-300">
+                    {k.name}
+                  </span>
+                )
+              )}
+            </div>
+          </FadeUp>
         </div>
       </section>
 
