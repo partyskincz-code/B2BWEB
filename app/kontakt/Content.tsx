@@ -312,7 +312,7 @@ export default function KontaktPage() {
               </label>
               <input
                 type="text"
-                name="Jméno a příjmení"
+                name="Jmeno a prijmeni"
                 required
                 placeholder={
                   lang === "en"
@@ -473,7 +473,7 @@ export default function KontaktPage() {
                   ? "Odhadované množstvo"
                   : "Odhadované množství"}
               </label>
-              <select name="Množství" className="input-field">
+              <select name="Mnozstvi" className="input-field">
                 <option value="">
                   {lang === "en" ? "Select..." : "Vyberte..."}
                 </option>
@@ -496,11 +496,38 @@ export default function KontaktPage() {
               </label>
               <input
                 type="date"
-                name="Termín akce"
+                name="Termin akce"
                 className="input-field"
                 min={new Date().toISOString().split("T")[0]}
               />
             </div>
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              {lang === "en"
+                ? "Link to your artwork"
+                : lang === "sk"
+                ? "Odkaz na podklady"
+                : "Odkaz na podklady"}
+            </label>
+            <input
+              type="url"
+              name="Odkaz na podklady"
+              placeholder={
+                lang === "en"
+                  ? "Google Drive, WeTransfer, Dropbox…"
+                  : "Úschovna, Google Drive, WeTransfer…"
+              }
+              className="input-field"
+            />
+            <p className="text-gray-400 text-xs mt-1.5">
+              {lang === "en"
+                ? "You can also email files to objednavky@partyskin.cz, we will match them to your inquiry."
+                : lang === "sk"
+                ? "Súbory môžete poslať aj e-mailom na objednavky@partyskin.cz, priradíme ich k vášmu dopytu."
+                : "Soubory můžete poslat i e-mailem na objednavky@partyskin.cz, přiřadíme je k vaší poptávce."}
+            </p>
           </div>
 
           <div>
@@ -513,7 +540,7 @@ export default function KontaktPage() {
               <span className="text-brand-primary">*</span>
             </label>
             <textarea
-              name="Popis záměru"
+              name="Popis zameru"
               required
               rows={5}
               placeholder={
