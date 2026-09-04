@@ -84,7 +84,7 @@ const data: Prilezitost = {
     },
     {
       "q": "Zvládnete velký objem během sezóny?",
-      "a": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně měsíc dopředu, výroba trvá 10–15 pracovních dní."
+      "a": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně dva měsíce dopředu, výroba trvá 5–20 pracovních dní podle velikosti a složitosti projektu."
     }
   ],
   "ctaTitul": "Chystáte festival nebo venkovní akci?",
@@ -134,7 +134,7 @@ const faqSchema = {
       "name": "Zvládnete velký objem během sezóny?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně měsíc dopředu, výroba trvá 10–15 pracovních dní."
+        "text": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně dva měsíce dopředu, výroba trvá 5–20 pracovních dní podle velikosti a složitosti projektu."
       }
     }
   ]

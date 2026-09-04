@@ -86,10 +86,10 @@ export default function ProduktyPage() {
           : "Bez minimálního množství",
       deliveryTime:
         lang === "en"
-          ? "10–15 business days"
+          ? "5–20 business days"
           : lang === "sk"
-          ? "10–15 pracovných dní"
-          : "10–15 pracovních dní",
+          ? "5–20 pracovných dní"
+          : "5–20 pracovních dní",
       image: "/detske-tetovacky-archy.jpg",
       cta:
         lang === "en"
@@ -162,10 +162,10 @@ export default function ProduktyPage() {
           : "Min. 100 ks",
       deliveryTime:
         lang === "en"
-          ? "10–15 business days"
+          ? "5–20 business days"
           : lang === "sk"
-          ? "10–15 pracovných dní"
-          : "10–15 pracovních dní",
+          ? "5–20 pracovných dní"
+          : "5–20 pracovních dní",
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
       features:
         lang === "en"
@@ -241,10 +241,10 @@ export default function ProduktyPage() {
           : "Bez minima",
       deliveryTime:
         lang === "en"
-          ? "10–15 business days"
+          ? "5–20 business days"
           : lang === "sk"
-          ? "10–15 pracovných dní"
-          : "10–15 pracovních dní",
+          ? "5–20 pracovných dní"
+          : "5–20 pracovních dní",
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
       features:
         lang === "en"

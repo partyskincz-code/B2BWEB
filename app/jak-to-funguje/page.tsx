@@ -4,14 +4,14 @@ import Content from "./Content";
 export const metadata: Metadata = {
   title: "Jak probíhá zakázka, od poptávky po dodání",
   description:
-    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 10–15 pracovních dní. Časté otázky a záruky.",
+    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5–20 pracovních dní. Časté otázky a záruky.",
   alternates: {
     canonical: "/jak-to-funguje",
   },
   openGraph: {
     title: "Jak probíhá zakázka, od poptávky po dodání | PartySkin B2B",
     description:
-      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 10–15 pracovních dní. Časté otázky a záruky.",
+      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5–20 pracovních dní. Časté otázky a záruky.",
     url: "/jak-to-funguje",
     images: [
       {

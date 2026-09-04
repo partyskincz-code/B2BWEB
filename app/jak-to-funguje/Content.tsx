@@ -200,7 +200,7 @@ export default function JakToFunguePage() {
       title:
         lang === "en" ? "Production" : lang === "sk" ? "Výroba" : "Výroba",
       duration:
-        lang === "en" ? "10–15 business days" : lang === "sk" ? "10–15 pracovných dní" : "10–15 pracovních dní",
+        lang === "en" ? "5–20 business days" : lang === "sk" ? "5–20 pracovných dní" : "5–20 pracovních dní",
       description:
         lang === "en"
           ? "Production runs in a certified facility and we keep you posted. Every batch is checked before dispatch."
@@ -486,7 +486,7 @@ export default function JakToFunguePage() {
           : "Grafický návrh",
     },
     {
-      value: lang === "en" ? "10–15 days" : lang === "sk" ? "10–15 dní" : "10–15 dní",
+      value: lang === "en" ? "5–20 days" : lang === "sk" ? "5–20 dní" : "5–20 dní",
       label:
         lang === "en"
           ? "Standard production"

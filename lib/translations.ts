@@ -29,8 +29,8 @@ const cs: Record<string, string> = {
   "usp.3.desc": "Objednejte 1 nebo 10 000 kusů. Žádné minimální množství, žádné podmínky.",
   "usp.4.title": "Doobjednávka kdykoliv",
   "usp.4.desc": "Váš design máme uložený, doobjednejte jakékoliv množství bez závazků. Žádné minimální množství, žádné podmínky.",
-  "usp.5.title": "Výroba 10–15 dní",
-  "usp.5.desc": "Standardní lead time od schválení grafiky po dodání je 10–15 pracovních dní. Spěcháte? Zeptejte se nás.",
+  "usp.5.title": "Výroba 5–20 dní",
+  "usp.5.desc": "Od schválení grafiky po dodání to je 5–20 pracovních dní podle velikosti a složitosti projektu. Spěcháte? Zeptejte se nás.",
 
   // Storytelling
   "story.tag": "Kompletní B2B řešení",
@@ -39,7 +39,7 @@ const cs: Record<string, string> = {
   "story.p1": "Ať plánujete firemní večírek pro 50 lidí nebo festival pro 10 000, PartySkin pokryje veškeré promo materiály od A do Z. Grafika, výroba, dodání. Jeden kontakt. Vše pod kontrolou.",
   "story.check.1": "Cenová nabídka do 24 hodin",
   "story.check.2": "Grafický návrh do 48 hodin",
-  "story.check.3": "Dodání po celé Evropě, výroba 10–15 pracovních dní",
+  "story.check.3": "Dodání po celé Evropě, výroba 5–20 pracovních dní",
   "story.check.4": "Jeden kontakt po celou dobu projektu",
   "story.stat": "akcí úspěšně zásobeno materiálem",
 
@@ -69,7 +69,7 @@ const cs: Record<string, string> = {
 
   // Jak to funguje
   "process.tag": "Proces",
-  "process.h2": "Od nápadu k výrobě za 5 dní",
+  "process.h2": "Od nápadu k výrobě ve třech krocích",
   "process.sub": "Tři jednoduché kroky. Žádná byrokracie, žádné čekání.",
   "process.cta": "Zjistit více o procesu",
   "process.step": "Krok",
@@ -78,7 +78,7 @@ const cs: Record<string, string> = {
   "process.2.title": "Návrh do 24 hodin",
   "process.2.desc": "Náš grafik připraví vizualizaci nebo zpracuje váš design. Schvalujete online, jednoduše.",
   "process.3.title": "Výroba & dodání",
-  "process.3.desc": "Spustíme výrobu a doručíme přímo k vám. Standardně do 5–7 pracovních dní od schválení.",
+  "process.3.desc": "Spustíme výrobu a doručíme přímo k vám. Podle velikosti a složitosti projektu to je 5–20 pracovních dní od schválení.",
 
   // Reference
   "testimonials.tag": "Reference",
@@ -173,8 +173,8 @@ const en: Record<string, string> = {
   "usp.3.desc": "Order 1 or 10,000 pieces. No minimum quantity, no conditions.",
   "usp.4.title": "Reorder anytime",
   "usp.4.desc": "Your design is saved, reorder any quantity without commitment. No minimum, no conditions.",
-  "usp.5.title": "10–15 day turnaround",
-  "usp.5.desc": "Standard lead time from artwork approval to delivery is 10–15 working days. In a rush? Ask us.",
+  "usp.5.title": "5–20 day turnaround",
+  "usp.5.desc": "From artwork approval to delivery it takes 5–20 working days depending on the size and complexity of the project. In a rush? Ask us.",
 
   // Storytelling
   "story.tag": "Complete B2B solution",
@@ -183,7 +183,7 @@ const en: Record<string, string> = {
   "story.p1": "Whether you're planning a corporate party for 50 people or a festival for 10,000, PartySkin covers all promo materials from A to Z. Design, production, delivery. One contact. Everything under control.",
   "story.check.1": "Price quote within 24 hours",
   "story.check.2": "Graphic design within 48 hours",
-  "story.check.3": "Delivery across Europe, production in 10–15 business days",
+  "story.check.3": "Delivery across Europe, production in 5–20 business days",
   "story.check.4": "One contact throughout the project",
   "story.stat": "events successfully supplied",
 
@@ -213,7 +213,7 @@ const en: Record<string, string> = {
 
   // Jak to funguje
   "process.tag": "Process",
-  "process.h2": "From idea to production in 5 days",
+  "process.h2": "From idea to production in three steps",
   "process.sub": "Three simple steps. No bureaucracy, no waiting.",
   "process.cta": "Learn more about the process",
   "process.step": "Step",
@@ -222,7 +222,7 @@ const en: Record<string, string> = {
   "process.2.title": "Design within 24 hours",
   "process.2.desc": "Our designer prepares a visualization or processes your design. You approve online, simply.",
   "process.3.title": "Production & delivery",
-  "process.3.desc": "We start production and deliver directly to you. Typically 5–7 business days from approval.",
+  "process.3.desc": "We start production and deliver directly to you. Depending on the size and complexity of the project it takes 5–20 business days from approval.",
 
   // Reference
   "testimonials.tag": "References",
@@ -317,8 +317,8 @@ const sk: Record<string, string> = {
   "usp.3.desc": "Objednajte 1 alebo 10 000 kusov. Žiadne minimálne množstvo, žiadne podmienky.",
   "usp.4.title": "Doobjednávka kedykoľvek",
   "usp.4.desc": "Váš dizajn máme uložený, doobjednajte akékoľvek množstvo bez záväzkov. Žiadne minimum, žiadne podmienky.",
-  "usp.5.title": "Výroba 10–15 dní",
-  "usp.5.desc": "Štandardný lead time od schválenia grafiky po doručenie je 10–15 pracovných dní. Ponáhľate sa? Opýtajte sa nás.",
+  "usp.5.title": "Výroba 5–20 dní",
+  "usp.5.desc": "Od schválenia grafiky po doručenie to je 5–20 pracovných dní podľa veľkosti a zložitosti projektu. Ponáhľate sa? Opýtajte sa nás.",
 
   // Storytelling
   "story.tag": "Kompletné B2B riešenie",
@@ -327,7 +327,7 @@ const sk: Record<string, string> = {
   "story.p1": "Či plánujete firemný večierok pre 50 ľudí alebo festival pre 10 000, PartySkin pokryje všetky promo materiály od A po Z. Grafika, výroba, doručenie. Jeden kontakt. Všetko pod kontrolou.",
   "story.check.1": "Cenová ponuka do 24 hodín",
   "story.check.2": "Grafický návrh do 48 hodín",
-  "story.check.3": "Doručenie po celej Európe, výroba 10–15 pracovných dní",
+  "story.check.3": "Doručenie po celej Európe, výroba 5–20 pracovných dní",
   "story.check.4": "Jeden kontakt počas celého projektu",
   "story.stat": "eventov úspešne zásobených materiálom",
 
@@ -357,7 +357,7 @@ const sk: Record<string, string> = {
 
   // Jak to funguje
   "process.tag": "Proces",
-  "process.h2": "Od nápadu k výrobe za 5 dní",
+  "process.h2": "Od nápadu k výrobe v troch krokoch",
   "process.sub": "Tri jednoduché kroky. Žiadna byrokracia, žiadne čakanie.",
   "process.cta": "Zistiť viac o procese",
   "process.step": "Krok",
@@ -366,7 +366,7 @@ const sk: Record<string, string> = {
   "process.2.title": "Návrh do 24 hodín",
   "process.2.desc": "Náš grafik pripraví vizualizáciu alebo spracuje váš dizajn. Schvaľujete online, jednoducho.",
   "process.3.title": "Výroba & doručenie",
-  "process.3.desc": "Spustíme výrobu a doručíme priamo k vám. Štandardne do 5–7 pracovných dní od schválenia.",
+  "process.3.desc": "Spustíme výrobu a doručíme priamo k vám. Podľa veľkosti a zložitosti projektu to je 5–20 pracovných dní od schválenia.",
 
   // Reference
   "testimonials.tag": "Referencie",
