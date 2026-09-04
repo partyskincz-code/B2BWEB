@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
@@ -619,10 +620,10 @@ export default function KontaktPage() {
             </h1>
             <p className="text-gray-500 text-lg leading-relaxed">
               {lang === "en"
-                ? "Send us your logo, artwork or just a rough idea. We'll prepare a format recommendation, quote and production timeline. We usually reply the same working day."
+                ? "Send us your logo, artwork or just a rough idea. We'll prepare a format recommendation, quote and production timeline. We usually reply within 24 hours."
                 : lang === "sk"
-                ? "Pošlite nám logo, grafiku alebo len stručnú predstavu. Pripravíme odporúčanie formátu, kalkuláciu aj termín výroby. Odpovedáme spravidla ešte ten istý pracovný deň."
-                : "Pošlete nám logo, grafiku nebo jen stručnou představu. Připravíme doporučení formátu, kalkulaci i termín výroby. Odpovídáme zpravidla ještě tentýž pracovní den."}
+                ? "Pošlite nám logo, grafiku alebo len stručnú predstavu. Pripravíme odporúčanie formátu, kalkuláciu aj termín výroby. Odpovedáme spravidla do 24 hodín."
+                : "Pošlete nám logo, grafiku nebo jen stručnou představu. Připravíme doporučení formátu, kalkulaci i termín výroby. Odpovídáme zpravidla do 24 hodin."}
             </p>
           </FadeUp>
         </div>
@@ -711,8 +712,8 @@ export default function KontaktPage() {
               {/* Team contact card */}
               <div className="rounded-2xl bg-brand-secondary p-6 text-white">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-primary/60 bg-brand-primary/20 flex items-center justify-center">
-                    <span className="font-display font-bold text-xl text-brand-primary">J</span>
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-primary/60">
+                    <Image src="/jana-budinova.jpg" alt="Jana Budínová, PartySkin" fill sizes="56px" className="object-cover" />
                   </div>
                   <div>
                     <p className="font-display font-bold text-base leading-tight">Jana Budínová</p>
