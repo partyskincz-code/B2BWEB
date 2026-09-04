@@ -721,10 +721,10 @@ export default function KontaktPage() {
                 </div>
                 <p className="text-white/75 text-sm leading-relaxed mb-4">
                   {lang === "en"
-                    ? "Our team takes care of every inquiry personally. Don't hesitate to write, even with just a rough idea. We'll get back to you the same day."
+                    ? "Our team takes care of every inquiry personally. Don't hesitate to write, even with just a rough idea. We'll get back to you within 24 hours."
                     : lang === "sk"
-                    ? "Každý dopyt vybavujeme osobne. Neváhajte napísať, aj keď máte zatiaľ len hrubú predstavu. Ozveme sa ešte ten deň."
-                    : "Každou poptávku vyřizujeme osobně. Neváhejte napsat, i s jen hrubou představou. Ozveme se ještě ten den."}
+                    ? "Každý dopyt vybavujeme osobne. Neváhajte napísať, aj keď máte zatiaľ len hrubú predstavu. Ozveme sa do 24 hodín."
+                    : "Každou poptávku vyřizujeme osobně. Neváhejte napsat, i s jen hrubou představou. Ozveme se do 24 hodin."}
                 </p>
                 <a
                   href="mailto:objednavky@partyskin.cz"
