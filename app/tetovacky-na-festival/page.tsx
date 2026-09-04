@@ -36,7 +36,7 @@ const data: Prilezitost = {
     },
     {
       "title": "Tiskoviny na stánek",
-      "text": "Pozvánky, vstupenkové doplňky, jmenovky a pohlednice v jednom vizuálním stylu."
+      "text": "Pozvánky, vstupenkové doplňky a pohlednice s vlastním potiskem, v jednom vizuálním stylu."
     }
   ],
   "duvody": [

@@ -31,12 +31,12 @@ const data: Prilezitost = {
       "text": "Maskot školy, logo tábora nebo motivy podle tématu akce. Certifikované a bezpečné pro děti od 3 let."
     },
     {
-      "title": "Samolepky na odměny",
-      "text": "Do žákovské knížky, na tabulku pokroku nebo jako odměna za splněný úkol. Tvarové, v libovolném motivu."
+      "title": "Samolepky na míru",
+      "text": "Tvarové samolepky v libovolném motivu."
     },
     {
-      "title": "Pohlednice a jmenovky",
-      "text": "Jmenovky na tábor, pozvánky na besídku nebo pohlednice z výletu, které děti pošlou domů."
+      "title": "Tiskoviny na míru",
+      "text": "Pohlednice a pozvánky s vlastním potiskem."
     }
   ],
   "duvody": [

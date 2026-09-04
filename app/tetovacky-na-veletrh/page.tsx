@@ -32,7 +32,7 @@ const data: Prilezitost = {
     },
     {
       "title": "Vizitky a pozvánky",
-      "text": "Tiskoviny ve stejném vizuálním stylu jako zbytek stánku, pozvánky na after party, vizitky obchodníků, jmenovky."
+      "text": "Tiskoviny ve stejném vizuálním stylu jako zbytek stánku, pozvánky na after party i vizitky obchodníků."
     },
     {
       "title": "Samolepky na notebook",

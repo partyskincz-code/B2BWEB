@@ -66,7 +66,7 @@ const sluzbaSchema = {
         "name": "Tiskoviny na míru",
         "priceCurrency": "CZK",
         "price": "12",
-        "description": "Pohlednice, přání, pozvánky, jmenovky a vizitky s vaším motivem."
+        "description": "Pohlednice, přání, pozvánky a vizitky s vlastním potiskem nebo podle našeho návrhu."
       }
     ]
   }

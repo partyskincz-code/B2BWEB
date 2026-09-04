@@ -86,10 +86,10 @@ export default function HomePage() {
       title: lang === "cs" ? "Tiskoviny na míru" : lang === "en" ? "Custom Print" : "Tlačoviny na mieru",
       subtitle: lang === "cs" ? "Pohlednice, pozvánky, vizitky" : lang === "en" ? "Postcards, invitations, cards" : "Pohľadnice, pozvánky, vizitky",
       description: lang === "cs"
-        ? "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším motivem, pro eventy, dárkové akce i firemní promo. Tiskneme už od jednoho kusu."
+        ? "Pohlednice, přání, pozvánky i vizitky s vlastním potiskem nebo podle našeho návrhu. Tiskneme už od jednoho kusu."
         : lang === "en"
-        ? "Postcards, greeting cards, invitations, place cards and business cards with your artwork, for events, gifting and corporate promo. We print from a single piece."
-        : "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším motívom, pre eventy, darčekové akcie aj firemné promo. Tlačíme už od jedného kusu.",
+        ? "Postcards, greeting cards, invitations and business cards with your own artwork or based on our design. We print from a single piece."
+        : "Pohľadnice, priania, pozvánky aj vizitky s vlastným potiskom alebo podľa nášho návrhu. Tlačíme už od jedného kusu.",
       price: lang === "en" ? "from €0.45 / pc" : "od 12 Kč / ks",
       minQty: t("usp.3.title"),
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",

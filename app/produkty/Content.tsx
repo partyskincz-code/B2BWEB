@@ -223,10 +223,10 @@ export default function ProduktyPage() {
           : "Personalizovaný tisk s vlastním motivem",
       description:
         lang === "en"
-          ? "Postcards, greeting cards, invitations, place cards and business cards with your design, for corporate promo, gift campaigns or personalised communication. Professional paper, vivid colours, we print from a single piece."
+          ? "Postcards, greeting cards, invitations and business cards with your own artwork or based on our design. Professional paper, vivid colours, we print from a single piece."
           : lang === "sk"
-          ? "Pohľadnice, priania, pozvánky, menovky aj vizitky s vaším dizajnom, pre firemné promo, darčekové akcie alebo personalizovanú komunikáciu. Profesionálny papier, živé farby, tlačíme už od jedného kusu."
-          : "Pohlednice, přání, pozvánky, jmenovky i vizitky s vaším designem, pro firemní promo, dárkové akce nebo personalizovanou komunikaci. Profesionální papír, živé barvy, tiskneme už od jednoho kusu.",
+          ? "Pohľadnice, priania, pozvánky aj vizitky s vlastným potiskom alebo podľa nášho návrhu. Profesionálny papier, živé farby, tlačíme už od jedného kusu."
+          : "Pohlednice, přání, pozvánky i vizitky s vlastním potiskem nebo podle našeho návrhu. Profesionální papír, živé barvy, tiskneme už od jednoho kusu.",
       price:
         lang === "en"
           ? "from €0.48 / pc"
@@ -429,8 +429,8 @@ export default function ProduktyPage() {
         lang === "en"
           ? "A wedding, a party, a baby shower or a hen do? Tattoos for guests (kids love them most), name cards, postcards and stickers for decorations, all in one style, with your names on them."
           : lang === "sk"
-          ? "Svadba, oslava, baby shower alebo rozlúčka? Tetovačky pre hostí (deti ich milujú najviac), menovky, pohľadnice aj samolepky na dekorácie, všetko v jednom štýle a s menami."
-          : "Svatba, oslava, baby shower nebo rozlučka? Tetovačky pro hosty (děti je milují nejvíc), jmenovky, pohlednice i samolepky na dekorace, všechno v jednom stylu a se jmény.",
+          ? "Svadba, oslava, baby shower alebo rozlúčka? Tetovačky pre hostí (deti ich milujú najviac), pohľadnice aj samolepky na dekorácie, všetko v jednom štýle."
+          : "Svatba, oslava, baby shower nebo rozlučka? Tetovačky pro hosty (děti je milují nejvíc), pohlednice i samolepky na dekorace, všechno v jednom stylu.",
       cta:
         lang === "en"
           ? "Request a custom solution"
@@ -465,12 +465,12 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? [
               "Tetovačky pre hostí, s vaším motívom, dátumom alebo iniciálami",
-              "Pohľadnice a menovky, zladené so svadobným oznámením",
+              "Pohľadnice s vlastným potiskom, zladené so svadobným oznámením",
               "Samolepky na dekorácie, na fľaše, darčeky, welcome bag",
             ]
           : [
               "Tetovačky pro hosty, s vaším motivem, datem nebo iniciálami",
-              "Pohlednice a jmenovky, sladěné se svatebním oznámením",
+              "Pohlednice s vlastním potiskem, sladěné se svatebním oznámením",
               "Samolepky na dekorace, na lahve, dárky, welcome bag",
             ],
       image: "/nanaseni-tetovacky.jpg",
