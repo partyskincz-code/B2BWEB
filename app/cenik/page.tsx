@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const hladiny = ["1–5 ks", "6–19 ks", "20–49 ks", "50–99 ks", "100–499 ks", "500–999 ks", "1 000+ ks"];
 
 const tetovacky = [
-  { format: "A4 (největší)", ceny: ["179 Kč", "149 Kč", "119 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"] },
+  { format: "A4 (největší)", ceny: ["179 Kč", "149 Kč", "89 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"] },
   { format: "A5", ceny: ["95 Kč", "75 Kč", "59 Kč", "45 Kč", "39 Kč", "35 Kč", "29 Kč"] },
   { format: "A6", ceny: ["55 Kč", "45 Kč", "35 Kč", "29 Kč", "25 Kč", "22 Kč", "19 Kč"] },
   { format: "A7 (nejmenší)", ceny: ["35 Kč", "27 Kč", "22 Kč", "18 Kč", "15 Kč", "13 Kč", "11 Kč"] },

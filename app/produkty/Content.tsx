@@ -749,7 +749,7 @@ export default function ProduktyPage() {
                         : lang === "sk"
                         ? "A4 (najväčší)"
                         : "A4 (největší)",
-                    prices: ["179 Kč", "149 Kč", "119 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"],
+                    prices: ["179 Kč", "149 Kč", "89 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"],
                   },
                 ].map((row, i) => (
                   <tr key={row.format} className={`border-b border-gray-50 last:border-0 ${i % 2 === 1 ? "bg-gray-50/60" : ""}`}>
