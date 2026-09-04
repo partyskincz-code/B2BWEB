@@ -701,11 +701,21 @@ export default function JakToFunguePage() {
             </h2>
             <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
               {lang === "en"
-                ? "Get a quote today and have your products in hand within a week."
+                ? "Send us a brief today and you'll have a quote and a design within 24 hours."
                 : lang === "sk"
-                ? "Dopytujte nás ešte dnes a do týždňa máte produkty v rukách."
-                : "Poptejte nás ještě dnes a do týdne máte produkty v ruce."}
+                ? "Pošlite nám zadanie ešte dnes a do 24 hodín máte kalkuláciu aj návrh."
+                : "Pošlete nám zadání ještě dnes a do 24 hodin máte kalkulaci i návrh."}
             </p>
+
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-primary/40">
+                <Image src="/jana-budinova.jpg" alt="Jana Budínová, PartySkin" fill sizes="80px" className="object-cover" />
+              </div>
+              <div className="text-left">
+                <p className="font-display font-bold text-brand-secondary text-sm">Jana Budínová</p>
+                <p className="text-gray-400 text-xs">PartySkin</p>
+              </div>
+            </div>
             <Link href="/kontakt" className="btn-primary text-base px-8 py-4">
               {lang === "en"
                 ? "Get a quote"

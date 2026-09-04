@@ -111,8 +111,8 @@ const cs: Record<string, string> = {
   "stats.1.label": "Spokojených klientů",
   "stats.2.value": "50 000+",
   "stats.2.label": "Tetováček ročně",
-  "stats.3.value": "5 dní",
-  "stats.3.label": "Průměrná výroba",
+  "stats.3.value": "5–20 dní",
+  "stats.3.label": "Doba výroby",
   "stats.4.value": "100%",
   "stats.4.label": "EU certifikace",
 
@@ -255,8 +255,8 @@ const en: Record<string, string> = {
   "stats.1.label": "Happy clients",
   "stats.2.value": "50,000+",
   "stats.2.label": "Tattoos per year",
-  "stats.3.value": "5 days",
-  "stats.3.label": "Average production",
+  "stats.3.value": "5–20 days",
+  "stats.3.label": "Production time",
   "stats.4.value": "100%",
   "stats.4.label": "EU certified",
 
@@ -399,8 +399,8 @@ const sk: Record<string, string> = {
   "stats.1.label": "Spokojných klientov",
   "stats.2.value": "50 000+",
   "stats.2.label": "Tetovačiek ročne",
-  "stats.3.value": "5 dní",
-  "stats.3.label": "Priemerná výroba",
+  "stats.3.value": "5–20 dní",
+  "stats.3.label": "Doba výroby",
   "stats.4.value": "100%",
   "stats.4.label": "EU certifikácia",
 

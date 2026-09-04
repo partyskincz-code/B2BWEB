@@ -854,6 +854,23 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
+
+                <div className="flex items-center gap-4 mt-8 pt-8 border-t border-white/20">
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/40">
+                    <Image src="/jana-budinova.jpg" alt="Jana Budínová, PartySkin" fill sizes="80px" className="object-cover" />
+                  </div>
+                  <div>
+                    <p className="text-white/90 text-sm leading-relaxed">
+                      {lang === "en"
+                        ? "I handle every inquiry personally, from the first email to delivery."
+                        : lang === "sk"
+                        ? "Každý dopyt vybavujem osobne, od prvého e-mailu po doručenie."
+                        : "Každou poptávku vyřizuji osobně, od prvního e-mailu po dodání."}
+                    </p>
+                    <p className="text-white font-display font-bold text-sm mt-1">Jana Budínová</p>
+                    <p className="text-white/60 text-xs">PartySkin</p>
+                  </div>
+                </div>
               </div>
 
               <div className="w-full lg:w-auto lg:min-w-[340px] bg-white rounded-2xl p-6 shadow-2xl">
