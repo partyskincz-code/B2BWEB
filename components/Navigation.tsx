@@ -76,7 +76,7 @@ export default function Navigation() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   pathname === link.href
                     ? "text-brand-primary bg-brand-light"
-                    : "text-gray-600 hover:text-brand-primary hover:bg-brand-light"
+                    : "text-gray-600 hover:text-white hover:bg-brand-secondary"
                 }`}
               >
                 {link.label}
@@ -97,7 +97,7 @@ export default function Navigation() {
                   className={`px-2.5 py-1.5 text-xs font-bold transition-all duration-200 ${
                     lang === code
                       ? "bg-brand-primary text-white"
-                      : "text-gray-500 hover:text-brand-primary hover:bg-brand-light"
+                      : "text-gray-600 hover:text-white hover:bg-brand-secondary"
                   }`}
                 >
                   {label}
@@ -113,7 +113,7 @@ export default function Navigation() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              "text-gray-700 hover:bg-gray-100"
+              "text-gray-700 hover:text-white hover:bg-brand-secondary"
             }`}
             aria-label="Otevřít menu"
           >
@@ -133,7 +133,7 @@ export default function Navigation() {
                 className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${
                   pathname === link.href
                     ? "text-brand-primary bg-brand-light"
-                    : "text-gray-700 hover:text-brand-primary hover:bg-brand-light"
+                    : "text-gray-700 hover:text-white hover:bg-brand-secondary"
                 }`}
               >
                 {link.label}
@@ -149,7 +149,7 @@ export default function Navigation() {
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                     lang === code
                       ? "bg-brand-primary text-white"
-                      : "text-gray-500 hover:text-brand-primary hover:bg-brand-light border border-gray-200"
+                      : "text-gray-600 hover:text-white hover:bg-brand-secondary border border-gray-200"
                   }`}
                 >
                   {label}

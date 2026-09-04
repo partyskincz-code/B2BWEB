@@ -209,13 +209,13 @@ export default function Footer() {
             {lang === "en" ? "All rights reserved." : lang === "sk" ? "Všetky práva vyhradené." : "Všechna práva vyhrazena."}
           </p>
           <div className="flex items-center gap-4">
-            <a href="https://www.instagram.com/partyskin.cz/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-all" aria-label="Instagram">
+            <a href="https://www.instagram.com/partyskin.cz/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-brand-primary transition-all" aria-label="Instagram">
               <Instagram size={18} />
             </a>
-            <a href="https://www.facebook.com/partyskincz/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-all" aria-label="Facebook">
+            <a href="https://www.facebook.com/partyskincz/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-brand-primary transition-all" aria-label="Facebook">
               <Facebook size={18} />
             </a>
-            <a href="https://www.linkedin.com/company/partyskin" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/50 hover:text-white hover:bg-white/10 transition-all" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/partyskin" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-brand-primary transition-all" aria-label="LinkedIn">
               <Linkedin size={18} />
             </a>
           </div>

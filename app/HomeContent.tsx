@@ -65,7 +65,6 @@ export default function HomePage() {
       price: lang === "en" ? "from €0.30 / pc" : "od 8 Kč / ks",
       minQty: t("usp.3.title"),
       image: "/detske-tetovacky-archy.jpg",
-      tag: lang === "en" ? "Bestseller" : "Bestseller",
       href: "/produkty#tetovacky",
     },
     {
@@ -80,7 +79,6 @@ export default function HomePage() {
       price: lang === "en" ? "from €0.15 / pc" : "od 4 Kč / ks",
       minQty: t("usp.3.title"),
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
-      tag: lang === "en" ? "Popular" : lang === "sk" ? "Populárne" : "Populární",
       href: "/produkty#samolepky",
     },
     {
@@ -95,7 +93,6 @@ export default function HomePage() {
       price: lang === "en" ? "from €0.45 / pc" : "od 12 Kč / ks",
       minQty: t("usp.3.title"),
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
-      tag: lang === "en" ? "New" : lang === "sk" ? "Nové" : "Nové",
       href: "/produkty#pohlednice",
     },
     {
@@ -110,7 +107,6 @@ export default function HomePage() {
       price: lang === "en" ? "Individual price" : "Individuální cena",
       minQty: lang === "cs" ? "Dle rozsahu" : lang === "en" ? "By scope" : "Podľa rozsahu",
       image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80",
-      tag: lang === "en" ? "Recommended" : lang === "sk" ? "Odporúčame" : "Oblíbené",
       href: "/produkty#kompletni",
     },
   ];
@@ -483,9 +479,6 @@ export default function HomePage() {
                   <div className="bg-white rounded-2xl overflow-hidden card-hover border border-gray-100 h-full flex flex-col">
                     <div className="relative h-52 overflow-hidden">
                       <Image src={product.image} alt={product.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                      <div className="absolute top-3 left-3">
-                        <span className="tag text-xs">{product.tag}</span>
-                      </div>
                     </div>
                     <div className="p-5 flex flex-col flex-1">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">{product.subtitle}</p>

@@ -54,12 +54,6 @@ export default function ProduktyPage() {
   const categories = [
     {
       id: "tetovacky",
-      tag:
-        lang === "en"
-          ? "Bestseller"
-          : lang === "sk"
-          ? "Bestseller"
-          : "Bestseller",
       title:
         lang === "en"
           ? "Custom Temporary Tattoos"
@@ -133,16 +127,9 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? ["Firemné eventy", "Festivaly", "Svadby", "Rozlúčky", "Detské oslavy", "Merch"]
           : ["Firemní eventy", "Festivaly", "Svatby", "Rozlučky", "Dětské oslavy", "Merch"],
-      tagColor: "bg-brand-light text-brand-primary",
     },
     {
       id: "samolepky",
-      tag:
-        lang === "en"
-          ? "Popular"
-          : lang === "sk"
-          ? "Populárne"
-          : "Populární",
       title:
         lang === "en"
           ? "Custom Stickers"
@@ -219,16 +206,9 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? ["Packaging", "Branding", "Merch", "Labelling", "Darčeky", "E-shopy"]
           : ["Packaging", "Branding", "Merch", "Labelling", "Dárky", "E-shopy"],
-      tagColor: "bg-blue-50 text-blue-600",
     },
     {
       id: "pohlednice",
-      tag:
-        lang === "en"
-          ? "New"
-          : lang === "sk"
-          ? "Nové"
-          : "Nové",
       title:
         lang === "en"
           ? "Custom Print, Postcards, Invitations, Cards"
@@ -305,16 +285,9 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? ["Vianočné priania", "Pozvánky", "Promo kampane", "Darčeky", "Firemné darčeky", "Svadby"]
           : ["Vánoční přání", "Pozvánky", "Promo kampaně", "Dárky", "Firemní dárky", "Svatby"],
-      tagColor: "bg-green-50 text-green-600",
     },
     {
       id: "kompletni",
-      tag:
-        lang === "en"
-          ? "Recommended"
-          : lang === "sk"
-          ? "Odporúčame"
-          : "Doporučujeme",
       title:
         lang === "en"
           ? "Complete Turnkey Solution"
@@ -391,7 +364,6 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? ["Firemné eventy", "Teambuildingy", "Konferencie", "Svadby", "Festivaly", "Veľtrhy"]
           : ["Firemní eventy", "Teambuildingy", "Konference", "Svatby", "Festivaly", "Veletrhy"],
-      tagColor: "bg-orange-50 text-orange-600",
     },
   ];
 
@@ -636,15 +608,11 @@ export default function ProduktyPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute bottom-4 left-4">
-                    <span className={`tag text-xs ${cat.tagColor}`}>{cat.tag}</span>
-                  </div>
                 </div>
               </FadeUp>
 
               {/* Content */}
               <FadeUp delay={0.2} className={catIndex % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
-                <span className={`tag text-xs ${cat.tagColor}`}>{cat.tag}</span>
                 <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-secondary mt-3 mb-2">
                   {cat.title}
                 </h2>
