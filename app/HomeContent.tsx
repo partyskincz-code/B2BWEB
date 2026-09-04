@@ -64,7 +64,7 @@ export default function HomePage() {
         : "Váš logo, motív alebo dizajn na koži zákazníkov. Certifikovaná výroba, bezpečné pre deti aj dospelých.",
       price: lang === "en" ? "from €0.30 / pc" : "od 8 Kč / ks",
       minQty: t("usp.3.title"),
-      image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=600&q=80",
+      image: "/detske-tetovacky-archy.jpg",
       tag: lang === "en" ? "Bestseller" : "Bestseller",
       href: "/produkty#tetovacky",
     },

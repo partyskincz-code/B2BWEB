@@ -96,7 +96,7 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? "10–15 pracovných dní"
           : "10–15 pracovních dní",
-      image: "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=800&q=80",
+      image: "/detske-tetovacky-archy.jpg",
       cta:
         lang === "en"
           ? "Request custom tattoos →"

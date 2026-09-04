@@ -47,8 +47,8 @@ const data: Prilezitost = {
     "Výdrž 3–7 dní, takže odměna vydrží až do víkendu"
   ],
   "foto": {
-    "src": "/realizace-detske-prebal-a6.jpg",
-    "alt": "Dětské tetovačky v přebalu A6"
+    "src": "/detske-tetovacky-archy.jpg",
+    "alt": "Dětské dočasné tetovačky v balení, motivy vesmíru, zvířátek a moře"
   },
   "fotoPopis": "Dětský formát A6 v přebalu, malá věc, kterou si dítě odnese domů a ukáže rodičům. U školních akcí to funguje líp než diplom.",
   "ceny": [
