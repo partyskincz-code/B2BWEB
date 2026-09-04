@@ -862,10 +862,10 @@ export default function HomePage() {
                   <div>
                     <p className="text-white/90 text-sm leading-relaxed">
                       {lang === "en"
-                        ? "I handle every inquiry personally, from the first email to delivery."
+                        ? "We handle every inquiry personally, from the first email to delivery."
                         : lang === "sk"
-                        ? "Každý dopyt vybavujem osobne, od prvého e-mailu po doručenie."
-                        : "Každou poptávku vyřizuji osobně, od prvního e-mailu po dodání."}
+                        ? "Každý dopyt vybavujeme osobne, od prvého e-mailu po doručenie."
+                        : "Každou poptávku vyřizujeme osobně, od prvního e-mailu po dodání."}
                     </p>
                     <p className="text-white font-display font-bold text-sm mt-1">Jana Budínová</p>
                     <p className="text-white/60 text-xs">PartySkin</p>
