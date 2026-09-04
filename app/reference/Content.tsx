@@ -140,6 +140,21 @@ export default function ReferencePage() {
           : "Velikonoční A5 arch s motivy zajíčka, kuřátka a květin. Přebal z kraftového papíru + celofánové balení.",
     },
     {
+      src: "/svatebni-tetovaci-koutek.jpg",
+      title:
+        lang === "en"
+          ? "Wedding, Tattoo corner for guests"
+          : lang === "sk"
+          ? "Svadba, Tetovací kútik pre hostí"
+          : "Svatba, Tetovací koutek pro hosty",
+      desc:
+        lang === "en"
+          ? "A complete tattoo corner for a wedding: sheets of motifs, monogram stickers and printed instructions. Guests apply the tattoos themselves."
+          : lang === "sk"
+          ? "Kompletný tetovací kútik na svadbu: archy s motívmi, samolepky s monogramom a tlačený návod. Hostia si tetovačky nanášajú sami."
+          : "Kompletní tetovací koutek na svatbu: archy s motivy, samolepky s monogramem a tištěný návod. Hosté si tetovačky nanášejí sami.",
+    },
+    {
       src: "/realizace-papirovy-prebal.jpg",
       title:
         lang === "en"
@@ -348,8 +363,8 @@ export default function ReferencePage() {
                     "/realizace-detske-prebal-a6.jpg",
                     "/realizace-prebal-a5.jpg",
                     "/realizace-papirovy-prebal.jpg",
-                    "/realizace-prebal-b2b-a5-zadni.jpg",
-                    "/realizace-prebal-a5.jpg",
+                    "/svatebni-tetovaci-koutek.jpg",
+                    "/nanaseni-tetovacky.jpg",
                   ].map((src, i) => (
                     <div key={i} className="relative overflow-hidden">
                       <Image

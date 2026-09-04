@@ -324,7 +324,7 @@ export default function ProduktyPage() {
           : lang === "sk"
           ? "Podľa rozsahu projektu"
           : "Dle rozsahu projektu",
-      image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80",
+      image: "/svatebni-tetovaci-koutek.jpg",
       features:
         lang === "en"
           ? [
@@ -473,7 +473,7 @@ export default function ProduktyPage() {
               "Pohlednice a jmenovky, sladěné se svatebním oznámením",
               "Samolepky na dekorace, na lahve, dárky, welcome bag",
             ],
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
+      image: "/nanaseni-tetovacky.jpg",
     },
     {
       id: "festivaly",

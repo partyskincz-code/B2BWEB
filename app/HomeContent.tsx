@@ -106,7 +106,7 @@ export default function HomePage() {
         : "Balíčky pre firemné eventy, teambuildingy, svadby alebo festivaly. Jeden dodávateľ, všetko vyriešené.",
       price: lang === "en" ? "Individual price" : "Individuální cena",
       minQty: lang === "cs" ? "Dle rozsahu" : lang === "en" ? "By scope" : "Podľa rozsahu",
-      image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80",
+      image: "/svatebni-tetovaci-koutek.jpg",
       href: "/produkty#kompletni",
     },
   ];
@@ -557,7 +557,7 @@ export default function HomePage() {
               {/* Image */}
               <div className="relative w-full sm:w-52 h-40 sm:h-auto flex-shrink-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&q=80"
+                  src="/nanaseni-tetovacky.jpg"
                   alt="Tetovačky pro každou oslavu"
                   fill
                   className="object-cover"
@@ -753,9 +753,9 @@ export default function HomePage() {
               { url: "/realizace-prebal-a5.jpg", alt: "Velikonoční edice A5" },
               { url: "/realizace-papirovy-prebal.jpg", alt: "Tetovačky s jednorožci" },
               { url: "/realizace-prebal-b2b-a5-zadni.jpg", alt: "got2b obal zadní strana" },
-              { url: "/realizace-prebal-b2b-a5.jpg", alt: "Zakázková B2B výroba" },
+              { url: "/svatebni-tetovaci-koutek.jpg", alt: "Svatební tetovací koutek se zrcadlem a archy tetovaček" },
               { url: "/realizace-detske-prebal-a6.jpg", alt: "Dětské tetovačky balení" },
-              { url: "/realizace-prebal-a5.jpg", alt: "Sezónní edice tetovačky" },
+              { url: "/nanaseni-tetovacky.jpg", alt: "Nanášení dočasné tetovačky na zápěstí" },
             ].map((img, i) => (
               <FadeUp key={i} delay={i * 0.05}>
                 <div className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer">
