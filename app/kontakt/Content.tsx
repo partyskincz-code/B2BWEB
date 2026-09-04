@@ -111,10 +111,10 @@ export default function KontaktPage() {
           : "Sídlo",
       value:
         lang === "en"
-          ? "Prague, Czech Republic"
+          ? "Prague & Třeboň, Czech Republic"
           : lang === "sk"
-          ? "Praha, Česká republika"
-          : "Praha, Česká republika",
+          ? "Praha a Třeboň, Česká republika"
+          : "Praha a Třeboň, Česká republika",
       href: null,
     },
     {
