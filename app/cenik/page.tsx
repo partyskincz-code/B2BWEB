@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
 import Drobecky from "@/components/Drobecky";
+import FloatingStars from "@/components/FloatingStars";
 
 export const metadata: Metadata = {
   title: "Ceník reklamních tetovaček, samolepek a tiskovin",
@@ -128,7 +129,8 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="pt-28 pb-14 bg-brand-light">
+      <section className="pt-28 pb-14 bg-brand-light relative overflow-hidden">
+        <FloatingStars variant="light" density={0.5} />
         <div className="container-pad max-w-3xl">
           <Drobecky nazev="Ceník" />
           <span className="tag mb-4">Ceník</span>
@@ -257,7 +259,8 @@ export default function Page() {
 
       <section className="py-20 bg-white">
         <div className="container-pad">
-          <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 text-center">
+          <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 text-center relative overflow-hidden">
+            <FloatingStars variant="warm" />
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-white mb-4">Chcete přesnou cenu?</h2>
             <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">
               Napište nám formát, přibližné množství a termín akce. Kalkulaci pošleme do 24 hodin, nezávazně a zdarma.

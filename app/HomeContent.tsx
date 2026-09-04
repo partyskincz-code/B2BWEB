@@ -22,6 +22,7 @@ import {
   Eye,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import FloatingStars from "@/components/FloatingStars";
 
 const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
 
@@ -254,6 +255,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-light">
         {/* Subtle dot texture on light background */}
         <div className="absolute inset-0 dot-pattern opacity-40" />
+        <FloatingStars variant="light" className="lg:right-[58%]" />
 
         {/* Right-side photo */}
         <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[58%] pointer-events-none">
@@ -359,6 +361,7 @@ export default function HomePage() {
 
       {/* ═══ USP ═══ */}
       <section className="py-20 bg-brand-secondary overflow-hidden relative">
+        <FloatingStars variant="dark" density={0.5} />
         {/* subtle background texture */}
         <div className="absolute inset-0 opacity-5 pointer-events-none" style={{backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px"}} />
         <div className="container-pad relative">
@@ -604,6 +607,7 @@ export default function HomePage() {
 
       {/* ═══ PROCES ═══ */}
       <section className="section-pad bg-brand-secondary relative overflow-hidden">
+        <FloatingStars variant="dark" />
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-brand-primary/10 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl" />
 
@@ -791,8 +795,8 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="group flex items-center gap-5 rounded-2xl border border-gray-100 hover:border-brand-primary/30 bg-gray-50 hover:bg-brand-light/30 transition-all px-6 py-4 w-full sm:w-auto"
             >
-              <div className="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
-                <span className="text-brand-primary font-display font-extrabold text-lg">a</span>
+              <div className="relative w-20 h-12 rounded-lg bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 p-1.5">
+                <Image src="/logo-amalthea.png" alt="Amalthea z.s." width={480} height={118} className="object-contain w-full h-full" />
               </div>
               <div>
                 <p className="font-display font-bold text-brand-secondary text-base group-hover:text-brand-primary transition-colors">
@@ -814,8 +818,8 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="group flex items-center gap-5 rounded-2xl border border-gray-100 hover:border-brand-primary/30 bg-gray-50 hover:bg-brand-light/30 transition-all px-6 py-4 w-full sm:w-auto"
             >
-              <div className="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center flex-shrink-0">
-                <span className="text-brand-primary font-display font-extrabold text-lg">A</span>
+              <div className="relative w-20 h-12 rounded-lg bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 p-1">
+                <Image src="/logo-anidef.png" alt="AniDef, z.s." width={320} height={320} className="object-contain w-full h-full" />
               </div>
               <div>
                 <p className="font-display font-bold text-brand-secondary text-base group-hover:text-brand-primary transition-colors">
@@ -839,6 +843,7 @@ export default function HomePage() {
       <section className="section-pad bg-white">
         <div className="container-pad">
           <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 relative overflow-hidden">
+            <FloatingStars variant="warm" />
             <div className="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-20 w-48 h-48 bg-white/5 rounded-full translate-y-1/2" />
 
@@ -882,8 +887,9 @@ export default function HomePage() {
       </section>
 
       {/* ═══ STATS ═══ */}
-      <section className="py-12 bg-brand-secondary">
-        <div className="container-pad">
+      <section className="py-12 bg-brand-secondary relative overflow-hidden">
+        <FloatingStars variant="dark" density={0.5} />
+        <div className="relative z-10 container-pad">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {(["1", "2", "3", "4"] as const).map((num, i) => (
               <FadeUp key={num} delay={i * 0.08}>

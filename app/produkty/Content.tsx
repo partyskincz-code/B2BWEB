@@ -15,6 +15,7 @@ import {
   Store,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import FloatingStars from "@/components/FloatingStars";
 
 const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
 
@@ -872,7 +873,8 @@ export default function ProduktyPage() {
       </section>
 
       {/* Segments section */}
-      <section className="section-pad bg-brand-secondary">
+      <section className="section-pad bg-brand-secondary relative overflow-hidden">
+        <FloatingStars variant="dark" density={0.5} />
         <div className="container-pad">
           <FadeUp className="text-center mb-14">
             <span className="tag bg-white/10 text-white border border-white/20 mb-4">

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Drobecky from "@/components/Drobecky";
+import FloatingStars from "@/components/FloatingStars";
 
 export type Prilezitost = {
   tag: string;
@@ -22,7 +23,8 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
   return (
     <>
       {/* Hero */}
-      <section className="pt-28 pb-14 bg-brand-light">
+      <section className="pt-28 pb-14 bg-brand-light relative overflow-hidden">
+        <FloatingStars variant="light" density={0.5} />
         <div className="container-pad">
           <div className="max-w-3xl">
             <Drobecky nazev={data.tag} />
@@ -139,7 +141,8 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
       {/* CTA */}
       <section className="py-20 bg-white">
         <div className="container-pad">
-          <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 text-center">
+          <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 text-center relative overflow-hidden">
+            <FloatingStars variant="warm" />
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-white mb-4">{data.ctaTitul}</h2>
             <p className="text-white/80 text-lg max-w-xl mx-auto mb-8">{data.ctaText}</p>
             <Link href="/kontakt" className="inline-flex items-center gap-2 bg-white text-brand-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition-colors">

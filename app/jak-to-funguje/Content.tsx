@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
+import FloatingStars from "@/components/FloatingStars";
 import {
   ArrowRight,
   MessageSquare,
@@ -596,7 +597,8 @@ export default function JakToFunguePage() {
       </section>
 
       {/* Timeline summary */}
-      <section className="section-pad bg-brand-secondary">
+      <section className="section-pad bg-brand-secondary relative overflow-hidden">
+        <FloatingStars variant="dark" density={0.5} />
         <div className="container-pad">
           <FadeUp className="text-center mb-12">
             <h2 className="text-4xl font-display font-extrabold text-white mb-4">

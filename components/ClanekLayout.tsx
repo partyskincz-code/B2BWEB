@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Drobecky from "@/components/Drobecky";
+import FloatingStars from "@/components/FloatingStars";
 
 export type Odstavec =
   | { typ: "p"; text: string }
@@ -85,7 +86,8 @@ export default function ClanekLayout({ data }: { data: Clanek }) {
             );
           })}
 
-          <div className="mt-12 rounded-2xl bg-gradient-to-br from-brand-primary to-[#593027] p-8 text-center">
+          <div className="mt-12 rounded-2xl bg-gradient-to-br from-brand-primary to-[#593027] p-8 text-center relative overflow-hidden">
+            <FloatingStars variant="warm" density={0.5} />
             <p className="text-white font-display font-bold text-xl mb-3">Potřebujete kalkulaci na míru?</p>
             <p className="text-white/80 mb-6">Napište nám formát, množství a termín. Odpovíme do 24 hodin.</p>
             <Link href="/kontakt" className="inline-flex items-center gap-2 bg-white text-brand-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition-colors">

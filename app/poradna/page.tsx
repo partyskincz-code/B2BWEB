@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Drobecky from "@/components/Drobecky";
+import FloatingStars from "@/components/FloatingStars";
 
 export const metadata: Metadata = {
   title: "Poradna, jak na dočasné tetovačky a promo materiály",
@@ -78,7 +79,8 @@ export default function Page() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(seznamSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <section className="pt-28 pb-12 bg-brand-light">
+      <section className="pt-28 pb-12 bg-brand-light relative overflow-hidden">
+        <FloatingStars variant="light" density={0.5} />
         <div className="container-pad max-w-3xl">
           <Drobecky nazev="Poradna" />
           <h1 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mb-5 leading-tight">
