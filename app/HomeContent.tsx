@@ -365,13 +365,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-white/10 rounded-3xl overflow-hidden">
             {usps.map((usp, i) => (
               <FadeUp key={usp.title} delay={i * 0.1}>
-                <div className="group flex flex-col gap-5 p-8 lg:p-10 bg-brand-secondary hover:bg-white/5 transition-colors duration-300 h-full">
-                  <div className="w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center group-hover:bg-brand-primary/30 transition-colors duration-300">
-                    <usp.icon size={26} className="text-brand-primary" />
+                <div className="group flex flex-col gap-5 p-8 lg:p-10 bg-brand-secondary hover:bg-brand-primary transition-colors duration-300 h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                    <usp.icon size={26} className="text-brand-primary group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="font-display font-bold text-white text-lg leading-tight">{usp.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed">{usp.desc}</p>
+                    <p className="text-white/60 group-hover:text-white/90 text-sm leading-relaxed transition-colors duration-300">{usp.desc}</p>
                   </div>
                 </div>
               </FadeUp>
@@ -557,7 +557,7 @@ export default function HomePage() {
               {/* Image */}
               <div className="relative w-full sm:w-52 h-40 sm:h-auto flex-shrink-0">
                 <Image
-                  src="/nanaseni-tetovacky.jpg"
+                  src="/eshop-nahled.jpg"
                   alt="Tetovačky pro každou oslavu"
                   fill
                   className="object-cover"

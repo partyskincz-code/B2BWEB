@@ -43,7 +43,7 @@ const data: Prilezitost = {
     "Bez minimálního množství, vyrobíme i jeden arch pro malou akci",
     "Grafický návrh do 24 hodin od briefu, jedno kolo úprav zdarma",
     "Výroba 5–20 pracovních dní podle velikosti a složitosti projektu",
-    "Certifikované materiály podle normy EN 71, bezpečné i pro děti od 3 let",
+    "Certifikované materiály, bezpečné i pro děti od 3 let",
     "Doručení na adresu firmy nebo rovnou na místo konání akce"
   ],
   "foto": {

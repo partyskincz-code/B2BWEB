@@ -22,7 +22,7 @@ const cs: Record<string, string> = {
 
   // USPs
   "usp.1.title": "Vše z jedné ruky",
-  "usp.1.desc": "Tetovačky, samolepky i tiskoviny na míru. Jeden dodavatel, jedna faktura, jeden termín.",
+  "usp.1.desc": "Tetovačky, samolepky i tiskoviny vyrobíme na míru. Nemusíte řešit víc dodavatelů, všechno dorazí najednou a na jednu fakturu.",
   "usp.2.title": "Vzorky zdarma",
   "usp.2.desc": "Před objednávkou si vyzkoušejte kvalitu. Vzorky posíláme zdarma, bez závazků.",
   "usp.3.title": "Bez minimálního množství",
@@ -166,7 +166,7 @@ const en: Record<string, string> = {
 
   // USPs
   "usp.1.title": "Everything from one supplier",
-  "usp.1.desc": "Tattoos, stickers and custom print materials. One supplier, one invoice, one deadline.",
+  "usp.1.desc": "We make tattoos, stickers and print materials to order. No juggling several suppliers, everything arrives together on a single invoice.",
   "usp.2.title": "Free samples",
   "usp.2.desc": "Try the quality before ordering. We send samples for free, no commitment.",
   "usp.3.title": "No minimum order",
@@ -310,7 +310,7 @@ const sk: Record<string, string> = {
 
   // USPs
   "usp.1.title": "Všetko z jednej ruky",
-  "usp.1.desc": "Tetovačky, samolepky aj tlačoviny na mieru. Jeden dodávateľ, jedna faktúra, jeden termín.",
+  "usp.1.desc": "Tetovačky, samolepky aj tlačoviny vyrobíme na mieru. Nemusíte riešiť viac dodávateľov, všetko príde naraz a na jednu faktúru.",
   "usp.2.title": "Vzorky zdarma",
   "usp.2.desc": "Pred objednávkou si vyskúšajte kvalitu. Vzorky posielame zdarma, bez záväzkov.",
   "usp.3.title": "Bez minimálneho množstva",

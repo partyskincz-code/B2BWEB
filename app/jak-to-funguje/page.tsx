@@ -58,7 +58,7 @@ const faqSchema = {
       "name": "Jsou materiály bezpečné pro děti?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ano. Naše tetovačky odpovídají normě EN 71 a jsou certifikovány pro použití dětmi od 3 let. Samolepky i tiskoviny jsou vyrobeny z materiálů bez škodlivých látek."
+        "text": "Ano. Naše tetovačky jsou certifikované pro použití dětmi od 3 let. Samolepky i tiskoviny jsou vyrobeny z materiálů bez škodlivých látek."
       }
     },
     {

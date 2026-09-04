@@ -43,7 +43,7 @@ const data: Prilezitost = {
     "Výdrž 3–7 dní podle místa na těle a péče o pokožku",
     "Voděodolné materiály, tetovačku nesmyje déšť ani pot",
     "Balení po sériích podle toho, jak budete rozdávat",
-    "Certifikované materiály EN 71, bezpečné i pro dětské zóny",
+    "Certifikované materiály, bezpečné i pro dětské zóny",
     "Doručení přímo do areálu festivalu"
   ],
   "foto": {

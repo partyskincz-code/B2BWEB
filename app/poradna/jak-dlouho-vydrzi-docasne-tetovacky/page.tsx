@@ -86,7 +86,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Naše tetovačky odpovídají normě EN 71 a jsou certifikované pro použití dětmi od tří let. Materiály neobsahují škodlivé látky. Přesto platí obecné pravidlo, které říkáme i školám: nelepit na podrážděnou nebo poraněnou kůži a u dětí s citlivou pokožkou vyzkoušet nejdřív malý motiv."
+      "text": "Naše tetovačky jsou certifikované pro použití dětmi od tří let. Materiály neobsahují škodlivé látky. Přesto platí obecné pravidlo, které říkáme i školám: nelepit na podrážděnou nebo poraněnou kůži a u dětí s citlivou pokožkou vyzkoušet nejdřív malý motiv."
     },
     {
       "typ": "h2",

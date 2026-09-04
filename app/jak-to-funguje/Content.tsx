@@ -402,10 +402,10 @@ export default function JakToFunguePage() {
           : "Jsou materiály bezpečné pro děti?",
       a:
         lang === "en"
-          ? "Yes. Our tattoos comply with EN 71 and are certified for use by children aged 3 and over. Stickers and postcards are made from materials free of harmful substances."
+          ? "Yes. Our tattoos are certified for use by children aged 3 and over. Stickers and postcards are made from materials free of harmful substances."
           : lang === "sk"
-          ? "Áno. Naše tetovačky zodpovedajú norme EN 71 a sú certifikované na použitie deťmi od 3 rokov. Samolepky aj pohľadnice sú vyrobené z materiálov bez škodlivých látok."
-          : "Ano. Naše tetovačky odpovídají normě EN 71 a jsou certifikovány pro použití dětmi od 3 let. Samolepky i pohlednice jsou vyrobeny z materiálů bez škodlivých látek.",
+          ? "Áno. Naše tetovačky sú certifikované na použitie deťmi od 3 rokov. Samolepky aj pohľadnice sú vyrobené z materiálov bez škodlivých látok."
+          : "Ano. Naše tetovačky jsou certifikované pro použití dětmi od 3 let. Samolepky i pohlednice jsou vyrobeny z materiálů bez škodlivých látek.",
     },
     {
       q:

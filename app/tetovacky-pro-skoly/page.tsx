@@ -4,11 +4,11 @@ import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage"
 export const metadata: Metadata = {
   title: "Tetovačky a samolepky pro školy a dětské akce",
   description:
-    "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Norma EN 71, bezpečné pro děti od 3 let. Bez minimálního množství.",
+    "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
   alternates: { canonical: "/tetovacky-pro-skoly" },
   openGraph: {
     title: "Tetovačky a samolepky pro školy a dětské akce | PartySkin B2B",
-    description: "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Norma EN 71, bezpečné pro děti od 3 let. Bez minimálního množství.",
+    description: "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
     url: "/tetovacky-pro-skoly",
     images: [
       {
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 const data: Prilezitost = {
   "tag": "Školy a dětské akce",
   "h1": "Tetovačky a samolepky pro školy a dětské akce",
-  "perex": "Dětský den, příměstský tábor, sportovní den nebo odměna za vysvědčení. Naše tetovačky odpovídají normě EN 71 a jsou certifikované pro děti od tří let, a děti je milují víc než jakoukoli jinou odměnu.",
+  "perex": "Dětský den, příměstský tábor, sportovní den nebo odměna za vysvědčení. Naše tetovačky jsou certifikované a bezpečné pro děti od tří let, a děti je milují víc než jakoukoli jinou odměnu.",
   "produkty": [
     {
       "title": "Certifikované dětské tetovačky",
-      "text": "Maskot školy, logo tábora nebo motivy podle tématu akce. Norma EN 71, bezpečné pro děti od 3 let."
+      "text": "Maskot školy, logo tábora nebo motivy podle tématu akce. Certifikované a bezpečné pro děti od 3 let."
     },
     {
       "title": "Samolepky na odměny",
@@ -40,7 +40,7 @@ const data: Prilezitost = {
     }
   ],
   "duvody": [
-    "Certifikace podle normy EN 71, bezpečné pro děti od 3 let",
+    "Certifikované materiály, bezpečné pro děti od 3 let",
     "Bez minimálního množství, vyrobíme i pro jednu třídu",
     "Tetovačka se sundá vodou a mýdlem nebo dětským olejem",
     "Motivy navrhneme podle tématu akce, i z dětské kresby",
@@ -76,7 +76,7 @@ const data: Prilezitost = {
   "faq": [
     {
       "q": "Jsou tetovačky bezpečné pro malé děti?",
-      "a": "Ano. Odpovídají normě EN 71 a jsou certifikované pro použití dětmi od 3 let. Materiály neobsahují škodlivé látky."
+      "a": "Ano. Jsou certifikované pro použití dětmi od 3 let a materiály neobsahují škodlivé látky."
     },
     {
       "q": "Jak se tetovačka sundá?",
@@ -118,7 +118,7 @@ const faqSchema = {
       "name": "Jsou tetovačky bezpečné pro malé děti?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ano. Odpovídají normě EN 71 a jsou certifikované pro použití dětmi od 3 let. Materiály neobsahují škodlivé látky."
+        "text": "Ano. Jsou certifikované pro použití dětmi od 3 let a materiály neobsahují škodlivé látky."
       }
     },
     {
@@ -167,7 +167,7 @@ const sluzbaSchema = {
   "provider": {
     "@id": "https://www.makethemoment.cz/#organizace"
   },
-  "description": "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Norma EN 71, bezpečné pro děti od 3 let. Bez minimálního množství.",
+  "description": "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
   "areaServed": [
     {
       "@type": "Country",
