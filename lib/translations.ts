@@ -21,8 +21,8 @@ const cs: Record<string, string> = {
   "hero.scroll": "Scrollujte",
 
   // USPs
-  "usp.1.title": "Navrhujeme v ČR",
-  "usp.1.desc": "Každý projekt řídíme osobně z Česka, od briefu až po dodání. Certifikované materiály bezpečné pro děti i dospělé.",
+  "usp.1.title": "Vše z jedné ruky",
+  "usp.1.desc": "Tetovačky, samolepky i tiskoviny na míru. Jeden dodavatel, jedna faktura, jeden termín.",
   "usp.2.title": "Vzorky zdarma",
   "usp.2.desc": "Před objednávkou si vyzkoušejte kvalitu. Vzorky posíláme zdarma, bez závazků.",
   "usp.3.title": "Bez minimálního množství",
@@ -36,7 +36,7 @@ const cs: Record<string, string> = {
   "story.tag": "Kompletní B2B řešení",
   "story.h2a": "Jeden dodavatel.",
   "story.h2b": "Celý event vyřešen.",
-  "story.p1": "Ať plánujete firemní večírek pro 50 lidí nebo festival pro 10 000, PartySkin pokryje veškeré promo materiály od A do Z. Grafika, výroba, balení, dodání. Jeden kontakt. Vše pod kontrolou.",
+  "story.p1": "Ať plánujete firemní večírek pro 50 lidí nebo festival pro 10 000, PartySkin pokryje veškeré promo materiály od A do Z. Grafika, výroba, dodání. Jeden kontakt. Vše pod kontrolou.",
   "story.check.1": "Cenová nabídka do 24 hodin",
   "story.check.2": "Grafický návrh do 48 hodin",
   "story.check.3": "Dodání po celé Evropě, výroba 10–15 pracovních dní",
@@ -44,17 +44,17 @@ const cs: Record<string, string> = {
   "story.stat": "akcí úspěšně zásobeno materiálem",
 
   // Výhody
-  "vyhody.h2": "Vyzkoušejte. Objednejte. Doobjednejte.",
-  "vyhody.sub": "Tři svobody, které u jiných dodavatelů nenajdete.",
+  "vyhody.h2": "Bez rizika. Bez minima. Bez překvapení.",
+  "vyhody.sub": "Tři jistoty, které u jiných dodavatelů nenajdete.",
   "vyhody.1.title": "Vzorky zdarma",
   "vyhody.1.desc": "Nejste si jistí kvalitou? Pošleme vám vzorky předtím, než cokoliv objednáte. Zdarma, bez podmínek. Chceme, abyste se rozhodli s jistotou.",
   "vyhody.1.cta": "Požádat o vzorky",
   "vyhody.2.title": "Bez minimálního množství",
   "vyhody.2.desc": "Potřebujete 10 tetováček pro malou rodinnou oslavu, nebo 5 000 pro festival? Oboje zvládneme. Žádné umělé limity, žádné \"musíte vzít aspoň X kusů.\"",
   "vyhody.2.cta": "Zjistit cenu",
-  "vyhody.3.title": "Doobjednávka kdykoliv",
-  "vyhody.3.desc": "Váš design máme uložený, doobjednejte jakékoliv množství bez závazků. Výroba startuje okamžitě, žádné minimální množství, žádné podmínky.",
-  "vyhody.3.cta": "Doobjednat",
+  "vyhody.3.title": "Náhled před výrobou",
+  "vyhody.3.desc": "Grafiku připravíme a pošleme vám náhled e-mailem. Tiskneme až potom, co ho odsouhlasíte. Žádné překvapení po otevření krabice.",
+  "vyhody.3.cta": "Poptat nezávazně",
 
   // Produkty sekce
   "products.tag": "Naše nabídka",
@@ -165,8 +165,8 @@ const en: Record<string, string> = {
   "hero.scroll": "Scroll",
 
   // USPs
-  "usp.1.title": "Designed in Czechia",
-  "usp.1.desc": "Every project is personally managed from Czechia, from brief to delivery. Certified materials safe for the whole family.",
+  "usp.1.title": "Everything from one supplier",
+  "usp.1.desc": "Tattoos, stickers and custom print materials. One supplier, one invoice, one deadline.",
   "usp.2.title": "Free samples",
   "usp.2.desc": "Try the quality before ordering. We send samples for free, no commitment.",
   "usp.3.title": "No minimum order",
@@ -180,7 +180,7 @@ const en: Record<string, string> = {
   "story.tag": "Complete B2B solution",
   "story.h2a": "One supplier.",
   "story.h2b": "The whole event sorted.",
-  "story.p1": "Whether you're planning a corporate party for 50 people or a festival for 10,000, PartySkin covers all promo materials from A to Z. Design, production, packaging, delivery. One contact. Everything under control.",
+  "story.p1": "Whether you're planning a corporate party for 50 people or a festival for 10,000, PartySkin covers all promo materials from A to Z. Design, production, delivery. One contact. Everything under control.",
   "story.check.1": "Price quote within 24 hours",
   "story.check.2": "Graphic design within 48 hours",
   "story.check.3": "Delivery across Europe, production in 10–15 business days",
@@ -188,17 +188,17 @@ const en: Record<string, string> = {
   "story.stat": "events successfully supplied",
 
   // Výhody
-  "vyhody.h2": "Try. Order. Reorder.",
-  "vyhody.sub": "Three freedoms you won't find at other suppliers.",
+  "vyhody.h2": "No risk. No minimum. No surprises.",
+  "vyhody.sub": "Three certainties you won't find at other suppliers.",
   "vyhody.1.title": "Free samples",
   "vyhody.1.desc": "Not sure about the quality? We'll send you samples before you order anything. Free, no conditions. We want you to decide with confidence.",
   "vyhody.1.cta": "Request samples",
   "vyhody.2.title": "No minimum order",
   "vyhody.2.desc": "Need 10 tattoos for a small family party, or 5,000 for a festival? We handle both. No artificial limits, no \"you must order at least X pieces.\"",
   "vyhody.2.cta": "Get pricing",
-  "vyhody.3.title": "Reorder anytime",
-  "vyhody.3.desc": "Your design is saved, reorder any quantity without commitment. Production starts immediately, no minimum quantity, no conditions.",
-  "vyhody.3.cta": "Reorder",
+  "vyhody.3.title": "Proof before printing",
+  "vyhody.3.desc": "We prepare the artwork and email you a proof. We print only once you approve it. No surprises when the box arrives.",
+  "vyhody.3.cta": "Send an enquiry",
 
   // Produkty sekce
   "products.tag": "Our offer",
@@ -309,8 +309,8 @@ const sk: Record<string, string> = {
   "hero.scroll": "Scrollujte",
 
   // USPs
-  "usp.1.title": "Navrhujeme v ČR",
-  "usp.1.desc": "Každý projekt riadime osobne z Česka, od briefu až po dodanie. Certifikované materiály bezpečné pre celú rodinu.",
+  "usp.1.title": "Všetko z jednej ruky",
+  "usp.1.desc": "Tetovačky, samolepky aj tlačoviny na mieru. Jeden dodávateľ, jedna faktúra, jeden termín.",
   "usp.2.title": "Vzorky zdarma",
   "usp.2.desc": "Pred objednávkou si vyskúšajte kvalitu. Vzorky posielame zdarma, bez záväzkov.",
   "usp.3.title": "Bez minimálneho množstva",
@@ -324,7 +324,7 @@ const sk: Record<string, string> = {
   "story.tag": "Kompletné B2B riešenie",
   "story.h2a": "Jeden dodávateľ.",
   "story.h2b": "Celý event vyriešený.",
-  "story.p1": "Či plánujete firemný večierok pre 50 ľudí alebo festival pre 10 000, PartySkin pokryje všetky promo materiály od A po Z. Grafika, výroba, balenie, doručenie. Jeden kontakt. Všetko pod kontrolou.",
+  "story.p1": "Či plánujete firemný večierok pre 50 ľudí alebo festival pre 10 000, PartySkin pokryje všetky promo materiály od A po Z. Grafika, výroba, doručenie. Jeden kontakt. Všetko pod kontrolou.",
   "story.check.1": "Cenová ponuka do 24 hodín",
   "story.check.2": "Grafický návrh do 48 hodín",
   "story.check.3": "Doručenie po celej Európe, výroba 10–15 pracovných dní",
@@ -332,17 +332,17 @@ const sk: Record<string, string> = {
   "story.stat": "eventov úspešne zásobených materiálom",
 
   // Výhody
-  "vyhody.h2": "Vyskúšajte. Objednajte. Doobjednajte.",
-  "vyhody.sub": "Tri slobody, ktoré u iných dodávateľov nenájdete.",
+  "vyhody.h2": "Bez rizika. Bez minima. Bez prekvapení.",
+  "vyhody.sub": "Tri istoty, ktoré u iných dodávateľov nenájdete.",
   "vyhody.1.title": "Vzorky zdarma",
   "vyhody.1.desc": "Nie ste si istí kvalitou? Pošleme vám vzorky predtým, než čokoľvek objednáte. Zdarma, bez podmienok.",
   "vyhody.1.cta": "Požiadať o vzorky",
   "vyhody.2.title": "Bez minimálneho množstva",
   "vyhody.2.desc": "Potrebujete 10 tetovačiek pre malú oslavu alebo 5 000 pre festival? Oboje zvládneme. Žiadne umelé limity.",
   "vyhody.2.cta": "Zistiť cenu",
-  "vyhody.3.title": "Doobjednávka kedykoľvek",
-  "vyhody.3.desc": "Váš dizajn máme uložený, doobjednajte akékoľvek množstvo bez záväzkov. Výroba štartuje okamžite.",
-  "vyhody.3.cta": "Doobjednať",
+  "vyhody.3.title": "Náhľad pred výrobou",
+  "vyhody.3.desc": "Grafiku pripravíme a pošleme vám náhľad e-mailom. Tlačíme až potom, čo ho odsúhlasíte. Žiadne prekvapenie po otvorení krabice.",
+  "vyhody.3.cta": "Dopytovať nezáväzne",
 
   // Produkty sekce
   "products.tag": "Naša ponuka",

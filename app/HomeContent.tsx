@@ -18,8 +18,8 @@ import {
   Gift,
   Infinity,
   RefreshCw,
-  ShieldCheck,
   Clock,
+  Eye,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
@@ -112,7 +112,7 @@ export default function HomePage() {
   ];
 
   const usps = [
-    { icon: ShieldCheck, title: t("usp.1.title"), desc: t("usp.1.desc") },
+    { icon: Package, title: t("usp.1.title"), desc: t("usp.1.desc") },
     { icon: Gift, title: t("usp.2.title"), desc: t("usp.2.desc") },
     { icon: Infinity, title: t("usp.3.title"), desc: t("usp.3.desc") },
     { icon: RefreshCw, title: t("usp.4.title"), desc: t("usp.4.desc") },
@@ -442,7 +442,7 @@ export default function HomePage() {
             {[
               { icon: Gift, titleKey: "vyhody.1.title", descKey: "vyhody.1.desc", ctaKey: "vyhody.1.cta" },
               { icon: Infinity, titleKey: "vyhody.2.title", descKey: "vyhody.2.desc", ctaKey: "vyhody.2.cta" },
-              { icon: RefreshCw, titleKey: "vyhody.3.title", descKey: "vyhody.3.desc", ctaKey: "vyhody.3.cta" },
+              { icon: Eye, titleKey: "vyhody.3.title", descKey: "vyhody.3.desc", ctaKey: "vyhody.3.cta" },
             ].map((card, i) => (
               <FadeUp key={card.titleKey} delay={i * 0.08}>
                 <div className="bg-white rounded-2xl p-8 border border-brand-primary/10 h-full flex flex-col card-hover">
