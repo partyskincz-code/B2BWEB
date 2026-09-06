@@ -81,11 +81,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
               <Image
-                src="/logo-partyskin-white.png"
-                alt="PartySkin"
-                width={391}
-                height={238}
-                className="h-12 w-auto"
+                src="/logo-mtm-white.png"
+                alt="Make the Moment"
+                width={918}
+                height={336}
+                className="h-10 w-auto"
               />
               <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-white/10 text-white/80">B2B</span>
             </div>

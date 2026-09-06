@@ -148,7 +148,7 @@ export default function KontaktPage() {
         ]
       : lang === "sk"
       ? [
-          "Bez minimálneho množstva objednávky",
+          "Tetovačky bez minimálneho množstva",
           "Česká značka s osobným prístupom",
           "Kontrola podkladov pred výrobou",
           "Certifikované a bezpečné materiály",
@@ -156,7 +156,7 @@ export default function KontaktPage() {
           "Rýchle termíny výroby a doručenia",
         ]
       : [
-          "Bez minimálního množství objednávky",
+          "Tetovačky bez minimálního množství",
           "Česká značka s osobním přístupem",
           "Kontrola podkladů před výrobou",
           "Certifikované a bezpečné materiály",

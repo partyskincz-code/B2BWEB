@@ -276,11 +276,11 @@ export default function HomePage() {
         <div className="absolute bottom-20 right-6 sm:right-14 opacity-80 rotate-[-6deg] select-none pointer-events-none hidden sm:block">
           <div className="border-[3px] border-brand-primary rounded-xl px-4 py-2 text-center bg-white/10 backdrop-blur-sm">
             <Image
-              src="/logo-partyskin.png"
-              alt="PartySkin"
-              width={391}
-              height={238}
-              className="h-10 w-auto mx-auto opacity-90"
+              src="/logo-mtm.png"
+              alt="Make the Moment"
+              width={918}
+              height={336}
+              className="h-8 w-auto mx-auto opacity-90"
             />
             <p className="text-brand-secondary/70 text-[9px] font-semibold tracking-[0.2em] uppercase mt-1">temporary tattoos</p>
           </div>

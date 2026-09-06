@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     url: "/poradna/jaky-format-tetovacek-zvolit",
     images: [
       {
-        url: "/og-partyskin-b2b.jpg",
+        url: "/og-make-the-moment.jpg",
         width: 1200,
         height: 630,
         alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",

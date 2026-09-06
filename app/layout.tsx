@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   description:
     "Dočasné tetovačky, samolepky a pohlednice na míru pro firmy, eventy, svatby a festivaly. Certifikovaná výroba, vlastní design, výroba 5–20 pracovních dní. Poptejte zdarma.",
   applicationName: "Make the Moment",
-  authors: [{ name: "PartySkin" }],
-  creator: "PartySkin",
-  publisher: "PartySkin",
+  authors: [{ name: "Make the Moment" }],
+  creator: "Make the Moment",
+  publisher: "Make the Moment",
   alternates: {
     canonical: "/",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Kompletní promo materiály na jednom místě. Dočasné tetovačky, samolepky, pohlednice, vše na míru pro váš event nebo značku.",
     images: [
       {
-        url: "/og-partyskin-b2b.jpg",
+        url: "/og-make-the-moment.jpg",
         width: 1200,
         height: 630,
         alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Make the Moment, Váš brand na kůži. Doslova.",
     description:
       "Dočasné tetovačky, samolepky a tiskoviny na míru pro firmy a eventy.",
-    images: ["/og-partyskin-b2b.jpg"],
+    images: ["/og-make-the-moment.jpg"],
   },
   robots: {
     index: true,
@@ -71,7 +71,7 @@ const organizationSchema = {
   description:
     "Výroba dočasných tetovaček, samolepek a tiskovin na míru pro firmy, agentury a eventy.",
   url: SITE,
-  logo: `${SITE}/logo-partyskin.png`,
+  logo: `${SITE}/logo-mtm.png`,
   image: `${SITE}/realizace-prebal-b2b-a5.jpg`,
   telephone: "+420724874274",
   email: "objednavky@partyskin.cz",

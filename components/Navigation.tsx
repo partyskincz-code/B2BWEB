@@ -53,12 +53,12 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5" aria-label="Make the Moment">
             <Image
-              src="/logo-partyskin.png"
-              alt="PartySkin"
-              width={391}
-              height={238}
+              src="/logo-mtm.png"
+              alt="Make the Moment"
+              width={918}
+              height={336}
               priority
-              className="h-9 md:h-11 w-auto transition-opacity duration-300"
+              className="h-7 md:h-9 w-auto transition-opacity duration-300"
             />
             <span className={`text-xs font-medium px-2 py-0.5 rounded-full transition-colors duration-300 ${
               "bg-brand-light text-brand-primary"
