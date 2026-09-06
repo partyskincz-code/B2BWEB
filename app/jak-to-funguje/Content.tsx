@@ -125,7 +125,7 @@ export default function JakToFunguePage() {
       title:
         lang === "en" ? "Graphic design" : lang === "sk" ? "Grafický návrh" : "Grafický návrh",
       duration:
-        lang === "en" ? "Day 2–3" : lang === "sk" ? "Deň 2–3" : "Den 2–3",
+        lang === "en" ? "Day 2 to 3" : lang === "sk" ? "Deň 2 až 3" : "Den 2 až 3",
       description:
         lang === "en"
           ? "We turn your artwork or brief into a visualisation on the real product. One round of revisions is free."
@@ -163,7 +163,7 @@ export default function JakToFunguePage() {
       title:
         lang === "en" ? "Approval & payment" : lang === "sk" ? "Schválenie a platba" : "Schválení a platba",
       duration:
-        lang === "en" ? "Day 3–4" : lang === "sk" ? "Deň 3–4" : "Den 3–4",
+        lang === "en" ? "Day 3 to 4" : lang === "sk" ? "Deň 3 až 4" : "Den 3 až 4",
       description:
         lang === "en"
           ? "We send the visualisation by email, you approve it by replying. Then we invoice or take a deposit and start production."
@@ -201,7 +201,7 @@ export default function JakToFunguePage() {
       title:
         lang === "en" ? "Production" : lang === "sk" ? "Výroba" : "Výroba",
       duration:
-        lang === "en" ? "5–20 business days" : lang === "sk" ? "5–20 pracovných dní" : "5–20 pracovních dní",
+        lang === "en" ? "5 to 20 business days" : lang === "sk" ? "5 až 20 pracovných dní" : "5 až 20 pracovních dní",
       description:
         lang === "en"
           ? "Production runs in a certified facility and we keep you posted. Every batch is checked before dispatch."
@@ -239,7 +239,7 @@ export default function JakToFunguePage() {
       title:
         lang === "en" ? "Delivery" : lang === "sk" ? "Doručenie" : "Dodání",
       duration:
-        lang === "en" ? "+1–2 days" : lang === "sk" ? "+1–2 dni" : "+1–2 dny",
+        lang === "en" ? "+1 to 2 days" : lang === "sk" ? "+1 až 2 dni" : "+1 až 2 dny",
       description:
         lang === "en"
           ? "We deliver to you or straight to the event venue. You get the tracking number automatically."
@@ -417,10 +417,10 @@ export default function JakToFunguePage() {
           : "Jak dlouho vydrží dočasné tetovačky na kůži?",
       a:
         lang === "en"
-          ? "Typically 3–7 days depending on body location, activity and skincare routine. We include instructions for application and prolonging wear."
+          ? "Typically 3 to 7 days depending on body location, activity and skincare routine. We include instructions for application and prolonging wear."
           : lang === "sk"
-          ? "Štandardne 3–7 dní v závislosti od miesta tela, aktivity a starostlivosti o pokožku. Dodávame inštrukcie pre nanesenie aj predĺženie výdrže."
-          : "Standardně 3–7 dní v závislosti na místě těla, aktivitě a péči o pokožku. Dodáváme instrukce pro nanesení i prodloužení výdrže.",
+          ? "Štandardne 3 až 7 dní v závislosti od miesta tela, aktivity a starostlivosti o pokožku. Dodávame inštrukcie pre nanesenie aj predĺženie výdrže."
+          : "Standardně 3 až 7 dní v závislosti na místě těla, aktivitě a péči o pokožku. Dodáváme instrukce pro nanesení i prodloužení výdrže.",
     },
     {
       q:
@@ -487,7 +487,7 @@ export default function JakToFunguePage() {
           : "Grafický návrh",
     },
     {
-      value: lang === "en" ? "5–20 days" : lang === "sk" ? "5–20 dní" : "5–20 dní",
+      value: lang === "en" ? "5 to 20 days" : lang === "sk" ? "5 až 20 dní" : "5 až 20 dní",
       label:
         lang === "en"
           ? "Standard production"
@@ -496,7 +496,7 @@ export default function JakToFunguePage() {
           : "Standardní výroba",
     },
     {
-      value: lang === "en" ? "1–2 days" : lang === "sk" ? "1–2 dni" : "1–2 dny",
+      value: lang === "en" ? "1 to 2 days" : lang === "sk" ? "1 až 2 dni" : "1 až 2 dny",
       label:
         lang === "en"
           ? "Shipping"

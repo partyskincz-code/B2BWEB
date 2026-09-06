@@ -4,14 +4,14 @@ import Content from "./Content";
 export const metadata: Metadata = {
   title: "Jak probíhá zakázka, od poptávky po dodání",
   description:
-    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5–20 pracovních dní. Časté otázky a záruky.",
+    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky.",
   alternates: {
     canonical: "/jak-to-funguje",
   },
   openGraph: {
     title: "Jak probíhá zakázka, od poptávky po dodání | Make the Moment",
     description:
-      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5–20 pracovních dní. Časté otázky a záruky.",
+      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky.",
     url: "/jak-to-funguje",
     images: [
       {
@@ -66,7 +66,7 @@ const faqSchema = {
       "name": "Jak dlouho vydrží dočasné tetovačky na kůži?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Standardně 3–7 dní v závislosti na místě těla, aktivitě a péči o pokožku. Dodáváme instrukce pro nanesení i prodloužení výdrže."
+        "text": "Standardně 3 až 7 dní v závislosti na místě těla, aktivitě a péči o pokožku. Dodáváme instrukce pro nanesení i prodloužení výdrže."
       }
     },
     {

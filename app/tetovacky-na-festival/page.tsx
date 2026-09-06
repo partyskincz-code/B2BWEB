@@ -4,11 +4,11 @@ import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage"
 export const metadata: Metadata = {
   title: "Tetovačky a promo materiály na festival",
   description:
-    "Dočasné tetovačky na festival ve velkých objemech, výdrž 3–7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
+    "Dočasné tetovačky na festival ve velkých objemech, výdrž 3 až 7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
   alternates: { canonical: "/tetovacky-na-festival" },
   openGraph: {
     title: "Tetovačky a promo materiály na festival | Make the Moment",
-    description: "Dočasné tetovačky na festival ve velkých objemech, výdrž 3–7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
+    description: "Dočasné tetovačky na festival ve velkých objemech, výdrž 3 až 7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
     url: "/tetovacky-na-festival",
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const data: Prilezitost = {
   "tag": "Festivaly a venkovní akce",
   "h1": "Tetovačky a promo materiály na festival",
-  "perex": "Na festivalu funguje to, co si člověk nalepí a nosí celý víkend. Dočasné tetovačky vydrží 3–7 dní, snesou pot i vodu a na fotkách z akce jde vaše značka dál sama.",
+  "perex": "Na festivalu funguje to, co si člověk nalepí a nosí celý víkend. Dočasné tetovačky vydrží 3 až 7 dní, snesou pot i vodu a na fotkách z akce jde vaše značka dál sama.",
   "produkty": [
     {
       "title": "Tetovačky ve velkých objemech",
@@ -40,7 +40,7 @@ const data: Prilezitost = {
     }
   ],
   "duvody": [
-    "Výdrž 3–7 dní podle místa na těle a péče o pokožku",
+    "Výdrž 3 až 7 dní podle místa na těle a péče o pokožku",
     "Voděodolné materiály, tetovačku nesmyje déšť ani pot",
     "Balení po sériích podle toho, jak budete rozdávat",
     "Certifikované materiály, bezpečné i pro dětské zóny",
@@ -76,15 +76,15 @@ const data: Prilezitost = {
   "faq": [
     {
       "q": "Kolik kusů se hodí na festival?",
-      "a": "Podle návštěvnosti a počtu dní. U jednodenní akce pro tisíc lidí obvykle stačí 700–1 000 archů, u vícedenního festivalu se počítá spíš s poloviční až plnou návštěvností každý den."
+      "a": "Podle návštěvnosti a počtu dní. U jednodenní akce pro tisíc lidí obvykle stačí 700 až 1 000 archů, u vícedenního festivalu se počítá spíš s poloviční až plnou návštěvností každý den."
     },
     {
       "q": "Vydrží tetovačka celý festival?",
-      "a": "Standardně 3–7 dní podle místa na těle, aktivity a péče o pokožku. Na paži nebo lýtku vydrží déle než na rukou. Ke každé zakázce dodáváme instrukce, jak výdrž prodloužit."
+      "a": "Standardně 3 až 7 dní podle místa na těle, aktivity a péče o pokožku. Na paži nebo lýtku vydrží déle než na rukou. Ke každé zakázce dodáváme instrukce, jak výdrž prodloužit."
     },
     {
       "q": "Zvládnete velký objem během sezóny?",
-      "a": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně dva měsíce dopředu, výroba trvá 5–20 pracovních dní podle velikosti a složitosti projektu."
+      "a": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně dva měsíce dopředu, výroba trvá 5 až 20 pracovních dní podle velikosti a složitosti projektu."
     }
   ],
   "ctaTitul": "Chystáte festival nebo venkovní akci?",
@@ -118,7 +118,7 @@ const faqSchema = {
       "name": "Kolik kusů se hodí na festival?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Podle návštěvnosti a počtu dní. U jednodenní akce pro tisíc lidí obvykle stačí 700–1 000 archů, u vícedenního festivalu se počítá spíš s poloviční až plnou návštěvností každý den."
+        "text": "Podle návštěvnosti a počtu dní. U jednodenní akce pro tisíc lidí obvykle stačí 700 až 1 000 archů, u vícedenního festivalu se počítá spíš s poloviční až plnou návštěvností každý den."
       }
     },
     {
@@ -126,7 +126,7 @@ const faqSchema = {
       "name": "Vydrží tetovačka celý festival?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Standardně 3–7 dní podle místa na těle, aktivity a péče o pokožku. Na paži nebo lýtku vydrží déle než na rukou. Ke každé zakázce dodáváme instrukce, jak výdrž prodloužit."
+        "text": "Standardně 3 až 7 dní podle místa na těle, aktivity a péče o pokožku. Na paži nebo lýtku vydrží déle než na rukou. Ke každé zakázce dodáváme instrukce, jak výdrž prodloužit."
       }
     },
     {
@@ -134,7 +134,7 @@ const faqSchema = {
       "name": "Zvládnete velký objem během sezóny?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně dva měsíce dopředu, výroba trvá 5–20 pracovních dní podle velikosti a složitosti projektu."
+        "text": "Ano, ale v květnu až srpnu je kapacita napjatá. Objednávejte ideálně dva měsíce dopředu, výroba trvá 5 až 20 pracovních dní podle velikosti a složitosti projektu."
       }
     }
   ]
@@ -167,7 +167,7 @@ const sluzbaSchema = {
   "provider": {
     "@id": "https://www.makethemoment.cz/#organizace"
   },
-  "description": "Dočasné tetovačky na festival ve velkých objemech, výdrž 3–7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
+  "description": "Dočasné tetovačky na festival ve velkých objemech, výdrž 3 až 7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
   "areaServed": [
     {
       "@type": "Country",

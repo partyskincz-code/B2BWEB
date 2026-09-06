@@ -29,8 +29,8 @@ const cs: Record<string, string> = {
   "usp.3.desc": "U tetovaček vyrobíme i jeden arch. Žádné minimální množství, žádné podmínky.",
   "usp.4.title": "Doobjednávka kdykoliv",
   "usp.4.desc": "Váš design máme uložený, doobjednejte jakékoliv množství bez závazků. Žádné minimální množství, žádné podmínky.",
-  "usp.5.title": "Výroba 5–20 dní",
-  "usp.5.desc": "Od schválení grafiky po dodání to je 5–20 pracovních dní podle velikosti a složitosti projektu. Spěcháte? Zeptejte se nás.",
+  "usp.5.title": "Výroba 5 až 20 dní",
+  "usp.5.desc": "Od schválení grafiky po dodání to je 5 až 20 pracovních dní podle velikosti a složitosti projektu. Spěcháte? Zeptejte se nás.",
 
   // Storytelling
   "story.tag": "Kompletní B2B řešení",
@@ -39,13 +39,13 @@ const cs: Record<string, string> = {
   "story.p1": "Ať plánujete firemní večírek pro 50 lidí nebo festival pro 10 000, PartySkin pokryje veškeré promo materiály od A do Z. Grafika, výroba, dodání. Jeden kontakt. Vše pod kontrolou.",
   "story.check.1": "Cenová nabídka do 24 hodin",
   "story.check.2": "Grafický návrh do 48 hodin",
-  "story.check.3": "Dodání po celé Evropě, výroba 5–20 pracovních dní",
+  "story.check.3": "Dodání po celé Evropě, výroba 5 až 20 pracovních dní",
   "story.check.4": "Jeden kontakt po celou dobu projektu",
   "story.stat": "akcí úspěšně zásobeno materiálem",
 
   // Výhody
-  "vyhody.h2": "Bez rizika. Bez minima. Bez překvapení.",
-  "vyhody.sub": "Tři jistoty, které u jiných dodavatelů nenajdete.",
+  "vyhody.h2": "Žádné riziko, žádné minimální množství, žádná překvapení.",
+  "vyhody.sub": "Tři věci, na které se u nás můžete spolehnout.",
   "vyhody.1.title": "Vzorky zdarma",
   "vyhody.1.desc": "Nejste si jistí kvalitou? Pošleme vám vzorky předtím, než cokoliv objednáte. Zdarma, bez podmínek. Chceme, abyste se rozhodli s jistotou.",
   "vyhody.1.cta": "Požádat o vzorky",
@@ -78,7 +78,7 @@ const cs: Record<string, string> = {
   "process.2.title": "Návrh do 24 hodin",
   "process.2.desc": "Náš grafik připraví vizualizaci nebo zpracuje váš design. Schvalujete online, jednoduše.",
   "process.3.title": "Výroba & dodání",
-  "process.3.desc": "Spustíme výrobu a doručíme přímo k vám. Podle velikosti a složitosti projektu to je 5–20 pracovních dní od schválení.",
+  "process.3.desc": "Spustíme výrobu a doručíme přímo k vám. Podle velikosti a složitosti projektu to je 5 až 20 pracovních dní od schválení.",
 
   // Reference
   "testimonials.tag": "Reference",
@@ -111,7 +111,7 @@ const cs: Record<string, string> = {
   "stats.1.label": "Minimální objednávka",
   "stats.2.value": "do 24 h",
   "stats.2.label": "Reakce na poptávku",
-  "stats.3.value": "5–20 dní",
+  "stats.3.value": "5 až 20 dní",
   "stats.3.label": "Doba výroby",
   "stats.4.value": "100%",
   "stats.4.label": "EU certifikace",
@@ -173,8 +173,8 @@ const en: Record<string, string> = {
   "usp.3.desc": "For tattoos we print even a single sheet. No minimum quantity, no conditions.",
   "usp.4.title": "Reorder anytime",
   "usp.4.desc": "Your design is saved, reorder any quantity without commitment. No minimum, no conditions.",
-  "usp.5.title": "5–20 day turnaround",
-  "usp.5.desc": "From artwork approval to delivery it takes 5–20 working days depending on the size and complexity of the project. In a rush? Ask us.",
+  "usp.5.title": "5 to 20 day turnaround",
+  "usp.5.desc": "From artwork approval to delivery it takes 5 to 20 working days depending on the size and complexity of the project. In a rush? Ask us.",
 
   // Storytelling
   "story.tag": "Complete B2B solution",
@@ -183,13 +183,13 @@ const en: Record<string, string> = {
   "story.p1": "Whether you're planning a corporate party for 50 people or a festival for 10,000, PartySkin covers all promo materials from A to Z. Design, production, delivery. One contact. Everything under control.",
   "story.check.1": "Price quote within 24 hours",
   "story.check.2": "Graphic design within 48 hours",
-  "story.check.3": "Delivery across Europe, production in 5–20 business days",
+  "story.check.3": "Delivery across Europe, production in 5 to 20 business days",
   "story.check.4": "One contact throughout the project",
   "story.stat": "events successfully supplied",
 
   // Výhody
-  "vyhody.h2": "No risk. No minimum. No surprises.",
-  "vyhody.sub": "Three certainties you won't find at other suppliers.",
+  "vyhody.h2": "No risk, no minimum order, no surprises.",
+  "vyhody.sub": "Three things you can count on with us.",
   "vyhody.1.title": "Free samples",
   "vyhody.1.desc": "Not sure about the quality? We'll send you samples before you order anything. Free, no conditions. We want you to decide with confidence.",
   "vyhody.1.cta": "Request samples",
@@ -222,7 +222,7 @@ const en: Record<string, string> = {
   "process.2.title": "Design within 24 hours",
   "process.2.desc": "Our designer prepares a visualization or processes your design. You approve online, simply.",
   "process.3.title": "Production & delivery",
-  "process.3.desc": "We start production and deliver directly to you. Depending on the size and complexity of the project it takes 5–20 business days from approval.",
+  "process.3.desc": "We start production and deliver directly to you. Depending on the size and complexity of the project it takes 5 to 20 business days from approval.",
 
   // Reference
   "testimonials.tag": "References",
@@ -255,7 +255,7 @@ const en: Record<string, string> = {
   "stats.1.label": "Minimum order",
   "stats.2.value": "within 24 h",
   "stats.2.label": "Reply to your enquiry",
-  "stats.3.value": "5–20 days",
+  "stats.3.value": "5 to 20 days",
   "stats.3.label": "Production time",
   "stats.4.value": "100%",
   "stats.4.label": "EU certified",
@@ -317,8 +317,8 @@ const sk: Record<string, string> = {
   "usp.3.desc": "Pri tetovačkách vyrobíme aj jeden hárok. Žiadne minimálne množstvo, žiadne podmienky.",
   "usp.4.title": "Doobjednávka kedykoľvek",
   "usp.4.desc": "Váš dizajn máme uložený, doobjednajte akékoľvek množstvo bez záväzkov. Žiadne minimum, žiadne podmienky.",
-  "usp.5.title": "Výroba 5–20 dní",
-  "usp.5.desc": "Od schválenia grafiky po doručenie to je 5–20 pracovných dní podľa veľkosti a zložitosti projektu. Ponáhľate sa? Opýtajte sa nás.",
+  "usp.5.title": "Výroba 5 až 20 dní",
+  "usp.5.desc": "Od schválenia grafiky po doručenie to je 5 až 20 pracovných dní podľa veľkosti a zložitosti projektu. Ponáhľate sa? Opýtajte sa nás.",
 
   // Storytelling
   "story.tag": "Kompletné B2B riešenie",
@@ -327,13 +327,13 @@ const sk: Record<string, string> = {
   "story.p1": "Či plánujete firemný večierok pre 50 ľudí alebo festival pre 10 000, PartySkin pokryje všetky promo materiály od A po Z. Grafika, výroba, doručenie. Jeden kontakt. Všetko pod kontrolou.",
   "story.check.1": "Cenová ponuka do 24 hodín",
   "story.check.2": "Grafický návrh do 48 hodín",
-  "story.check.3": "Doručenie po celej Európe, výroba 5–20 pracovných dní",
+  "story.check.3": "Doručenie po celej Európe, výroba 5 až 20 pracovných dní",
   "story.check.4": "Jeden kontakt počas celého projektu",
   "story.stat": "eventov úspešne zásobených materiálom",
 
   // Výhody
-  "vyhody.h2": "Bez rizika. Bez minima. Bez prekvapení.",
-  "vyhody.sub": "Tri istoty, ktoré u iných dodávateľov nenájdete.",
+  "vyhody.h2": "Žiadne riziko, žiadne minimálne množstvo, žiadne prekvapenia.",
+  "vyhody.sub": "Tri veci, na ktoré sa u nás môžete spoľahnúť.",
   "vyhody.1.title": "Vzorky zdarma",
   "vyhody.1.desc": "Nie ste si istí kvalitou? Pošleme vám vzorky predtým, než čokoľvek objednáte. Zdarma, bez podmienok.",
   "vyhody.1.cta": "Požiadať o vzorky",
@@ -366,7 +366,7 @@ const sk: Record<string, string> = {
   "process.2.title": "Návrh do 24 hodín",
   "process.2.desc": "Náš grafik pripraví vizualizáciu alebo spracuje váš dizajn. Schvaľujete online, jednoducho.",
   "process.3.title": "Výroba & doručenie",
-  "process.3.desc": "Spustíme výrobu a doručíme priamo k vám. Podľa veľkosti a zložitosti projektu to je 5–20 pracovných dní od schválenia.",
+  "process.3.desc": "Spustíme výrobu a doručíme priamo k vám. Podľa veľkosti a zložitosti projektu to je 5 až 20 pracovných dní od schválenia.",
 
   // Reference
   "testimonials.tag": "Referencie",
@@ -399,7 +399,7 @@ const sk: Record<string, string> = {
   "stats.1.label": "Minimálna objednávka",
   "stats.2.value": "do 24 h",
   "stats.2.label": "Reakcia na dopyt",
-  "stats.3.value": "5–20 dní",
+  "stats.3.value": "5 až 20 dní",
   "stats.3.label": "Doba výroby",
   "stats.4.value": "100%",
   "stats.4.label": "EU certifikácia",

@@ -4,12 +4,12 @@ import ClanekLayout, { type Clanek } from "@/components/ClanekLayout";
 export const metadata: Metadata = {
   title: "Jak dlouho vydrží dočasné tetovačky a jak výdrž prodloužit",
   description:
-    "Dočasné tetovačky vydrží běžně 3–7 dní. Co výdrž ovlivňuje, kam je nalepit, jak je sundat a jestli jsou bezpečné pro děti.",
+    "Dočasné tetovačky vydrží běžně 3 až 7 dní. Co výdrž ovlivňuje, kam je nalepit, jak je sundat a jestli jsou bezpečné pro děti.",
   alternates: { canonical: "/poradna/jak-dlouho-vydrzi-docasne-tetovacky" },
   openGraph: {
     type: "article",
     title: "Jak dlouho vydrží dočasné tetovačky a jak výdrž prodloužit | Make the Moment",
-    description: "Dočasné tetovačky vydrží běžně 3–7 dní. Co výdrž ovlivňuje, kam je nalepit, jak je sundat a jestli jsou bezpečné pro děti.",
+    description: "Dočasné tetovačky vydrží běžně 3 až 7 dní. Co výdrž ovlivňuje, kam je nalepit, jak je sundat a jestli jsou bezpečné pro děti.",
     url: "/poradna/jak-dlouho-vydrzi-docasne-tetovacky",
     images: [
       {
@@ -39,11 +39,11 @@ const data: Clanek = {
     {
       "typ": "ul",
       "polozky": [
-        "Místo na těle, paže, lýtko a rameno vydrží nejdéle, ruce a prsty nejkratší dobu",
-        "Tření o oblečení, pod rukávem se tetovačka odře rychleji než na předloktí",
-        "Voda a mýdlo, sprchování výdrž zkracuje, koupání v bazénu ještě víc",
-        "Krémy a oleje, mastný podklad tetovačku uvolňuje",
-        "Pocení a sport, na festivalu v létě počítejte spíš se spodní hranicí"
+        "Místo na těle: nejdéle vydrží na paži, lýtku a rameni, nejkratší dobu na rukou a prstech",
+        "Tření o oblečení: pod rukávem se tetovačka odře rychleji než na předloktí",
+        "Voda a mýdlo: sprchování výdrž zkracuje, koupání v bazénu ještě víc",
+        "Krémy a oleje: mastná pokožka tetovačku uvolňuje",
+        "Pocení a sport: na letním festivalu počítejte spíš se spodní hranicí"
       ]
     },
     {
@@ -121,7 +121,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Jak dlouho vydrží dočasné tetovačky a jak výdrž prodloužit",
-  "description": "Dočasné tetovačky vydrží běžně 3–7 dní. Co výdrž ovlivňuje, kam je nalepit, jak je sundat a jestli jsou bezpečné pro děti.",
+  "description": "Dočasné tetovačky vydrží běžně 3 až 7 dní. Co výdrž ovlivňuje, kam je nalepit, jak je sundat a jestli jsou bezpečné pro děti.",
   "datePublished": "2026-09-02",
   "dateModified": "2026-09-02",
   "author": {

@@ -44,7 +44,7 @@ const data: Prilezitost = {
     "Jeden dodavatel na tetovačky, samolepky i tiskoviny, jeden vizuální styl",
     "Kalkulace do 24 hodin, grafický návrh do 24 hodin od briefu",
     "Vyrobíme i malou sérii na jednorázový veletrh",
-    "Doručení na adresu nebo rovnou do areálu výstaviště"
+    "Podklady si zpracujeme sami, stačí poslat logo"
   ],
   "foto": {
     "src": "/realizace-papirovy-prebal.jpg",

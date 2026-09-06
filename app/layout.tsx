@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | Make the Moment",
   },
   description:
-    "Dočasné tetovačky, samolepky a pohlednice na míru pro firmy, eventy, svatby a festivaly. Certifikovaná výroba, vlastní design, výroba 5–20 pracovních dní. Poptejte zdarma.",
+    "Dočasné tetovačky, samolepky a pohlednice na míru pro firmy, eventy, svatby a festivaly. Certifikovaná výroba, vlastní design, výroba 5 až 20 pracovních dní. Poptejte zdarma.",
   applicationName: "Make the Moment",
   authors: [{ name: "Make the Moment" }],
   creator: "Make the Moment",

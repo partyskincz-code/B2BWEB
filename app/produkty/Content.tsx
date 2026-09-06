@@ -87,10 +87,10 @@ export default function ProduktyPage() {
           : "Bez minimálního množství",
       deliveryTime:
         lang === "en"
-          ? "5–20 business days"
+          ? "5 to 20 business days"
           : lang === "sk"
-          ? "5–20 pracovných dní"
-          : "5–20 pracovních dní",
+          ? "5 až 20 pracovných dní"
+          : "5 až 20 pracovních dní",
       image: "/detske-tetovacky-archy.jpg",
       cta:
         lang === "en"
@@ -163,10 +163,10 @@ export default function ProduktyPage() {
           : "Min. 100 ks",
       deliveryTime:
         lang === "en"
-          ? "5–20 business days"
+          ? "5 to 20 business days"
           : lang === "sk"
-          ? "5–20 pracovných dní"
-          : "5–20 pracovních dní",
+          ? "5 až 20 pracovných dní"
+          : "5 až 20 pracovních dní",
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
       features:
         lang === "en"
@@ -242,17 +242,17 @@ export default function ProduktyPage() {
           : "Bez minima",
       deliveryTime:
         lang === "en"
-          ? "5–20 business days"
+          ? "5 to 20 business days"
           : lang === "sk"
-          ? "5–20 pracovných dní"
-          : "5–20 pracovních dní",
+          ? "5 až 20 pracovných dní"
+          : "5 až 20 pracovních dní",
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
       features:
         lang === "en"
           ? [
               "Formats: A6, A5, square (10×10 cm)",
               "Single-sided or double-sided print",
-              "Paper 300–400 g/m² coated or recycled",
+              "Paper 300 až 400 g/m² coated or recycled",
               "Surface finish: gloss, matte, soft-touch laminate",
               "Personalisation of each card (name, text)",
               "Envelopes included in delivery",
@@ -263,7 +263,7 @@ export default function ProduktyPage() {
           ? [
               "Formáty: A6, A5, štvorcové (10×10 cm)",
               "Jednostranná alebo obojstranná tlač",
-              "Papier 300–400 g/m² kriedový alebo recyklovaný",
+              "Papier 300 až 400 g/m² kriedový alebo recyklovaný",
               "Povrchová úprava: lesklý, matný, soft-touch laminát",
               "Personalizácia každej pohľadnice (meno, text)",
               "Obálky súčasťou dodávky",
@@ -273,7 +273,7 @@ export default function ProduktyPage() {
           : [
               "Formáty: A6, A5, čtvercové (10×10 cm)",
               "Jednostranný nebo oboustranný tisk",
-              "Papír 300–400 g/m² krídový nebo recyklovaný",
+              "Papír 300 až 400 g/m² krídový nebo recyklovaný",
               "Povrchová úprava: lesklý, matný, soft-touch laminát",
               "Personalizace každé pohlednice (jméno, text)",
               "Obálky součástí dodávky",
@@ -798,10 +798,10 @@ export default function ProduktyPage() {
               </h3>
               <p className="text-gray-500 leading-relaxed mb-6 max-w-2xl">
                 {lang === "en"
-                  ? "For a wedding, a kids' party or a hen do you don't need a quote at all. Pick a ready-made design in our e-shop or upload your own photo, order straight away, even a single sheet, and it's with you in 2–3 days."
+                  ? "For a wedding, a kids' party or a hen do you don't need a quote at all. Pick a ready-made design in our e-shop or upload your own photo, order straight away, even a single sheet, and it's with you in 2 to 3 days."
                   : lang === "sk"
-                  ? "Na svadbu, detskú párty alebo rozlúčku nemusíte nič dopytovať. V našom e-shope si vyberiete z hotových motívov alebo nahráte vlastnú fotku, objednáte hneď, pokojne jediný arch, a do 2–3 dní to máte doma."
-                  : "Na svatbu, dětskou párty nebo rozlučku nemusíte nic poptávat. V našem e-shopu si vyberete z hotových motivů nebo nahrajete vlastní fotku, objednáte hned, klidně jediný arch, a do 2–3 dnů to máte doma."}
+                  ? "Na svadbu, detskú párty alebo rozlúčku nemusíte nič dopytovať. V našom e-shope si vyberiete z hotových motívov alebo nahráte vlastnú fotku, objednáte hneď, pokojne jediný arch, a do 2 až 3 dní to máte doma."
+                  : "Na svatbu, dětskou párty nebo rozlučku nemusíte nic poptávat. V našem e-shopu si vyberete z hotových motivů nebo nahrajete vlastní fotku, objednáte hned, klidně jediný arch, a do 2 až 3 dnů to máte doma."}
               </p>
               <div className="flex gap-4 flex-wrap">
                 <a

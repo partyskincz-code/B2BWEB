@@ -66,8 +66,8 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
       {/* Foto + důvody */}
       <section className="section-pad bg-gray-50">
         <div className="container-pad grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-            <Image src={data.foto.src} alt={data.foto.alt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+          <div className="relative aspect-[3/4] w-full max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden bg-gray-100">
+            <Image src={data.foto.src} alt={data.foto.alt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
           </div>
           <div>
             <p className="text-gray-600 leading-relaxed mb-6">{data.fotoPopis}</p>

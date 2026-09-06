@@ -128,10 +128,10 @@ export default function KontaktPage() {
           : "Pracovní doba",
       value:
         lang === "en"
-          ? "Mon–Fri: 9:00–17:00"
+          ? "Mon to Fri: 9:00 to 17:00"
           : lang === "sk"
-          ? "Po–Pia: 9:00–17:00"
-          : "Po–Pá: 9:00–17:00",
+          ? "Po až Pia: 9:00 až 17:00"
+          : "Po až Pá: 9:00 až 17:00",
       href: null,
     },
   ];
@@ -478,12 +478,12 @@ export default function KontaktPage() {
                 <option value="">
                   {lang === "en" ? "Select..." : "Vyberte..."}
                 </option>
-                <option>1–10 {lang === "en" ? "pcs" : "ks"}</option>
-                <option>10–50 {lang === "en" ? "pcs" : "ks"}</option>
-                <option>50–100 {lang === "en" ? "pcs" : "ks"}</option>
-                <option>100–500 {lang === "en" ? "pcs" : "ks"}</option>
-                <option>500–1 000 {lang === "en" ? "pcs" : "ks"}</option>
-                <option>1 000–5 000 {lang === "en" ? "pcs" : "ks"}</option>
+                <option>1 {lang === "en" ? "to" : "až"} 10 {lang === "en" ? "pcs" : "ks"}</option>
+                <option>10 {lang === "en" ? "to" : "až"} 50 {lang === "en" ? "pcs" : "ks"}</option>
+                <option>50 {lang === "en" ? "to" : "až"} 100 {lang === "en" ? "pcs" : "ks"}</option>
+                <option>100 {lang === "en" ? "to" : "až"} 500 {lang === "en" ? "pcs" : "ks"}</option>
+                <option>500 {lang === "en" ? "to" : "až"} 1 000 {lang === "en" ? "pcs" : "ks"}</option>
+                <option>1 000 {lang === "en" ? "to" : "až"} 5 000 {lang === "en" ? "pcs" : "ks"}</option>
                 <option>5 000+ {lang === "en" ? "pcs" : "ks"}</option>
               </select>
             </div>

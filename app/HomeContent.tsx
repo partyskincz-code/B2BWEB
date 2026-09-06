@@ -198,7 +198,7 @@ export default function HomePage() {
       author: "Mgr. Alena Dolinová",
       org: "Gepard Express, SE",
       orgFull: "Gepard Express / Úzkokolejka Jindřichův Hradec",
-      website: "",
+      website: "https://uzkokolejky.cz",
       logo: "/logo-uzkokolejky.png",
       initials: "GE",
       rating: 5,
@@ -242,8 +242,8 @@ export default function HomePage() {
     : ["Firemní event", "Teambuilding", "Festival", "Veletrh", "Konference", "Svatba", "Brand launch", "Dětská party", "Sportovní akce"];
 
   const clientLogos = [
-    { name: "Gepard Express", url: "" },
-    { name: "HK Mladí Draci Šumperk", url: "" },
+    { name: "Gepard Express", url: "https://uzkokolejky.cz" },
+    { name: "HK Mladí Draci Šumperk", url: "https://www.hkmdsumperk.cz" },
     { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
     { name: "NaZemi", url: "https://nazemi.cz" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },

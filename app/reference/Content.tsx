@@ -40,7 +40,7 @@ export default function ReferencePage() {
       author: "Mgr. Alena Dolinová",
       org: "Gepard Express, SE",
       orgFull: "Gepard Express / Úzkokolejka Jindřichův Hradec",
-      website: "",
+      website: "https://uzkokolejky.cz",
       logo: "/logo-uzkokolejky.png",
       initials: "GE",
     },
@@ -76,7 +76,7 @@ export default function ReferencePage() {
   const klienti = [
     { name: "got2b", url: "" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
-    { name: "Gepard Express", url: "" },
+    { name: "Gepard Express", url: "https://uzkokolejky.cz" },
     { name: "HK Mladí Draci Šumperk", url: "https://www.hkmdsumperk.cz" },
     { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
     { name: "NaZemi", url: "https://nazemi.cz" },

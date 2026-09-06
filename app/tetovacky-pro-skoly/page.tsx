@@ -44,7 +44,7 @@ const data: Prilezitost = {
     "Bez minimálního množství, vyrobíme i pro jednu třídu",
     "Tetovačka se sundá vodou a mýdlem nebo dětským olejem",
     "Motivy navrhneme podle tématu akce, i z dětské kresby",
-    "Výdrž 3–7 dní, takže odměna vydrží až do víkendu"
+    "Výdrž 3 až 7 dní, takže odměna vydrží až do víkendu"
   ],
   "foto": {
     "src": "/detske-tetovacky-archy.jpg",
