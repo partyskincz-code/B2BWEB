@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Ochrana osobních údajů",
-  description: "Zásady zpracování osobních údajů PartySkin B2B.",
+  description: "Zásady zpracování osobních údajů Make the Moment.",
   robots: { index: false, follow: true },
 };
 

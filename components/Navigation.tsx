@@ -51,7 +51,7 @@ export default function Navigation() {
       <div className="container-pad">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5" aria-label="PartySkin B2B">
+          <Link href="/" className="flex items-center gap-2.5" aria-label="Make the Moment">
             <Image
               src="/logo-partyskin.png"
               alt="PartySkin"

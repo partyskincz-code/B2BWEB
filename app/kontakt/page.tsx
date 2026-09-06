@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/kontakt",
   },
   openGraph: {
-    title: "Nezávazná poptávka | PartySkin B2B",
+    title: "Nezávazná poptávka | Make the Moment",
     description:
       "Pošlete logo, grafiku nebo jen nápad. Do 24 hodin dostanete kalkulaci, doporučení formátu i termín výroby. Bez minimálního množství.",
     url: "/kontakt",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

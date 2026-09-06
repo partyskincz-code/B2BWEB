@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Kolik stojí reklamní tetovačky s logem? Ceny od 11 Kč za kus u velkých nákladů, formáty A4 až A7, samolepky od 4 Kč, tiskoviny od 12 Kč. Ceny včetně DPH.",
   alternates: { canonical: "/cenik" },
   openGraph: {
-    title: "Ceník reklamních tetovaček, samolepek a tiskovin | PartySkin B2B",
+    title: "Ceník reklamních tetovaček, samolepek a tiskovin | Make the Moment",
     description:
       "Ceny tetovaček s logem podle formátu a množství, včetně DPH. Samolepky od 4 Kč, tiskoviny od 12 Kč za kus.",
     url: "/cenik",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 const hladiny = ["1–5 ks", "6–19 ks", "20–49 ks", "50–99 ks", "100–499 ks", "500–999 ks", "1 000+ ks"];
 
 const tetovacky = [
-  { format: "A4 (největší)", ceny: ["179 Kč", "149 Kč", "89 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"] },
+  { format: "A4 (největší)", ceny: ["179 Kč", "149 Kč", "89 Kč", "85 Kč", "79 Kč", "69 Kč", "59 Kč"] },
   { format: "A5", ceny: ["95 Kč", "75 Kč", "59 Kč", "45 Kč", "39 Kč", "35 Kč", "29 Kč"] },
   { format: "A6", ceny: ["55 Kč", "45 Kč", "35 Kč", "29 Kč", "25 Kč", "22 Kč", "19 Kč"] },
   { format: "A7 (nejmenší)", ceny: ["35 Kč", "27 Kč", "22 Kč", "18 Kč", "15 Kč", "13 Kč", "11 Kč"] },
@@ -207,7 +207,7 @@ export default function Page() {
             </p>
           </div>
 
-          <a href="/PartySkin_B2B_Cenik.pdf" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-brand-primary hover:underline">
+          <a href="/MakeTheMoment_B2B_Cenik.pdf" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-brand-primary hover:underline" target="_blank" rel="noopener noreferrer">
             Stáhnout kompletní ceník (PDF) <ArrowRight size={15} />
           </a>
         </div>

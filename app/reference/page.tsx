@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/reference",
   },
   openGraph: {
-    title: "Reference a realizace | PartySkin B2B",
+    title: "Reference a realizace | Make the Moment",
     description:
       "Reálné zakázky pro got2b, MOREAU AGRI, NaZemi nebo Ekocentrum Vydra. Fotky hotových tetovaček, přebalů a tiskovin na míru.",
     url: "/reference",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -48,7 +48,7 @@ const referenceBreadcrumb = {
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Reference klientů PartySkin B2B",
+  "name": "Reference klientů Make the Moment",
   "itemListElement": [
     {
       "@type": "ListItem",

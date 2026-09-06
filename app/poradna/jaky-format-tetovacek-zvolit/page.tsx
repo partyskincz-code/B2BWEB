@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/poradna/jaky-format-tetovacek-zvolit" },
   openGraph: {
     type: "article",
-    title: "Jaký formát tetovaček zvolit, A4, A5, A6 nebo A7 | PartySkin B2B",
+    title: "Jaký formát tetovaček zvolit, A4, A5, A6 nebo A7 | Make the Moment",
     description: "Srovnání formátů archů dočasných tetovaček podle použití a ceny. Co se vyplatí na veletrh, co na festival a co jako dárek pro klienty.",
     url: "/poradna/jaky-format-tetovacek-zvolit",
     images: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -123,7 +123,7 @@ const articleSchema = {
   "dateModified": "2026-09-02",
   "author": {
     "@type": "Organization",
-    "name": "PartySkin B2B",
+    "name": "Make the Moment",
     "url": "https://www.makethemoment.cz"
   },
   "publisher": {

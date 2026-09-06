@@ -205,7 +205,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-pad py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} PartySkin s.r.o.{" "}
+            © {new Date().getFullYear()} Make the Moment, Jana Budínová, IČO 21135886.{" "}
             {lang === "en" ? "All rights reserved." : lang === "sk" ? "Všetky práva vyhradené." : "Všechna práva vyhrazena."}
           </p>
           <div className="flex items-center gap-4">

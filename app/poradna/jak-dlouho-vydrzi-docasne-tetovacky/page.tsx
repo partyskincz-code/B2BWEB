@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/poradna/jak-dlouho-vydrzi-docasne-tetovacky" },
   openGraph: {
     type: "article",
-    title: "Jak dlouho vydrží dočasné tetovačky a jak výdrž prodloužit | PartySkin B2B",
+    title: "Jak dlouho vydrží dočasné tetovačky a jak výdrž prodloužit | Make the Moment",
     description: "Dočasné tetovačky vydrží běžně 3–7 dní. Co výdrž ovlivňuje, kam je nalepit, jak je sundat a jestli jsou bezpečné pro děti.",
     url: "/poradna/jak-dlouho-vydrzi-docasne-tetovacky",
     images: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -126,7 +126,7 @@ const articleSchema = {
   "dateModified": "2026-09-02",
   "author": {
     "@type": "Organization",
-    "name": "PartySkin B2B",
+    "name": "Make the Moment",
     "url": "https://www.makethemoment.cz"
   },
   "publisher": {

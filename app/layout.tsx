@@ -10,12 +10,12 @@ const SITE = "https://www.makethemoment.cz";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "PartySkin B2B, Promo materiály na míru pro firmy a eventy",
-    template: "%s | PartySkin B2B",
+    default: "Make the Moment, Promo materiály na míru pro firmy a eventy",
+    template: "%s | Make the Moment",
   },
   description:
     "Dočasné tetovačky, samolepky a pohlednice na míru pro firmy, eventy, svatby a festivaly. Certifikovaná výroba, vlastní design, výroba 5–20 pracovních dní. Poptejte zdarma.",
-  applicationName: "PartySkin B2B",
+  applicationName: "Make the Moment",
   authors: [{ name: "PartySkin" }],
   creator: "PartySkin",
   publisher: "PartySkin",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "cs_CZ",
     url: SITE,
-    siteName: "PartySkin B2B",
-    title: "PartySkin B2B, Váš brand na kůži. Doslova.",
+    siteName: "Make the Moment",
+    title: "Make the Moment, Váš brand na kůži. Doslova.",
     description:
       "Kompletní promo materiály na jednom místě. Dočasné tetovačky, samolepky, pohlednice, vše na míru pro váš event nebo značku.",
     images: [
@@ -35,13 +35,13 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PartySkin B2B, Váš brand na kůži. Doslova.",
+    title: "Make the Moment, Váš brand na kůži. Doslova.",
     description:
       "Dočasné tetovačky, samolepky a tiskoviny na míru pro firmy a eventy.",
     images: ["/og-partyskin-b2b.jpg"],
@@ -66,7 +66,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${SITE}/#organizace`,
-  name: "PartySkin B2B",
+  name: "Make the Moment",
   alternateName: "PartySkin",
   description:
     "Výroba dočasných tetovaček, samolepek a tiskovin na míru pro firmy, agentury a eventy.",
@@ -111,7 +111,7 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": `${SITE}/#web`,
   url: SITE,
-  name: "PartySkin B2B",
+  name: "Make the Moment",
   inLanguage: "cs-CZ",
   publisher: { "@id": `${SITE}/#organizace` },
 };

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Praktické návody k dočasným tetovačkám: jak připravit podklady pro tisk, jaký formát archu zvolit a jak dlouho tetovačky vydrží na kůži.",
   alternates: { canonical: "/poradna" },
   openGraph: {
-    title: "Poradna | PartySkin B2B",
+    title: "Poradna | Make the Moment",
     description:
       "Jak připravit podklady, jaký formát zvolit a jak dlouho tetovačky vydrží. Návody z praxe.",
     url: "/poradna",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -55,7 +55,7 @@ const SITE = "https://www.makethemoment.cz";
 const seznamSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Poradna PartySkin B2B",
+  name: "Poradna Make the Moment",
   itemListElement: clanky.map((c, i) => ({
     "@type": "ListItem",
     position: i + 1,

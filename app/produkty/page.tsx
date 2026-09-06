@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/produkty",
   },
   openGraph: {
-    title: "Tetovačky, samolepky a tiskoviny na míru, ceník | PartySkin B2B",
+    title: "Tetovačky, samolepky a tiskoviny na míru, ceník | Make the Moment",
     description:
       "Dočasné tetovačky od 8 Kč, samolepky od 4 Kč, tiskoviny od 12 Kč za kus. Formáty A4 až A7, certifikované materiály, ceník ke stažení.",
     url: "/produkty",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

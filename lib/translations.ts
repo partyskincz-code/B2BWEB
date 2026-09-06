@@ -107,10 +107,10 @@ const cs: Record<string, string> = {
   "form.success": "Děkujeme! Ozveme se vám do 24 hodin.",
 
   // Stats
-  "stats.1.value": "500+",
-  "stats.1.label": "Spokojených klientů",
-  "stats.2.value": "50 000+",
-  "stats.2.label": "Tetováček ročně",
+  "stats.1.value": "od 1 ks",
+  "stats.1.label": "Minimální objednávka",
+  "stats.2.value": "do 24 h",
+  "stats.2.label": "Reakce na poptávku",
   "stats.3.value": "5–20 dní",
   "stats.3.label": "Doba výroby",
   "stats.4.value": "100%",
@@ -121,7 +121,7 @@ const cs: Record<string, string> = {
   "footer.products": "Produkty",
   "footer.company": "Společnost",
   "footer.contact": "Kontakt",
-  "footer.copyright": "PartySkin B2B. Všechna práva vyhrazena.",
+  "footer.copyright": "Make the Moment. Všechna práva vyhrazena.",
 
   // Produkty page
   "page.products.tag": "Naše nabídka",
@@ -251,10 +251,10 @@ const en: Record<string, string> = {
   "form.success": "Thank you! We'll get back to you within 24 hours.",
 
   // Stats
-  "stats.1.value": "500+",
-  "stats.1.label": "Happy clients",
-  "stats.2.value": "50,000+",
-  "stats.2.label": "Tattoos per year",
+  "stats.1.value": "from 1 pc",
+  "stats.1.label": "Minimum order",
+  "stats.2.value": "within 24 h",
+  "stats.2.label": "Reply to your enquiry",
   "stats.3.value": "5–20 days",
   "stats.3.label": "Production time",
   "stats.4.value": "100%",
@@ -265,7 +265,7 @@ const en: Record<string, string> = {
   "footer.products": "Products",
   "footer.company": "Company",
   "footer.contact": "Contact",
-  "footer.copyright": "PartySkin B2B. All rights reserved.",
+  "footer.copyright": "Make the Moment. All rights reserved.",
 
   // Produkty page
   "page.products.tag": "Our offer",
@@ -395,10 +395,10 @@ const sk: Record<string, string> = {
   "form.success": "Ďakujeme! Ozveme sa vám do 24 hodín.",
 
   // Stats
-  "stats.1.value": "500+",
-  "stats.1.label": "Spokojných klientov",
-  "stats.2.value": "50 000+",
-  "stats.2.label": "Tetovačiek ročne",
+  "stats.1.value": "od 1 ks",
+  "stats.1.label": "Minimálna objednávka",
+  "stats.2.value": "do 24 h",
+  "stats.2.label": "Reakcia na dopyt",
   "stats.3.value": "5–20 dní",
   "stats.3.label": "Doba výroby",
   "stats.4.value": "100%",
@@ -409,7 +409,7 @@ const sk: Record<string, string> = {
   "footer.products": "Produkty",
   "footer.company": "Spoločnosť",
   "footer.contact": "Kontakt",
-  "footer.copyright": "PartySkin B2B. Všetky práva vyhradené.",
+  "footer.copyright": "Make the Moment. Všetky práva vyhradené.",
 
   // Produkty page
   "page.products.tag": "Naša ponuka",

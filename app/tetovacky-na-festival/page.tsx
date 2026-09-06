@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Dočasné tetovačky na festival ve velkých objemech, výdrž 3–7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
   alternates: { canonical: "/tetovacky-na-festival" },
   openGraph: {
-    title: "Tetovačky a promo materiály na festival | PartySkin B2B",
+    title: "Tetovačky a promo materiály na festival | Make the Moment",
     description: "Dočasné tetovačky na festival ve velkých objemech, výdrž 3–7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
     url: "/tetovacky-na-festival",
     images: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Dárek u stánku, který si lidé odnesou. Tetovačky s logem, samolepky, vizitky a pozvánky na veletrh nebo konferenci. Kalkulace do 24 hodin.",
   alternates: { canonical: "/tetovacky-na-veletrh" },
   openGraph: {
-    title: "Promo materiály na veletrh a konferenci | PartySkin B2B",
+    title: "Promo materiály na veletrh a konferenci | Make the Moment",
     description: "Dárek u stánku, který si lidé odnesou. Tetovačky s logem, samolepky, vizitky a pozvánky na veletrh nebo konferenci. Kalkulace do 24 hodin.",
     url: "/tetovacky-na-veletrh",
     images: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

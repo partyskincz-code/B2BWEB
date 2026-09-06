@@ -295,7 +295,7 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.05 }}
               className="text-brand-primary font-semibold text-sm uppercase tracking-widest mb-5"
             >
-              PartySkin B2B
+              Make the Moment
             </motion.p>
 
             <motion.h1

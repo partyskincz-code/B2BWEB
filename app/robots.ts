@@ -6,7 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/obchodni-podminky", "/ochrana-osobnich-udaju"],
+        // Právní stránky se záměrně nezakazují: mají v HTML `noindex`,
+        // a kdyby je robots.txt blokoval, vyhledávač by ten pokyn nikdy nestáhl
+        // a nechal by je v indexu.
       },
     ],
     sitemap: "https://www.makethemoment.cz/sitemap.xml",

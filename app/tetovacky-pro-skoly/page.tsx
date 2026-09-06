@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
   alternates: { canonical: "/tetovacky-pro-skoly" },
   openGraph: {
-    title: "Tetovačky a samolepky pro školy a dětské akce | PartySkin B2B",
+    title: "Tetovačky a samolepky pro školy a dětské akce | Make the Moment",
     description: "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
     url: "/tetovacky-pro-skoly",
     images: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

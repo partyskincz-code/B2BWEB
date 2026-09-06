@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Obchodní podmínky",
-  description: "Obchodní podmínky PartySkin B2B.",
+  description: "Obchodní podmínky Make the Moment.",
   robots: { index: false, follow: true },
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/poradna/jak-pripravit-podklady-pro-tisk-tetovacek" },
   openGraph: {
     type: "article",
-    title: "Jak připravit podklady pro tisk dočasných tetovaček | PartySkin B2B",
+    title: "Jak připravit podklady pro tisk dočasných tetovaček | Make the Moment",
     description: "Jaký formát souboru dodat, jaké rozlišení, co s bílou barvou a proč se zrcadlí text. Praktický návod pro grafiky i pro firmy bez grafika.",
     url: "/poradna/jak-pripravit-podklady-pro-tisk-tetovacek",
     images: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
@@ -134,7 +134,7 @@ const articleSchema = {
   "dateModified": "2026-09-02",
   "author": {
     "@type": "Organization",
-    "name": "PartySkin B2B",
+    "name": "Make the Moment",
     "url": "https://www.makethemoment.cz"
   },
   "publisher": {

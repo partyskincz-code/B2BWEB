@@ -707,62 +707,44 @@ export default function ProduktyPage() {
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               {lang === "en"
-                ? "The final price depends on format, quantity and packaging. The table below is indicative, we will always prepare an exact calculation for you individually, free of charge and without obligation."
+                ? "Below are the entry prices per piece for the largest volumes. The full table with all seven volume tiers and packaging surcharges is on the price list page. We always prepare an exact calculation individually, free of charge and without obligation."
                 : lang === "sk"
-                ? "Konečná cena závisí od formátu, množstva a balenia. Tabuľka nižšie je orientačná, presnú kalkuláciu vám pripravíme vždy individuálne, zdarma a bez záväzkov."
-                : "Konečná cena závisí na formátu, množství a balení. Tabulka níže je orientační, přesnou kalkulaci vám připravíme vždy individuálně, zdarma a bez závazků."}
+                ? "Nižšie sú ceny za kus pri najväčších objemoch. Kompletná tabuľka so všetkými siedmimi hladinami a príplatkami za balenie je na stránke cenníka. Presnú kalkuláciu pripravíme vždy individuálne, zdarma a bez záväzkov."
+                : "Níže jsou ceny za kus při největších objemech. Kompletní tabulka se všemi sedmi hladinami a příplatky za balení je na stránce ceníku. Přesnou kalkulaci připravíme vždy individuálně, zdarma a bez závazků."}
             </p>
           </FadeUp>
 
-          <FadeUp delay={0.1} className="overflow-x-auto rounded-2xl border border-gray-200 bg-white mb-4">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-gray-100">
-                  <th className="text-left px-6 py-4 font-semibold text-brand-secondary">
-                    {lang === "en" ? "Format" : lang === "sk" ? "Formát" : "Formát"}
-                  </th>
-                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">1–5 ks</th>
-                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">6–19 ks</th>
-                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">20–49 ks</th>
-                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">50–99 ks</th>
-                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">100–499 ks</th>
-                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">500–999 ks</th>
-                  <th className="px-3 py-4 font-semibold text-brand-secondary text-center whitespace-nowrap">1 000+ ks</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  {
-                    format:
-                      lang === "en"
-                        ? "A7 (smallest)"
-                        : lang === "sk"
-                        ? "A7 (najmenší)"
-                        : "A7 (nejmenší)",
-                    prices: ["35 Kč", "27 Kč", "22 Kč", "18 Kč", "15 Kč", "13 Kč", "11 Kč"],
-                  },
-                  { format: "A6", prices: ["55 Kč", "45 Kč", "35 Kč", "29 Kč", "25 Kč", "22 Kč", "19 Kč"] },
-                  { format: "A5", prices: ["95 Kč", "75 Kč", "59 Kč", "45 Kč", "39 Kč", "35 Kč", "29 Kč"] },
-                  {
-                    format:
-                      lang === "en"
-                        ? "A4 (largest)"
-                        : lang === "sk"
-                        ? "A4 (najväčší)"
-                        : "A4 (největší)",
-                    prices: ["179 Kč", "149 Kč", "89 Kč", "95 Kč", "79 Kč", "69 Kč", "59 Kč"],
-                  },
-                ].map((row, i) => (
-                  <tr key={row.format} className={`border-b border-gray-50 last:border-0 ${i % 2 === 1 ? "bg-gray-50/60" : ""}`}>
-                    <td className="px-3 py-4 font-medium text-brand-secondary whitespace-nowrap">{row.format}</td>
-                    {row.prices.map((price, j) => (
-                      <td key={j} className="px-3 py-4 text-center text-gray-600 whitespace-nowrap">{price}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <FadeUp delay={0.1} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            {[
+              { format: "A7", od: "11 Kč" },
+              { format: "A6", od: "19 Kč" },
+              { format: "A5", od: "29 Kč" },
+              { format: "A4", od: "59 Kč" },
+            ].map((r) => (
+              <div key={r.format} className="rounded-2xl border border-gray-200 bg-white px-5 py-6 text-center">
+                <p className="font-display font-extrabold text-brand-secondary text-2xl">{r.format}</p>
+                <p className="text-gray-400 text-xs mt-1">
+                  {lang === "en" ? "from" : lang === "sk" ? "od" : "od"}
+                </p>
+                <p className="text-brand-primary font-display font-bold text-xl mt-0.5">{r.od}</p>
+                <p className="text-gray-400 text-xs mt-1">
+                  {lang === "en" ? "per piece" : lang === "sk" ? "za kus" : "za kus"}
+                </p>
+              </div>
+            ))}
           </FadeUp>
+
+          <FadeUp delay={0.12} className="text-center mb-10">
+            <Link href="/cenik" className="btn-primary text-sm px-6 py-3">
+              {lang === "en"
+                ? "Full price list, all seven volume tiers"
+                : lang === "sk"
+                ? "Kompletný cenník, všetkých sedem hladín"
+                : "Kompletní ceník, všech sedm cenových hladin"}
+              <ArrowRight size={16} className="ml-2" />
+            </Link>
+          </FadeUp>
+
 
           <FadeUp delay={0.15} className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 px-1">
             <p className="text-sm text-gray-400">
@@ -783,19 +765,17 @@ export default function ProduktyPage() {
                 </>
               )}
             </p>
-            <a
-              href="/PartySkin_B2B_Cenik.pdf"
+            <Link
+              href="/cenik"
               className="text-sm font-semibold text-brand-primary flex items-center gap-1.5 hover:gap-2.5 transition-all whitespace-nowrap shrink-0"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               {lang === "en"
-                ? "Download full price list (PDF)"
+                ? "Full price list and packaging surcharges"
                 : lang === "sk"
-                ? "Stiahnuť plný cenník (PDF)"
-                : "Stáhnout plný ceník (PDF)"}{" "}
+                ? "Kompletný cenník a príplatky za balenie"
+                : "Kompletní ceník a příplatky za balení"}{" "}
               <ArrowRight size={14} />
-            </a>
+            </Link>
           </FadeUp>
 
           {/* B2C eshop links */}

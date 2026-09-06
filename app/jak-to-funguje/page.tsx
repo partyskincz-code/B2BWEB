@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: "/jak-to-funguje",
   },
   openGraph: {
-    title: "Jak probíhá zakázka, od poptávky po dodání | PartySkin B2B",
+    title: "Jak probíhá zakázka, od poptávky po dodání | Make the Moment",
     description:
       "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5–20 pracovních dní. Časté otázky a záruky.",
     url: "/jak-to-funguje",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },

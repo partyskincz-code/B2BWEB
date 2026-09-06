@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafika do 24 hodin, výroba 5–20 pracovních dní.",
   alternates: { canonical: "/tetovacky-na-firemni-event" },
   openGraph: {
-    title: "Tetovačky s logem na firemní event | PartySkin B2B",
+    title: "Tetovačky s logem na firemní event | Make the Moment",
     description: "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafika do 24 hodin, výroba 5–20 pracovních dní.",
     url: "/tetovacky-na-firemni-event",
     images: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
         url: "/og-partyskin-b2b.jpg",
         width: 1200,
         height: 630,
-        alt: "PartySkin B2B, dočasné tetovačky a promo materiály na míru",
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
       },
     ],
   },
