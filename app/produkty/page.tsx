@@ -4,14 +4,14 @@ import Content from "./Content";
 export const metadata: Metadata = {
   title: "Tetovačky, samolepky a tiskoviny na míru, ceník",
   description:
-    "Dočasné tetovačky od 8 Kč, samolepky od 4 Kč, tiskoviny od 12 Kč za kus. Formáty A4 až A7, certifikované materiály, ceník ke stažení.",
+    "Dočasné tetovačky od 8 Kč, samolepky od 3 Kč, tiskoviny od 8 Kč za kus. Orientační pásma, formáty A4 až A7, certifikované materiály, ceník ke stažení.",
   alternates: {
     canonical: "/produkty",
   },
   openGraph: {
     title: "Tetovačky, samolepky a tiskoviny na míru, ceník | Make the Moment",
     description:
-      "Dočasné tetovačky od 8 Kč, samolepky od 4 Kč, tiskoviny od 12 Kč za kus. Formáty A4 až A7, certifikované materiály, ceník ke stažení.",
+      "Dočasné tetovačky od 8 Kč, samolepky od 3 Kč, tiskoviny od 8 Kč za kus. Orientační pásma, formáty A4 až A7, certifikované materiály, ceník ke stažení.",
     url: "/produkty",
     images: [
       {

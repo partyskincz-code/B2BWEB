@@ -7,12 +7,12 @@ import FloatingStars from "@/components/FloatingStars";
 export const metadata: Metadata = {
   title: "Ceník reklamních tetovaček, samolepek a tiskovin",
   description:
-    "Kolik stojí reklamní tetovačky s logem? Ceny od 11 Kč za kus u velkých nákladů, formáty A4 až A7, samolepky od 4 Kč, tiskoviny od 12 Kč. Ceny včetně DPH.",
+    "Kolik stojí reklamní tetovačky s logem? Orientační cenová pásma od 8 Kč za kus u velkých nákladů, formáty A4 až A7, samolepky od 3 Kč, tiskoviny od 8 Kč. Ceny včetně DPH, přesnou kalkulaci připravíme na míru.",
   alternates: { canonical: "/cenik" },
   openGraph: {
     title: "Ceník reklamních tetovaček, samolepek a tiskovin | Make the Moment",
     description:
-      "Ceny tetovaček s logem podle formátu a množství, včetně DPH. Samolepky od 4 Kč, tiskoviny od 12 Kč za kus.",
+      "Orientační cenová pásma tetovaček s logem podle formátu a množství, včetně DPH. Samolepky od 3 Kč, tiskoviny od 8 Kč za kus.",
     url: "/cenik",
     images: [
       {
@@ -25,25 +25,25 @@ export const metadata: Metadata = {
   },
 };
 
-const hladiny = ["1–5 ks", "6–19 ks", "20–49 ks", "50–99 ks", "100–499 ks", "500–999 ks", "1 000+ ks"];
+const hladiny = ["1 až 19 ks", "20 až 99 ks", "100 až 499 ks", "500 až 999 ks", "1 000+ ks"];
 
 const tetovacky = [
-  { format: "A4 (největší)", ceny: ["179 Kč", "149 Kč", "89 Kč", "85 Kč", "79 Kč", "69 Kč", "59 Kč"] },
-  { format: "A5", ceny: ["95 Kč", "75 Kč", "59 Kč", "45 Kč", "39 Kč", "35 Kč", "29 Kč"] },
-  { format: "A6", ceny: ["55 Kč", "45 Kč", "35 Kč", "29 Kč", "25 Kč", "22 Kč", "19 Kč"] },
-  { format: "A7 (nejmenší)", ceny: ["35 Kč", "27 Kč", "22 Kč", "18 Kč", "15 Kč", "13 Kč", "11 Kč"] },
+  { format: "A4 (největší)", ceny: ["129 až 169 Kč", "75 až 89 Kč", "65 až 79 Kč", "55 až 69 Kč", "45 až 59 Kč"] },
+  { format: "A5", ceny: ["65 až 89 Kč", "39 až 55 Kč", "32 až 39 Kč", "28 až 35 Kč", "22 až 29 Kč"] },
+  { format: "A6", ceny: ["39 až 52 Kč", "25 až 33 Kč", "19 až 25 Kč", "17 až 22 Kč", "14 až 19 Kč"] },
+  { format: "A7 (nejmenší)", ceny: ["24 až 33 Kč", "15 až 21 Kč", "12 až 15 Kč", "10 až 13 Kč", "8 až 11 Kč"] },
 ];
 
 const baleni = [
   { typ: "Bez balení", priplatek: "základní cena", pozn: "Volné archy." },
-  { typ: "S papírovým přebalem", priplatek: "+10 Kč / ks", pozn: "Přebal na míru, možnost tisku návodu na rub." },
-  { typ: "S celofánem", priplatek: "+3 Kč / ks", pozn: "Zatavený celofánový sáček." },
-  { typ: "Papír + celofán", priplatek: "+13 Kč / ks", pozn: "Kombinace obojího, nejlepší jako dárek." },
+  { typ: "S papírovým přebalem", priplatek: "+7 až 10 Kč / ks", pozn: "Přebal na míru, možnost tisku návodu na rub. Cena podle formátu a nákladu." },
+  { typ: "S celofánem", priplatek: "+2 Kč / ks", pozn: "Zatavený celofánový sáček." },
+  { typ: "Papír + celofán", priplatek: "+9 až 12 Kč / ks", pozn: "Kombinace obojího, nejlepší jako dárek." },
 ];
 
 const dalsi = [
-  { produkt: "Samolepky na míru", cena: "od 4 Kč / ks", minimum: "od 100 ks", pozn: "Tvarový řez, voděodolné a UV odolné materiály." },
-  { produkt: "Tiskoviny, pohlednice, pozvánky, vizitky", cena: "od 12 Kč / ks", minimum: "od 1 ks", pozn: "Profesionální papír, plnobarevný tisk." },
+  { produkt: "Samolepky na míru", cena: "3 až 6 Kč / ks", minimum: "od 100 ks", pozn: "Tvarový řez, voděodolné a UV odolné materiály." },
+  { produkt: "Tiskoviny, pohlednice, pozvánky, vizitky", cena: "8 až 15 Kč / ks", minimum: "od 1 ks", pozn: "Profesionální papír, plnobarevný tisk." },
   { produkt: "Kompletní řešení pro akci", cena: "individuální", minimum: "dle rozsahu", pozn: "Balíček tetovaček, samolepek a tiskovin v jednom stylu." },
 ];
 
@@ -56,7 +56,7 @@ const vCene = [
 ];
 
 const zvlast = [
-  "Balení, papírový přebal +10 Kč/ks, celofán +3 Kč/ks, kombinace +13 Kč/ks",
+  "Balení, papírový přebal +7 až 10 Kč/ks, celofán +2 Kč/ks, kombinace +9 až 12 Kč/ks",
   "Tisk na rubovou stranu (text, logo, věnování, QR kód), +10 % z ceny zakázky",
   "Kusový ořez archu, 50 Kč / ks A4",
   "Grafické zpracování nad rámec základní úpravy, 500 Kč / hod",
@@ -66,7 +66,7 @@ const zvlast = [
 const faq = [
   {
     q: "Kolik stojí 1 000 tetovaček s logem?",
-    a: "U formátu A6 vychází 1 000 kusů na 19 Kč za kus, tedy 19 000 Kč včetně DPH. Menší formát A7 vyjde na 11 Kč za kus, větší A5 na 29 Kč. K ceně se připočítává balení a doprava.",
+    a: "U formátu A6 se 1 000 kusů pohybuje mezi 14 a 19 Kč za kus, tedy zhruba 14 000 až 19 000 Kč včetně DPH. Menší formát A7 vychází na 8 až 11 Kč za kus, větší A5 na 22 až 29 Kč. Přesnou cenu stanovíme podle grafiky, balení a termínu.",
   },
   {
     q: "Je grafika v ceně?",
@@ -74,7 +74,7 @@ const faq = [
   },
   {
     q: "Jsou ceny s DPH, nebo bez?",
-    a: "Uvedené ceny jsou včetně DPH a platí za jeden kus bez balení.",
+    a: "Uvedená pásma jsou včetně DPH a platí za jeden kus bez balení. Jsou orientační, závaznou cenu dostanete v nabídce na míru.",
   },
   {
     q: "Platí se záloha?",
@@ -82,7 +82,7 @@ const faq = [
   },
   {
     q: "Jak se dá cena snížit?",
-    a: "Největší vliv má množství, mezi náklady 100 kusů a 1 000 kusů je rozdíl zhruba třetina ceny za kus. Druhý nejsilnější faktor je formát: A7 vyjde na třetinu ceny A5. Pomůže i standardní balení místo přebalu na míru.",
+    a: "Největší vliv má množství, mezi náklady 100 kusů a 1 000 kusů je rozdíl zhruba třetina ceny za kus. Druhý nejsilnější faktor je formát: A7 vyjde na třetinu ceny A5. Pomůže i standardní balení místo přebalu na míru a jednodušší grafika.",
   },
 ];
 
@@ -113,12 +113,12 @@ const cenikSchema = {
   name: "Ceník promo materiálů na míru",
   provider: { "@id": `${SITE}/#organizace` },
   itemListElement: [
-    { "@type": "Offer", name: "Dočasné tetovačky A7", priceCurrency: "CZK", price: "11", description: "Cena za kus při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Dočasné tetovačky A6", priceCurrency: "CZK", price: "19", description: "Cena za kus při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Dočasné tetovačky A5", priceCurrency: "CZK", price: "29", description: "Cena za kus při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Dočasné tetovačky A4", priceCurrency: "CZK", price: "59", description: "Cena za kus při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Samolepky na míru", priceCurrency: "CZK", price: "4", description: "Cena za kus, minimum 100 ks, včetně DPH." },
-    { "@type": "Offer", name: "Tiskoviny na míru", priceCurrency: "CZK", price: "12", description: "Cena za kus, tiskneme už od jednoho kusu, včetně DPH." },
+    { "@type": "Offer", name: "Dočasné tetovačky A7", priceCurrency: "CZK", price: "8", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
+    { "@type": "Offer", name: "Dočasné tetovačky A6", priceCurrency: "CZK", price: "14", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
+    { "@type": "Offer", name: "Dočasné tetovačky A5", priceCurrency: "CZK", price: "22", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
+    { "@type": "Offer", name: "Dočasné tetovačky A4", priceCurrency: "CZK", price: "45", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
+    { "@type": "Offer", name: "Samolepky na míru", priceCurrency: "CZK", price: "3", description: "Orientační cena za kus od, minimum 100 ks, včetně DPH." },
+    { "@type": "Offer", name: "Tiskoviny na míru", priceCurrency: "CZK", price: "8", description: "Orientační cena za kus od, tiskneme už od jednoho kusu, včetně DPH." },
   ],
 };
 
@@ -138,8 +138,9 @@ export default function Page() {
             Kolik stojí reklamní tetovačky a promo materiály
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Cena závisí na třech věcech: formátu archu, počtu kusů a způsobu balení. Níže jsou orientační ceny,
-            přesnou kalkulaci připravíme zdarma do 24 hodin od poptávky.
+            Každou zakázku počítáme na míru. Cena závisí na formátu archu, počtu kusů, náročnosti grafiky
+            a způsobu balení, proto níže uvádíme orientační cenová pásma. Konkrétní cenu pro váš projekt
+            připravíme zdarma do 24 hodin od poptávky.
           </p>
         </div>
       </section>
@@ -147,7 +148,7 @@ export default function Page() {
       <section className="section-pad bg-white">
         <div className="container-pad">
           <h2 className="text-3xl font-display font-extrabold text-brand-secondary mb-2">Dočasné tetovačky</h2>
-          <p className="text-gray-500 mb-8">Ceny za jeden kus podle formátu a velikosti nákladu.</p>
+          <p className="text-gray-500 mb-8">Orientační pásma za jeden kus podle formátu a velikosti nákladu. Konečnou cenu stanovíme podle konkrétního zadání.</p>
           <div className="overflow-x-auto rounded-2xl border border-gray-100">
             <table className="w-full text-sm">
               <thead className="bg-gray-50">

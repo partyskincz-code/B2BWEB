@@ -13,9 +13,9 @@ const D = {
   produkty: "2026-09-06",
   cenik: "2026-09-06",
   jakToFunguje: "2026-09-04",
-  reference: "2026-09-04",
-  prilezitosti: "2026-09-04",
-  poradna: "2026-09-02",
+  reference: "2026-09-06",
+  prilezitosti: "2026-09-06",
+  poradna: "2026-09-06",
   kontakt: "2026-09-04",
 };
 

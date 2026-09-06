@@ -39,10 +39,10 @@ const data: Clanek = {
     {
       "typ": "ul",
       "polozky": [
-        "A7, nejmenší, od 11 Kč/ks při velkém nákladu. Jeden až tři menší motivy. Ideální na rozdávání ve velkém.",
-        "A6, od 19 Kč/ks. Nejčastější volba u firemních akcí, vejde se do kapsy i do obálky.",
-        "A5, od 29 Kč/ks. Prostor pro sadu motivů, funguje jako dárek.",
-        "A4, od 59 Kč/ks. Velká sada nebo jeden výrazný motiv, hodí se jako pozornost pro klíčové klienty."
+        "A7, nejmenší, 8 až 11 Kč/ks při velkém nákladu. Jeden až tři menší motivy. Ideální na rozdávání ve velkém.",
+        "A6, 14 až 19 Kč/ks. Nejčastější volba u firemních akcí, vejde se do kapsy i do obálky.",
+        "A5, 22 až 29 Kč/ks. Prostor pro sadu motivů, funguje jako dárek.",
+        "A4, 45 až 59 Kč/ks. Velká sada nebo jeden výrazný motiv, hodí se jako pozornost pro klíčové klienty."
       ]
     },
     {

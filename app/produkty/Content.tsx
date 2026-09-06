@@ -75,10 +75,10 @@ export default function ProduktyPage() {
           : "Vytvořte originální dočasné tetovačky pro firemní eventy, festivaly, svatby, rozlučky se svobodou i dětské oslavy. Tiskneme již od několika kusů, bez minimálního množství a s rychlou výrobou na míru vašemu projektu.",
       price:
         lang === "en"
-          ? "from €0.16 / pc"
+          ? "from €0.32 / pc"
           : lang === "sk"
-          ? "od 4 Kč / ks"
-          : "od 4 Kč / ks",
+          ? "od 8 Kč / ks"
+          : "od 8 Kč / ks",
       minQty:
         lang === "en"
           ? "No minimum"
@@ -151,10 +151,10 @@ export default function ProduktyPage() {
           : "Tvarové samolepky pro branding, packaging a merchandise. Dostupné v různých materiálech, lesklé, matné, průhledné, voděodolné. Výroba od 100 ks.",
       price:
         lang === "en"
-          ? "from €0.16 / pc"
+          ? "from €0.12 / pc"
           : lang === "sk"
-          ? "od 4 Kč / ks"
-          : "od 4 Kč / ks",
+          ? "od 3 Kč / ks"
+          : "od 3 Kč / ks",
       minQty:
         lang === "en"
           ? "Min. 100 pcs"
@@ -230,10 +230,10 @@ export default function ProduktyPage() {
           : "Pohlednice, přání, pozvánky i vizitky s vlastním potiskem nebo podle našeho návrhu. Profesionální papír, živé barvy, tiskneme už od jednoho kusu.",
       price:
         lang === "en"
-          ? "from €0.48 / pc"
+          ? "from €0.32 / pc"
           : lang === "sk"
-          ? "od 12 Kč / ks"
-          : "od 12 Kč / ks",
+          ? "od 8 Kč / ks"
+          : "od 8 Kč / ks",
       minQty:
         lang === "en"
           ? "Min. 50 pcs"
@@ -707,24 +707,24 @@ export default function ProduktyPage() {
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
               {lang === "en"
-                ? "Below are the entry prices per piece for the largest volumes. The full table with all seven volume tiers and packaging surcharges is on the price list page. We always prepare an exact calculation individually, free of charge and without obligation."
+                ? "Below are indicative price ranges per piece for the largest volumes. The full table with all volume tiers and packaging surcharges is on the price list page. We always price each job individually, free of charge and without obligation."
                 : lang === "sk"
-                ? "Nižšie sú ceny za kus pri najväčších objemoch. Kompletná tabuľka so všetkými siedmimi hladinami a príplatkami za balenie je na stránke cenníka. Presnú kalkuláciu pripravíme vždy individuálne, zdarma a bez záväzkov."
-                : "Níže jsou ceny za kus při největších objemech. Kompletní tabulka se všemi sedmi hladinami a příplatky za balení je na stránce ceníku. Přesnou kalkulaci připravíme vždy individuálně, zdarma a bez závazků."}
+                ? "Nižšie sú orientačné cenové pásma za kus pri najväčších objemoch. Kompletná tabuľka s hladinami a príplatkami za balenie je na stránke cenníka. Každú zákazku počítame individuálne, zdarma a bez záväzkov."
+                : "Níže jsou orientační cenová pásma za kus při největších objemech. Kompletní tabulka s hladinami a příplatky za balení je na stránce ceníku. Každou zakázku počítáme individuálně, zdarma a bez závazků."}
             </p>
           </FadeUp>
 
           <FadeUp delay={0.1} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {[
-              { format: "A7", od: "11 Kč" },
-              { format: "A6", od: "19 Kč" },
-              { format: "A5", od: "29 Kč" },
-              { format: "A4", od: "59 Kč" },
+              { format: "A7", od: "8 až 11 Kč" },
+              { format: "A6", od: "14 až 19 Kč" },
+              { format: "A5", od: "22 až 29 Kč" },
+              { format: "A4", od: "45 až 59 Kč" },
             ].map((r) => (
               <div key={r.format} className="rounded-2xl border border-gray-200 bg-white px-5 py-6 text-center">
                 <p className="font-display font-extrabold text-brand-secondary text-2xl">{r.format}</p>
                 <p className="text-gray-400 text-xs mt-1">
-                  {lang === "en" ? "from" : lang === "sk" ? "od" : "od"}
+                  {lang === "en" ? "approx." : lang === "sk" ? "orientačne" : "orientačně"}
                 </p>
                 <p className="text-brand-primary font-display font-bold text-xl mt-0.5">{r.od}</p>
                 <p className="text-gray-400 text-xs mt-1">
@@ -737,10 +737,10 @@ export default function ProduktyPage() {
           <FadeUp delay={0.12} className="text-center mb-10">
             <Link href="/cenik" className="btn-primary text-sm px-6 py-3">
               {lang === "en"
-                ? "Full price list, all seven volume tiers"
+                ? "Full price list with all volume tiers"
                 : lang === "sk"
-                ? "Kompletný cenník, všetkých sedem hladín"
-                : "Kompletní ceník, všech sedm cenových hladin"}
+                ? "Kompletný cenník so všetkými hladinami"
+                : "Kompletní ceník se všemi cenovými hladinami"}
               <ArrowRight size={16} className="ml-2" />
             </Link>
           </FadeUp>

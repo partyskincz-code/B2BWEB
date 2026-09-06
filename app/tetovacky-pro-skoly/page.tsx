@@ -54,22 +54,22 @@ const data: Prilezitost = {
   "ceny": [
     {
       "format": "A7 (nejmenší)",
-      "cena": "11 Kč",
+      "cena": "8 až 11 Kč",
       "pozn": "od 1 000 ks"
     },
     {
       "format": "A6",
-      "cena": "19 Kč",
+      "cena": "14 až 19 Kč",
       "pozn": "od 1 000 ks"
     },
     {
       "format": "A5",
-      "cena": "29 Kč",
+      "cena": "22 až 29 Kč",
       "pozn": "od 1 000 ks"
     },
     {
       "format": "Samolepky",
-      "cena": "4 Kč",
+      "cena": "3 až 6 Kč",
       "pozn": "od 100 ks"
     }
   ],

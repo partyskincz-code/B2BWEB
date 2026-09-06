@@ -77,7 +77,7 @@ export default function HomePage() {
         : lang === "en"
         ? "Die-cut stickers for branding, packaging and merch. Waterproof, UV-resistant materials."
         : "Tvarové samolepky pre branding, packaging a merch. Vodoodolné, UV odolné materiály.",
-      price: lang === "en" ? "from €0.15 / pc" : "od 4 Kč / ks",
+      price: lang === "en" ? "from €0.12 / pc" : "od 3 Kč / ks",
       minQty: t("usp.3.title"),
       image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
       href: "/produkty#samolepky",
@@ -91,7 +91,7 @@ export default function HomePage() {
         : lang === "en"
         ? "Postcards, greeting cards, invitations and business cards with your own artwork or based on our design. We print from a single piece."
         : "Pohľadnice, priania, pozvánky aj vizitky s vlastným potiskom alebo podľa nášho návrhu. Tlačíme už od jedného kusu.",
-      price: lang === "en" ? "from €0.45 / pc" : "od 12 Kč / ks",
+      price: lang === "en" ? "from €0.32 / pc" : "od 8 Kč / ks",
       minQty: t("usp.3.title"),
       image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
       href: "/produkty#pohlednice",
@@ -199,7 +199,7 @@ export default function HomePage() {
       org: "Gepard Express, SE",
       orgFull: "Gepard Express / Úzkokolejka Jindřichův Hradec",
       website: "",
-      logo: "",
+      logo: "/logo-uzkokolejky.png",
       initials: "GE",
       rating: 5,
     },
@@ -208,8 +208,8 @@ export default function HomePage() {
       author: "Mgr. Alena Ryšavá, MBA",
       org: "HK Mladí Draci Šumperk",
       orgFull: "HK Mladí Draci Šumperk",
-      website: "",
-      logo: "",
+      website: "https://www.hkmdsumperk.cz",
+      logo: "/logo-hk-mladi-draci.png",
       initials: "HK",
       rating: 5,
     },
@@ -219,7 +219,7 @@ export default function HomePage() {
       org: "Ekocentrum Vydra",
       orgFull: "Záchranná stanice Vydra, Třeboň",
       website: "https://www.ekocentrumvydra.cz",
-      logo: "",
+      logo: "/logo-ekocentrum-vydra.png",
       initials: "EV",
       rating: 5,
     },
@@ -663,8 +663,8 @@ export default function HomePage() {
                     {/* logo + stars */}
                     <div className="flex items-center gap-4 mb-5">
                       {testimonial.logo ? (
-                        <div className="w-12 h-12 rounded-xl overflow-hidden border border-gray-100 flex-shrink-0 bg-white flex items-center justify-center">
-                          <Image src={testimonial.logo} alt={testimonial.org} width={48} height={48} className="object-contain" />
+                        <div className="h-12 min-w-[3rem] max-w-[8.5rem] rounded-xl border border-gray-100 flex-shrink-0 bg-white flex items-center justify-center px-2 py-1.5">
+                          <Image src={testimonial.logo} alt={testimonial.org} width={520} height={200} className="object-contain max-h-full w-auto" />
                         </div>
                       ) : (
                         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center flex-shrink-0">

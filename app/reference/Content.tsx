@@ -41,6 +41,7 @@ export default function ReferencePage() {
       org: "Gepard Express, SE",
       orgFull: "Gepard Express / Úzkokolejka Jindřichův Hradec",
       website: "",
+      logo: "/logo-uzkokolejky.png",
       initials: "GE",
     },
     {
@@ -49,6 +50,7 @@ export default function ReferencePage() {
       org: "HK Mladí Draci Šumperk",
       orgFull: "HK Mladí Draci Šumperk",
       website: "https://www.hkmdsumperk.cz",
+      logo: "/logo-hk-mladi-draci.png",
       initials: "HK",
     },
     {
@@ -57,6 +59,7 @@ export default function ReferencePage() {
       org: "Ekocentrum Vydra",
       orgFull: "Záchranná stanice Vydra, Třeboň",
       website: "https://www.ekocentrumvydra.cz",
+      logo: "/logo-ekocentrum-vydra.png",
       initials: "EV",
     },
     {
@@ -65,6 +68,7 @@ export default function ReferencePage() {
       org: "NaZemi",
       orgFull: "NaZemi",
       website: "https://nazemi.cz",
+      logo: "/logo-nazemi.jpg",
       initials: "NZ",
     },
   ];
@@ -271,9 +275,15 @@ export default function ReferencePage() {
                 >
                   <blockquote className="text-gray-600 leading-relaxed mb-6 flex-1">&bdquo;{r.text}&ldquo;</blockquote>
                   <figcaption className="flex items-center gap-3 pt-5 border-t border-gray-100">
-                    <div className="w-11 h-11 rounded-full bg-brand-light flex items-center justify-center flex-shrink-0">
-                      <span className="font-display font-bold text-brand-primary text-sm">{r.initials}</span>
-                    </div>
+                    {r.logo ? (
+                      <div className="h-11 min-w-[2.75rem] max-w-[8rem] rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 px-2 py-1.5">
+                        <Image src={r.logo} alt={r.org} width={520} height={200} className="object-contain max-h-full w-auto" />
+                      </div>
+                    ) : (
+                      <div className="w-11 h-11 rounded-full bg-brand-light flex items-center justify-center flex-shrink-0">
+                        <span className="font-display font-bold text-brand-primary text-sm">{r.initials}</span>
+                      </div>
+                    )}
                     <div className="min-w-0">
                       <p className="font-display font-bold text-brand-secondary text-sm">{r.author}</p>
                       {r.website ? (
