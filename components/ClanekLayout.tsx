@@ -40,7 +40,7 @@ export default function ClanekLayout({ data }: { data: Clanek }) {
       {data.foto && (
         <section className="bg-brand-light pb-10">
           <div className="container-pad max-w-3xl">
-            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
               <Image src={data.foto.src} alt={data.foto.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 768px" />
             </div>
           </div>

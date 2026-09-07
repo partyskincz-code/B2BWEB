@@ -99,6 +99,10 @@ const data: Clanek = {
   ],
   "dalsi": [
     {
+      "href": "/poradna/drobne-darky-pro-zamestnance",
+      "label": "Drobné dárky pro zaměstnance"
+    },
+    {
       "href": "/poradna/jaky-format-tetovacek-zvolit",
       "label": "Jaký formát tetovaček zvolit"
     },

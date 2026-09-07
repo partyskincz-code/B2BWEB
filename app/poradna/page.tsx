@@ -8,7 +8,7 @@ import FloatingStars from "@/components/FloatingStars";
 export const metadata: Metadata = {
   title: "Poradna, jak na dočasné tetovačky a promo materiály",
   description:
-    "Praktické návody k dočasným tetovačkám: jak připravit podklady pro tisk, jaký formát archu zvolit a jak dlouho tetovačky vydrží na kůži.",
+    "Praktické návody z praxe: kolik stojí reklamní tetovačky, co dát na veletržní stánek, jak připravit podklady pro tisk a jak dlouho tetovačky vydrží.",
   alternates: { canonical: "/poradna" },
   openGraph: {
     title: "Poradna | Make the Moment",
@@ -27,6 +27,34 @@ export const metadata: Metadata = {
 };
 
 const clanky = [
+  {
+    href: "/poradna/kolik-stoji-reklamni-tetovacky",
+    nadpis: "Kolik stojí reklamní tetovačky s logem",
+    perex: "Rozpad ceny podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit.",
+    foto: "/realizace-prebal-b2b-a5.jpg",
+    minut: 5,
+  },
+  {
+    href: "/poradna/co-dat-na-veletrzni-stanek",
+    nadpis: "Co dát na veletržní stánek, aby si to lidi vzali",
+    perex: "Většina letáků skončí v koši do dvou hodin. Co na stánku funguje a kolik kusů objednat.",
+    foto: "/hero.jpg",
+    minut: 5,
+  },
+  {
+    href: "/poradna/drobne-darky-pro-zamestnance",
+    nadpis: "Drobné dárky pro zaměstnance, které se opravdu použijí",
+    perex: "Hrnek s logem má každý tři. Co funguje na teambuilding, uvítání nováčka i rodinný den.",
+    foto: "/realizace-prebal-a5.jpg",
+    minut: 4,
+  },
+  {
+    href: "/poradna/jak-z-loga-udelat-tetovacku",
+    nadpis: "Jak z firemního loga udělat tetovačku, kterou si lidi nalepí",
+    perex: "Logo přenesené na kůži jedna k jedné většinou nefunguje. Jak ho zjednodušit a co poslat.",
+    foto: "/realizace-papirovy-prebal.jpg",
+    minut: 4,
+  },
   {
     href: "/poradna/jak-pripravit-podklady-pro-tisk-tetovacek",
     nadpis: "Jak připravit podklady pro tisk dočasných tetovaček",

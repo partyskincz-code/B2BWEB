@@ -104,8 +104,8 @@ const data: Clanek = {
       "label": "Jak dlouho vydrží dočasné tetovačky"
     },
     {
-      "href": "/cenik",
-      "label": "Ceník"
+      "href": "/poradna/kolik-stoji-reklamni-tetovacky",
+      "label": "Kolik stojí reklamní tetovačky"
     },
     {
       "href": "/tetovacky-na-veletrh",

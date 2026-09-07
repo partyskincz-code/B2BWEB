@@ -107,6 +107,10 @@ const data: Clanek = {
   ],
   "dalsi": [
     {
+      "href": "/poradna/jak-z-loga-udelat-tetovacku",
+      "label": "Jak z loga udělat tetovačku"
+    },
+    {
       "href": "/poradna/jaky-format-tetovacek-zvolit",
       "label": "Jaký formát tetovaček zvolit"
     },

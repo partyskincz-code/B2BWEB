@@ -15,7 +15,7 @@ const D = {
   jakToFunguje: "2026-09-04",
   reference: "2026-09-06",
   prilezitosti: "2026-09-06",
-  poradna: "2026-09-06",
+  poradna: "2026-09-07",
   kontakt: "2026-09-04",
 };
 
@@ -34,6 +34,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/poradna/jak-pripravit-podklady-pro-tisk-tetovacek`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE}/poradna/jaky-format-tetovacek-zvolit`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE}/poradna/jak-dlouho-vydrzi-docasne-tetovacky`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${SITE}/poradna/kolik-stoji-reklamni-tetovacky`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
+    { url: `${SITE}/poradna/co-dat-na-veletrzni-stanek`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
+    { url: `${SITE}/poradna/drobne-darky-pro-zamestnance`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
+    { url: `${SITE}/poradna/jak-z-loga-udelat-tetovacku`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE}/kontakt`, lastModified: D.kontakt, changeFrequency: "yearly", priority: 0.9 },
   ];
 }
