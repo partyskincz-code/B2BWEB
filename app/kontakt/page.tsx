@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Content from "./Content";
 
 export const metadata: Metadata = {
-  title: "Nezávazná poptávka",
+  title: "Nezávazná poptávka tetovaček s logem",
   description:
     "Pošlete logo, grafiku nebo jen nápad. Do 24 hodin dostanete kalkulaci, doporučení formátu i termín výroby. Bez minimálního množství.",
   alternates: {
     canonical: "/kontakt",
   },
   openGraph: {
-    title: "Nezávazná poptávka | Make the Moment",
+    title: "Nezávazná poptávka tetovaček s logem | Make the Moment",
     description:
       "Pošlete logo, grafiku nebo jen nápad. Do 24 hodin dostanete kalkulaci, doporučení formátu i termín výroby. Bez minimálního množství.",
     url: "/kontakt",

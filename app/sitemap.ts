@@ -13,10 +13,10 @@ const D = {
   produkty: "2026-09-06",
   cenik: "2026-09-06",
   jakToFunguje: "2026-09-04",
-  reference: "2026-09-06",
-  prilezitosti: "2026-09-06",
-  poradna: "2026-09-07",
-  kontakt: "2026-09-04",
+  reference: "2026-09-08",
+  prilezitosti: "2026-09-08",
+  poradna: "2026-09-08",
+  kontakt: "2026-09-08",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -38,6 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/poradna/co-dat-na-veletrzni-stanek`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
     { url: `${SITE}/poradna/drobne-darky-pro-zamestnance`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
     { url: `${SITE}/poradna/jak-z-loga-udelat-tetovacku`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${SITE}/poradna/kolik-stoji-reklamni-predmety-na-konferenci`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
+    { url: `${SITE}/poradna/darkovy-balicek-pro-klienty`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
+    { url: `${SITE}/poradna/kdy-zadat-vyrobu-promo-materialu`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE}/kontakt`, lastModified: D.kontakt, changeFrequency: "yearly", priority: 0.9 },
   ];
 }

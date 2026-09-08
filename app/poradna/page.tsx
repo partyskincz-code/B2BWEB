@@ -28,6 +28,28 @@ export const metadata: Metadata = {
 
 const clanky = [
   {
+    href: "/poradna/kolik-stoji-reklamni-predmety-na-konferenci",
+    nadpis: "Kolik stojí reklamní předměty na konferenci",
+    perex: "Kolik dát na osobu, co se vyplatí a co je vyhozené. Modelové rozpočty pro 100 až 1 000 lidí.",
+    foto: "/realizace-prebal-b2b-a5.jpg",
+    minut: 5,
+  },
+  {
+    href: "/poradna/darkovy-balicek-pro-klienty",
+    nadpis: "Dárkový balíček pro klienty, co do něj dát",
+    perex: "Aby to vypadalo jako dárek, ne jako vzorkovnice reklamních předmětů. Rozpočty od 150 do 800 Kč.",
+    foto: "/realizace-papirovy-prebal.jpg",
+    minut: 5,
+  },
+  {
+    href: "/poradna/kdy-zadat-vyrobu-promo-materialu",
+    nadpis: "Kdy zadat výrobu promo materiálů před akcí",
+    perex: "Reálná časová osa od poptávky po dodání, kde se termíny lámou a co dělat, když akce hoří.",
+    foto: "/nanaseni-tetovacky.jpg",
+    minut: 4,
+  },
+
+  {
     href: "/poradna/kolik-stoji-reklamni-tetovacky",
     nadpis: "Kolik stojí reklamní tetovačky s logem",
     perex: "Rozpad ceny podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit.",

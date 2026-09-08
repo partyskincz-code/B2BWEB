@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage";
 
 export const metadata: Metadata = {
-  title: "Promo materiály na veletrh a konferenci",
+  title: "Tetovačky s logem na veletrh a konferenci",
   description:
     "Dárek u stánku, který si lidé odnesou. Tetovačky s logem, samolepky, vizitky a pozvánky na veletrh nebo konferenci. Kalkulace do 24 hodin.",
   alternates: { canonical: "/tetovacky-na-veletrh" },
   openGraph: {
-    title: "Promo materiály na veletrh a konferenci | Make the Moment",
+    title: "Tetovačky s logem na veletrh a konferenci | Make the Moment",
     description: "Dárek u stánku, který si lidé odnesou. Tetovačky s logem, samolepky, vizitky a pozvánky na veletrh nebo konferenci. Kalkulace do 24 hodin.",
     url: "/tetovacky-na-veletrh",
     images: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 const data: Prilezitost = {
   "tag": "Veletrhy a konference",
-  "h1": "Promo materiály na veletrh a konferenci",
+  "h1": "Tetovačky s logem na veletrh a konferenci",
   "perex": "U stánku rozhoduje, jestli si návštěvník něco odnese a jestli si to nechá. Propiska skončí v šuplíku, tetovačka s vaším logem se nalepí a chodí po veletrhu za vás.",
   "produkty": [
     {
@@ -162,7 +162,7 @@ const breadcrumbSchema = {
 const sluzbaSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Promo materiály na veletrh a konferenci",
+  "name": "Tetovačky s logem na veletrh a konferenci",
   "serviceType": "Výroba promo materiálů na míru",
   "provider": {
     "@id": "https://www.makethemoment.cz/#organizace"

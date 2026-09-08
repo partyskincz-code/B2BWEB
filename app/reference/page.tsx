@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Content from "./Content";
 
 export const metadata: Metadata = {
-  title: "Reference a realizace",
+  title: "Reference: tetovačky s logem pro firmy",
   description:
     "Reálné zakázky pro got2b, MOREAU AGRI, NaZemi nebo Ekocentrum Vydra. Fotky hotových tetovaček, přebalů a tiskovin na míru.",
   alternates: {
     canonical: "/reference",
   },
   openGraph: {
-    title: "Reference a realizace | Make the Moment",
+    title: "Reference: tetovačky s logem pro firmy | Make the Moment",
     description:
       "Reálné zakázky pro got2b, MOREAU AGRI, NaZemi nebo Ekocentrum Vydra. Fotky hotových tetovaček, přebalů a tiskovin na míru.",
     url: "/reference",
