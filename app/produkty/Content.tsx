@@ -960,6 +960,29 @@ export default function ProduktyPage() {
                   : "Jak to funguje?"}
               </Link>
             </div>
+
+            <div className="mt-12">
+              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
+                {lang === "en" ? "Guides that help" : lang === "sk" ? "Z poradne" : "Z poradny"}
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center">
+                {[
+                  { href: "/poradna/jaky-format-tetovacek-zvolit", cs: "Jaký formát tetovaček zvolit", sk: "Aký formát tetovačiek zvoliť", en: "Which format to choose" },
+                  { href: "/poradna/jak-z-loga-udelat-tetovacku", cs: "Jak z loga udělat tetovačku", sk: "Ako z loga urobiť tetovačku", en: "Turning a logo into a tattoo" },
+                  { href: "/poradna/jak-pripravit-podklady-pro-tisk-tetovacek", cs: "Jak připravit podklady pro tisk", sk: "Ako pripraviť podklady pre tlač", en: "Preparing print files" },
+                  { href: "/poradna/jak-dlouho-vydrzi-docasne-tetovacky", cs: "Jak dlouho tetovačky vydrží", sk: "Ako dlho tetovačky vydržia", en: "How long tattoos last" },
+                  { href: "/poradna", cs: "Celá poradna", sk: "Celá poradňa", en: "All guides" },
+                ].map((g) => (
+                  <Link
+                    key={g.href}
+                    href={g.href}
+                    className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors"
+                  >
+                    {lang === "en" ? g.en : lang === "sk" ? g.sk : g.cs}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </FadeUp>
         </div>
       </section>

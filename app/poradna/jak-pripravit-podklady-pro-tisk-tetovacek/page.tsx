@@ -125,6 +125,10 @@ const data: Clanek = {
     {
       "href": "/jak-to-funguje",
       "label": "Jak probíhá zakázka"
+    },
+    {
+      "href": "/poradna/kdy-zadat-vyrobu-promo-materialu",
+      "label": "Kdy zadat výrobu před akcí"
     }
   ]
 };

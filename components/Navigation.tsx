@@ -25,6 +25,7 @@ export default function Navigation() {
     { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
     { href: "/jak-to-funguje", label: t("nav.how") },
     { href: "/reference", label: t("nav.references") },
+    { href: "/poradna", label: lang === "en" ? "Guides" : lang === "sk" ? "Poradňa" : "Poradna" },
     { href: "/kontakt", label: t("nav.contact") },
   ];
 

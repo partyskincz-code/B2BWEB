@@ -95,12 +95,20 @@ const data: Prilezitost = {
       "label": "Tetovačky na firemní event"
     },
     {
-      "href": "/produkty",
-      "label": "Ceník a produkty"
+      "href": "/poradna/co-dat-na-veletrzni-stanek",
+      "label": "Co dát na veletržní stánek"
     },
     {
-      "href": "/jak-to-funguje",
-      "label": "Jak probíhá zakázka"
+      "href": "/poradna/kolik-stoji-reklamni-predmety-na-konferenci",
+      "label": "Kolik stojí předměty na konferenci"
+    },
+    {
+      "href": "/poradna/kdy-zadat-vyrobu-promo-materialu",
+      "label": "Kdy zadat výrobu před akcí"
+    },
+    {
+      "href": "/cenik",
+      "label": "Ceník tetovaček"
     },
     {
       "href": "/kontakt",

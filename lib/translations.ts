@@ -10,7 +10,7 @@ const cs: Record<string, string> = {
   "nav.cta": "Poptat výrobu",
 
   // Hero
-  "hero.h1a": "Tetovačky na míru.",
+  "hero.h1a": "Reklamní tetovačky na míru.",
   "hero.h1b": "A promo, co k nim sedí.",
   "hero.sub": "Dočasné tetovačky s vaším logem nebo motivem, a k nim samolepky, pohlednice a kompletní promo řešení pro firmy, agentury a eventy. Od několika kusů až po velké kampaně.",
   "hero.cta.primary": "Nezávazně poptat",
@@ -154,7 +154,7 @@ const en: Record<string, string> = {
   "nav.cta": "Get a quote",
 
   // Hero
-  "hero.h1a": "Custom temporary tattoos.",
+  "hero.h1a": "Promotional temporary tattoos.",
   "hero.h1b": "And the promo to match.",
   "hero.sub": "Temporary tattoos with your logo or artwork, plus stickers, postcards and complete promo solutions for companies, agencies and events. From a few pieces to large campaigns.",
   "hero.cta.primary": "Get a quote",
@@ -298,7 +298,7 @@ const sk: Record<string, string> = {
   "nav.cta": "Dopytovať výrobu",
 
   // Hero
-  "hero.h1a": "Tetovačky na mieru.",
+  "hero.h1a": "Reklamné tetovačky na mieru.",
   "hero.h1b": "A promo, čo k nim sedí.",
   "hero.sub": "Dočasné tetovačky s vaším logom alebo motívom, a k nim samolepky, pohľadnice a kompletné promo riešenia pre firmy, agentúry a eventy. Od niekoľkých kusov až po veľké kampane.",
   "hero.cta.primary": "Nezáväzne dopytovať",

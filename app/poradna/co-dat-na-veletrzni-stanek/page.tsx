@@ -135,6 +135,14 @@ const data: Clanek = {
     {
       "href": "/kontakt",
       "label": "Nezávazná poptávka"
+    },
+    {
+      "href": "/poradna/kolik-stoji-reklamni-predmety-na-konferenci",
+      "label": "Kolik stojí předměty na konferenci"
+    },
+    {
+      "href": "/poradna/kdy-zadat-vyrobu-promo-materialu",
+      "label": "Kdy zadat výrobu"
     }
   ]
 };

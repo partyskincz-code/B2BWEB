@@ -91,16 +91,24 @@ const data: Prilezitost = {
   "ctaText": "Napište nám počet dětí a téma akce. Připravíme návrh i kalkulaci do 24 hodin.",
   "souvisejici": [
     {
-      "href": "/produkty",
-      "label": "Ceník a produkty"
-    },
-    {
-      "href": "/jak-to-funguje",
-      "label": "Jak probíhá zakázka"
-    },
-    {
       "href": "/tetovacky-na-firemni-event",
       "label": "Tetovačky na firemní event"
+    },
+    {
+      "href": "/poradna/jak-dlouho-vydrzi-docasne-tetovacky",
+      "label": "Jak dlouho tetovačky vydrží"
+    },
+    {
+      "href": "/poradna/jaky-format-tetovacek-zvolit",
+      "label": "Jaký formát zvolit"
+    },
+    {
+      "href": "/poradna/jak-pripravit-podklady-pro-tisk-tetovacek",
+      "label": "Jak připravit podklady"
+    },
+    {
+      "href": "/cenik",
+      "label": "Ceník tetovaček"
     },
     {
       "href": "/kontakt",

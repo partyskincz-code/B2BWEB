@@ -258,6 +258,29 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="pb-4 bg-white">
+        <div className="container-pad">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Než se rozhodnete</p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/poradna/kolik-stoji-reklamni-tetovacky" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Kolik stojí reklamní tetovačky s logem
+            </Link>
+            <Link href="/poradna/kolik-stoji-reklamni-predmety-na-konferenci" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Kolik stojí reklamní předměty na konferenci
+            </Link>
+            <Link href="/poradna/jaky-format-tetovacek-zvolit" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Jaký formát tetovaček zvolit
+            </Link>
+            <Link href="/poradna/kdy-zadat-vyrobu-promo-materialu" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Kdy zadat výrobu před akcí
+            </Link>
+            <Link href="/poradna" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Celá poradna
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-white">
         <div className="container-pad">
           <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 text-center relative overflow-hidden">

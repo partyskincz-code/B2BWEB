@@ -95,12 +95,20 @@ const data: Prilezitost = {
       "label": "Tetovačky na veletrh a konferenci"
     },
     {
-      "href": "/tetovacky-na-festival",
-      "label": "Tetovačky na festival"
+      "href": "/poradna/drobne-darky-pro-zamestnance",
+      "label": "Drobné dárky pro zaměstnance"
     },
     {
-      "href": "/jak-to-funguje",
-      "label": "Jak probíhá zakázka"
+      "href": "/poradna/darkovy-balicek-pro-klienty",
+      "label": "Dárkový balíček pro klienty"
+    },
+    {
+      "href": "/poradna/jak-z-loga-udelat-tetovacku",
+      "label": "Jak z loga udělat tetovačku"
+    },
+    {
+      "href": "/cenik",
+      "label": "Ceník tetovaček"
     },
     {
       "href": "/reference",

@@ -133,6 +133,10 @@ const data: Clanek = {
     {
       "href": "/kontakt",
       "label": "Nezávazná poptávka"
+    },
+    {
+      "href": "/poradna/darkovy-balicek-pro-klienty",
+      "label": "Dárkový balíček pro klienty"
     }
   ]
 };

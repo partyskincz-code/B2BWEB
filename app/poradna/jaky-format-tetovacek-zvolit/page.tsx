@@ -110,6 +110,10 @@ const data: Clanek = {
     {
       "href": "/tetovacky-na-veletrh",
       "label": "Tetovačky na veletrh"
+    },
+    {
+      "href": "/poradna/kolik-stoji-reklamni-predmety-na-konferenci",
+      "label": "Rozpočet na konferenci"
     }
   ]
 };

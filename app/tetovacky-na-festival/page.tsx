@@ -91,16 +91,24 @@ const data: Prilezitost = {
   "ctaText": "Řekněte nám počet návštěvníků a termín, připravíme kalkulaci a doporučíme formát i objem.",
   "souvisejici": [
     {
-      "href": "/tetovacky-na-firemni-event",
-      "label": "Tetovačky na firemní event"
-    },
-    {
       "href": "/tetovacky-na-veletrh",
       "label": "Tetovačky na veletrh"
     },
     {
-      "href": "/produkty",
-      "label": "Ceník a produkty"
+      "href": "/poradna/jak-dlouho-vydrzi-docasne-tetovacky",
+      "label": "Jak dlouho tetovačky vydrží"
+    },
+    {
+      "href": "/poradna/jaky-format-tetovacek-zvolit",
+      "label": "Jaký formát zvolit"
+    },
+    {
+      "href": "/poradna/kdy-zadat-vyrobu-promo-materialu",
+      "label": "Kdy zadat výrobu před akcí"
+    },
+    {
+      "href": "/cenik",
+      "label": "Ceník tetovaček"
     },
     {
       "href": "/reference",
