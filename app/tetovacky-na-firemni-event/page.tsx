@@ -113,6 +113,10 @@ const data: Prilezitost = {
     {
       "href": "/reference",
       "label": "Reference"
+    },
+    {
+      "href": "/tetovacky-na-firemni-vecirek",
+      "label": "Tetovačky na firemní večírek"
     }
   ]
 };

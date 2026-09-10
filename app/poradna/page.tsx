@@ -28,6 +28,14 @@ export const metadata: Metadata = {
 
 const clanky = [
   {
+    href: "/poradna/zabava-na-firemni-vecirek",
+    nadpis: "Zábava na firemní večírek, která opravdu funguje",
+    perex: "Bez moderátora, bez povinných her a bez rozpočtu na kapelu. Co funguje, co ne a do kdy zadat výrobu.",
+    foto: "/realizace-papirovy-prebal.jpg",
+    minut: 6,
+  },
+
+  {
     href: "/poradna/kolik-stoji-reklamni-predmety-na-konferenci",
     nadpis: "Kolik stojí reklamní předměty na konferenci",
     perex: "Kolik dát na osobu, co se vyplatí a co je vyhozené. Modelové rozpočty pro 100 až 1 000 lidí.",

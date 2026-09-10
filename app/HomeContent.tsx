@@ -11,6 +11,7 @@ import {
   Star,
   ChevronRight,
   Building2,
+  PartyPopper,
   Heart,
   Music,
   GraduationCap,
@@ -133,6 +134,19 @@ export default function HomePage() {
       href: "/tetovacky-na-firemni-event",
       color: "bg-blue-50",
       iconColor: "text-blue-600",
+    },
+    {
+      icon: PartyPopper,
+      title: lang === "cs" ? "Firemní večírky" : lang === "en" ? "Company parties" : "Firemné večierky",
+      desc: lang === "cs"
+        ? "Vánoční párty, teambuilding, oslava výročí. Zábava, kterou nemusí nikdo moderovat ani organizovat."
+        : lang === "en"
+        ? "Christmas parties, team dinners, anniversary celebrations. Entertainment nobody has to host or organise."
+        : "Vianočné párty, teambuilding, oslava výročia. Zábava, ktorú nemusí nikto moderovať ani organizovať.",
+      cta: lang === "en" ? "Explore" : lang === "sk" ? "Preskúmať" : "Prozkoumat",
+      href: "/tetovacky-na-firemni-vecirek",
+      color: "bg-amber-50",
+      iconColor: "text-amber-600",
     },
     {
       icon: Heart,

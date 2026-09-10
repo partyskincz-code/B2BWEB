@@ -37,6 +37,7 @@ export default function Footer() {
     segmenty: [
       { href: "/tetovacky-na-firemni-event", label: lang === "en" ? "Corporate events" : lang === "sk" ? "Firemné eventy" : "Firemní eventy" },
       { href: "/tetovacky-na-veletrh", label: lang === "en" ? "Trade fairs" : lang === "sk" ? "Veľtrhy a konferencie" : "Veletrhy a konference" },
+      { href: "/tetovacky-na-firemni-vecirek", label: lang === "en" ? "Company parties" : lang === "sk" ? "Firemné večierky" : "Firemní večírky" },
       { href: "/produkty#svatby", label: lang === "en" ? "Weddings & celebrations" : lang === "sk" ? "Svadby a oslavy" : "Svatby a oslavy" },
       { href: "/tetovacky-na-festival", label: lang === "en" ? "Festivals & events" : lang === "sk" ? "Festivaly a akcie" : "Festivaly a akce" },
       { href: "/tetovacky-pro-skoly", label: lang === "en" ? "Schools & children" : lang === "sk" ? "Školy a deti" : "Školy a děti" },

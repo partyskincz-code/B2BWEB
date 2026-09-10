@@ -144,6 +144,10 @@ const data: Clanek = {
     {
       "href": "/poradna/darkovy-balicek-pro-klienty",
       "label": "Dárkový balíček pro klienty"
+    },
+    {
+      "href": "/poradna/zabava-na-firemni-vecirek",
+      "label": "Zábava na firemní večírek"
     }
   ]
 };

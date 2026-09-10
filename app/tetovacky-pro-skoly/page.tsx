@@ -113,6 +113,10 @@ const data: Prilezitost = {
     {
       "href": "/kontakt",
       "label": "Nezávazná poptávka"
+    },
+    {
+      "href": "/tetovacky-na-firemni-vecirek",
+      "label": "Tetovačky na firemní večírek"
     }
   ]
 };

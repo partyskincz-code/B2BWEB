@@ -137,6 +137,10 @@ const data: Clanek = {
     {
       "href": "/kontakt",
       "label": "Nezávazná poptávka"
+    },
+    {
+      "href": "/poradna/zabava-na-firemni-vecirek",
+      "label": "Zábava na firemní večírek"
     }
   ]
 };
