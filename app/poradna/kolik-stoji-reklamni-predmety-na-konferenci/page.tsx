@@ -50,7 +50,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Ceny jsou konečné včetně DPH a počítáme s formátem A6, tedy tím, který se u konferencí nejvíc používá."
+      "text": "Ceny jsou konečné a počítáme s formátem A6, tedy tím, který se u konferencí nejvíc používá."
     },
     {
       "typ": "ul",

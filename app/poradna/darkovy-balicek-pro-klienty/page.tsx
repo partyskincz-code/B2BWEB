@@ -63,7 +63,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Ceny jsou konečné včetně DPH, bez krabice a dopravy."
+      "text": "Ceny jsou konečné, bez krabice a dopravy."
     },
     {
       "typ": "ul",

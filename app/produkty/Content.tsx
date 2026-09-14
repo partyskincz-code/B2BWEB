@@ -750,17 +750,17 @@ export default function ProduktyPage() {
             <p className="text-sm text-gray-400">
               {lang === "en" ? (
                 <>
-                  Prices are <strong className="text-gray-500">VAT inclusive</strong>, per piece, excluding packaging.
+                  Prices are <strong className="text-gray-500">final</strong>, per piece, excluding packaging.
                   Packaging, reverse printing and express production are charged separately.
                 </>
               ) : lang === "sk" ? (
                 <>
-                  Ceny sú <strong className="text-gray-500">vrátane DPH</strong>, za 1 ks, bez balenia.
+                  Ceny sú <strong className="text-gray-500">konečné</strong>, za 1 ks, bez balenia.
                   Balenie, tlač na rub a express výroba sa účtujú zvlášť.
                 </>
               ) : (
                 <>
-                  Ceny jsou <strong className="text-gray-500">včetně DPH</strong>, za 1 ks, bez balení.
+                  Ceny jsou <strong className="text-gray-500">konečné</strong>, za 1 ks, bez balení.
                   Balení, tisk na rub a express výroba se účtují zvlášť.
                 </>
               )}

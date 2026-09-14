@@ -100,7 +100,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Pro představu: padesát zaměstnanců, formát A6 s firemním motivem, vychází zhruba na 25 až 33 Kč za kus, tedy 1 250 až 1 650 Kč včetně DPH za celý tým. S papírovým přebalem na míru připočtěte 7 až 10 Kč na kus."
+      "text": "Pro představu: padesát zaměstnanců, formát A6 s firemním motivem, vychází zhruba na 25 až 33 Kč za kus, tedy 1 250 až 1 650 Kč za celý tým. S papírovým přebalem na míru připočtěte 7 až 10 Kč na kus."
     },
     {
       "typ": "p",
