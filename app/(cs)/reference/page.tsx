@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Content from "./Content";
+import { languageAlternates } from "@/lib/localization";
 
 export const metadata: Metadata = {
   title: "Reference: tetovačky s logem pro firmy",
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
     "Reálné zakázky pro got2b, MOREAU AGRI, NaZemi nebo Ekocentrum Vydra. Fotky hotových tetovaček, přebalů a tiskovin na míru.",
   alternates: {
     canonical: "/reference",
+    languages: languageAlternates("/reference"),
   },
   openGraph: {
     title: "Reference: tetovačky s logem pro firmy | Make the Moment",

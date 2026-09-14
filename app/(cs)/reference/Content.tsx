@@ -33,6 +33,7 @@ function FadeUp({
 
 export default function ReferencePage() {
   const { lang } = useLanguage();
+  const href = (path: string) => lang === "cs" ? path : `/${lang}${path}`;
 
   const reference = [
     {
@@ -466,7 +467,7 @@ export default function ReferencePage() {
                 ? "Pošlite nám váš nápad alebo logo a pripravíme ponuku a odporúčanie."
                 : "Pošlete nám váš nápad nebo logo a připravíme nabídku a doporučení formátu."}
             </p>
-            <Link href="/kontakt" className="btn-primary text-base px-8 py-4">
+            <Link href={href("/kontakt")} className="btn-primary text-base px-8 py-4">
               {lang === "en"
                 ? "Get a quote"
                 : lang === "sk"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Content from "./Content";
+import { languageAlternates } from "@/lib/localization";
 
 export const metadata: Metadata = {
   title: "Nezávazná poptávka tetovaček s logem",
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
     "Pošlete logo, grafiku nebo jen nápad. Do 24 hodin dostanete kalkulaci, doporučení formátu i termín výroby. Bez minimálního množství.",
   alternates: {
     canonical: "/kontakt",
+    languages: languageAlternates("/kontakt"),
   },
   openGraph: {
     title: "Nezávazná poptávka tetovaček s logem | Make the Moment",

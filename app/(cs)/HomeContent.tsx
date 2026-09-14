@@ -53,6 +53,7 @@ function FadeUp({
 
 export default function HomePage() {
   const { t, lang } = useLanguage();
+  const href = (path: string) => lang === "cs" ? path : `/${lang}${path}`;
 
   const products = [
     {
@@ -337,11 +338,11 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/kontakt" className="btn-primary text-base px-8 py-4 gap-2">
+              <Link href={href("/kontakt")} className="btn-primary text-base px-8 py-4 gap-2">
                 {t("hero.cta.primary")}
                 <ArrowRight size={18} />
               </Link>
-              <Link href="/produkty" className="btn-outline text-base px-8 py-4">
+              <Link href={href("/produkty")} className="btn-outline text-base px-8 py-4">
                 {t("hero.cta.secondary")}
               </Link>
             </motion.div>
@@ -468,7 +469,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">{t(card.titleKey)}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{t(card.descKey)}</p>
-                  <Link href="/kontakt" className="text-sm font-semibold text-brand-primary flex items-center gap-1 hover:gap-2 transition-all">
+                  <Link href={href("/kontakt")} className="text-sm font-semibold text-brand-primary flex items-center gap-1 hover:gap-2 transition-all">
                     {t(card.ctaKey)} <ArrowRight size={15} />
                   </Link>
                 </div>
@@ -518,7 +519,7 @@ export default function HomePage() {
           </div>
 
           <FadeUp className="text-center mt-10">
-            <Link href="/produkty" className="btn-ghost">
+            <Link href={href("/produkty")} className="btn-ghost">
               {t("products.cta")}
               <ArrowRight size={18} className="ml-2" />
             </Link>
@@ -649,7 +650,7 @@ export default function HomePage() {
           </div>
 
           <FadeUp className="text-center mt-12">
-            <Link href="/jak-to-funguje" className="btn-primary">
+            <Link href={href("/jak-to-funguje")} className="btn-primary">
               {t("process.cta")}
               <ArrowRight size={18} className="ml-2" />
             </Link>
@@ -785,7 +786,7 @@ export default function HomePage() {
           </div>
 
           <FadeUp className="text-center mt-10">
-            <Link href="/reference" className="btn-ghost">
+            <Link href={href("/reference")} className="btn-ghost">
               {t("gallery.cta")}
               <ArrowRight size={18} className="ml-2" />
             </Link>

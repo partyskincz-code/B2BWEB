@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Content from "./Content";
+import { languageAlternates } from "@/lib/localization";
 
 export const metadata: Metadata = {
   title: "Tetovačky, samolepky a tiskoviny na míru, ceník",
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
     "Dočasné tetovačky od 8 Kč, samolepky od 3 Kč, tiskoviny od 8 Kč za kus. Orientační pásma, formáty A4 až A7, certifikované materiály, ceník ke stažení.",
   alternates: {
     canonical: "/produkty",
+    languages: languageAlternates("/produkty"),
   },
   openGraph: {
     title: "Tetovačky, samolepky a tiskoviny na míru, ceník | Make the Moment",

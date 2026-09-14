@@ -48,6 +48,7 @@ function FadeUp({
 // ─────────────────────────────────────────────────
 export default function ProduktyPage() {
   const { lang } = useLanguage();
+  const href = (path: string) => lang === "cs" ? path : `/${lang}${path}`;
 
   // ─────────────────────────────────────────────────
   // Data (inside component for language switching)
@@ -671,7 +672,7 @@ export default function ProduktyPage() {
                   ))}
                 </div>
 
-                <Link href="/kontakt" className="btn-primary gap-2">
+                <Link href={href("/kontakt")} className="btn-primary gap-2">
                   {cat.cta
                     ? cat.cta
                     : lang === "en"
@@ -948,11 +949,11 @@ export default function ProduktyPage() {
                 : "Kontaktujte nás a společně vymyslíme řešení na míru. Rádi poradíme."}
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <Link href="/kontakt" className="btn-primary">
+              <Link href={href("/kontakt")} className="btn-primary">
                 {lang === "en" ? "Write to us" : lang === "sk" ? "Napíšte nám" : "Napište nám"}
                 <ArrowRight size={18} className="ml-2" />
               </Link>
-              <Link href="/jak-to-funguje" className="btn-outline">
+              <Link href={href("/jak-to-funguje")} className="btn-outline">
                 {lang === "en"
                   ? "How does it work?"
                   : lang === "sk"

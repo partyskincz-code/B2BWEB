@@ -78,6 +78,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 // ─────────────────────────────────────────────────
 export default function JakToFunguePage() {
   const { t, lang } = useLanguage();
+  const href = (path: string) => lang === "cs" ? path : `/${lang}${path}`;
 
   // ─── Data arrays (inside component to access lang) ───────────────────────
   const steps = [
@@ -718,7 +719,7 @@ export default function JakToFunguePage() {
                 <p className="text-gray-400 text-xs">PartySkin</p>
               </div>
             </div>
-            <Link href="/kontakt" className="btn-primary text-base px-8 py-4">
+            <Link href={href("/kontakt")} className="btn-primary text-base px-8 py-4">
               {lang === "en"
                 ? "Get a quote"
                 : lang === "sk"

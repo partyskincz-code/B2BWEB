@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Content from "./Content";
+import { languageAlternates } from "@/lib/localization";
 
 export const metadata: Metadata = {
   title: "Jak probíhá zakázka, od poptávky po dodání",
@@ -7,6 +8,7 @@ export const metadata: Metadata = {
     "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky.",
   alternates: {
     canonical: "/jak-to-funguje",
+    languages: languageAlternates("/jak-to-funguje"),
   },
   openGraph: {
     title: "Jak probíhá zakázka, od poptávky po dodání | Make the Moment",

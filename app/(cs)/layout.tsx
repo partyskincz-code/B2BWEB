@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/lib/i18n";
@@ -142,7 +142,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <LanguageProvider translations={translations}>
+        <LanguageProvider lang="cs" translations={translations}>
           <Navigation />
           <main>{children}</main>
           <Footer />

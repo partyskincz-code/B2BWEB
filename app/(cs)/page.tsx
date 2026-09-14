@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Content from "./HomeContent";
+import { languageAlternates } from "@/lib/localization";
 
 export const metadata: Metadata = {
   title: {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "Dočasné tetovačky s vaším logem, samolepky a tiskoviny na míru pro firmy, agentury a eventy. Bez minimálního množství, nabídka do 24 hodin.",
   alternates: {
     canonical: "/",
+    languages: languageAlternates("/"),
   },
   openGraph: {
     title: "Reklamní tetovačky na míru pro firmy a eventy | Make the Moment",
