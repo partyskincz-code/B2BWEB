@@ -11,7 +11,7 @@ const SITE = "https://www.makethemoment.cz";
 const D = {
   home: "2026-09-10",
   produkty: "2026-09-09",
-  cenik: "2026-09-09",
+  cenik: "2026-09-14",
   jakToFunguje: "2026-09-04",
   reference: "2026-09-08",
   prilezitosti: "2026-09-10",

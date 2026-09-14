@@ -7,7 +7,7 @@ import FloatingStars from "@/components/FloatingStars";
 export const metadata: Metadata = {
   title: "Ceník reklamních tetovaček, samolepek a tiskovin",
   description:
-    "Kolik stojí reklamní tetovačky s logem? Orientační cenová pásma od 8 Kč za kus u velkých nákladů, formáty A4 až A7, samolepky od 3 Kč, tiskoviny od 8 Kč. Ceny včetně DPH, přesnou kalkulaci připravíme na míru.",
+    "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 8 Kč za kus, samolepky od 3 Kč. Ceny včetně DPH.",
   alternates: { canonical: "/cenik" },
   openGraph: {
     title: "Ceník reklamních tetovaček, samolepek a tiskovin | Make the Moment",
