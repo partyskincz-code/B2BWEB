@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
@@ -20,10 +20,12 @@ import {
   Infinity,
   RefreshCw,
   Clock,
-  Eye,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import FloatingStars from "@/components/FloatingStars";
+import { BUSINESS } from "@/lib/siteConfig";
+import { submitInquiry } from "@/lib/inquiry";
+import { trackEvent } from "@/lib/analytics";
 
 const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
 
@@ -61,11 +63,11 @@ export default function HomePage() {
       title: lang === "cs" ? "Dočasné tetovačky" : lang === "en" ? "Temporary Tattoos" : "Dočasné tetovačky",
       subtitle: lang === "cs" ? "Nalepovací, transfer" : lang === "en" ? "Stick-on transfer" : "Nalepovací, transfer",
       description: lang === "cs"
-        ? "Váš logo, motiv nebo design na kůži zákazníků. Certifikovaná výroba, bezpečné pro děti i dospělé."
+        ? "Vaše logo, motiv nebo design na kůži zákazníků. Certifikovaná výroba, bezpečné pro děti i dospělé."
         : lang === "en"
         ? "Your logo, motif or design on customers' skin. Certified production, safe for children and adults."
-        : "Váš logo, motív alebo dizajn na koži zákazníkov. Certifikovaná výroba, bezpečné pre deti aj dospelých.",
-      price: lang === "en" ? "from €0.30 / pc" : "od 8 Kč / ks",
+        : "Vaše logo, motív alebo dizajn na koži zákazníkov. Certifikovaná výroba, bezpečné pre deti aj dospelých.",
+      price: lang === "en" ? "from €0.30 / pc" : `od ${BUSINESS.pricesCzk.tattoos} Kč / ks`,
       minQty: t("usp.3.title"),
       image: "/detske-tetovacky-archy.jpg",
       href: "/produkty#tetovacky",
@@ -79,9 +81,9 @@ export default function HomePage() {
         : lang === "en"
         ? "Die-cut stickers for branding, packaging and merch. Waterproof, UV-resistant materials."
         : "Tvarové samolepky pre branding, packaging a merch. Vodoodolné, UV odolné materiály.",
-      price: lang === "en" ? "from €0.12 / pc" : "od 3 Kč / ks",
+      price: lang === "en" ? "from €0.12 / pc" : `od ${BUSINESS.pricesCzk.stickers} Kč / ks`,
       minQty: t("usp.3.title"),
-      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&q=80",
+      image: "/realizace-papirovy-prebal.jpg",
       href: "/produkty#samolepky",
     },
     {
@@ -93,9 +95,9 @@ export default function HomePage() {
         : lang === "en"
         ? "Postcards, greeting cards, invitations and business cards with your own artwork or based on our design. We print from a single piece."
         : "Pohľadnice, priania, pozvánky aj vizitky s vlastným potiskom alebo podľa nášho návrhu. Tlačíme už od jedného kusu.",
-      price: lang === "en" ? "from €0.32 / pc" : "od 8 Kč / ks",
+      price: lang === "en" ? "from €0.32 / pc" : `od ${BUSINESS.pricesCzk.print} Kč / ks`,
       minQty: t("usp.3.title"),
-      image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&q=80",
+      image: "/realizace-prebal-a5.jpg",
       href: "/produkty#pohlednice",
     },
     {
@@ -267,7 +269,7 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-brand-light">
+      <section className="relative min-h-[760px] md:min-h-screen flex items-center overflow-hidden bg-brand-light">
         {/* Subtle dot texture on light background */}
         <div className="absolute inset-0 dot-pattern opacity-40" />
         <FloatingStars variant="light" className="lg:right-[58%]" />
@@ -302,7 +304,7 @@ export default function HomePage() {
         </div>
 
         {/* Left-side content */}
-        <div className="relative z-10 container-pad w-full pt-28 pb-20">
+        <div className="relative z-10 container-pad w-full pt-24 md:pt-28 pb-16 md:pb-20">
           <div className="max-w-xl lg:max-w-[46%]">
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -317,7 +319,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-display font-extrabold text-brand-secondary leading-[1.05] mb-6 text-balance"
+              className="text-[2.5rem] sm:text-6xl lg:text-6xl xl:text-7xl font-display font-extrabold text-brand-secondary leading-[1.03] md:leading-[1.05] mb-5 md:mb-6 text-balance"
             >
               {t("hero.h1a")}{" "}
               <span className="text-brand-primary">{t("hero.h1b")}</span>
@@ -327,7 +329,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="text-lg text-brand-secondary/65 mb-10 leading-relaxed"
+              className="text-base md:text-lg text-brand-secondary/75 mb-7 md:mb-10 leading-relaxed"
             >
               {t("hero.sub")}
             </motion.p>
@@ -338,7 +340,7 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href={href("/kontakt")} className="btn-primary text-base px-8 py-4 gap-2">
+              <Link href={href("/kontakt")} onClick={() => trackEvent("cta_clicked", { location: "hero", lang })} className="btn-primary text-base px-8 py-4 gap-2">
                 {t("hero.cta.primary")}
                 <ArrowRight size={18} />
               </Link>
@@ -351,7 +353,7 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row flex-wrap gap-4 mt-12"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 mt-8 md:mt-12"
             >
               {[t("hero.badge.1"), t("hero.badge.2"), t("hero.badge.3")].map((badge) => (
                 <div key={badge} className="flex items-center gap-2 text-brand-secondary/60 text-sm">
@@ -367,7 +369,7 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
         >
           <span className="text-brand-secondary/30 text-xs uppercase tracking-widest">{t("hero.scroll")}</span>
           <div className="w-px h-8 bg-gradient-to-b from-brand-secondary/30 to-transparent animate-pulse" />
@@ -443,38 +445,6 @@ export default function HomePage() {
                 </div>
               </div>
             </FadeUp>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ VÝHODY ═══ */}
-      <section className="py-16 bg-brand-light">
-        <div className="container-pad">
-          <FadeUp className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-secondary mb-3">
-              {t("vyhody.h2")}
-            </h2>
-            <p className="text-gray-500 text-lg max-w-xl mx-auto">{t("vyhody.sub")}</p>
-          </FadeUp>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {[
-              { icon: Gift, titleKey: "vyhody.1.title", descKey: "vyhody.1.desc", ctaKey: "vyhody.1.cta" },
-              { icon: Infinity, titleKey: "vyhody.2.title", descKey: "vyhody.2.desc", ctaKey: "vyhody.2.cta" },
-              { icon: Eye, titleKey: "vyhody.3.title", descKey: "vyhody.3.desc", ctaKey: "vyhody.3.cta" },
-            ].map((card, i) => (
-              <FadeUp key={card.titleKey} delay={i * 0.08}>
-                <div className="bg-white rounded-2xl p-8 border border-brand-primary/10 h-full flex flex-col card-hover">
-                  <div className="w-14 h-14 rounded-2xl bg-brand-primary/10 flex items-center justify-center mb-5">
-                    <card.icon size={26} className="text-brand-primary" />
-                  </div>
-                  <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">{t(card.titleKey)}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-5">{t(card.descKey)}</p>
-                  <Link href={href("/kontakt")} className="text-sm font-semibold text-brand-primary flex items-center gap-1 hover:gap-2 transition-all">
-                    {t(card.ctaKey)} <ArrowRight size={15} />
-                  </Link>
-                </div>
-              </FadeUp>
-            ))}
           </div>
         </div>
       </section>
@@ -669,7 +639,7 @@ export default function HomePage() {
           </FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {testimonials.map((testimonial, i) => (
+            {testimonials.slice(0, 2).map((testimonial, i) => (
               <FadeUp key={i} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl border border-brand-primary/20 h-full flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   {/* top accent bar */}
@@ -794,66 +764,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ PODPORUJEME ═══ */}
-      <section className="py-14 bg-white border-t border-gray-100">
-        <div className="container-pad">
-          <FadeUp className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-6 max-w-5xl mx-auto">
-            <div className="flex-shrink-0 text-center sm:text-left">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">
-                {lang === "en" ? "We support" : lang === "sk" ? "Podporujeme" : "Podporujeme"}
-              </p>
-            </div>
-            <div className="w-px h-10 bg-gray-200 hidden sm:block flex-shrink-0" />
-            <a
-              href="https://www.amalthea.cz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-5 rounded-2xl border border-gray-100 hover:border-brand-primary/30 bg-gray-50 hover:bg-brand-light/30 transition-all px-6 py-4 w-full sm:w-auto"
-            >
-              <div className="relative w-20 h-12 rounded-lg bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 p-1.5">
-                <Image src="/logo-amalthea.png" alt="Amalthea z.s." width={480} height={118} className="object-contain w-full h-full" />
-              </div>
-              <div>
-                <p className="font-display font-bold text-brand-secondary text-base group-hover:text-brand-primary transition-colors">
-                  Amalthea z.s.
-                </p>
-                <p className="text-gray-400 text-xs mt-0.5">
-                  {lang === "en"
-                    ? "Supporting children and families in need"
-                    : lang === "sk"
-                    ? "Podpora detí a rodín v núdzi"
-                    : "Pomoc dětem a rodinám, které to potřebují"}
-                </p>
-              </div>
-              <span className="ml-auto text-gray-300 group-hover:text-brand-primary transition-colors text-lg">→</span>
-            </a>
-            <a
-              href="https://www.anidef.cz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-5 rounded-2xl border border-gray-100 hover:border-brand-primary/30 bg-gray-50 hover:bg-brand-light/30 transition-all px-6 py-4 w-full sm:w-auto"
-            >
-              <div className="relative w-20 h-12 rounded-lg bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 p-1">
-                <Image src="/logo-anidef.png" alt="AniDef, z.s." width={320} height={320} className="object-contain w-full h-full" />
-              </div>
-              <div>
-                <p className="font-display font-bold text-brand-secondary text-base group-hover:text-brand-primary transition-colors">
-                  AniDef, z.s.
-                </p>
-                <p className="text-gray-400 text-xs mt-0.5">
-                  {lang === "en"
-                    ? "Shelter for abandoned animals in Žim"
-                    : lang === "sk"
-                    ? "Útulok pre opustené zvieratá v Žime"
-                    : "Útulek pro opuštěná zvířata v Žimu"}
-                </p>
-              </div>
-              <span className="ml-auto text-gray-300 group-hover:text-brand-primary transition-colors text-lg">→</span>
-            </a>
-          </FadeUp>
-        </div>
-      </section>
-
       {/* ═══ CTA ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
@@ -922,22 +832,56 @@ export default function HomePage() {
 }
 
 function QuickContactForm() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const formStartedRef = useRef(false);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setStatus("sending");
+    try {
+      await submitInquiry(form, lang, "homepage_quick_form");
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  if (status === "sent") {
+    return (
+      <div className="py-8 text-center" role="status">
+        <CheckCircle2 size={36} className="text-green-600 mx-auto mb-3" />
+        <p className="font-display font-bold text-brand-secondary text-lg">{t("form.success")}</p>
+        <p className="text-sm text-gray-500 mt-2">{lang === "en" ? "Your request has been delivered." : lang === "sk" ? "Váš dopyt bol doručený." : "Vaše poptávka byla doručena."}</p>
+      </div>
+    );
+  }
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        alert(t("form.success"));
+      onSubmit={handleSubmit}
+      onFocus={() => {
+        if (!formStartedRef.current) {
+          formStartedRef.current = true;
+          trackEvent("inquiry_form_started", { source: "homepage", lang });
+        }
       }}
       className="flex flex-col gap-3"
     >
+      <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
       <p className="font-display font-bold text-brand-secondary text-lg mb-1">{t("form.title")}</p>
-      <input type="text" placeholder={t("form.name")} required className="input-field text-sm" />
-      <input type="email" placeholder={t("form.email")} required className="input-field text-sm" />
-      <input type="tel" placeholder={t("form.phone")} className="input-field text-sm" />
-      <textarea placeholder={t("form.message")} rows={3} className="input-field text-sm resize-none" />
-      <button type="submit" className="btn-primary w-full mt-1">
-        {t("form.submit")}
+      <label className="sr-only" htmlFor="quick-name">{t("form.name")}</label>
+      <input id="quick-name" name="Jmeno a firma" type="text" placeholder={t("form.name")} required className="input-field text-sm" />
+      <label className="sr-only" htmlFor="quick-email">{t("form.email")}</label>
+      <input id="quick-email" name="email" type="email" placeholder={t("form.email")} required className="input-field text-sm" />
+      <label className="sr-only" htmlFor="quick-phone">{t("form.phone")}</label>
+      <input id="quick-phone" name="Telefon" type="tel" placeholder={t("form.phone")} className="input-field text-sm" />
+      <label className="sr-only" htmlFor="quick-message">{t("form.message")}</label>
+      <textarea id="quick-message" name="Popis zameru" placeholder={t("form.message")} rows={3} required className="input-field text-sm resize-none" />
+      {status === "error" && <p className="text-sm text-red-700" role="alert">{lang === "en" ? "Sending failed. Please email us at objednavky@partyskin.cz." : lang === "sk" ? "Odoslanie zlyhalo. Napíšte na objednavky@partyskin.cz." : "Odeslání se nezdařilo. Napište na objednavky@partyskin.cz."}</p>}
+      <button type="submit" disabled={status === "sending"} className="btn-primary w-full mt-1 disabled:opacity-60">
+        {status === "sending" ? (lang === "en" ? "Sending…" : lang === "sk" ? "Odosielam…" : "Odesílám…") : t("form.submit")}
         <ArrowRight size={16} className="ml-2" />
       </button>
       <p className="text-gray-400 text-xs text-center">{t("form.note")}</p>

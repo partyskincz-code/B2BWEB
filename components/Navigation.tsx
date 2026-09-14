@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useLanguage, type Lang } from "@/lib/i18n";
+import { trackEvent } from "@/lib/analytics";
 
 const LANGS: { code: Lang; label: string }[] = [
   { code: "cs", label: "CS" },
@@ -27,13 +28,11 @@ export default function Navigation() {
   };
 
   const navLinks = [
-    { href: localizedPath("/"), label: t("nav.home") },
     { href: localizedPath("/produkty"), label: t("nav.products") },
     { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
     { href: localizedPath("/jak-to-funguje"), label: t("nav.how") },
     { href: localizedPath("/reference"), label: t("nav.references") },
     { href: "/poradna", label: lang === "en" ? "Guides" : lang === "sk" ? "Poradňa" : "Poradna" },
-    { href: localizedPath("/kontakt"), label: t("nav.contact") },
   ];
 
   useEffect(() => {
@@ -104,6 +103,7 @@ export default function Navigation() {
                   key={code}
                   href={switchPath(code)}
                   hrefLang={code}
+                  onClick={() => trackEvent("language_changed", { from: lang, to: code, path: pathname })}
                   className={`px-2.5 py-1.5 text-xs font-bold transition-all duration-200 ${
                     lang === code
                       ? "bg-brand-primary text-white"
@@ -114,7 +114,7 @@ export default function Navigation() {
                 </Link>
               ))}
             </div>
-            <Link href={localizedPath("/kontakt")} className="btn-primary text-sm px-5 py-2.5">
+            <Link href={localizedPath("/kontakt")} onClick={() => trackEvent("cta_clicked", { location: "navigation", lang })} className="btn-primary text-sm px-5 py-2.5">
               {t("nav.cta")}
             </Link>
           </div>
@@ -122,10 +122,10 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              "text-gray-700 hover:text-white hover:bg-brand-secondary"
-            }`}
+            className="md:hidden p-2 rounded-lg transition-colors text-brand-secondary bg-white/80 backdrop-blur-sm hover:text-white hover:bg-brand-secondary shadow-sm"
             aria-label="Otevřít menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -134,7 +134,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+        <div id="mobile-navigation" className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="container-pad py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
@@ -157,6 +157,7 @@ export default function Navigation() {
                   key={code}
                   href={switchPath(code)}
                   hrefLang={code}
+                  onClick={() => trackEvent("language_changed", { from: lang, to: code, path: pathname })}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                     lang === code
                       ? "bg-brand-primary text-white"

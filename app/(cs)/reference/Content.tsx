@@ -176,6 +176,30 @@ export default function ReferencePage() {
     },
   ];
 
+  const caseDetailsCs = [
+    { type: "Brand activation", scope: "A5 tetovačky + brandovaný přebal", result: "Jednotný vizuál připravený pro distribuci na akci" },
+    { type: "Packaging", scope: "Oboustranný přebal + návod", result: "Produkt připravený k okamžitému předání návštěvníkům" },
+    { type: "Velkoobchod", scope: "Tematická A6 kolekce + balení", result: "Opakovatelná produktová řada pro maloobchod" },
+    { type: "Sezónní kampaň", scope: "A5 motivy + kraftový přebal", result: "Kompletní limitovaná edice v jednom balení" },
+    { type: "Svatba", scope: "Tetovací koutek + instrukce", result: "Samoobslužná aktivita pro hosty bez obsluhy" },
+    { type: "Dětská kolekce", scope: "Arch + ochranné balení", result: "Bezpečný produkt připravený k prodeji i rozdávání" },
+  ];
+  const caseDetails = lang === "cs" ? caseDetailsCs : lang === "sk" ? [
+    { type: "Brand activation", scope: "A5 tetovačky + brandovaný obal", result: "Jednotný vizuál pripravený na distribúciu na akcii" },
+    { type: "Packaging", scope: "Obojstranný obal + návod", result: "Produkt pripravený na okamžité odovzdanie návštevníkom" },
+    { type: "Veľkoobchod", scope: "Tematická A6 kolekcia + balenie", result: "Opakovateľný produktový rad pre maloobchod" },
+    { type: "Sezónna kampaň", scope: "A5 motívy + kraftový obal", result: "Kompletná limitovaná edícia v jednom balení" },
+    { type: "Svadba", scope: "Tetovací kútik + inštrukcie", result: "Samoobslužná aktivita pre hostí bez obsluhy" },
+    { type: "Detská kolekcia", scope: "Arch + ochranné balenie", result: "Bezpečný produkt pripravený na predaj aj rozdávanie" },
+  ] : [
+    { type: "Brand activation", scope: "A5 tattoos + branded sleeve", result: "A consistent visual ready for event distribution" },
+    { type: "Packaging", scope: "Two-sided sleeve + instructions", result: "A product ready to hand directly to visitors" },
+    { type: "Wholesale", scope: "Themed A6 collection + packaging", result: "A repeatable product line for retail" },
+    { type: "Seasonal campaign", scope: "A5 designs + kraft sleeve", result: "A complete limited edition in one package" },
+    { type: "Wedding", scope: "Tattoo corner + instructions", result: "A self-service guest activity requiring no staff" },
+    { type: "Children's collection", scope: "Sheet + protective packaging", result: "A safe product ready to sell or give away" },
+  ];
+
   return (
     <>
       {/* Hero */}
@@ -231,10 +255,15 @@ export default function ReferencePage() {
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-brand-secondary/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   </div>
                   <div className="p-5">
+                    <span className="tag mb-3">{caseDetails[i].type}</span>
                     <h3 className="font-display font-bold text-brand-secondary text-base mb-2">
                       {photo.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{photo.desc}</p>
+                    <dl className="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs">
+                      <div><dt className="font-semibold text-brand-secondary inline">{lang === "en" ? "Scope" : lang === "sk" ? "Rozsah" : "Rozsah"}: </dt><dd className="text-gray-500 inline">{caseDetails[i].scope}</dd></div>
+                      <div><dt className="font-semibold text-brand-secondary inline">{lang === "en" ? "Outcome" : lang === "sk" ? "Výsledok" : "Výsledek"}: </dt><dd className="text-gray-500 inline">{caseDetails[i].result}</dd></div>
+                    </dl>
                   </div>
                 </motion.div>
               </FadeUp>

@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { trackEvent } from "@/lib/analytics";
+import { BUSINESS } from "@/lib/siteConfig";
 
 const igPhotos = [
   "/realizace-prebal-b2b-a5.jpg",
@@ -53,6 +55,7 @@ export default function Footer() {
         href="https://www.instagram.com/partyskin.cz/"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent("social_clicked", { network: "instagram", placement: "footer_strip", lang })}
         className="block group"
         aria-label="Instagram @partyskin.cz"
       >
@@ -99,11 +102,11 @@ export default function Footer() {
                 : "Spolehlivý partner pro zakázkovou výrobu dočasných tetovaček, samolepek a pohlednic. Od několika kusů až po velké kampaně. Rychlá komunikace, osobní přístup a řešení na míru každému projektu."}
             </p>
             <div className="space-y-3">
-              <a href="mailto:objednavky@partyskin.cz" className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
+              <a href={`mailto:${BUSINESS.contactEmail}`} onClick={() => trackEvent("contact_clicked", { channel: "email", placement: "footer", lang })} className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                 <Mail size={16} className="text-brand-primary flex-shrink-0" />
-                objednavky@partyskin.cz
+                {BUSINESS.contactEmail}
               </a>
-              <a href="tel:+420724874274" className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
+              <a href={`tel:${BUSINESS.contactPhone}`} onClick={() => trackEvent("contact_clicked", { channel: "phone", placement: "footer", lang })} className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                 <Phone size={16} className="text-brand-primary flex-shrink-0" />
                 +420 724 874 274
               </a>
@@ -115,6 +118,7 @@ export default function Footer() {
                 href={lang === "sk" ? "https://www.partyskin.sk" : "https://www.partyskin.cz"}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("eshop_clicked", { shop: lang === "sk" ? "sk" : "cz", placement: "footer", lang })}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-primary hover:text-white transition-colors mt-1"
               >
                 →&nbsp;{lang === "en"

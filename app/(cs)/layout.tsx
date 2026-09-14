@@ -142,9 +142,10 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">Přeskočit na obsah</a>
         <LanguageProvider lang="cs" translations={translations}>
           <Navigation />
-          <main>{children}</main>
+          <main id="main-content">{children}</main>
           <Footer />
         </LanguageProvider>
         <Analytics />

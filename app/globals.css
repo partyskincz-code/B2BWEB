@@ -13,6 +13,10 @@
   --brand-light: #F2EBE9;
   --brand-gold: #FFC107;
   --brand-beige: #BFA799;
+  --space-section: clamp(4rem, 7vw, 7rem);
+  --radius-control: 0.75rem;
+  --radius-card: 1rem;
+  --shadow-card: 0 10px 30px rgb(33 42 52 / 0.08);
 }
 
 @layer base {
@@ -35,6 +39,37 @@
 
   * {
     box-sizing: border-box;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--brand-accent);
+    outline-offset: 3px;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  left: 1rem;
+  top: 1rem;
+  transform: translateY(-200%);
+  border-radius: var(--radius-control);
+  background: var(--brand-secondary);
+  color: white;
+  padding: 0.75rem 1rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

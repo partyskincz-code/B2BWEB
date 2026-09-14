@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
@@ -17,14 +18,10 @@ import {
   Send,
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { submitInquiry } from "@/lib/inquiry";
+import { trackEvent } from "@/lib/analytics";
 
 const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
-
-// Veřejný klíč Web3Forms, je určený do klientského kódu, umožňuje pouze
-// odeslání na schránku nastavenou v účtu. Ve Vercelu se dá přebít proměnnou
-// NEXT_PUBLIC_WEB3FORMS_KEY (např. po rotaci klíče).
-const WEB3FORMS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "a2615ddf-cd67-44d7-8c12-0f7a731dd88b";
 
 function FadeUp({
   children,
@@ -55,6 +52,7 @@ function FadeUp({
 // ─────────────────────────────────────────────────
 export default function KontaktPage() {
   const { t, lang } = useLanguage();
+  const formStartedRef = useRef(false);
 
   // ─── Data arrays (inside component to access lang) ───
   const productTypes = [
@@ -188,38 +186,13 @@ export default function KontaktPage() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       const form = e.currentTarget;
-      const accessKey = WEB3FORMS_KEY;
-
       setError(null);
       setSending(true);
       try {
-        if (!accessKey) throw new Error("Missing NEXT_PUBLIC_WEB3FORMS_KEY");
-
-        const data = new FormData(form);
-        data.append("access_key", accessKey);
-        data.append("from_name", "makethemoment.cz");
-        data.append(
-          "subject",
-          `Nová poptávka z webu, ${selectedSegment ?? "neuvedeno"}` +
-            (selectedProducts.length ? `, ${selectedProducts.join(", ")}` : "")
-        );
-        data.append("Segment", selectedSegment ?? "neuvedeno");
-        data.append(
-          "Produkty",
-          selectedProducts.length ? selectedProducts.join(", ") : "neuvedeno"
-        );
-        data.append("Jazyk webu", lang);
-
-        const email = data.get("email");
-        if (typeof email === "string" && email) data.append("replyto", email);
-
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: data,
+        await submitInquiry(form, lang, "contact_page", {
+          Segment: selectedSegment ?? "neuvedeno",
+          Produkty: selectedProducts.length ? selectedProducts.join(", ") : "neuvedeno",
         });
-        const json = await res.json().catch(() => null);
-        if (!res.ok || !json?.success) throw new Error("Web3Forms rejected the submission");
-
         form.reset();
         setSelectedProducts([]);
         setSelectedSegment(null);
@@ -282,7 +255,16 @@ export default function KontaktPage() {
     }
 
     return (
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form
+        onSubmit={handleSubmit}
+        onFocus={() => {
+          if (!formStartedRef.current) {
+            formStartedRef.current = true;
+            trackEvent("inquiry_form_started", { source: "contact_page", lang });
+          }
+        }}
+        className="space-y-6"
+      >
         {/* honeypot, hidden from users, filled only by bots */}
         <input
           type="checkbox"
@@ -303,7 +285,7 @@ export default function KontaktPage() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label htmlFor="contact-name" className="block text-sm font-medium text-gray-700 mb-1.5">
                 {lang === "en"
                   ? "Full name"
                   : lang === "sk"
@@ -312,6 +294,7 @@ export default function KontaktPage() {
                 <span className="text-brand-primary">*</span>
               </label>
               <input
+                id="contact-name"
                 type="text"
                 name="Jmeno a prijmeni"
                 required
@@ -326,7 +309,7 @@ export default function KontaktPage() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label htmlFor="contact-company" className="block text-sm font-medium text-gray-700 mb-1.5">
                 {lang === "en"
                   ? "Company name"
                   : lang === "sk"
@@ -334,6 +317,7 @@ export default function KontaktPage() {
                   : "Název firmy"}
               </label>
               <input
+                id="contact-company"
                 type="text"
                 name="Firma"
                 placeholder={
@@ -347,7 +331,7 @@ export default function KontaktPage() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label htmlFor="contact-email" className="block text-sm font-medium text-gray-700 mb-1.5">
                 {lang === "en"
                   ? "Email address"
                   : lang === "sk"
@@ -356,6 +340,7 @@ export default function KontaktPage() {
                 <span className="text-brand-primary">*</span>
               </label>
               <input
+                id="contact-email"
                 type="email"
                 name="email"
                 required
@@ -370,7 +355,7 @@ export default function KontaktPage() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label htmlFor="contact-phone" className="block text-sm font-medium text-gray-700 mb-1.5">
                 {lang === "en"
                   ? "Phone"
                   : lang === "sk"
@@ -378,6 +363,7 @@ export default function KontaktPage() {
                   : "Telefon"}
               </label>
               <input
+                id="contact-phone"
                 type="tel"
                 name="Telefon"
                 placeholder="+420 600 000 000"
@@ -401,6 +387,7 @@ export default function KontaktPage() {
               <button
                 key={seg.label}
                 type="button"
+                aria-pressed={selectedSegment === seg.label}
                 onClick={() =>
                   setSelectedSegment(
                     seg.label === selectedSegment ? null : seg.label
@@ -440,6 +427,7 @@ export default function KontaktPage() {
               <button
                 key={p}
                 type="button"
+                aria-pressed={selectedProducts.includes(p)}
                 onClick={() => toggleProduct(p)}
                 className={`px-4 py-2.5 rounded-xl text-sm font-medium border-2 transition-all ${
                   selectedProducts.includes(p)
@@ -467,14 +455,14 @@ export default function KontaktPage() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label htmlFor="contact-quantity" className="block text-sm font-medium text-gray-700 mb-1.5">
                 {lang === "en"
                   ? "Estimated quantity"
                   : lang === "sk"
                   ? "Odhadované množstvo"
                   : "Odhadované množství"}
               </label>
-              <select name="Mnozstvi" className="input-field">
+              <select id="contact-quantity" name="Mnozstvi" className="input-field">
                 <option value="">
                   {lang === "en" ? "Select..." : "Vyberte..."}
                 </option>
@@ -488,7 +476,7 @@ export default function KontaktPage() {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1.5">
+              <label htmlFor="contact-date" className="block text-sm font-medium text-gray-700 mb-1.5">
                 {lang === "en"
                   ? "Event date"
                   : lang === "sk"
@@ -496,6 +484,7 @@ export default function KontaktPage() {
                   : "Termín akce"}
               </label>
               <input
+                id="contact-date"
                 type="date"
                 name="Termin akce"
                 className="input-field"
@@ -505,7 +494,7 @@ export default function KontaktPage() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label htmlFor="contact-artwork" className="block text-sm font-medium text-gray-700 mb-1.5">
               {lang === "en"
                 ? "Link to your artwork"
                 : lang === "sk"
@@ -513,6 +502,7 @@ export default function KontaktPage() {
                 : "Odkaz na podklady"}
             </label>
             <input
+              id="contact-artwork"
               type="url"
               name="Odkaz na podklady"
               placeholder={
@@ -532,7 +522,7 @@ export default function KontaktPage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+            <label htmlFor="contact-description" className="block text-sm font-medium text-gray-700 mb-1.5">
               {lang === "en"
                 ? "Project description"
                 : lang === "sk"
@@ -541,6 +531,7 @@ export default function KontaktPage() {
               <span className="text-brand-primary">*</span>
             </label>
             <textarea
+              id="contact-description"
               name="Popis zameru"
               required
               rows={5}
@@ -559,11 +550,10 @@ export default function KontaktPage() {
         {/* Submit */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
           <p className="text-gray-400 text-xs leading-relaxed max-w-xs">
-            {lang === "en"
-              ? "By submitting you agree to the processing of personal data for inquiry purposes. "
-              : lang === "sk"
-              ? "Odoslaním súhlasíte so spracovaním osobných údajov na účely vybavenia dopytu. "
-              : "Odesláním souhlasíte se zpracováním osobních údajů pro účely vyřízení poptávky. "}
+            {lang === "en" ? "By submitting you agree to our " : lang === "sk" ? "Odoslaním súhlasíte s našimi " : "Odesláním souhlasíte s našimi "}
+            <Link href="/ochrana-osobnich-udaju" className="underline hover:text-brand-primary">
+              {lang === "en" ? "privacy terms" : lang === "sk" ? "podmienkami ochrany osobných údajov" : "podmínkami ochrany osobních údajů"}
+            </Link>.{" "}
             {lang === "en"
               ? "We'll respond within 24 hours."
               : lang === "sk"

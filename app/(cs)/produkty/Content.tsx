@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import FloatingStars from "@/components/FloatingStars";
+import { trackEvent } from "@/lib/analytics";
+import { BUSINESS, productionRange } from "@/lib/siteConfig";
 
 const UTM_B2C = "?utm_source=makethemoment&utm_medium=referral&utm_campaign=b2c";
 
@@ -78,8 +80,8 @@ export default function ProduktyPage() {
         lang === "en"
           ? "from €0.32 / pc"
           : lang === "sk"
-          ? "od 8 Kč / ks"
-          : "od 8 Kč / ks",
+          ? `od ${BUSINESS.pricesCzk.tattoos} Kč / ks`
+          : `od ${BUSINESS.pricesCzk.tattoos} Kč / ks`,
       minQty:
         lang === "en"
           ? "No minimum"
@@ -87,11 +89,7 @@ export default function ProduktyPage() {
           ? "Bez minimálneho množstva"
           : "Bez minimálního množství",
       deliveryTime:
-        lang === "en"
-          ? "5 to 20 business days"
-          : lang === "sk"
-          ? "5 až 20 pracovných dní"
-          : "5 až 20 pracovních dní",
+        productionRange[lang],
       image: "/detske-tetovacky-archy.jpg",
       cta:
         lang === "en"
@@ -154,8 +152,8 @@ export default function ProduktyPage() {
         lang === "en"
           ? "from €0.12 / pc"
           : lang === "sk"
-          ? "od 3 Kč / ks"
-          : "od 3 Kč / ks",
+          ? `od ${BUSINESS.pricesCzk.stickers} Kč / ks`
+          : `od ${BUSINESS.pricesCzk.stickers} Kč / ks`,
       minQty:
         lang === "en"
           ? "Min. 100 pcs"
@@ -163,12 +161,8 @@ export default function ProduktyPage() {
           ? "Min. 100 ks"
           : "Min. 100 ks",
       deliveryTime:
-        lang === "en"
-          ? "5 to 20 business days"
-          : lang === "sk"
-          ? "5 až 20 pracovných dní"
-          : "5 až 20 pracovních dní",
-      image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&q=80",
+        productionRange[lang],
+      image: "/realizace-papirovy-prebal.jpg",
       features:
         lang === "en"
           ? [
@@ -233,8 +227,8 @@ export default function ProduktyPage() {
         lang === "en"
           ? "from €0.32 / pc"
           : lang === "sk"
-          ? "od 8 Kč / ks"
-          : "od 8 Kč / ks",
+          ? `od ${BUSINESS.pricesCzk.print} Kč / ks`
+          : `od ${BUSINESS.pricesCzk.print} Kč / ks`,
       minQty:
         lang === "en"
           ? "Min. 50 pcs"
@@ -242,12 +236,8 @@ export default function ProduktyPage() {
           ? "Bez minima"
           : "Bez minima",
       deliveryTime:
-        lang === "en"
-          ? "5 to 20 business days"
-          : lang === "sk"
-          ? "5 až 20 pracovných dní"
-          : "5 až 20 pracovních dní",
-      image: "https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800&q=80",
+        productionRange[lang],
+      image: "/realizace-prebal-a5.jpg",
       features:
         lang === "en"
           ? [
@@ -736,7 +726,7 @@ export default function ProduktyPage() {
           </FadeUp>
 
           <FadeUp delay={0.12} className="text-center mb-10">
-            <Link href="/cenik" className="btn-primary text-sm px-6 py-3">
+            <Link href="/cenik" className="btn-primary text-sm px-6 py-3" onClick={() => trackEvent("price_list_opened", { placement: "products_primary", lang })}>
               {lang === "en"
                 ? "Full price list with all volume tiers"
                 : lang === "sk"
@@ -768,6 +758,7 @@ export default function ProduktyPage() {
             </p>
             <Link
               href="/cenik"
+              onClick={() => trackEvent("price_list_opened", { placement: "products_secondary", lang })}
               className="text-sm font-semibold text-brand-primary flex items-center gap-1.5 hover:gap-2.5 transition-all whitespace-nowrap shrink-0"
             >
               {lang === "en"
@@ -807,6 +798,7 @@ export default function ProduktyPage() {
               <div className="flex gap-4 flex-wrap">
                 <a
                   href={`https://www.partyskin.cz${UTM_B2C}`}
+                  onClick={() => trackEvent("eshop_clicked", { shop: "cz", placement: "products", lang })}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary gap-2"
@@ -820,6 +812,7 @@ export default function ProduktyPage() {
                 </a>
                 <a
                   href={`https://www.partyskin.sk${UTM_B2C}`}
+                  onClick={() => trackEvent("eshop_clicked", { shop: "sk", placement: "products", lang })}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-outline gap-2"
@@ -836,6 +829,7 @@ export default function ProduktyPage() {
 
               <a
                 href={`https://www.partyskin.cz${UTM_B2C}`}
+                onClick={() => trackEvent("eshop_clicked", { shop: "cz", placement: "products_image", lang })}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block relative rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow"

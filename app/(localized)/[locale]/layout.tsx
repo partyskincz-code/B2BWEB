@@ -46,8 +46,9 @@ export default function LocaleLayout({ children, params }: { children: React.Rea
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       </head>
       <body>
+        <a href="#main-content" className="skip-link">{params.locale === "sk" ? "Preskočiť na obsah" : "Skip to content"}</a>
         <LanguageProvider lang={params.locale} translations={translations}>
-          <Navigation /><main>{children}</main><Footer />
+          <Navigation /><main id="main-content">{children}</main><Footer />
         </LanguageProvider>
         <Analytics /><SpeedInsights />
       </body>
