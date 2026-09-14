@@ -55,7 +55,7 @@ const data: Clanek = {
     {
       "typ": "ul",
       "polozky": [
-        "A7, nejmenší: 24 až 33 Kč při pár kusech, 8 až 11 Kč od tisíce kusů",
+        "A7, nejmenší: 24 až 33 Kč při pár kusech, 9 Kč od 501 kusů",
         "A6: 39 až 52 Kč při pár kusech, 14 až 19 Kč od tisíce kusů",
         "A5: 65 až 89 Kč při pár kusech, 22 až 29 Kč od tisíce kusů",
         "A4, největší: 129 až 169 Kč při pár kusech, 45 až 59 Kč od tisíce kusů"

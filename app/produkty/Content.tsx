@@ -75,10 +75,10 @@ export default function ProduktyPage() {
           : "Vytvořte originální dočasné tetovačky pro firemní eventy, festivaly, svatby, rozlučky se svobodou i dětské oslavy. Tiskneme již od několika kusů, bez minimálního množství a s rychlou výrobou na míru vašemu projektu.",
       price:
         lang === "en"
-          ? "from €0.32 / pc"
+          ? "from €0.36 / pc"
           : lang === "sk"
-          ? "od 8 Kč / ks"
-          : "od 8 Kč / ks",
+          ? "od 9 Kč / ks"
+          : "od 9 Kč / ks",
       minQty:
         lang === "en"
           ? "No minimum"
@@ -716,7 +716,7 @@ export default function ProduktyPage() {
 
           <FadeUp delay={0.1} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             {[
-              { format: "A7", od: "8 až 11 Kč" },
+              { format: "A7", od: "9 Kč" },
               { format: "A6", od: "14 až 19 Kč" },
               { format: "A5", od: "22 až 29 Kč" },
               { format: "A4", od: "45 až 59 Kč" },

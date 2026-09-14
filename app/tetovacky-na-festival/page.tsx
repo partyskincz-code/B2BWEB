@@ -54,8 +54,8 @@ const data: Prilezitost = {
   "ceny": [
     {
       "format": "A7 (nejmenší)",
-      "cena": "8 až 11 Kč",
-      "pozn": "od 1 000 ks"
+      "cena": "9 Kč",
+      "pozn": "od 501 ks"
     },
     {
       "format": "A6",
