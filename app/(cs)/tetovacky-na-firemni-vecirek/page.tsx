@@ -4,11 +4,11 @@ import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage"
 export const metadata: Metadata = {
   title: "Tetovačky na firemní večírek a vánoční párty",
   description:
-    "Zábava na firemní večírek, která nic nestojí navíc a nikdo ji neorganizuje. Tetovačky s vaším logem nebo hláškou od 8 Kč za kus, bez minimálního množství.",
+    "Zábava na firemní večírek, která nic nestojí navíc a nikdo ji neorganizuje. Tetovačky s vaším logem nebo hláškou od 9 Kč za kus, bez minimálního množství.",
   alternates: { canonical: "/tetovacky-na-firemni-vecirek" },
   openGraph: {
     title: "Tetovačky na firemní večírek a vánoční párty | Make the Moment",
-    description: "Zábava na firemní večírek, která nic nestojí navíc a nikdo ji neorganizuje. Tetovačky s vaším logem nebo hláškou od 8 Kč za kus, bez minimálního množství.",
+    description: "Zábava na firemní večírek, která nic nestojí navíc a nikdo ji neorganizuje. Tetovačky s vaším logem nebo hláškou od 9 Kč za kus, bez minimálního množství.",
     url: "/tetovacky-na-firemni-vecirek",
     images: [
       {
@@ -54,7 +54,7 @@ const data: Prilezitost = {
   "ceny": [
     {
       "format": "A7 (nejmenší)",
-      "cena": "12 až 15 Kč",
+      "cena": "10 až 12 Kč",
       "pozn": "od 100 ks"
     },
     {

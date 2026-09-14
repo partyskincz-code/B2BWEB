@@ -90,7 +90,7 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
             Orientační ceny
           </h2>
           <p className="text-gray-500 mb-8">
-            Ceny jsou včetně DPH za kus. Přesnou kalkulaci připravíme podle množství a formátu do 24 hodin.
+            Ceny jsou konečné za kus. Přesnou kalkulaci připravíme podle množství a formátu do 24 hodin.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-left border-separate border-spacing-y-2">

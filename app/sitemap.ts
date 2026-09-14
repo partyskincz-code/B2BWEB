@@ -9,13 +9,13 @@ const SITE = "https://www.makethemoment.cz";
  * Při obsahové úpravě stránky se tady ručně přepíše datum.
  */
 const D = {
-  home: "2026-09-10",
-  produkty: "2026-09-09",
-  cenik: "2026-09-14",
+  home: "2026-09-15",
+  produkty: "2026-09-15",
+  cenik: "2026-09-15",
   jakToFunguje: "2026-09-04",
   reference: "2026-09-08",
-  prilezitosti: "2026-09-10",
-  poradna: "2026-09-10",
+  prilezitosti: "2026-09-15",
+  poradna: "2026-09-15",
   kontakt: "2026-09-08",
 };
 

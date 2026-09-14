@@ -94,12 +94,12 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Ceny jsou konečné včetně DPH, za jeden arch."
+      "text": "Ceny jsou konečné, za jeden arch."
     },
     {
       "typ": "ul",
       "polozky": [
-        "A7, nejmenší formát: přibližně 12 až 15 Kč za kus při odběru od sta kusů",
+        "A7, nejmenší formát: 12 Kč za kus při 100 až 250 kusech, 10 Kč při 251 až 500 kusech, 9 Kč od 501 kusů",
         "A6: přibližně 19 až 25 Kč za kus",
         "A5: přibližně 32 až 39 Kč za kus",
         "Papírový přebal s potiskem na rub: +7 až 10 Kč za kus"

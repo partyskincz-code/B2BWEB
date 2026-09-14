@@ -4,12 +4,12 @@ import ClanekLayout, { type Clanek } from "@/components/ClanekLayout";
 export const metadata: Metadata = {
   title: "Kolik stojí reklamní tetovačky s logem",
   description:
-    "Reálné ceny reklamních tetovaček podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit. Orientační pásma včetně DPH.",
+    "Reálné ceny reklamních tetovaček podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit. Orientační pásma, ceny jsou konečné.",
   alternates: { canonical: "/poradna/kolik-stoji-reklamni-tetovacky" },
   openGraph: {
     type: "article",
     title: "Kolik stojí reklamní tetovačky s logem | Make the Moment",
-    description: "Reálné ceny reklamních tetovaček podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit. Orientační pásma včetně DPH.",
+    description: "Reálné ceny reklamních tetovaček podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit. Orientační pásma, ceny jsou konečné.",
     url: "/poradna/kolik-stoji-reklamni-tetovacky",
     images: [
       {
@@ -50,12 +50,12 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Ceny jsou včetně DPH, za jeden arch bez balení. Uvádíme pásma, protože konečná cena vychází z konkrétního zadání, náročnosti grafiky a termínu."
+      "text": "Ceny jsou konečné, za jeden arch bez balení. Uvádíme pásma, protože konečná cena vychází z konkrétního zadání, náročnosti grafiky a termínu."
     },
     {
       "typ": "ul",
       "polozky": [
-        "A7, nejmenší: 24 až 33 Kč při pár kusech, 8 až 11 Kč od tisíce kusů",
+        "A7, nejmenší: 24 až 33 Kč při pár kusech, 9 Kč od 501 kusů",
         "A6: 39 až 52 Kč při pár kusech, 14 až 19 Kč od tisíce kusů",
         "A5: 65 až 89 Kč při pár kusech, 22 až 29 Kč od tisíce kusů",
         "A4, největší: 129 až 169 Kč při pár kusech, 45 až 59 Kč od tisíce kusů"
@@ -67,7 +67,7 @@ const data: Clanek = {
     },
     {
       "typ": "p",
-      "text": "Konference pro tři sta lidí, formát A6, jeden arch na osobu. Vychází to zhruba na 19 až 25 Kč za kus, tedy 5 700 až 7 500 Kč včetně DPH za celou akci. S papírovým přebalem na míru připočtěte 7 až 10 Kč na kus."
+      "text": "Konference pro tři sta lidí, formát A6, jeden arch na osobu. Vychází to zhruba na 19 až 25 Kč za kus, tedy 5 700 až 7 500 Kč za celou akci. S papírovým přebalem na míru připočtěte 7 až 10 Kč na kus."
     },
     {
       "typ": "p",
@@ -158,7 +158,7 @@ const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Kolik stojí reklamní tetovačky s logem",
-  "description": "Reálné ceny reklamních tetovaček podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit. Orientační pásma včetně DPH.",
+  "description": "Reálné ceny reklamních tetovaček podle formátu a nákladu, co je v ceně, co se účtuje zvlášť a na čem se dá ušetřit. Orientační pásma, ceny jsou konečné.",
   "datePublished": "2026-09-07",
   "dateModified": "2026-09-07",
   "author": {

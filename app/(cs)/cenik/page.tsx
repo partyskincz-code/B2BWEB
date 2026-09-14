@@ -7,12 +7,12 @@ import FloatingStars from "@/components/FloatingStars";
 export const metadata: Metadata = {
   title: "Ceník reklamních tetovaček, samolepek a tiskovin",
   description:
-    "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 8 Kč za kus, samolepky od 3 Kč. Ceny včetně DPH.",
+    "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 9 Kč za kus, samolepky od 3 Kč. Ceny jsou konečné.",
   alternates: { canonical: "/cenik" },
   openGraph: {
     title: "Ceník reklamních tetovaček, samolepek a tiskovin | Make the Moment",
     description:
-      "Orientační cenová pásma tetovaček s logem podle formátu a množství, včetně DPH. Samolepky od 3 Kč, tiskoviny od 8 Kč za kus.",
+      "Orientační cenová pásma tetovaček s logem podle formátu a množství, ceny jsou konečné. Samolepky od 3 Kč, tiskoviny od 8 Kč za kus.",
     url: "/cenik",
     images: [
       {
@@ -31,7 +31,7 @@ const tetovacky = [
   { format: "A4 (největší)", ceny: ["129 až 169 Kč", "75 až 89 Kč", "65 až 79 Kč", "55 až 69 Kč", "45 až 59 Kč"] },
   { format: "A5", ceny: ["65 až 89 Kč", "39 až 55 Kč", "32 až 39 Kč", "28 až 35 Kč", "22 až 29 Kč"] },
   { format: "A6", ceny: ["39 až 52 Kč", "25 až 33 Kč", "19 až 25 Kč", "17 až 22 Kč", "14 až 19 Kč"] },
-  { format: "A7 (nejmenší)", ceny: ["24 až 33 Kč", "15 až 21 Kč", "12 až 15 Kč", "10 až 13 Kč", "8 až 11 Kč"] },
+  { format: "A7 (nejmenší)", ceny: ["24 až 33 Kč", "15 až 21 Kč", "10 až 12 Kč", "9 až 10 Kč", "9 Kč"] },
 ];
 
 const baleni = [
@@ -66,15 +66,15 @@ const zvlast = [
 const faq = [
   {
     q: "Kolik stojí 1 000 tetovaček s logem?",
-    a: "U formátu A6 se 1 000 kusů pohybuje mezi 14 a 19 Kč za kus, tedy zhruba 14 000 až 19 000 Kč včetně DPH. Menší formát A7 vychází na 8 až 11 Kč za kus, větší A5 na 22 až 29 Kč. Přesnou cenu stanovíme podle grafiky, balení a termínu.",
+    a: "U formátu A6 se 1 000 kusů pohybuje mezi 14 a 19 Kč za kus, tedy zhruba 14 000 až 19 000 Kč. Menší formát A7 vychází na 9 Kč za kus, větší A5 na 22 až 29 Kč. Přesnou cenu stanovíme podle grafiky, balení a termínu.",
   },
   {
     q: "Je grafika v ceně?",
     a: "Ano. Zpracování vašeho loga nebo motivu, vizualizace na reálném produktu i jedno kolo úprav jsou zahrnuté v ceně zakázky.",
   },
   {
-    q: "Jsou ceny s DPH, nebo bez?",
-    a: "Uvedená pásma jsou včetně DPH a platí za jeden kus bez balení. Jsou orientační, závaznou cenu dostanete v nabídce na míru.",
+    q: "Jsou uvedené ceny konečné?",
+    a: "Ano. Uvedená pásma jsou konečné ceny za jeden kus bez balení, nic se k nim už nepřipočítává. Jsou orientační, závaznou cenu dostanete v nabídce na míru.",
   },
   {
     q: "Platí se záloha?",
@@ -113,12 +113,12 @@ const cenikSchema = {
   name: "Ceník promo materiálů na míru",
   provider: { "@id": `${SITE}/#organizace` },
   itemListElement: [
-    { "@type": "Offer", name: "Dočasné tetovačky A7", priceCurrency: "CZK", price: "8", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Dočasné tetovačky A6", priceCurrency: "CZK", price: "14", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Dočasné tetovačky A5", priceCurrency: "CZK", price: "22", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Dočasné tetovačky A4", priceCurrency: "CZK", price: "45", description: "Orientační cena za kus od, při nákladu od 1 000 ks, včetně DPH." },
-    { "@type": "Offer", name: "Samolepky na míru", priceCurrency: "CZK", price: "3", description: "Orientační cena za kus od, minimum 100 ks, včetně DPH." },
-    { "@type": "Offer", name: "Tiskoviny na míru", priceCurrency: "CZK", price: "8", description: "Orientační cena za kus od, tiskneme už od jednoho kusu, včetně DPH." },
+    { "@type": "Offer", name: "Dočasné tetovačky A7", priceCurrency: "CZK", price: "9", description: "Orientační cena za kus od, při nákladu od 501 ks, konečná cena." },
+    { "@type": "Offer", name: "Dočasné tetovačky A6", priceCurrency: "CZK", price: "14", description: "Orientační cena za kus od, při nákladu od 1 000 ks, konečná cena." },
+    { "@type": "Offer", name: "Dočasné tetovačky A5", priceCurrency: "CZK", price: "22", description: "Orientační cena za kus od, při nákladu od 1 000 ks, konečná cena." },
+    { "@type": "Offer", name: "Dočasné tetovačky A4", priceCurrency: "CZK", price: "45", description: "Orientační cena za kus od, při nákladu od 1 000 ks, konečná cena." },
+    { "@type": "Offer", name: "Samolepky na míru", priceCurrency: "CZK", price: "3", description: "Orientační cena za kus od, minimum 100 ks, konečná cena." },
+    { "@type": "Offer", name: "Tiskoviny na míru", priceCurrency: "CZK", price: "8", description: "Orientační cena za kus od, tiskneme už od jednoho kusu, konečná cena." },
   ],
 };
 
@@ -173,6 +173,9 @@ export default function Page() {
               </tbody>
             </table>
           </div>
+          <p className="text-gray-500 text-sm mt-4">
+            U formátu A7 platí konkrétní ceny za kus: 12 Kč při 100 až 250 kusech, 10 Kč při 251 až 500 kusech a 9 Kč od 501 kusů výš.
+          </p>
 
           <h2 className="text-3xl font-display font-extrabold text-brand-secondary mt-14 mb-3">Balení</h2>
           <p className="text-gray-500 mb-8">Příplatek za kus k základní ceně tetovaček.</p>
@@ -203,7 +206,7 @@ export default function Page() {
           <div className="mt-6 flex items-start gap-3 text-sm text-gray-500 bg-brand-light rounded-xl p-4">
             <Info size={18} className="text-brand-primary flex-shrink-0 mt-0.5" />
             <p>
-              Všechny ceny jsou <strong className="text-brand-secondary">včetně DPH</strong> a platí za jeden kus bez balení.
+              Všechny ceny jsou <strong className="text-brand-secondary">konečné</strong> a platí za jeden kus bez balení.
               U tetovaček nemáme minimální množství, vyrobíme i jeden arch. Pro objednávky nad 5 000 ks připravíme kalkulaci na míru.
             </p>
           </div>
