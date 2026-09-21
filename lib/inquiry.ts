@@ -2,6 +2,7 @@
 
 import type { Lang } from "./i18n";
 import { trackEvent } from "./analytics";
+import { trackMetaEvent } from "@/components/MetaPixel";
 
 const WEB3FORMS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "a2615ddf-cd67-44d7-8c12-0f7a731dd88b";
@@ -26,4 +27,6 @@ export async function submitInquiry(form: HTMLFormElement, lang: Lang, source: s
     throw new Error("Web3Forms rejected the submission");
   }
   trackEvent("inquiry_submit_succeeded", { source, lang });
+  // Meta Pixel: poptávka = Lead (na tuto událost se optimalizují B2B kampaně)
+  trackMetaEvent("Lead", { content_name: source, content_category: "poptavka", lang });
 }

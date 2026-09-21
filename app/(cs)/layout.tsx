@@ -6,6 +6,7 @@ import { LanguageProvider } from "@/lib/i18n";
 import { translations } from "@/lib/translations";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import MetaPixel from "@/components/MetaPixel";
 
 const SITE = "https://www.makethemoment.cz";
 
@@ -150,6 +151,7 @@ export default function RootLayout({
         </LanguageProvider>
         <Analytics />
         <SpeedInsights />
+        <MetaPixel />
       </body>
     </html>
   );
