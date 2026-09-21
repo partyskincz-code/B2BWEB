@@ -1,0 +1,204 @@
+import type { Metadata } from "next";
+import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage";
+
+export const metadata: Metadata = {
+  title: "Tetovačky a samolepky pro školy a dětské akce",
+  description:
+    "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
+  alternates: { canonical: "/tetovacky-pro-skoly" },
+  openGraph: {
+    title: "Tetovačky a samolepky pro školy a dětské akce | Make the Moment",
+    description: "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
+    url: "/tetovacky-pro-skoly",
+    images: [
+      {
+        url: "/og-make-the-moment.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Make the Moment, dočasné tetovačky a promo materiály na míru",
+      },
+    ],
+  },
+};
+
+const data: Prilezitost = {
+  "tag": "Školy a dětské akce",
+  "h1": "Tetovačky a samolepky pro školy a dětské akce",
+  "perex": "Dětský den, příměstský tábor, sportovní den nebo odměna za vysvědčení. Naše tetovačky jsou certifikované a bezpečné pro děti od tří let, a děti je milují víc než jakoukoli jinou odměnu.",
+  "produkty": [
+    {
+      "title": "Certifikované dětské tetovačky",
+      "text": "Maskot školy, logo tábora nebo motivy podle tématu akce. Certifikované a bezpečné pro děti od 3 let."
+    },
+    {
+      "title": "Samolepky na míru",
+      "text": "Tvarové samolepky v libovolném motivu."
+    },
+    {
+      "title": "Tiskoviny na míru",
+      "text": "Pohlednice a pozvánky s vlastním potiskem."
+    }
+  ],
+  "duvody": [
+    "Certifikované materiály, bezpečné pro děti od 3 let",
+    "Bez minimálního množství, vyrobíme i pro jednu třídu",
+    "Tetovačka se sundá vodou a mýdlem nebo dětským olejem",
+    "Motivy navrhneme podle tématu akce, i z dětské kresby",
+    "Výdrž 3 až 7 dní, takže odměna vydrží až do víkendu"
+  ],
+  "foto": {
+    "src": "/detske-tetovacky-archy.jpg",
+    "alt": "Dětské dočasné tetovačky v balení, motivy vesmíru, zvířátek a moře"
+  },
+  "fotoPopis": "Dětský formát A6 v přebalu, malá věc, kterou si dítě odnese domů a ukáže rodičům. U školních akcí to funguje líp než diplom.",
+  "ceny": [
+    {
+      "format": "A7 (nejmenší)",
+      "cena": "9 Kč",
+      "pozn": "od 501 ks"
+    },
+    {
+      "format": "A6",
+      "cena": "14 až 19 Kč",
+      "pozn": "od 1 000 ks"
+    },
+    {
+      "format": "A5",
+      "cena": "22 až 29 Kč",
+      "pozn": "od 1 000 ks"
+    },
+    {
+      "format": "Samolepky",
+      "cena": "3 až 6 Kč",
+      "pozn": "od 100 ks"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Jsou tetovačky bezpečné pro malé děti?",
+      "a": "Ano. Jsou certifikované pro použití dětmi od 3 let a materiály neobsahují škodlivé látky."
+    },
+    {
+      "q": "Jak se tetovačka sundá?",
+      "a": "Vodou a mýdlem, u odolnějších motivů dětským olejem nebo krémem. Nedře se ani nešmíruje."
+    },
+    {
+      "q": "Můžeme použít kresbu od dětí?",
+      "a": "Ano a je to náš oblíbený typ zakázky. Stačí kresbu vyfotit nebo naskenovat, grafik ji připraví pro tisk a pošleme vizualizaci ke schválení."
+    }
+  ],
+  "ctaTitul": "Chystáte akci pro děti?",
+  "ctaText": "Napište nám počet dětí a téma akce. Připravíme návrh i kalkulaci do 24 hodin.",
+  "souvisejici": [
+    {
+      "href": "/tetovacky-na-firemni-event",
+      "label": "Tetovačky na firemní event"
+    },
+    {
+      "href": "/poradna/jak-dlouho-vydrzi-docasne-tetovacky",
+      "label": "Jak dlouho tetovačky vydrží"
+    },
+    {
+      "href": "/poradna/jaky-format-tetovacek-zvolit",
+      "label": "Jaký formát zvolit"
+    },
+    {
+      "href": "/poradna/jak-pripravit-podklady-pro-tisk-tetovacek",
+      "label": "Jak připravit podklady"
+    },
+    {
+      "href": "/cenik",
+      "label": "Ceník tetovaček"
+    },
+    {
+      "href": "/kontakt",
+      "label": "Nezávazná poptávka"
+    },
+    {
+      "href": "/tetovacky-na-firemni-vecirek",
+      "label": "Tetovačky na firemní večírek"
+    }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Jsou tetovačky bezpečné pro malé děti?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ano. Jsou certifikované pro použití dětmi od 3 let a materiály neobsahují škodlivé látky."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Jak se tetovačka sundá?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vodou a mýdlem, u odolnějších motivů dětským olejem nebo krémem. Nedře se ani nešmíruje."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Můžeme použít kresbu od dětí?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ano a je to náš oblíbený typ zakázky. Stačí kresbu vyfotit nebo naskenovat, grafik ji připraví pro tisk a pošleme vizualizaci ke schválení."
+      }
+    }
+  ]
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Domů",
+      "item": "https://www.makethemoment.cz/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Školy a dětské akce",
+      "item": "https://www.makethemoment.cz/tetovacky-pro-skoly"
+    }
+  ]
+};
+
+const sluzbaSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Tetovačky a samolepky pro školy a dětské akce",
+  "serviceType": "Výroba promo materiálů na míru",
+  "provider": {
+    "@id": "https://www.makethemoment.cz/#organizace"
+  },
+  "description": "Certifikované dočasné tetovačky pro školy, dětské dny a tábory. Bezpečné pro děti od 3 let, bez minimálního množství.",
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Česko"
+    },
+    {
+      "@type": "Country",
+      "name": "Slovensko"
+    }
+  ]
+};
+
+export default function Page() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sluzbaSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <PrilezitostPage data={data} />
+    </>
+  );
+}
