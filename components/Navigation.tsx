@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useLanguage, type Lang } from "@/lib/i18n";
+import { trackEvent } from "@/lib/analytics";
 
 const LANGS: { code: Lang; label: string }[] = [
   { code: "cs", label: "CS" },
@@ -17,16 +18,21 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
-  const { lang, setLang, t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const localizedPath = (path: string) => lang === "cs" ? path : `/${lang}${path === "/" ? "" : path}`;
+  const switchPath = (code: Lang) => {
+    const pathWithoutLocale = pathname.replace(/^\/(sk|en)(?=\/|$)/, "") || "/";
+    const isLocalized = ["/", "/produkty", "/jak-to-funguje", "/reference", "/kontakt"].includes(pathWithoutLocale);
+    const target = isLocalized ? pathWithoutLocale : "/";
+    return code === "cs" ? target : `/${code}${target === "/" ? "" : target}`;
+  };
 
   const navLinks = [
-    { href: "/", label: t("nav.home") },
-    { href: "/produkty", label: t("nav.products") },
+    { href: localizedPath("/produkty"), label: t("nav.products") },
     { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
-    { href: "/jak-to-funguje", label: t("nav.how") },
-    { href: "/reference", label: t("nav.references") },
+    { href: localizedPath("/jak-to-funguje"), label: t("nav.how") },
+    { href: localizedPath("/reference"), label: t("nav.references") },
     { href: "/poradna", label: lang === "en" ? "Guides" : lang === "sk" ? "Poradňa" : "Poradna" },
-    { href: "/kontakt", label: t("nav.contact") },
   ];
 
   useEffect(() => {
@@ -39,7 +45,8 @@ export default function Navigation() {
     setIsOpen(false);
   }, [pathname]);
 
-  const isLight = scrolled || pathname !== "/";
+  const isHome = pathname === "/" || pathname === "/sk" || pathname === "/en";
+  const isLight = scrolled || !isHome;
 
   return (
     <header
@@ -52,7 +59,7 @@ export default function Navigation() {
       <div className="container-pad">
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5" aria-label="Make the Moment">
+          <Link href={localizedPath("/")} className="flex items-center gap-2.5" aria-label="Make the Moment">
             <Image
               src="/logo-mtm.png"
               alt="Make the Moment"
@@ -92,9 +99,11 @@ export default function Navigation() {
               "border-gray-200"
             }`}>
               {LANGS.map(({ code, label }) => (
-                <button
+                <Link
                   key={code}
-                  onClick={() => setLang(code)}
+                  href={switchPath(code)}
+                  hrefLang={code}
+                  onClick={() => trackEvent("language_changed", { from: lang, to: code, path: pathname })}
                   className={`px-2.5 py-1.5 text-xs font-bold transition-all duration-200 ${
                     lang === code
                       ? "bg-brand-primary text-white"
@@ -102,10 +111,10 @@ export default function Navigation() {
                   }`}
                 >
                   {label}
-                </button>
+                </Link>
               ))}
             </div>
-            <Link href="/kontakt" className="btn-primary text-sm px-5 py-2.5">
+            <Link href={localizedPath("/kontakt")} onClick={() => trackEvent("cta_clicked", { location: "navigation", lang })} className="btn-primary text-sm px-5 py-2.5">
               {t("nav.cta")}
             </Link>
           </div>
@@ -113,10 +122,10 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              "text-gray-700 hover:text-white hover:bg-brand-secondary"
-            }`}
+            className="md:hidden p-2 rounded-lg transition-colors text-brand-secondary bg-white/80 backdrop-blur-sm hover:text-white hover:bg-brand-secondary shadow-sm"
             aria-label="Otevřít menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -125,7 +134,7 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+        <div id="mobile-navigation" className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="container-pad py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link
@@ -144,9 +153,11 @@ export default function Navigation() {
             <div className="flex items-center gap-2 mt-3 pt-3 border-t border-gray-100">
               <span className="text-xs text-gray-400 font-medium">Jazyk:</span>
               {LANGS.map(({ code, label }) => (
-                <button
+                <Link
                   key={code}
-                  onClick={() => setLang(code)}
+                  href={switchPath(code)}
+                  hrefLang={code}
+                  onClick={() => trackEvent("language_changed", { from: lang, to: code, path: pathname })}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                     lang === code
                       ? "bg-brand-primary text-white"
@@ -154,10 +165,10 @@ export default function Navigation() {
                   }`}
                 >
                   {label}
-                </button>
+                </Link>
               ))}
             </div>
-            <Link href="/kontakt" className="btn-primary text-sm mt-2">
+            <Link href={localizedPath("/kontakt")} className="btn-primary text-sm mt-2">
               {t("nav.cta")}
             </Link>
           </div>

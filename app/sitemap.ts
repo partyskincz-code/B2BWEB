@@ -44,5 +44,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/poradna/kdy-zadat-vyrobu-promo-materialu`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE}/poradna/zabava-na-firemni-vecirek`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.7 },
     { url: `${SITE}/kontakt`, lastModified: D.kontakt, changeFrequency: "yearly", priority: 0.9 },
+    { url: `${SITE}/sk`, lastModified: D.home, changeFrequency: "monthly", priority: 1 },
+    { url: `${SITE}/sk/produkty`, lastModified: D.produkty, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE}/sk/jak-to-funguje`, lastModified: D.jakToFunguje, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/sk/reference`, lastModified: D.reference, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE}/sk/kontakt`, lastModified: D.kontakt, changeFrequency: "yearly", priority: 0.9 },
+    { url: `${SITE}/en`, lastModified: D.home, changeFrequency: "monthly", priority: 1 },
+    { url: `${SITE}/en/produkty`, lastModified: D.produkty, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE}/en/jak-to-funguje`, lastModified: D.jakToFunguje, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/en/reference`, lastModified: D.reference, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${SITE}/en/kontakt`, lastModified: D.kontakt, changeFrequency: "yearly", priority: 0.9 },
   ];
 }

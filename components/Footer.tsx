@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
+import { trackEvent } from "@/lib/analytics";
+import { BUSINESS } from "@/lib/siteConfig";
 
 const igPhotos = [
   "/realizace-prebal-b2b-a5.jpg",
@@ -18,30 +20,31 @@ const igPhotos = [
 
 export default function Footer() {
   const { lang } = useLanguage();
+  const localizedPath = (path: string) => lang === "cs" ? path : `/${lang}${path}`;
 
   const footerLinks = {
     produkty: [
-      { href: "/produkty#tetovacky", label: lang === "en" ? "Temporary Tattoos" : lang === "sk" ? "Dočasné tetovačky" : "Dočasné tetovačky" },
-      { href: "/produkty#samolepky", label: lang === "en" ? "Custom Stickers" : lang === "sk" ? "Samolepky na mieru" : "Samolepky na míru" },
-      { href: "/produkty#pohlednice", label: lang === "en" ? "Postcards & Cards" : lang === "sk" ? "Pohľadnice a priania" : "Pohlednice a přání" },
-      { href: "/produkty#kompletni", label: lang === "en" ? "Complete Solution" : lang === "sk" ? "Kompletné riešenie" : "Kompletní řešení" },
+      { href: localizedPath("/produkty#tetovacky"), label: lang === "en" ? "Temporary Tattoos" : lang === "sk" ? "Dočasné tetovačky" : "Dočasné tetovačky" },
+      { href: localizedPath("/produkty#samolepky"), label: lang === "en" ? "Custom Stickers" : lang === "sk" ? "Samolepky na mieru" : "Samolepky na míru" },
+      { href: localizedPath("/produkty#pohlednice"), label: lang === "en" ? "Postcards & Cards" : lang === "sk" ? "Pohľadnice a priania" : "Pohlednice a přání" },
+      { href: localizedPath("/produkty#kompletni"), label: lang === "en" ? "Complete Solution" : lang === "sk" ? "Kompletné riešenie" : "Kompletní řešení" },
     ],
     sluzby: [
       { href: "/poradna", label: lang === "en" ? "Guides" : lang === "sk" ? "Poradňa" : "Poradna" },
       { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
-      { href: "/jak-to-funguje", label: lang === "en" ? "How it works" : lang === "sk" ? "Ako to funguje" : "Jak to funguje" },
-      { href: "/reference", label: lang === "en" ? "References & gallery" : lang === "sk" ? "Referencie a galéria" : "Reference a galerie" },
-      { href: "/kontakt", label: lang === "en" ? "Inquiry form" : lang === "sk" ? "Dopytový formulár" : "Poptávkový formulář" },
-      { href: "/jak-to-funguje#faq", label: lang === "en" ? "FAQ" : lang === "sk" ? "Časté otázky" : "Časté otázky" },
+      { href: localizedPath("/jak-to-funguje"), label: lang === "en" ? "How it works" : lang === "sk" ? "Ako to funguje" : "Jak to funguje" },
+      { href: localizedPath("/reference"), label: lang === "en" ? "References & gallery" : lang === "sk" ? "Referencie a galéria" : "Reference a galerie" },
+      { href: localizedPath("/kontakt"), label: lang === "en" ? "Inquiry form" : lang === "sk" ? "Dopytový formulár" : "Poptávkový formulář" },
+      { href: localizedPath("/jak-to-funguje#faq"), label: lang === "en" ? "FAQ" : lang === "sk" ? "Časté otázky" : "Časté otázky" },
     ],
     segmenty: [
       { href: "/tetovacky-na-firemni-event", label: lang === "en" ? "Corporate events" : lang === "sk" ? "Firemné eventy" : "Firemní eventy" },
       { href: "/tetovacky-na-veletrh", label: lang === "en" ? "Trade fairs" : lang === "sk" ? "Veľtrhy a konferencie" : "Veletrhy a konference" },
       { href: "/tetovacky-na-firemni-vecirek", label: lang === "en" ? "Company parties" : lang === "sk" ? "Firemné večierky" : "Firemní večírky" },
-      { href: "/produkty#svatby", label: lang === "en" ? "Weddings & celebrations" : lang === "sk" ? "Svadby a oslavy" : "Svatby a oslavy" },
+      { href: localizedPath("/produkty#svatby"), label: lang === "en" ? "Weddings & celebrations" : lang === "sk" ? "Svadby a oslavy" : "Svatby a oslavy" },
       { href: "/tetovacky-na-festival", label: lang === "en" ? "Festivals & events" : lang === "sk" ? "Festivaly a akcie" : "Festivaly a akce" },
       { href: "/tetovacky-pro-skoly", label: lang === "en" ? "Schools & children" : lang === "sk" ? "Školy a deti" : "Školy a děti" },
-      { href: "/produkty#obchody", label: lang === "en" ? "Wholesale" : lang === "sk" ? "Veľkoobchod" : "Velkoobchod" },
+      { href: localizedPath("/produkty#obchody"), label: lang === "en" ? "Wholesale" : lang === "sk" ? "Veľkoobchod" : "Velkoobchod" },
     ],
   };
 
@@ -52,6 +55,7 @@ export default function Footer() {
         href="https://www.instagram.com/partyskin.cz/"
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackEvent("social_clicked", { network: "instagram", placement: "footer_strip", lang })}
         className="block group"
         aria-label="Instagram @partyskin.cz"
       >
@@ -98,11 +102,11 @@ export default function Footer() {
                 : "Spolehlivý partner pro zakázkovou výrobu dočasných tetovaček, samolepek a pohlednic. Od několika kusů až po velké kampaně. Rychlá komunikace, osobní přístup a řešení na míru každému projektu."}
             </p>
             <div className="space-y-3">
-              <a href="mailto:objednavky@partyskin.cz" className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
+              <a href={`mailto:${BUSINESS.contactEmail}`} onClick={() => trackEvent("contact_clicked", { channel: "email", placement: "footer", lang })} className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                 <Mail size={16} className="text-brand-primary flex-shrink-0" />
-                objednavky@partyskin.cz
+                {BUSINESS.contactEmail}
               </a>
-              <a href="tel:+420724874274" className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
+              <a href={`tel:${BUSINESS.contactPhone}`} onClick={() => trackEvent("contact_clicked", { channel: "phone", placement: "footer", lang })} className="flex items-center gap-3 text-sm text-white/70 hover:text-white transition-colors">
                 <Phone size={16} className="text-brand-primary flex-shrink-0" />
                 +420 724 874 274
               </a>
@@ -114,6 +118,7 @@ export default function Footer() {
                 href={lang === "sk" ? "https://www.partyskin.sk" : "https://www.partyskin.cz"}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("eshop_clicked", { shop: lang === "sk" ? "sk" : "cz", placement: "footer", lang })}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-primary hover:text-white transition-colors mt-1"
               >
                 →&nbsp;{lang === "en"
