@@ -8,6 +8,7 @@ import { translations } from "@/lib/translations";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import MetaPixel from "@/components/MetaPixel";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { isLocalizedLang, localizedLocales, SITE } from "@/lib/localization";
 
 export const dynamicParams = false;
@@ -51,7 +52,7 @@ export default function LocaleLayout({ children, params }: { children: React.Rea
         <LanguageProvider lang={params.locale} translations={translations}>
           <Navigation /><main id="main-content">{children}</main><Footer />
         </LanguageProvider>
-        <Analytics /><SpeedInsights /><MetaPixel />
+        <Analytics /><SpeedInsights /><MetaPixel /><GoogleAnalytics />
       </body>
     </html>
   );

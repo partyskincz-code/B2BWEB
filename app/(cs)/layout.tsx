@@ -7,6 +7,7 @@ import { translations } from "@/lib/translations";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import MetaPixel from "@/components/MetaPixel";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const SITE = "https://www.makethemoment.cz";
 
@@ -152,6 +153,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <MetaPixel />
+        <GoogleAnalytics />
       </body>
     </html>
   );
