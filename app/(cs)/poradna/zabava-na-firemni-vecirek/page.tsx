@@ -136,7 +136,7 @@ const data: Clanek = {
     },
     {
       "typ": "tip",
-      "text": "Napište nám termín večírku a přibližný počet lidí. Do 24 hodin dostanete kalkulaci i první grafický návrh motivu, zdarma a nezávazně."
+      "text": "Napište nám termín večírku a přibližný počet lidí. Do 24 hodin dostanete kalkulaci a do 48 hodin první grafický návrh motivu, zdarma a nezávazně."
     }
   ],
   "dalsi": [

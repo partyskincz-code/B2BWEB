@@ -4,11 +4,11 @@ import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage"
 export const metadata: Metadata = {
   title: "Tetovačky s logem na firemní event",
   description:
-    "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafika do 24 hodin, výroba 5 až 20 pracovních dní.",
+    "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafický návrh do 48 hodin, výroba 5 až 20 pracovních dní.",
   alternates: { canonical: "/tetovacky-na-firemni-event" },
   openGraph: {
     title: "Tetovačky s logem na firemní event | Make the Moment",
-    description: "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafika do 24 hodin, výroba 5 až 20 pracovních dní.",
+    description: "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafický návrh do 48 hodin, výroba 5 až 20 pracovních dní.",
     url: "/tetovacky-na-firemni-event",
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const data: Prilezitost = {
   "tag": "Firemní eventy",
   "h1": "Dočasné tetovačky s logem na firemní event",
-  "perex": "Konference, teambuilding, uvedení produktu nebo firemní oslava, tetovačky s vaším logem si lidé nalepí sami a odnesou si značku domů na kůži. Vyrobíme je od jednoho archu, s grafikou do 24 hodin od briefu.",
+  "perex": "Konference, teambuilding, uvedení produktu nebo firemní oslava, tetovačky s vaším logem si lidé nalepí sami a odnesou si značku domů na kůži. Vyrobíme je od jednoho archu, s grafickým návrhem do 48 hodin od briefu.",
   "produkty": [
     {
       "title": "Tetovačky s logem",
@@ -41,7 +41,7 @@ const data: Prilezitost = {
   ],
   "duvody": [
     "Bez minimálního množství, vyrobíme i jeden arch pro malou akci",
-    "Grafický návrh do 24 hodin od briefu, jedno kolo úprav zdarma",
+    "Grafický návrh do 48 hodin od briefu, jedno kolo úprav zdarma",
     "Výroba 5 až 20 pracovních dní podle velikosti a složitosti projektu",
     "Certifikované materiály, bezpečné i pro děti od 3 let",
     "Doručení na adresu firmy nebo rovnou na místo konání akce"
@@ -80,7 +80,7 @@ const data: Prilezitost = {
     },
     {
       "q": "Jak dlouho dopředu mám objednat?",
-      "a": "Počítejte s 24 hodinami na grafiku, jedním až dvěma dny na schválení a 5 až 20 pracovními dny na výrobu podle velikosti a složitosti projektu. U akce za dva měsíce je čas dostatečný, u akce za dva týdny se ozvěte, zkusíme expresní výrobu."
+      "a": "Počítejte s 48 hodinami na grafiku, jedním až dvěma dny na schválení a 5 až 20 pracovními dny na výrobu podle velikosti a složitosti projektu. U akce za dva měsíce je čas dostatečný, u akce za dva týdny se ozvěte, zkusíme expresní výrobu."
     },
     {
       "q": "Můžete dodat zásilku rovnou na místo akce?",
@@ -179,7 +179,7 @@ const sluzbaSchema = {
   "provider": {
     "@id": "https://www.makethemoment.cz/#organizace"
   },
-  "description": "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafika do 24 hodin, výroba 5 až 20 pracovních dní.",
+  "description": "Dočasné tetovačky s logem na konferenci, teambuilding nebo firemní oslavu. Bez minimálního množství, grafický návrh do 48 hodin, výroba 5 až 20 pracovních dní.",
   "areaServed": [
     {
       "@type": "Country",

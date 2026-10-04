@@ -497,6 +497,64 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══ PRŮVODCE OBJEDNÁVKOU ═══ */}
+      <section className="section-pad bg-brand-light/45">
+        <div className="container-pad">
+          <FadeUp className="text-center mb-12">
+            <span className="tag mb-4">
+              {lang === "en" ? "Before you order" : lang === "sk" ? "Pred objednávkou" : "Před objednávkou"}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-4">
+              {lang === "en" ? "Not sure where to start?" : lang === "sk" ? "Neviete, kde začať?" : "Nevíte, kde začít?"}
+            </h2>
+            <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
+              {lang === "en"
+                ? "Send us a logo, a rough idea or just the date of your event. We will recommend the format, quantity and next step."
+                : lang === "sk"
+                ? "Pošlite nám logo, hrubý nápad alebo len termín akcie. Odporučíme formát, množstvo aj ďalší krok."
+                : "Pošlete nám logo, hrubý nápad nebo jen termín akce. Doporučíme formát, množství i další krok."}
+            </p>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {[
+              {
+                number: "01",
+                title: lang === "en" ? "How many pieces?" : lang === "sk" ? "Koľko kusov?" : "Kolik kusů?",
+                body: lang === "en" ? "One sheet for a small celebration or thousands for a campaign — both are possible." : lang === "sk" ? "Jeden arch na malú oslavu alebo tisíce kusov na kampaň — zvládneme oboje." : "Jeden arch na malou oslavu nebo tisíce kusů na kampaň — zvládneme obojí.",
+                link: href("/cenik"),
+                cta: lang === "en" ? "See indicative prices" : lang === "sk" ? "Pozrieť orientačné ceny" : "Podívat se na orientační ceny",
+              },
+              {
+                number: "02",
+                title: lang === "en" ? "No finished artwork?" : lang === "sk" ? "Nemáte hotový dizajn?" : "Nemáte hotovou grafiku?",
+                body: lang === "en" ? "No problem. Send a logo, sketch or photo. We will prepare a visual proof before production." : lang === "sk" ? "Nevadí. Pošlite logo, náčrt alebo fotku. Pred výrobou pripravíme vizualizáciu na schválenie." : "Nevadí. Pošlete logo, náčrt nebo fotku. Před výrobou připravíme vizualizaci ke schválení.",
+                link: href("/poradna/jak-pripravit-podklady-pro-tisk-tetovacek"),
+                cta: lang === "en" ? "How to prepare artwork" : lang === "sk" ? "Ako pripraviť grafiku" : "Jak připravit grafiku",
+              },
+              {
+                number: "03",
+                title: lang === "en" ? "Want to try first?" : lang === "sk" ? "Chcete najprv skúsiť vzorku?" : "Chcete si nejdřív sáhnout na kvalitu?",
+                body: lang === "en" ? "Ask for samples before ordering. No commitment — just a calm way to decide." : lang === "sk" ? "Vyžiadajte si vzorky pred objednávkou. Bez záväzkov — jednoducho sa rozhodnete v pokoji." : "Požádejte o vzorky před objednávkou. Bez závazků — rozhodnete se v klidu.",
+                link: href("/kontakt"),
+                cta: lang === "en" ? "Ask for samples" : lang === "sk" ? "Požiadať o vzorky" : "Požádat o vzorky",
+              },
+            ].map((guide, i) => (
+              <FadeUp key={guide.number} delay={i * 0.1}>
+                <div className="bg-white rounded-2xl border border-brand-primary/15 p-7 h-full flex flex-col shadow-sm">
+                  <span className="text-brand-primary/45 text-4xl font-display font-extrabold leading-none mb-5">{guide.number}</span>
+                  <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">{guide.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-6">{guide.body}</p>
+                  <Link href={guide.link} className="text-brand-primary text-sm font-semibold inline-flex items-center gap-1 hover:gap-2 transition-all">
+                    {guide.cta}<ChevronRight size={16} />
+                  </Link>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ SEGMENTY ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">

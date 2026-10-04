@@ -5,7 +5,7 @@ import { languageAlternates } from "@/lib/localization";
 export const metadata: Metadata = {
   title: "Jak probíhá zakázka, od poptávky po dodání",
   description:
-    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky.",
+    "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 48 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky.",
   alternates: {
     canonical: "/jak-to-funguje",
     languages: languageAlternates("/jak-to-funguje"),
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jak probíhá zakázka, od poptávky po dodání | Make the Moment",
     description:
-      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky.",
+      "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 48 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky.",
     url: "/jak-to-funguje",
     images: [
       {

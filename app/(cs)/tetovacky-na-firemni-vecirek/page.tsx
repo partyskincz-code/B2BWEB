@@ -187,7 +187,7 @@ const sluzbaSchema = {
   "provider": {
     "@id": "https://www.makethemoment.cz/#organizace"
   },
-  "description": "Tetovačky s firemní hláškou nebo logem na firemní večírek a vánoční párty. Bez minimálního množství, grafika do 24 hodin.",
+  "description": "Tetovačky s firemní hláškou nebo logem na firemní večírek a vánoční párty. Bez minimálního množství, grafický návrh do 48 hodin.",
   "areaServed": [
     {
       "@type": "Country",

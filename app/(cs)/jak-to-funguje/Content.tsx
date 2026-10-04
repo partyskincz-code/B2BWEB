@@ -704,7 +704,7 @@ export default function JakToFunguePage() {
             </h2>
             <p className="text-gray-500 text-lg mb-8 max-w-lg mx-auto">
               {lang === "en"
-                ? "Send us a brief today and you'll have a quote and a design within 24 hours."
+                ? "Send us a brief today and you'll have a quote within 24 hours and a design within 48 hours."
                 : lang === "sk"
                 ? "Pošlite nám zadanie ešte dnes a do 24 hodín máte kalkuláciu aj návrh."
                 : "Pošlete nám zadání ještě dnes a do 24 hodin máte kalkulaci i návrh."}

@@ -33,9 +33,9 @@ const pageMetadata = {
     en: ["Custom tattoos, stickers and print materials, price list", "Temporary tattoos from CZK 8, stickers from CZK 3 and print materials from CZK 8 per piece. A4 to A7 formats, certified materials and downloadable price list."],
   },
   "/jak-to-funguje": {
-    cs: ["Jak probíhá zakázka, od poptávky po dodání", "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 24 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky."],
-    sk: ["Ako prebieha zákazka, od dopytu po dodanie", "Päť krokov od dopytu po dodanie. Odpoveď do 24 hodín, grafický návrh do 24 hodín od zadania a výroba 5 až 20 pracovných dní."],
-    en: ["How an order works, from inquiry to delivery", "Five steps from inquiry to delivery. Response within 24 hours, design within 24 hours of the brief and production in 5 to 20 business days."],
+    cs: ["Jak probíhá zakázka, od poptávky po dodání", "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 48 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky."],
+    sk: ["Ako prebieha zákazka, od dopytu po dodanie", "Päť krokov od dopytu po dodanie. Odpoveď do 24 hodín, grafický návrh do 48 hodín od zadania a výroba 5 až 20 pracovných dní."],
+    en: ["How an order works, from inquiry to delivery", "Five steps from inquiry to delivery. Response within 24 hours, design within 48 hours of the brief and production in 5 to 20 business days."],
   },
   "/reference": {
     cs: ["Reference: tetovačky s logem pro firmy", "Reálné zakázky pro got2b, MOREAU AGRI, NaZemi nebo Ekocentrum Vydra. Fotky hotových tetovaček, přebalů a tiskovin na míru."],

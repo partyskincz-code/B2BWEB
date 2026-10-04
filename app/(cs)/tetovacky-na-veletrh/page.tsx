@@ -42,7 +42,7 @@ const data: Prilezitost = {
   "duvody": [
     "Malé formáty A6 a A7 se rozdávají nejsnáz a nejvíc se použijí",
     "Jeden dodavatel na tetovačky, samolepky i tiskoviny, jeden vizuální styl",
-    "Kalkulace do 24 hodin, grafický návrh do 24 hodin od briefu",
+    "Kalkulace do 24 hodin, grafický návrh do 48 hodin od briefu",
     "Vyrobíme i malou sérii na jednorázový veletrh",
     "Podklady si zpracujeme sami, stačí poslat logo"
   ],
