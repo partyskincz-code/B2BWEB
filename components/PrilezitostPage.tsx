@@ -23,6 +23,10 @@ export type Prilezitost = {
     cisla: { hodnota: string; popis: string }[];
     fotky?: { src: string; alt: string; pomer?: string }[];
     fotoPopis?: string;
+    /** Barvy hostující značky. Blok se tím vizuálně přepne do jejího světa. */
+    styl?: { pozadi: string; akcent: string; text: string };
+    /** Text přes hlavní fotku, ve stylu značky klienta. */
+    znacka?: { hlavni: string; pod: string };
   };
   faq: { q: string; a: string }[];
   ctaTitul: string;
@@ -58,75 +62,113 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
       </section>
 
       {/* Hlavní realizace */}
-      {data.pripad && (
-        <section className="bg-brand-secondary text-brand-light py-20 md:py-28">
+      {data.pripad && (() => {
+        const pripad = data.pripad;
+        const akcent = pripad.styl?.akcent ?? "#F2EBE9";
+        return (
+        <section
+          className="py-20 md:py-28"
+          style={{
+            background: pripad.styl?.pozadi ?? "#212A34",
+            color: pripad.styl?.text ?? "#F2EBE9",
+          }}
+        >
           <div className="container-pad">
-            <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-brand-light/60 mb-8">
-              {data.pripad.stitek}
+            <p className="text-[12px] font-medium uppercase tracking-[0.18em] mb-8 opacity-60">
+              {pripad.stitek}
             </p>
+
+            {/* Hlavní fotka přes celou šířku, se značkou klienta přes ni */}
+            {pripad.fotky && pripad.fotky[0] && (
+              <div className="relative w-full aspect-[4/5] sm:aspect-[16/9] lg:aspect-[21/9] overflow-hidden mb-12">
+                <Image
+                  src={pripad.fotky[0].src}
+                  alt={pripad.fotky[0].alt}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1240px) 100vw, 1176px"
+                />
+                <div
+                  className="absolute inset-0"
+                  style={{ background: "linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0) 72%)" }}
+                />
+                {pripad.znacka && (
+                  <div className="absolute left-6 bottom-6 sm:left-10 sm:bottom-10">
+                    <p
+                      className="font-display font-extrabold leading-none text-4xl sm:text-5xl"
+                      style={{ color: akcent }}
+                    >
+                      {pripad.znacka.hlavni}
+                    </p>
+                    <p className="font-display font-extrabold leading-none text-2xl sm:text-4xl mt-1.5 text-white">
+                      {pripad.znacka.pod}
+                    </p>
+                  </div>
+                )}
+              </div>
+            )}
+
             <div className="flex flex-wrap gap-x-16 gap-y-12">
               <div className="flex-[999_1_460px] min-w-0">
                 <h2 className="text-4xl md:text-5xl font-display font-extrabold mb-8 max-w-[18ch]">
-                  {data.pripad.h2}
+                  {pripad.h2}
                 </h2>
-                {data.pripad.text.map((t) => (
-                  <p key={t} className="text-lg md:text-xl font-light leading-relaxed text-brand-light/85 max-w-[58ch] mb-5">
+                {pripad.text.map((t) => (
+                  <p key={t} className="text-lg md:text-xl font-light leading-relaxed opacity-85 max-w-[58ch] mb-5">
                     {t}
                   </p>
                 ))}
-                {data.pripad.klientUrl ? (
+                {pripad.klientUrl ? (
                   <a
-                    href={data.pripad.klientUrl}
+                    href={pripad.klientUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-4 text-sm text-brand-light border-b border-brand-light/40 pb-1 hover:border-brand-light transition-colors"
+                    className="inline-flex items-center gap-2 mt-4 text-sm border-b pb-1 transition-opacity hover:opacity-70"
+                    style={{
+                      color: akcent,
+                      borderColor: akcent,
+                    }}
                   >
-                    {data.pripad.klient} <ArrowRight size={15} />
+                    {pripad.klient} <ArrowRight size={15} />
                   </a>
                 ) : (
-                  <p className="mt-4 text-sm text-brand-light/70">{data.pripad.klient}</p>
+                  <p className="mt-4 text-sm opacity-70">{pripad.klient}</p>
                 )}
               </div>
 
-              <div className="flex-[1_1_260px] min-w-0">
+              <div className="flex-[1_1_240px] min-w-0">
                 <dl className="space-y-9">
-                  {data.pripad.cisla.map((c) => (
+                  {pripad.cisla.map((c) => (
                     <div key={c.popis}>
-                      <dt className="font-display font-extrabold text-4xl text-brand-light leading-none">
+                      <dt className="font-display font-extrabold text-5xl leading-none">
                         {c.hodnota}
                       </dt>
-                      <dd className="text-sm text-brand-light/70 mt-2.5 leading-relaxed">{c.popis}</dd>
+                      <dd className="text-sm opacity-70 mt-3 leading-relaxed">{c.popis}</dd>
                     </div>
                   ))}
                 </dl>
               </div>
             </div>
 
-            {data.pripad.fotky && data.pripad.fotky.length > 0 && (
+            {/* Doplňkové fotky */}
+            {pripad.fotky && pripad.fotky.length > 1 && (
               <figure className="mt-14">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  {data.pripad.fotky.map((f) => (
-                    <div key={f.src} className={`relative w-full overflow-hidden bg-brand-light/10 ${f.pomer ?? "aspect-[4/3]"}`}>
-                      <Image
-                        src={f.src}
-                        alt={f.alt}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, 580px"
-                      />
+                  {pripad.fotky.slice(1).map((f) => (
+                    <div key={f.src} className={`relative w-full overflow-hidden ${f.pomer ?? "aspect-[4/3]"}`} style={{ background: "rgba(255,255,255,0.06)" }}>
+                      <Image src={f.src} alt={f.alt} fill className="object-cover" sizes="(max-width: 640px) 100vw, 580px" />
                     </div>
                   ))}
                 </div>
-                {data.pripad.fotoPopis && (
-                  <figcaption className="text-sm text-brand-light/60 mt-4 max-w-[60ch]">
-                    {data.pripad.fotoPopis}
-                  </figcaption>
+                {pripad.fotoPopis && (
+                  <figcaption className="text-sm opacity-60 mt-4 max-w-[60ch]">{pripad.fotoPopis}</figcaption>
                 )}
               </figure>
             )}
           </div>
         </section>
-      )}
+        );
+      })()}
 
       {/* Co vyrobíme */}
       <section className="section-pad bg-white">

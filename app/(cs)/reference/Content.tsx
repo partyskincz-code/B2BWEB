@@ -85,6 +85,36 @@ export default function ReferencePage() {
 
   const photos = [
     {
+      src: "/realizace-litr-motiv.jpg",
+      title:
+        lang === "en"
+          ? "Li.t.r., Lipno outline for solo runners"
+          : lang === "sk"
+          ? "Li.t.r., obrys Lipna pre sólo bežcov"
+          : "Li.t.r., obrys Lipna pro sólo běžce",
+      desc:
+        lang === "en"
+          ? "Temporary tattoo for the Lipno.trail.run trail race: the outline of Lipno with the race name inside, for runners who covered all 111 km."
+          : lang === "sk"
+          ? "Dočasná tetovačka pre trailový závod Lipno.trail.run: obrys Lipna s názvom pretekov vnútri, pre bežcov, ktorí zvládli celých 111 km."
+          : "Dočasná tetovačka pro trailový závod Lipno.trail.run: obrys Lipna s názvem závodu uvnitř, pro běžce, kteří zvládli celých 111 km.",
+    },
+    {
+      src: "/realizace-litr-aplikace.jpg",
+      title:
+        lang === "en"
+          ? "Li.t.r., applying the tattoo at the race"
+          : lang === "sk"
+          ? "Li.t.r., nalepenie priamo na pretekoch"
+          : "Li.t.r., nalepení přímo na závodě",
+      desc:
+        lang === "en"
+          ? "Peeling off the transfer paper in the race village. Twenty seconds and the brand is on the runner's arm for the rest of the weekend."
+          : lang === "sk"
+          ? "Odstránenie prenosového papiera v zázemí pretekov. Dvadsať sekúnd a značka je na ruke po zvyšok víkendu."
+          : "Sejmutí přenosového papíru v zázemí závodu. Dvacet vteřin a značka je na ruce po zbytek víkendu.",
+    },
+    {
       src: "/realizace-prebal-b2b-a5.jpg",
       title:
         lang === "en"
@@ -159,45 +189,33 @@ export default function ReferencePage() {
           ? "Kompletný tetovací kútik na svadbu: archy s motívmi, samolepky s monogramom a tlačený návod. Hostia si tetovačky nanášajú sami."
           : "Kompletní tetovací koutek na svatbu: archy s motivy, samolepky s monogramem a tištěný návod. Hosté si tetovačky nanášejí sami.",
     },
-    {
-      src: "/realizace-papirovy-prebal.jpg",
-      title:
-        lang === "en"
-          ? "Unicorn tattoos, paper + cellophane packaging"
-          : lang === "sk"
-          ? "Jednorožcové tetovačky, papier + celofán"
-          : "Tetovačky s jednorožci, papírový + celofánový obal",
-      desc:
-        lang === "en"
-          ? "Children's tattoo sheet with unicorn motifs in a combination of paper cover and sealed cellophane bag."
-          : lang === "sk"
-          ? "Detský arch s motívmi jednorožcov, papierový prebal a zatavené celofánové vrecko."
-          : "Dětský arch s motivy jednorožců v kombinaci papírový přebal + zatavený celofánový sáček.",
-    },
   ];
 
   const caseDetailsCs = [
+    { type: "Sportovní akce", scope: "Tetovačky s logem závodu, obrys trasy", result: "Motiv, který si běžci po doběhu nalepili sami" },
+    { type: "Event na místě", scope: "Nalepení v zázemí závodu", result: "Značka na rukou účastníků po zbytek víkendu" },
     { type: "Brand activation", scope: "A5 tetovačky + brandovaný přebal", result: "Jednotný vizuál připravený pro distribuci na akci" },
     { type: "Packaging", scope: "Oboustranný přebal + návod", result: "Produkt připravený k okamžitému předání návštěvníkům" },
     { type: "Velkoobchod", scope: "Tematická A6 kolekce + balení", result: "Opakovatelná produktová řada pro maloobchod" },
     { type: "Sezónní kampaň", scope: "A5 motivy + kraftový přebal", result: "Kompletní limitovaná edice v jednom balení" },
     { type: "Svatba", scope: "Tetovací koutek + instrukce", result: "Samoobslužná aktivita pro hosty bez obsluhy" },
-    { type: "Dětská kolekce", scope: "Arch + ochranné balení", result: "Bezpečný produkt připravený k prodeji i rozdávání" },
   ];
   const caseDetails = lang === "cs" ? caseDetailsCs : lang === "sk" ? [
+    { type: "Športová akcia", scope: "Tetovačky s logom pretekov, obrys trasy", result: "Motív, ktorý si bežci po dobehnutí nalepili sami" },
+    { type: "Event na mieste", scope: "Nalepenie v zázemí pretekov", result: "Značka na rukách účastníkov po zvyšok víkendu" },
     { type: "Brand activation", scope: "A5 tetovačky + brandovaný obal", result: "Jednotný vizuál pripravený na distribúciu na akcii" },
     { type: "Packaging", scope: "Obojstranný obal + návod", result: "Produkt pripravený na okamžité odovzdanie návštevníkom" },
     { type: "Veľkoobchod", scope: "Tematická A6 kolekcia + balenie", result: "Opakovateľný produktový rad pre maloobchod" },
     { type: "Sezónna kampaň", scope: "A5 motívy + kraftový obal", result: "Kompletná limitovaná edícia v jednom balení" },
     { type: "Svadba", scope: "Tetovací kútik + inštrukcie", result: "Samoobslužná aktivita pre hostí bez obsluhy" },
-    { type: "Detská kolekcia", scope: "Arch + ochranné balenie", result: "Bezpečný produkt pripravený na predaj aj rozdávanie" },
   ] : [
+    { type: "Sports event", scope: "Race logo tattoos, outline of the course", result: "A design runners applied themselves after finishing" },
+    { type: "On-site activation", scope: "Applied in the race village", result: "The brand on participants' arms for the rest of the weekend" },
     { type: "Brand activation", scope: "A5 tattoos + branded sleeve", result: "A consistent visual ready for event distribution" },
     { type: "Packaging", scope: "Two-sided sleeve + instructions", result: "A product ready to hand directly to visitors" },
     { type: "Wholesale", scope: "Themed A6 collection + packaging", result: "A repeatable product line for retail" },
     { type: "Seasonal campaign", scope: "A5 designs + kraft sleeve", result: "A complete limited edition in one package" },
     { type: "Wedding", scope: "Tattoo corner + instructions", result: "A self-service guest activity requiring no staff" },
-    { type: "Children's collection", scope: "Sheet + protective packaging", result: "A safe product ready to sell or give away" },
   ];
 
   return (

@@ -7,14 +7,15 @@ import { useLanguage } from "@/lib/i18n";
 import { trackEvent } from "@/lib/analytics";
 import { BUSINESS } from "@/lib/siteConfig";
 
+// Osm různých fotek. Dřív se tu tři z nich opakovaly dvakrát.
 const igPhotos = [
+  "/realizace-litr-motiv.jpg",
   "/realizace-prebal-b2b-a5.jpg",
+  "/realizace-litr-aplikace.jpg",
   "/realizace-detske-prebal-a6.jpg",
-  "/realizace-prebal-a5.jpg",
-  "/realizace-papirovy-prebal.jpg",
+  "/svatebni-tetovaci-koutek.jpg",
   "/realizace-prebal-b2b-a5-zadni.jpg",
-  "/realizace-prebal-b2b-a5.jpg",
-  "/realizace-detske-prebal-a6.jpg",
+  "/nanaseni-tetovacky.jpg",
   "/realizace-prebal-a5.jpg",
 ];
 
