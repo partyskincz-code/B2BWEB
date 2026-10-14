@@ -113,10 +113,10 @@ export default function ReferencePage() {
       url: "https://pyselskykopecek.cz/24-hodinovka/",
       what:
         lang === "en"
-          ? "A 24 hour charity challenge run by the Pyselsky kopecek team, raising awareness of epilepsy with Spolecnost E as expert partner. We supported the first edition."
+          ? "Temporary tattoos for the 24 hour charity challenge run by the Pyselsky kopecek team, raising money for epilepsy awareness with Spolecnost E as expert partner."
           : lang === "sk"
-          ? "24 hodinová charitatívna výzva tímu Pyšelského kopečku, ktorá zbiera na osvetu o epilepsii. Odborným partnerom je Společnost E. Prvý ročník sme podporili."
-          : "24hodinová charitativní výzva týmu Pyšelského kopečku, která sbírá na osvětu o epilepsii. Odborným partnerem je Společnost E. První ročník jsme podpořili.",
+          ? "Dočasné tetovačky pre 24 hodinovú charitatívnu výzvu tímu Pyšelského kopečku, ktorá zbiera na osvetu o epilepsii. Odborným partnerom je Společnost E."
+          : "Dočasné tetovačky pro 24hodinovou charitativní výzvu týmu Pyšelského kopečku, která sbírá na osvětu o epilepsii. Odborným partnerem je Společnost E.",
       note:
         lang === "en"
           ? "24 hours of running and walking, Pysely"
