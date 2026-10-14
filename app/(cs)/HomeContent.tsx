@@ -287,6 +287,19 @@ export default function HomePage() {
           ? "Charitatívny beh pre hospic sv. Kleofáša"
           : "Charitativní běh pro Hospicovou péči sv. Kleofáše",
     },
+    {
+      name: "Když se tělo chvěje",
+      wordmark: "Když se tělo chvěje",
+      barva: "#F2EBE9",
+      logo: "",
+      url: "https://pyselskykopecek.cz/24-hodinovka/",
+      popis:
+        lang === "en"
+          ? "24 hour charity challenge for epilepsy awareness"
+          : lang === "sk"
+          ? "24 hodinová charitatívna výzva pre osvetu o epilepsii"
+          : "24hodinová charitativní výzva pro osvětu o epilepsii",
+    },
   ];
 
   const clientLogos = [
@@ -396,25 +409,25 @@ export default function HomePage() {
       </section>
 
       {/* ═══ PODZIMNÍ BĚHY ═══ */}
-      <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-14 md:py-20">
+      <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-10 md:py-14">
         <div className="container-pad">
-          <div className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12">
+          <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-9">
             {/* Vyříznutá běžecká tetovačka, levá strana. Běží doleva, pryč od claimu.
                 Zrcadlení musí být na vnitřním divu, animace framer-motion totiž
                 přepisuje inline transform a třídu scale-x by přebila. */}
             <motion.div
-              className="flex-shrink-0 w-16 sm:w-24 md:w-32"
-              animate={{ y: [0, -13, -2, -16, 0], x: [0, -6, 0, -3, 0], rotate: [-6, -11, -4, -9, -6] }}
+              className="flex-shrink-0 w-11 sm:w-14 md:w-[72px]"
+              animate={{ y: [0, -7, -1, -9, 0], x: [0, -3, 0, -2, 0], rotate: [-5, -9, -3, -7, -5] }}
               transition={{ duration: 3.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] }}
               aria-hidden="true"
             >
               <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
             </motion.div>
 
-            <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-4 text-center">
-              <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">Make the Moment</span>
-              <Heart size={38} className="fill-brand-primary text-brand-primary flex-shrink-0" aria-hidden="true" />
-              <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center">
+              <span className="font-display font-extrabold text-xl md:text-[26px] leading-none">Make the Moment</span>
+              <Heart size={20} className="fill-brand-primary text-brand-primary flex-shrink-0" aria-hidden="true" />
+              <span className="font-display font-extrabold text-xl md:text-[26px] leading-none">
                 {lang === "en" ? "autumn races" : lang === "sk" ? "jesenné behy" : "podzimní běhy"}
               </span>
             </div>
@@ -422,8 +435,8 @@ export default function HomePage() {
             {/* Druhá tetovačka, opravdu zrcadlená, běží doprava. Jiný rytmus,
                 aby to nevypadalo jako jedna animace puštěná dvakrát. */}
             <motion.div
-              className="flex-shrink-0 w-16 sm:w-24 md:w-32"
-              animate={{ y: [0, -16, -3, -11, 0], x: [0, 6, 0, 3, 0], rotate: [6, 10, 3, 12, 6] }}
+              className="flex-shrink-0 w-11 sm:w-14 md:w-[72px]"
+              animate={{ y: [0, -9, -2, -6, 0], x: [0, 3, 0, 2, 0], rotate: [5, 8, 2, 9, 5] }}
               transition={{ duration: 3.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1], delay: 0.45 }}
               aria-hidden="true"
             >
@@ -433,25 +446,25 @@ export default function HomePage() {
             </motion.div>
           </div>
 
-          <div className="mt-12 flex flex-wrap items-stretch justify-center gap-5">
+          <div className="mt-8 flex flex-wrap items-stretch justify-center gap-3">
             {behy.map((b, i) => (
               <motion.a
                 key={b.name}
                 href={b.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-5 border border-brand-light/20 px-7 py-6 hover:border-brand-light/60 transition-colors"
+                className="group flex items-center gap-3 border border-brand-light/20 px-5 py-3.5 hover:border-brand-light/60 transition-colors"
                 animate={{ y: [0, -9, 0] }}
                 transition={{ duration: 5.5 + i * 0.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: i * 0.5 }}
               >
                 {b.logo ? (
-                  <Image src={b.logo} alt={b.name} width={320} height={120} className="h-11 w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
+                  <Image src={b.logo} alt={b.name} width={320} height={120} className="h-7 w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
                 ) : (
-                  <span className="font-display font-extrabold text-xl md:text-2xl leading-none whitespace-nowrap" style={{ color: b.barva }}>
+                  <span className="font-display font-bold text-sm md:text-base leading-none whitespace-nowrap" style={{ color: b.barva }}>
                     {b.wordmark}
                   </span>
                 )}
-                <ArrowRight size={17} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                <ArrowRight size={14} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
               </motion.a>
             ))}
           </div>

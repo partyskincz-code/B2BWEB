@@ -108,6 +108,22 @@ export default function ReferencePage() {
           ? "Charitatívny beh, 13. ročník"
           : "Charitativní běh, 13. ročník",
     },
+    {
+      name: "Když se tělo chvěje",
+      url: "https://pyselskykopecek.cz/24-hodinovka/",
+      what:
+        lang === "en"
+          ? "A 24 hour charity challenge run by the Pyselsky kopecek team, raising awareness of epilepsy with Spolecnost E as expert partner. We supported the first edition."
+          : lang === "sk"
+          ? "24 hodinová charitatívna výzva tímu Pyšelského kopečku, ktorá zbiera na osvetu o epilepsii. Odborným partnerom je Společnost E. Prvý ročník sme podporili."
+          : "24hodinová charitativní výzva týmu Pyšelského kopečku, která sbírá na osvětu o epilepsii. Odborným partnerem je Společnost E. První ročník jsme podpořili.",
+      note:
+        lang === "en"
+          ? "24 hours of running and walking, Pysely"
+          : lang === "sk"
+          ? "24 hodín behu a chôdze, Pyšely"
+          : "24 hodin běhu a chůze, Pyšely",
+    },
   ];
 
   const klienti = [
