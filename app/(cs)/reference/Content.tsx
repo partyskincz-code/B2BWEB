@@ -236,7 +236,7 @@ export default function ReferencePage() {
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ type: "spring", stiffness: 260, damping: 22 }}
-                  className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-300 h-full"
+                  className="group bg-white overflow-hidden border border-gray-100 hover: transition-shadow duration-300 h-full"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <motion.div
@@ -301,7 +301,7 @@ export default function ReferencePage() {
                 <motion.figure
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 260, damping: 22 }}
-                  className="h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-7 hover:border-brand-primary/30 hover:shadow-lg transition-[border-color,box-shadow] duration-300"
+                  className="h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-7 hover:border-brand-primary/30 hover: transition-[border-color,box-shadow] duration-300"
                 >
                   <blockquote className="text-gray-600 leading-relaxed mb-6 flex-1">&bdquo;{r.text}&ldquo;</blockquote>
                   <figcaption className="flex items-center gap-3 pt-5 border-t border-gray-100">
@@ -336,7 +336,7 @@ export default function ReferencePage() {
           </div>
 
           <FadeUp>
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4 text-center">
+            <p className="tag mb-4 text-center">
               {lang === "en" ? "Some of our clients" : lang === "sk" ? "Niektorí z našich klientov" : "Někteří z našich klientů"}
             </p>
             <div className="relative overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
@@ -369,7 +369,7 @@ export default function ReferencePage() {
       </section>
 
       {/* Social & Web preview */}
-      <section className="section-pad bg-gray-50">
+      <section className="section-pad bg-[#F7F2F0]">
         <div className="container-pad">
           <FadeUp className="text-center mb-10">
             <h2 className="text-3xl font-display font-extrabold text-brand-secondary mb-3">
@@ -395,7 +395,7 @@ export default function ReferencePage() {
                 href="https://www.instagram.com/partyskin.cz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block rounded-2xl overflow-hidden border border-gray-100 bg-white card-hover"
+                className="group block overflow-hidden border border-gray-100 bg-white card-hover"
               >
                 <div className="relative h-64 grid grid-cols-3 grid-rows-2 gap-0.5 bg-white">
                   {[
@@ -416,7 +416,7 @@ export default function ReferencePage() {
                       />
                     </div>
                   ))}
-                  <div className="absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center shadow-lg">
+                  <div className="absolute bottom-3 right-3 w-10 h-10 rounded-xl bg-gradient-to-br from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] flex items-center justify-center ">
                     <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white" xmlns="http://www.w3.org/2000/svg">
                       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                     </svg>
@@ -444,9 +444,9 @@ export default function ReferencePage() {
                 href={lang === "sk" ? "https://www.partyskin.sk" : "https://www.partyskin.cz"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block rounded-2xl overflow-hidden border border-gray-100 bg-white card-hover"
+                className="group block overflow-hidden border border-gray-100 bg-white card-hover"
               >
-                <div className="relative h-64 bg-gradient-to-br from-brand-primary to-[#593027] flex items-center justify-center overflow-hidden">
+                <div className="relative h-64 bg-brand-primary flex items-center justify-center overflow-hidden">
                   <div className="absolute -top-10 -right-10 w-48 h-48 rounded-full bg-white/10" />
                   <div className="absolute -bottom-12 -left-8 w-40 h-40 rounded-full bg-white/5" />
                   <Image

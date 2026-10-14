@@ -21,6 +21,16 @@ module.exports = {
           rose: "#D99F9A",      // dusty salmon — přechod
         },
       },
+      // Typografická škála faceliftu 2026: nadpisy výrazně větší, těsnější
+      // prokládání i proklad řádků. Mění vzhled na celém webu najednou.
+      fontSize: {
+        "2xl": ["1.625rem", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+        "3xl": ["2.25rem", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
+        "4xl": ["3rem", { lineHeight: "1.0", letterSpacing: "-0.035em" }],
+        "5xl": ["4.25rem", { lineHeight: "0.95", letterSpacing: "-0.04em" }],
+        "6xl": ["5.5rem", { lineHeight: "0.92", letterSpacing: "-0.04em" }],
+        "7xl": ["6.5rem", { lineHeight: "0.9", letterSpacing: "-0.045em" }],
+      },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],

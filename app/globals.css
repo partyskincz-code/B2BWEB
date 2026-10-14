@@ -13,10 +13,10 @@
   --brand-light: #F2EBE9;
   --brand-gold: #FFC107;
   --brand-beige: #BFA799;
-  --space-section: clamp(4rem, 7vw, 7rem);
-  --radius-control: 0.75rem;
-  --radius-card: 1rem;
-  --shadow-card: 0 10px 30px rgb(33 42 52 / 0.08);
+  --space-section: clamp(5rem, 9vw, 9rem);
+  --radius-control: 999px;
+  --radius-card: 2px;
+  --hairline: rgb(33 42 52 / 0.14);
 }
 
 @layer base {
@@ -32,9 +32,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Facelift: displejové písmo je těžší a sevřenější, nadpisy nesou výraz. */
   h1, h2, h3, h4 {
     font-family: var(--font-plus-jakarta);
-    font-weight: 700;
+    font-weight: 800;
+  }
+
+  p {
+    text-wrap: pretty;
   }
 
   * {
@@ -42,7 +47,7 @@
   }
 
   :focus-visible {
-    outline: 3px solid var(--brand-accent);
+    outline: 3px solid var(--brand-primary);
     outline-offset: 3px;
   }
 }
@@ -56,7 +61,7 @@
   border-radius: var(--radius-control);
   background: var(--brand-secondary);
   color: white;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1.25rem;
 }
 
 .skip-link:focus {
@@ -74,36 +79,62 @@
 }
 
 @layer components {
+  /* Facelift: tlačítka jsou obrysové pilulky s prostrkaným kapitálkovým popiskem. */
+  .btn-base {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border-[1.5px] text-[12px] font-medium uppercase tracking-[0.14em] transition-colors duration-200 min-h-[48px];
+  }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-white bg-brand-primary hover:bg-[#73393d] transition-all duration-200 shadow-sm hover:shadow-md active:scale-[0.98];
+    @apply btn-base border-brand-secondary text-brand-secondary hover:bg-brand-primary hover:border-brand-primary hover:text-brand-light;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-brand-secondary border-2 border-brand-secondary hover:bg-brand-secondary hover:text-white transition-all duration-200 active:scale-[0.98];
+    @apply btn-base border-brand-secondary/25 text-brand-secondary hover:bg-brand-secondary hover:border-brand-secondary hover:text-white;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold text-brand-primary border-2 border-brand-primary hover:bg-brand-primary hover:text-white transition-all duration-200 active:scale-[0.98];
+    @apply btn-base border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-brand-light;
+  }
+
+  .btn-cream {
+    @apply btn-base border-brand-light text-brand-light hover:bg-brand-light hover:border-brand-light hover:text-brand-secondary;
   }
 
   .section-pad {
-    @apply py-20 md:py-28;
+    @apply py-20 md:py-32;
   }
 
   .container-pad {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-[1240px] mx-auto px-5 sm:px-6 lg:px-8;
   }
 
+  /* Facelift: kartičky nahradily vlasové linky, žádné stíny ani nadskakování. */
   .card-hover {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+    @apply transition-colors duration-200;
   }
 
   .tag {
-    @apply inline-block px-3 py-1 text-xs font-semibold rounded-full bg-brand-light text-brand-primary uppercase tracking-wider;
+    @apply inline-block text-[12px] font-medium text-brand-primary uppercase tracking-[0.18em];
+  }
+
+  .hairline {
+    border-top: 1px solid var(--hairline);
+  }
+
+  .lead {
+    @apply text-lg md:text-xl font-light leading-relaxed text-[#3F4A55];
+  }
+
+  .num {
+    font-family: var(--font-plus-jakarta);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--brand-primary);
   }
 
   .input-field {
-    @apply w-full px-4 py-3 rounded-xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white;
+    @apply w-full px-4 py-3 rounded-lg border border-brand-secondary/20 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white;
   }
 }
 
@@ -113,11 +144,11 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-primary to-brand-accent bg-clip-text text-transparent;
+    @apply text-brand-primary;
   }
 
   .gradient-bg {
-    background: linear-gradient(135deg, #8C4D52 0%, #E8889F 100%);
+    background: var(--brand-primary);
   }
 
   .hero-gradient {
@@ -125,7 +156,6 @@
   }
 
   .dot-pattern {
-    background-image: radial-gradient(circle, #8C4D5222 1px, transparent 1px);
-    background-size: 24px 24px;
+    background-image: none;
   }
 }

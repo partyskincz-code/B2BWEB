@@ -269,13 +269,13 @@ export default function HomePage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-[760px] md:min-h-screen flex items-center overflow-hidden bg-brand-light">
+      <section className="relative min-h-[640px] lg:min-h-[86vh] flex items-center overflow-hidden bg-brand-light pt-20">
         {/* Subtle dot texture on light background */}
         <div className="absolute inset-0 dot-pattern opacity-40" />
         <FloatingStars variant="light" className="lg:right-[58%]" />
 
         {/* Right-side photo */}
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[58%] pointer-events-none">
+        <div className="absolute right-0 top-0 bottom-0 hidden lg:block lg:w-[58%] pointer-events-none">
           <Image
             src="/hero.jpg"
             alt="Lidé na firemním eventu s dočasnými tetovačkami"
@@ -284,7 +284,7 @@ export default function HomePage() {
             priority
           />
           {/* Blend left edge into brand-light */}
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-light via-brand-light/55 lg:via-brand-light/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-light via-brand-light/35 to-transparent" />
           {/* Subtle warm tint */}
           <div className="absolute inset-0 bg-brand-primary/10" />
         </div>
@@ -319,7 +319,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[2.5rem] sm:text-6xl lg:text-6xl xl:text-7xl font-display font-extrabold text-brand-secondary leading-[1.03] md:leading-[1.05] mb-5 md:mb-6 text-balance"
+              className="text-[2.5rem] sm:text-4xl lg:text-5xl font-display font-extrabold text-brand-secondary mb-7 max-w-[15ch]"
             >
               {t("hero.h1a")}{" "}
               <span className="text-brand-primary">{t("hero.h1b")}</span>
@@ -435,7 +435,7 @@ export default function HomePage() {
 
             <FadeUp delay={0.2}>
               <div className="relative">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/realizace-prebal-b2b-a5.jpg"
                     alt="Dočasné tetovačky s logem klienta v brandovaném přebalu A5"
@@ -450,7 +450,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ PRODUKTY GRID ═══ */}
-      <section className="section-pad bg-gray-50">
+      <section className="section-pad bg-[#F7F2F0]">
         <div className="container-pad">
           <FadeUp className="text-center mb-14">
             <span className="tag mb-4">{t("products.tag")}</span>
@@ -464,7 +464,7 @@ export default function HomePage() {
             {products.map((product, i) => (
               <FadeUp key={product.id} delay={i * 0.1}>
                 <Link href={product.href} className="group block">
-                  <div className="bg-white rounded-2xl overflow-hidden card-hover border border-gray-100 h-full flex flex-col">
+                  <div className="bg-white overflow-hidden card-hover border border-gray-100 h-full flex flex-col">
                     <div className="relative h-52 overflow-hidden">
                       <Image src={product.image} alt={product.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
@@ -541,7 +541,7 @@ export default function HomePage() {
               },
             ].map((guide, i) => (
               <FadeUp key={guide.number} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl border border-brand-primary/15 p-7 h-full flex flex-col shadow-sm">
+                <div className="bg-white rounded-2xl border border-brand-primary/15 p-7 h-full flex flex-col ">
                   <span className="text-brand-primary/45 text-4xl font-display font-extrabold leading-none mb-5">{guide.number}</span>
                   <h3 className="font-display font-bold text-brand-secondary text-xl mb-3">{guide.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-6">{guide.body}</p>
@@ -570,7 +570,7 @@ export default function HomePage() {
             {segments.map((seg, i) => {
               const cardInner = (
                 <div className={`${seg.color} rounded-2xl p-7 card-hover h-full flex flex-col`}>
-                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-5 shadow-sm">
+                  <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center mb-5 ">
                     <seg.icon size={24} className={seg.iconColor} />
                   </div>
                   <h3 className="font-display font-bold text-brand-secondary text-xl mb-2">{seg.title}</h3>
@@ -699,7 +699,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {testimonials.slice(0, 2).map((testimonial, i) => (
               <FadeUp key={i} delay={i * 0.1}>
-                <div className="bg-white rounded-2xl border border-brand-primary/20 h-full flex flex-col overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-white rounded-2xl border border-brand-primary/20 h-full flex flex-col overflow-hidden hover: transition-shadow">
                   {/* top accent bar */}
                   <div className="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" />
                   <div className="p-7 flex flex-col flex-1">
@@ -784,7 +784,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ GALERIE ═══ */}
-      <section className="section-pad bg-gray-50">
+      <section className="section-pad bg-[#F7F2F0]">
         <div className="container-pad">
           <FadeUp className="text-center mb-10">
             <span className="tag mb-4">{t("gallery.tag")}</span>
@@ -825,7 +825,7 @@ export default function HomePage() {
       {/* ═══ CTA ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
-          <div className="bg-gradient-to-br from-brand-primary to-[#593027] rounded-3xl p-8 md:p-14 relative overflow-hidden">
+          <div className="bg-brand-primary px-7 py-16 md:px-16 md:py-24 relative overflow-hidden">
             <FloatingStars variant="warm" />
             <div className="absolute top-0 right-0 w-72 h-72 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-20 w-48 h-48 bg-white/5 rounded-full translate-y-1/2" />

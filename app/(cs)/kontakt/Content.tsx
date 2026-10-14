@@ -625,7 +625,7 @@ export default function KontaktPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Form */}
             <FadeUp className="lg:col-span-2" delay={0.1}>
-              <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm">
+              <div className="bg-white border border-gray-100 rounded-2xl p-8 ">
                 <div className="mb-6">
                   <span className="tag mb-2">
                     {lang === "en"

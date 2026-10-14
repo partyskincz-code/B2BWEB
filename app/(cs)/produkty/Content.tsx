@@ -593,7 +593,7 @@ export default function ProduktyPage() {
             >
               {/* Image */}
               <FadeUp delay={0.1} className={catIndex % 2 === 1 ? "lg:col-start-2" : ""}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-[4/3] overflow-hidden ">
                   <Image
                     src={cat.image}
                     alt={cat.title}
@@ -832,7 +832,7 @@ export default function ProduktyPage() {
                 onClick={() => trackEvent("eshop_clicked", { shop: "cz", placement: "products_image", lang })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block relative rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                className="block relative rounded-xl overflow-hidden border border-gray-100 hover: transition-shadow"
               >
                 <Image
                   src="/eshop-nahled.jpg"
@@ -957,7 +957,7 @@ export default function ProduktyPage() {
             </div>
 
             <div className="mt-12">
-              <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">
+              <p className="tag mb-4">
                 {lang === "en" ? "Guides that help" : lang === "sk" ? "Z poradne" : "Z poradny"}
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
@@ -971,7 +971,7 @@ export default function ProduktyPage() {
                   <Link
                     key={g.href}
                     href={g.href}
-                    className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors"
+                    className="inline-flex items-center border-b border-brand-secondary/25 pb-1 text-sm text-[#3F4A55] hover:border-brand-primary hover:text-brand-primary transition-colors"
                   >
                     {lang === "en" ? g.en : lang === "sk" ? g.sk : g.cs}
                   </Link>

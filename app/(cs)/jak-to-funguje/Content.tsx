@@ -52,7 +52,7 @@ function FadeUp({
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border border-gray-100 rounded-2xl overflow-hidden">
+    <div className="border border-gray-100 overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
@@ -547,7 +547,7 @@ export default function JakToFunguePage() {
                 >
                   {/* Image */}
                   <div className={i % 2 === 1 ? "lg:col-start-2" : ""}>
-                    <div className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${step.color} p-1`}>
+                    <div className={`relative overflow-hidden bg-gradient-to-br ${step.color} p-1`}>
                       <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
                         <Image
                           src={step.image}
@@ -661,7 +661,7 @@ export default function JakToFunguePage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="section-pad bg-gray-50">
+      <section id="faq" className="section-pad bg-[#F7F2F0]">
         <div className="container-pad">
           <FadeUp className="text-center mb-12">
             <span className="tag mb-4">FAQ</span>

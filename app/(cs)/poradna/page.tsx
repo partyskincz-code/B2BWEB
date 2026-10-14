@@ -158,7 +158,7 @@ export default function Page() {
               <Link
                 key={c.href}
                 href={c.href}
-                className="group flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-brand-primary/30 hover:shadow-lg transition-all duration-300"
+                className="group flex flex-col bg-white overflow-hidden border border-gray-100 hover:border-brand-primary/30 hover: transition-all duration-300"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image

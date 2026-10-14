@@ -40,7 +40,7 @@ export default function ClanekLayout({ data }: { data: Clanek }) {
       {data.foto && (
         <section className="bg-brand-light pb-10">
           <div className="container-pad max-w-3xl">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
+            <div className="relative aspect-[4/3] overflow-hidden bg-[#EFE9E7]">
               <Image src={data.foto.src} alt={data.foto.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 768px" />
             </div>
           </div>
@@ -86,20 +86,20 @@ export default function ClanekLayout({ data }: { data: Clanek }) {
             );
           })}
 
-          <div className="mt-12 rounded-2xl bg-gradient-to-br from-brand-primary to-[#593027] p-8 text-center relative overflow-hidden">
+          <div className="mt-16 bg-brand-primary px-7 py-14 md:px-12 relative overflow-hidden">
             <FloatingStars variant="warm" density={0.5} />
-            <p className="text-white font-display font-bold text-xl mb-3">Potřebujete kalkulaci na míru?</p>
-            <p className="text-white/80 mb-6">Napište nám formát, množství a termín. Odpovíme do 24 hodin.</p>
-            <Link href="/kontakt" className="inline-flex items-center gap-2 bg-white text-brand-primary font-semibold px-6 py-3 rounded-xl hover:bg-white/90 transition-colors">
+            <p className="text-brand-light font-display font-extrabold text-3xl mb-4 max-w-[16ch]">Potřebujete kalkulaci na míru?</p>
+            <p className="text-brand-light/85 text-lg font-light leading-relaxed max-w-[48ch] mb-8">Napište nám formát, množství a termín. Odpovíme do 24 hodin.</p>
+            <Link href="/kontakt" className="btn-cream">
               Nezávazně poptat <ArrowRight size={18} />
             </Link>
           </div>
 
           <div className="mt-10">
-            <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-4">Další z poradny</p>
-            <div className="flex flex-wrap gap-3">
+            <p className="tag mb-6">Další z poradny</p>
+            <div className="flex flex-wrap gap-x-7 gap-y-4">
               {data.dalsi.map((d) => (
-                <Link key={d.href} href={d.href} className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+                <Link key={d.href} href={d.href} className="inline-flex items-center border-b border-brand-secondary/25 pb-1 text-sm text-[#3F4A55] hover:border-brand-primary hover:text-brand-primary transition-colors">
                   {d.label}
                 </Link>
               ))}

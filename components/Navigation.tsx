@@ -46,18 +46,18 @@ export default function Navigation() {
   }, [pathname]);
 
   const isHome = pathname === "/" || pathname === "/sk" || pathname === "/en";
-  const isLight = scrolled || !isHome;
+  const isLight = true; // facelift: hlavička má vždy krémové pozadí, přes fotku byl text nečitelný
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isLight
-          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
+          ? "bg-[#F2EBE9] border-b border-brand-secondary/15"
           : "bg-transparent"
       }`}
     >
       <div className="container-pad">
-        <nav className="flex items-center justify-between h-16 md:h-20">
+        <nav className="flex items-center justify-between h-16 md:h-[72px]">
           {/* Logo */}
           <Link href={localizedPath("/")} className="flex items-center gap-2.5" aria-label="Make the Moment">
             <Image
@@ -68,23 +68,19 @@ export default function Navigation() {
               priority
               className="h-7 md:h-9 w-auto transition-opacity duration-300"
             />
-            <span className={`text-xs font-medium px-2 py-0.5 rounded-full transition-colors duration-300 ${
-              "bg-brand-light text-brand-primary"
-            }`}>
-              B2B
-            </span>
+            <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-brand-primary">B2B</span>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`text-sm transition-colors duration-200 border-b pb-0.5 ${
                   pathname === link.href
-                    ? "text-brand-primary bg-brand-light"
-                    : "text-gray-700 hover:text-white hover:bg-brand-secondary"
+                    ? "text-brand-primary border-brand-primary"
+                    : "text-[#3F4A55] border-transparent hover:text-brand-primary hover:border-brand-primary"
                 }`}
               >
                 {link.label}
@@ -93,28 +89,26 @@ export default function Navigation() {
           </div>
 
           {/* Right side: lang switcher + CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-6">
             {/* Language switcher */}
-            <div className={`flex items-center rounded-lg overflow-hidden border transition-colors duration-300 ${
-              "border-gray-200"
-            }`}>
+            <div className="flex items-center gap-2">
               {LANGS.map(({ code, label }) => (
                 <Link
                   key={code}
                   href={switchPath(code)}
                   hrefLang={code}
                   onClick={() => trackEvent("language_changed", { from: lang, to: code, path: pathname })}
-                  className={`px-2.5 py-1.5 text-xs font-bold transition-all duration-200 ${
+                  className={`text-[11px] font-medium tracking-[0.12em] transition-colors duration-200 ${
                     lang === code
-                      ? "bg-brand-primary text-white"
-                      : "text-gray-700 hover:text-white hover:bg-brand-secondary"
+                      ? "text-brand-primary"
+                      : "text-[#3F4A55]/60 hover:text-brand-primary"
                   }`}
                 >
                   {label}
                 </Link>
               ))}
             </div>
-            <Link href={localizedPath("/kontakt")} onClick={() => trackEvent("cta_clicked", { location: "navigation", lang })} className="btn-primary text-sm px-5 py-2.5">
+            <Link href={localizedPath("/kontakt")} onClick={() => trackEvent("cta_clicked", { location: "navigation", lang })} className="btn-primary !px-6 !py-3 !min-h-0">
               {t("nav.cta")}
             </Link>
           </div>
@@ -122,7 +116,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg transition-colors text-brand-secondary bg-white/80 backdrop-blur-sm hover:text-white hover:bg-brand-secondary shadow-sm"
+            className="md:hidden p-2 transition-colors text-brand-secondary hover:text-brand-primary"
             aria-label="Otevřít menu"
             aria-expanded={isOpen}
             aria-controls="mobile-navigation"
@@ -134,41 +128,37 @@ export default function Navigation() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div id="mobile-navigation" className="md:hidden bg-white border-t border-gray-100 shadow-lg">
-          <div className="container-pad py-4 flex flex-col gap-1">
+        <div id="mobile-navigation" className="md:hidden bg-[#F2EBE9] border-t border-brand-secondary/15">
+          <div className="container-pad py-6 flex flex-col">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${
-                  pathname === link.href
-                    ? "text-brand-primary bg-brand-light"
-                    : "text-gray-700 hover:text-white hover:bg-brand-secondary"
+                className={`py-3.5 text-lg font-display font-bold border-b border-brand-secondary/10 transition-colors ${
+                  pathname === link.href ? "text-brand-primary" : "text-brand-secondary hover:text-brand-primary"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
             {/* Mobile lang switcher */}
-            <div className="flex items-center gap-2 mt-3 pt-3 border-t border-gray-100">
-              <span className="text-xs text-gray-400 font-medium">Jazyk:</span>
+            <div className="flex items-center gap-4 mt-5 pt-5 border-t border-brand-secondary/15">
+              <span className="tag">Jazyk</span>
               {LANGS.map(({ code, label }) => (
                 <Link
                   key={code}
                   href={switchPath(code)}
                   hrefLang={code}
                   onClick={() => trackEvent("language_changed", { from: lang, to: code, path: pathname })}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                    lang === code
-                      ? "bg-brand-primary text-white"
-                      : "text-gray-700 hover:text-white hover:bg-brand-secondary border border-gray-200"
+                  className={`text-xs font-medium tracking-[0.12em] transition-colors ${
+                    lang === code ? "text-brand-primary" : "text-[#3F4A55]/60 hover:text-brand-primary"
                   }`}
                 >
                   {label}
                 </Link>
               ))}
             </div>
-            <Link href={localizedPath("/kontakt")} className="btn-primary text-sm mt-2">
+            <Link href={localizedPath("/kontakt")} className="btn-primary mt-5 w-full">
               {t("nav.cta")}
             </Link>
           </div>

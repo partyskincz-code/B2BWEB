@@ -94,7 +94,7 @@ export default function Footer() {
                 height={336}
                 className="h-10 w-auto"
               />
-              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-white/10 text-white/80">B2B</span>
+              <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-brand-light/60">B2B</span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs mb-6">
               {lang === "en"
@@ -217,13 +217,13 @@ export default function Footer() {
             {lang === "en" ? "All rights reserved." : lang === "sk" ? "Všetky práva vyhradené." : "Všechna práva vyhrazena."}
           </p>
           <div className="flex items-center gap-4">
-            <a href="https://www.instagram.com/partyskin.cz/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-brand-primary transition-all" aria-label="Instagram">
+            <a href="https://www.instagram.com/partyskin.cz/" target="_blank" rel="noopener noreferrer" className="p-2 text-white/60 hover:text-brand-primary transition-colors" aria-label="Instagram">
               <Instagram size={18} />
             </a>
-            <a href="https://www.facebook.com/partyskincz/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-brand-primary transition-all" aria-label="Facebook">
+            <a href="https://www.facebook.com/partyskincz/" target="_blank" rel="noopener noreferrer" className="p-2 text-white/60 hover:text-brand-primary transition-colors" aria-label="Facebook">
               <Facebook size={18} />
             </a>
-            <a href="https://www.linkedin.com/company/partyskin" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg text-white/60 hover:text-white hover:bg-brand-primary transition-all" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/partyskin" target="_blank" rel="noopener noreferrer" className="p-2 text-white/60 hover:text-brand-primary transition-colors" aria-label="LinkedIn">
               <Linkedin size={18} />
             </a>
           </div>
