@@ -786,26 +786,27 @@ export default function HomePage() {
       {/* ═══ GALERIE ═══ */}
       <section className="section-pad bg-[#F7F2F0]">
         <div className="container-pad">
-          <FadeUp className="text-center mb-10">
-            <span className="tag mb-4">{t("gallery.tag")}</span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-4">
+          <FadeUp className="mb-14 max-w-3xl">
+            <span className="tag mb-5 block">{t("gallery.tag")}</span>
+            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary max-w-[16ch]">
               {t("gallery.h2")}
             </h2>
           </FadeUp>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
+              // Osm různých fotek. Dřív tu byly dětské archy dvakrát.
+              { url: "/realizace-litr-motiv.jpg", alt: "Tetovačka s obrysem Lipna a názvem závodu Li.t.r. na předloktí běžkyně" },
               { url: "/realizace-prebal-b2b-a5.jpg", alt: "got2b brandované tetovačky A5" },
+              { url: "/realizace-litr-aplikace.jpg", alt: "Nalepení tetovačky v zázemí trailového závodu" },
               { url: "/realizace-detske-prebal-a6.jpg", alt: "Dětské tetovačky A6 kolekce" },
-              { url: "/realizace-prebal-a5.jpg", alt: "Velikonoční edice A5" },
-              { url: "/realizace-papirovy-prebal.jpg", alt: "Tetovačky s jednorožci" },
-              { url: "/realizace-prebal-b2b-a5-zadni.jpg", alt: "got2b obal zadní strana" },
               { url: "/svatebni-tetovaci-koutek.jpg", alt: "Svatební tetovací koutek se zrcadlem a archy tetovaček" },
-              { url: "/realizace-detske-prebal-a6.jpg", alt: "Dětské tetovačky balení" },
+              { url: "/realizace-prebal-b2b-a5-zadni.jpg", alt: "got2b obal zadní strana" },
               { url: "/nanaseni-tetovacky.jpg", alt: "Nanášení dočasné tetovačky na zápěstí" },
+              { url: "/realizace-prebal-a5.jpg", alt: "Velikonoční edice A5" },
             ].map((img, i) => (
               <FadeUp key={i} delay={i * 0.05}>
-                <div className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer">
+                <div className="relative aspect-square overflow-hidden group">
                   <Image src={img.url} alt={img.alt} fill className="object-cover object-center transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
                   <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/20 transition-all duration-300" />
                 </div>
@@ -813,7 +814,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <FadeUp className="text-center mt-10">
+          <FadeUp className="mt-12">
             <Link href={href("/reference")} className="btn-ghost">
               {t("gallery.cta")}
               <ArrowRight size={18} className="ml-2" />

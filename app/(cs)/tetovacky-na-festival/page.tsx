@@ -31,12 +31,12 @@ const data: Prilezitost = {
     "znacka": { "hlavni": "Li.t.r.", "pod": "Lipno.trail.run." },
     "klient": "Lipno.trail.run",
     "klientUrl": "https://www.lipnotrailrun.cz",
+    "vedlejsiOdkaz": { "href": "/reference#podporujeme", "label": "Koho dalšího podporujeme" },
     "h2": "Obrys Lipna na předloktí běžce, který ho právě oběhl",
     "text": [
-      "Li.t.r. je víkendový trailový festival kolem Lipna: 111 kilometrů, 2 500 metrů převýšení, trasa rozdělená na deset úseků a kus cesty vedoucí přes Rakousko. První ročník jsme podpořili jako partner a dodali jsme tetovačky s logem závodu.",
-      "Motiv pro sólo běžce, tedy ty, kdo jdou celých sto jedenáct kilometrů v kuse, nebyl jen logo. Byl to obrys Lipna, tvar té samé trasy, kterou měli za sebou, s názvem závodu uvnitř. Tetovačka tím přestala být reklamním předmětem a stala se odznakem, že jsi to dal.",
-      "A právě proto tenhle formát doporučujeme pořadatelům závodů. Tetovačka není drahá položka v rozpočtu akce, ale je to jedna z mála věcí, které si účastník sám nalepí na ruku a vyfotí se s ní. Značka závodu pak chodí po Lipensku na lidech ještě několik dní po doběhu.",
-      "Podporujeme i menší akce. Jednou z nich je Běh pro Kleofáše, amatérský běžecký závod ve prospěch Hospicové péče sv. Kleofáše, který se běží už třináctým rokem."
+      "Li.t.r. je víkendový trailový festival kolem Lipna. Sto jedenáct kilometrů, dva a půl tisíce metrů převýšení, trasa rozdělená na deset úseků a kus cesty vedoucí přes Rakousko. Zázemí má v Areálu Lipno, odkud se startuje v pět ráno a kam se dobíhá až do půlnoci.",
+      "První ročník jsme podpořili jako partner. Pro sólo běžce, tedy ty, kdo jdou celých sto jedenáct kilometrů v kuse, vznikl vlastní motiv: obrys Lipna s názvem závodu uvnitř. Tvar té samé trasy, kterou měli za sebou.",
+      "Nalepovalo se to přímo v zázemí závodu, většinou hned po doběhu. Na fotkách z cíle i z celého víkendu je pak ten obrys vidět na rukou lidí, kteří si ho tam nechali dát sami."
     ],
     "cisla": [
       { "hodnota": "1 000+", "popis": "dodaných tetovaček s logem závodu" },

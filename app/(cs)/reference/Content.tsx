@@ -78,6 +78,7 @@ export default function ReferencePage() {
     {
       name: "Li.t.r. Lipno.trail.run",
       url: "https://www.lipnotrailrun.cz",
+      pribeh: "/tetovacky-na-festival",
       what:
         lang === "en"
           ? "Temporary tattoos with the race logo, including the Lipno outline design for solo runners."
@@ -396,7 +397,7 @@ export default function ReferencePage() {
       </section>
 
       {/* Podporujeme */}
-      <section className="section-pad bg-white">
+      <section id="podporujeme" className="section-pad bg-white scroll-mt-24">
         <div className="container-pad">
           <FadeUp className="mb-14 max-w-3xl">
             <span className="tag mb-5 block">
@@ -423,15 +424,26 @@ export default function ReferencePage() {
                     {o.name}
                   </h3>
                   <p className="text-[#3F4A55] leading-relaxed flex-1 mb-7 max-w-[46ch]">{o.what}</p>
-                  <a
-                    href={o.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 self-start text-sm text-brand-primary border-b border-brand-primary/40 pb-1 hover:border-brand-primary transition-colors"
-                  >
-                    {lang === "en" ? "Visit the website" : lang === "sk" ? "Navštíviť web" : "Navštívit web"}
-                    <ArrowRight size={14} />
-                  </a>
+                  <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
+                    {"pribeh" in o && o.pribeh && (
+                      <Link
+                        href={o.pribeh}
+                        className="inline-flex items-center gap-1.5 text-sm text-brand-primary border-b border-brand-primary/40 pb-1 hover:border-brand-primary transition-colors"
+                      >
+                        {lang === "en" ? "Read the full story" : lang === "sk" ? "Prečítať celý príbeh" : "Přečíst celý příběh"}
+                        <ArrowRight size={14} />
+                      </Link>
+                    )}
+                    <a
+                      href={o.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm text-[#3F4A55] border-b border-brand-secondary/25 pb-1 hover:text-brand-primary hover:border-brand-primary transition-colors"
+                    >
+                      {lang === "en" ? "Visit the website" : lang === "sk" ? "Navštíviť web" : "Navštívit web"}
+                      <ArrowRight size={14} />
+                    </a>
+                  </div>
                 </div>
               </FadeUp>
             ))}

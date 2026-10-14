@@ -18,6 +18,7 @@ export type Prilezitost = {
     stitek: string;
     klient: string;
     klientUrl?: string;
+    vedlejsiOdkaz?: { href: string; label: string };
     h2: string;
     text: string[];
     cisla: { hodnota: string; popis: string }[];
@@ -134,13 +135,21 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
                 ) : (
                   <p className="mt-4 text-sm opacity-70">{pripad.klient}</p>
                 )}
+                {pripad.vedlejsiOdkaz && (
+                  <Link
+                    href={pripad.vedlejsiOdkaz.href}
+                    className="inline-flex items-center gap-2 mt-4 ml-0 sm:ml-8 text-sm border-b border-current/40 pb-1 opacity-80 hover:opacity-100 transition-opacity"
+                  >
+                    {pripad.vedlejsiOdkaz.label} <ArrowRight size={15} />
+                  </Link>
+                )}
               </div>
 
               <div className="flex-[1_1_240px] min-w-0">
                 <dl className="space-y-9">
                   {pripad.cisla.map((c) => (
                     <div key={c.popis}>
-                      <dt className="font-display font-extrabold text-5xl leading-none">
+                      <dt className="font-display font-extrabold text-5xl leading-none whitespace-nowrap">
                         {c.hodnota}
                       </dt>
                       <dd className="text-sm opacity-70 mt-3 leading-relaxed">{c.popis}</dd>
