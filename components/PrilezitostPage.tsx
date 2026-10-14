@@ -13,6 +13,17 @@ export type Prilezitost = {
   foto: { src: string; alt: string };
   fotoPopis: string;
   ceny: { format: string; cena: string; pozn: string }[];
+  /** Hlavní realizace. Vykreslí se hned pod hero sekcí jako hlavní důkaz. */
+  pripad?: {
+    stitek: string;
+    klient: string;
+    klientUrl?: string;
+    h2: string;
+    text: string[];
+    cisla: { hodnota: string; popis: string }[];
+    fotky?: { src: string; alt: string; pomer?: string }[];
+    fotoPopis?: string;
+  };
   faq: { q: string; a: string }[];
   ctaTitul: string;
   ctaText: string;
@@ -45,6 +56,77 @@ export default function PrilezitostPage({ data }: { data: Prilezitost }) {
           </div>
         </div>
       </section>
+
+      {/* Hlavní realizace */}
+      {data.pripad && (
+        <section className="bg-brand-secondary text-brand-light py-20 md:py-28">
+          <div className="container-pad">
+            <p className="text-[12px] font-medium uppercase tracking-[0.18em] text-brand-light/60 mb-8">
+              {data.pripad.stitek}
+            </p>
+            <div className="flex flex-wrap gap-x-16 gap-y-12">
+              <div className="flex-[999_1_460px] min-w-0">
+                <h2 className="text-4xl md:text-5xl font-display font-extrabold mb-8 max-w-[18ch]">
+                  {data.pripad.h2}
+                </h2>
+                {data.pripad.text.map((t) => (
+                  <p key={t} className="text-lg md:text-xl font-light leading-relaxed text-brand-light/85 max-w-[58ch] mb-5">
+                    {t}
+                  </p>
+                ))}
+                {data.pripad.klientUrl ? (
+                  <a
+                    href={data.pripad.klientUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-4 text-sm text-brand-light border-b border-brand-light/40 pb-1 hover:border-brand-light transition-colors"
+                  >
+                    {data.pripad.klient} <ArrowRight size={15} />
+                  </a>
+                ) : (
+                  <p className="mt-4 text-sm text-brand-light/70">{data.pripad.klient}</p>
+                )}
+              </div>
+
+              <div className="flex-[1_1_260px] min-w-0">
+                <dl className="space-y-9">
+                  {data.pripad.cisla.map((c) => (
+                    <div key={c.popis}>
+                      <dt className="font-display font-extrabold text-4xl text-brand-light leading-none">
+                        {c.hodnota}
+                      </dt>
+                      <dd className="text-sm text-brand-light/70 mt-2.5 leading-relaxed">{c.popis}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+
+            {data.pripad.fotky && data.pripad.fotky.length > 0 && (
+              <figure className="mt-14">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  {data.pripad.fotky.map((f) => (
+                    <div key={f.src} className={`relative w-full overflow-hidden bg-brand-light/10 ${f.pomer ?? "aspect-[4/3]"}`}>
+                      <Image
+                        src={f.src}
+                        alt={f.alt}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 580px"
+                      />
+                    </div>
+                  ))}
+                </div>
+                {data.pripad.fotoPopis && (
+                  <figcaption className="text-sm text-brand-light/60 mt-4 max-w-[60ch]">
+                    {data.pripad.fotoPopis}
+                  </figcaption>
+                )}
+              </figure>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Co vyrobíme */}
       <section className="section-pad bg-white">

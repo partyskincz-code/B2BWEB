@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/reference`, lastModified: D.reference, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/tetovacky-na-firemni-event`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/tetovacky-na-veletrh`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${SITE}/tetovacky-na-festival`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/tetovacky-na-festival`, lastModified: D.noveLandingy, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/tetovacky-pro-skoly`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/tetovacky-na-firemni-vecirek`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/tetovacky-pro-muzea-a-pamatky`, lastModified: D.noveLandingy, changeFrequency: "monthly", priority: 0.8 },

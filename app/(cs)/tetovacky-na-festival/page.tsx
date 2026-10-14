@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage";
 
 export const metadata: Metadata = {
-  title: "Tetovačky a promo materiály na festival",
+  title: "Tetovačky na festival, závod a sportovní akci",
   description:
-    "Dočasné tetovačky na festival ve velkých objemech, výdrž 3 až 7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
+    "Dočasné tetovačky na festival, běžecký závod a sportovní akci. Výdrž 3 až 7 dní, odolné potu i vodě. Realizace pro trailový závod Li.t.r. kolem Lipna.",
   alternates: { canonical: "/tetovacky-na-festival" },
   openGraph: {
-    title: "Tetovačky a promo materiály na festival | Make the Moment",
-    description: "Dočasné tetovačky na festival ve velkých objemech, výdrž 3 až 7 dní, voděodolné. Samolepky, tiskoviny a balení po sériích pro rozdávání u stánku.",
+    title: "Tetovačky na festival, závod a sportovní akci | Make the Moment",
+    description: "Dočasné tetovačky na festival, běžecký závod a sportovní akci. Výdrž 3 až 7 dní, odolné potu i vodě. Realizace pro trailový závod Li.t.r. kolem Lipna.",
     url: "/tetovacky-na-festival",
     images: [
       {
@@ -22,9 +22,38 @@ export const metadata: Metadata = {
 };
 
 const data: Prilezitost = {
-  "tag": "Festivaly a venkovní akce",
-  "h1": "Tetovačky a promo materiály na festival",
-  "perex": "Na festivalu funguje to, co si člověk nalepí a nosí celý víkend. Dočasné tetovačky vydrží 3 až 7 dní, snesou pot i vodu a na fotkách z akce jde vaše značka dál sama.",
+  "tag": "Festivaly, závody a venkovní akce",
+  "h1": "Tetovačky na festival, závod a sportovní akci",
+  "perex": "Na festivalu i na závodě funguje to, co si člověk nalepí a nosí celý víkend. Dočasné tetovačky vydrží 3 až 7 dní, snesou pot, déšť i cíl po sto kilometrech, a na fotkách z akce jde vaše značka dál sama.",
+  "pripad": {
+    "stitek": "Realizace",
+    "klient": "Lipno.trail.run",
+    "klientUrl": "https://www.lipnotrailrun.cz",
+    "h2": "Obrys Lipna na předloktí běžce, který ho právě oběhl",
+    "text": [
+      "Li.t.r. je víkendový trailový festival kolem Lipna: 111 kilometrů, 2 500 metrů převýšení, trasa rozdělená na deset úseků a kus cesty vedoucí přes Rakousko. Pro první ročník jsme vyrobili tetovačky s logem závodu v nákladu přes tisíc kusů.",
+      "Motiv pro sólo běžce, tedy ty, kdo jdou celých sto jedenáct kilometrů v kuse, nebyl jen logo. Byl to obrys Lipna, tvar té samé trasy, kterou měli za sebou, s názvem závodu uvnitř. Tetovačka tím přestala být reklamním předmětem a stala se odznakem, že jsi to dal.",
+      "Přesně tohle je rozdíl mezi promem, které skončí v koši u stánku, a promem, které si člověk sám nalepí na ruku a vyfotí se s ním. Značka závodu pak chodí po Lipensku na lidech ještě několik dní po doběhu."
+    ],
+    "cisla": [
+      { "hodnota": "1 000+", "popis": "tetovaček s logem závodu pro první ročník" },
+      { "hodnota": "111 km", "popis": "trasa kolem Lipna, jejíž obrys nesl motiv pro sólo běžce" },
+      { "hodnota": "2 500 m", "popis": "převýšení, které měli nositelé motivu za sebou" }
+    ],
+    "fotky": [
+      {
+        "src": "/realizace-litr-motiv.jpg",
+        "alt": "Dočasná tetovačka s obrysem Lipna a názvem závodu Li.t.r. na předloktí běžkyně",
+        "pomer": "aspect-[3/4]"
+      },
+      {
+        "src": "/realizace-litr-aplikace.jpg",
+        "alt": "Nalepení dočasné tetovačky na předloktí a sejmutí přenosového papíru přímo v zázemí závodu",
+        "pomer": "aspect-[3/4]"
+      }
+    ],
+    "fotoPopis": "Motiv pro sólo běžce: obrys Lipna s názvem závodu uvnitř. Vlevo hotová tetovačka, vpravo nalepení přímo v zázemí závodu."
+  },
   "produkty": [
     {
       "title": "Tetovačky ve velkých objemech",
