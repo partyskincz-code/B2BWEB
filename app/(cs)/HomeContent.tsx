@@ -321,19 +321,6 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-brand-primary/10" />
         </div>
 
-        {/* Stamp, bottom right of photo */}
-        <div className="absolute bottom-20 right-6 sm:right-14 opacity-80 rotate-[-6deg] select-none pointer-events-none hidden sm:block">
-          <div className="border-[3px] border-brand-primary rounded-xl px-4 py-2 text-center bg-white/10 backdrop-blur-sm">
-            <Image
-              src="/logo-mtm.png"
-              alt="Make the Moment"
-              width={918}
-              height={336}
-              className="h-8 w-auto mx-auto opacity-90"
-            />
-            <p className="text-brand-secondary/70 text-[9px] font-semibold tracking-[0.2em] uppercase mt-1">temporary tattoos</p>
-          </div>
-        </div>
 
         {/* Left-side content */}
         <div className="relative z-10 container-pad w-full pt-24 md:pt-28 pb-16 md:pb-20">
@@ -411,12 +398,34 @@ export default function HomePage() {
       {/* ═══ PODZIMNÍ BĚHY ═══ */}
       <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-14 md:py-20">
         <div className="container-pad">
-          <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-5 text-center">
-            <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">Make the Moment</span>
-            <Heart size={38} className="fill-brand-primary text-brand-primary flex-shrink-0" aria-hidden="true" />
-            <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">
-              {lang === "en" ? "autumn races" : lang === "sk" ? "jesenné behy" : "podzimní běhy"}
-            </span>
+          <div className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12">
+            {/* Vyříznutá běžecká tetovačka, levá strana. Plave nahoru a dolů. */}
+            <motion.div
+              className="flex-shrink-0 w-16 sm:w-24 md:w-32"
+              animate={{ y: [0, -14, 0], rotate: [-7, -3, -7] }}
+              transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+              aria-hidden="true"
+            >
+              <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
+            </motion.div>
+
+            <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-4 text-center">
+              <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">Make the Moment</span>
+              <Heart size={38} className="fill-brand-primary text-brand-primary flex-shrink-0" aria-hidden="true" />
+              <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">
+                {lang === "en" ? "autumn races" : lang === "sk" ? "jesenné behy" : "podzimní běhy"}
+              </span>
+            </div>
+
+            {/* Druhá tetovačka, zrcadlově, aby běžci mířili k claimu z obou stran. */}
+            <motion.div
+              className="flex-shrink-0 w-16 sm:w-24 md:w-32 scale-x-[-1]"
+              animate={{ y: [0, -14, 0], rotate: [7, 3, 7] }}
+              transition={{ duration: 6.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.7 }}
+              aria-hidden="true"
+            >
+              <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
+            </motion.div>
           </div>
 
           <div className="mt-12 flex flex-wrap items-stretch justify-center gap-5">
