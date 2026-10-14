@@ -74,9 +74,42 @@ export default function ReferencePage() {
     },
   ];
 
+  const podporujeme = [
+    {
+      name: "Li.t.r. Lipno.trail.run",
+      url: "https://www.lipnotrailrun.cz",
+      what:
+        lang === "en"
+          ? "Temporary tattoos with the race logo, including the Lipno outline design for solo runners."
+          : lang === "sk"
+          ? "Dočasné tetovačky s logom pretekov, vrátane motívu s obrysom Lipna pre sólo bežcov."
+          : "Dočasné tetovačky s logem závodu, včetně motivu s obrysem Lipna pro sólo běžce.",
+      note:
+        lang === "en"
+          ? "Trail festival around Lipno, 111 km"
+          : lang === "sk"
+          ? "Trailový festival okolo Lipna, 111 km"
+          : "Trailový festival kolem Lipna, 111 km",
+    },
+    {
+      name: "Hospicová péče sv. Kleofáše",
+      url: "https://behyprohospice.cz",
+      what:
+        lang === "en"
+          ? "Temporary tattoos and glitter freckles for Běh pro Kleofáše, the charity run supporting the hospice."
+          : lang === "sk"
+          ? "Dočasné tetovačky a trblietavé pehy pre Beh pre Kleofáša, charitatívny beh v prospech hospicu."
+          : "Dočasné tetovačky a třpytivé pihy pro Běh pro Kleofáše, charitativní závod ve prospěch hospice.",
+      note:
+        lang === "en"
+          ? "Charity run, 13th edition"
+          : lang === "sk"
+          ? "Charitatívny beh, 13. ročník"
+          : "Charitativní běh, 13. ročník",
+    },
+  ];
+
   const klienti = [
-    { name: "Li.t.r. Lipno.trail.run", url: "https://www.lipnotrailrun.cz" },
-    { name: "Běh pro Kleofáše", url: "https://behyprohospice.cz" },
     { name: "got2b", url: "" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
     { name: "Gepard Express", url: "https://uzkokolejky.cz" },
@@ -91,16 +124,16 @@ export default function ReferencePage() {
       href: "/tetovacky-na-festival",
       title:
         lang === "en"
-          ? "Li.t.r., Lipno outline for solo runners"
+          ? "Li.t.r., a custom solution for a trail race"
           : lang === "sk"
-          ? "Li.t.r., obrys Lipna pre sólo bežcov"
-          : "Li.t.r., obrys Lipna pro sólo běžce",
+          ? "Li.t.r., riešenie na mieru pre trailový pretek"
+          : "Li.t.r., řešení na míru pro trailový závod",
       desc:
         lang === "en"
-          ? "Temporary tattoo for the Lipno.trail.run trail race: the outline of Lipno with the race name inside, for runners who covered all 111 km."
+          ? "A design created for the 111 km race around Lipno. Not a promotional item, but a badge for those who covered the whole course."
           : lang === "sk"
-          ? "Dočasná tetovačka pre trailový závod Lipno.trail.run: obrys Lipna s názvom pretekov vnútri, pre bežcov, ktorí zvládli celých 111 km."
-          : "Dočasná tetovačka pro trailový závod Lipno.trail.run: obrys Lipna s názvem závodu uvnitř, pro běžce, kteří zvládli celých 111 km.",
+          ? "Motív navrhnutý pre 111 km dlhý pretek okolo Lipna. Nie reklamný predmet, ale odznak pre tých, čo trasu zvládli celú."
+          : "Motiv navržený pro 111 km dlouhý závod kolem Lipna. Ne reklamní předmět, ale odznak pro ty, kdo trasu zvládli celou.",
     },
     {
       src: "/realizace-prebal-b2b-a5.jpg",
@@ -331,7 +364,7 @@ export default function ReferencePage() {
 
           <FadeUp>
             <p className="tag mb-4 text-center">
-              {lang === "en" ? "Brands and events we have worked with" : lang === "sk" ? "Značky a akcie, s ktorými sme spolupracovali" : "Značky a akce, se kterými jsme spolupracovali"}
+              {lang === "en" ? "Some of our clients" : lang === "sk" ? "Niektorí z našich klientov" : "Někteří z našich klientů"}
             </p>
             <div className="relative overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
               <motion.div
@@ -359,6 +392,50 @@ export default function ReferencePage() {
               </motion.div>
             </div>
           </FadeUp>
+        </div>
+      </section>
+
+      {/* Podporujeme */}
+      <section className="section-pad bg-white">
+        <div className="container-pad">
+          <FadeUp className="mb-14 max-w-3xl">
+            <span className="tag mb-5 block">
+              {lang === "en" ? "Beyond orders" : lang === "sk" ? "Nad rámec zákaziek" : "Nad rámec zakázek"}
+            </span>
+            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mb-6 max-w-[16ch]">
+              {lang === "en" ? "Who we support" : lang === "sk" ? "Koho podporujeme" : "Koho podporujeme"}
+            </h2>
+            <p className="lead max-w-[58ch]">
+              {lang === "en"
+                ? "Some events do not have a budget for promo, and they are often the ones most worth doing. We supply the tattoos and take part."
+                : lang === "sk"
+                ? "Niektoré akcie nemajú na promo rozpočet, a často sú to práve tie, ktoré majú najväčší zmysel. Tetovačky dodáme a sme pri tom."
+                : "Některé akce na promo rozpočet nemají, a často jsou to právě ty, které dávají největší smysl. Tetovačky dodáme a jsme u toho."}
+            </p>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0">
+            {podporujeme.map((o, i) => (
+              <FadeUp key={o.name} delay={i * 0.08}>
+                <div className="border-t border-brand-secondary/20 pt-7 pb-10 h-full flex flex-col">
+                  <span className="tag mb-4 block">{o.note}</span>
+                  <h3 className="font-display font-extrabold text-brand-secondary text-2xl mb-4 max-w-[18ch]">
+                    {o.name}
+                  </h3>
+                  <p className="text-[#3F4A55] leading-relaxed flex-1 mb-7 max-w-[46ch]">{o.what}</p>
+                  <a
+                    href={o.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 self-start text-sm text-brand-primary border-b border-brand-primary/40 pb-1 hover:border-brand-primary transition-colors"
+                  >
+                    {lang === "en" ? "Visit the website" : lang === "sk" ? "Navštíviť web" : "Navštívit web"}
+                    <ArrowRight size={14} />
+                  </a>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
         </div>
       </section>
 
