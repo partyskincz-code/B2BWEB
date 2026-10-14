@@ -86,6 +86,7 @@ export default function ReferencePage() {
   const photos = [
     {
       src: "/realizace-litr-motiv.jpg",
+      href: "/tetovacky-na-festival",
       title:
         lang === "en"
           ? "Li.t.r., Lipno outline for solo runners"
@@ -101,6 +102,7 @@ export default function ReferencePage() {
     },
     {
       src: "/realizace-litr-aplikace.jpg",
+      href: "/tetovacky-na-festival",
       title:
         lang === "en"
           ? "Li.t.r., applying the tattoo at the race"
@@ -127,22 +129,7 @@ export default function ReferencePage() {
           ? "Custom A5 sheet with rainbow motifs and full got2b branding. Full-colour print including white ink."
           : lang === "sk"
           ? "Zákazkový A5 arch s dúhovými motívmi a plným brandingom got2b. Plnofarebná tlač vrátane bielej."
-          : "Zakázková A5 tetovačka s duhovou tematikou a plným brandingem got2b. Plnobarevný tisk včetně bílé barvy.",
-    },
-    {
-      src: "/realizace-prebal-b2b-a5-zadni.jpg",
-      title:
-        lang === "en"
-          ? "got2b, Custom packaging, back"
-          : lang === "sk"
-          ? "got2b, Obal na mieru, zadná strana"
-          : "got2b, Zakázkový obal, zadní strana",
-      desc:
-        lang === "en"
-          ? "Back of the branded packaging with instructions and brand story printed directly on the cover."
-          : lang === "sk"
-          ? "Zadná strana brandovaného obalu, návod a brand story priamo na obale."
-          : "Zadní strana brandovaného obalu, návod na použití a brand story přímo na přebalu.",
+          : "Zakázková A5 tetovačka s duhovou tematikou a plným brandingem got2b, včetně oboustranného přebalu s návodem na rubu. Plnobarevný tisk včetně bílé barvy.",
     },
     {
       src: "/realizace-detske-prebal-a6.jpg",
@@ -195,7 +182,6 @@ export default function ReferencePage() {
     { type: "Sportovní akce", scope: "Tetovačky s logem závodu, obrys trasy", result: "Motiv, který si běžci po doběhu nalepili sami" },
     { type: "Event na místě", scope: "Nalepení v zázemí závodu", result: "Značka na rukou účastníků po zbytek víkendu" },
     { type: "Brand activation", scope: "A5 tetovačky + brandovaný přebal", result: "Jednotný vizuál připravený pro distribuci na akci" },
-    { type: "Packaging", scope: "Oboustranný přebal + návod", result: "Produkt připravený k okamžitému předání návštěvníkům" },
     { type: "Velkoobchod", scope: "Tematická A6 kolekce + balení", result: "Opakovatelná produktová řada pro maloobchod" },
     { type: "Sezónní kampaň", scope: "A5 motivy + kraftový přebal", result: "Kompletní limitovaná edice v jednom balení" },
     { type: "Svatba", scope: "Tetovací koutek + instrukce", result: "Samoobslužná aktivita pro hosty bez obsluhy" },
@@ -204,7 +190,6 @@ export default function ReferencePage() {
     { type: "Športová akcia", scope: "Tetovačky s logom pretekov, obrys trasy", result: "Motív, ktorý si bežci po dobehnutí nalepili sami" },
     { type: "Event na mieste", scope: "Nalepenie v zázemí pretekov", result: "Značka na rukách účastníkov po zvyšok víkendu" },
     { type: "Brand activation", scope: "A5 tetovačky + brandovaný obal", result: "Jednotný vizuál pripravený na distribúciu na akcii" },
-    { type: "Packaging", scope: "Obojstranný obal + návod", result: "Produkt pripravený na okamžité odovzdanie návštevníkom" },
     { type: "Veľkoobchod", scope: "Tematická A6 kolekcia + balenie", result: "Opakovateľný produktový rad pre maloobchod" },
     { type: "Sezónna kampaň", scope: "A5 motívy + kraftový obal", result: "Kompletná limitovaná edícia v jednom balení" },
     { type: "Svadba", scope: "Tetovací kútik + inštrukcie", result: "Samoobslužná aktivita pre hostí bez obsluhy" },
@@ -212,7 +197,6 @@ export default function ReferencePage() {
     { type: "Sports event", scope: "Race logo tattoos, outline of the course", result: "A design runners applied themselves after finishing" },
     { type: "On-site activation", scope: "Applied in the race village", result: "The brand on participants' arms for the rest of the weekend" },
     { type: "Brand activation", scope: "A5 tattoos + branded sleeve", result: "A consistent visual ready for event distribution" },
-    { type: "Packaging", scope: "Two-sided sleeve + instructions", result: "A product ready to hand directly to visitors" },
     { type: "Wholesale", scope: "Themed A6 collection + packaging", result: "A repeatable product line for retail" },
     { type: "Seasonal campaign", scope: "A5 designs + kraft sleeve", result: "A complete limited edition in one package" },
     { type: "Wedding", scope: "Tattoo corner + instructions", result: "A self-service guest activity requiring no staff" },
@@ -254,7 +238,7 @@ export default function ReferencePage() {
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ type: "spring", stiffness: 260, damping: 22 }}
-                  className="group bg-white overflow-hidden border border-gray-100 hover: transition-shadow duration-300 h-full"
+                  className="group bg-white overflow-hidden border border-gray-100 transition-colors duration-300 h-full"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <motion.div
@@ -278,6 +262,15 @@ export default function ReferencePage() {
                       {photo.title}
                     </h3>
                     <p className="text-gray-500 text-sm leading-relaxed">{photo.desc}</p>
+                    {"href" in photo && photo.href && (
+                      <Link
+                        href={photo.href}
+                        className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-brand-primary border-b border-brand-primary/40 pb-0.5 hover:border-brand-primary transition-colors"
+                      >
+                        {lang === "en" ? "Read the full story" : lang === "sk" ? "Prečítať celý príbeh" : "Přečíst celý příběh"}
+                        <ArrowRight size={14} />
+                      </Link>
+                    )}
                     <dl className="mt-4 pt-4 border-t border-gray-100 space-y-2 text-xs">
                       <div><dt className="font-semibold text-brand-secondary inline">{lang === "en" ? "Scope" : lang === "sk" ? "Rozsah" : "Rozsah"}: </dt><dd className="text-gray-500 inline">{caseDetails[i].scope}</dd></div>
                       <div><dt className="font-semibold text-brand-secondary inline">{lang === "en" ? "Outcome" : lang === "sk" ? "Výsledok" : "Výsledek"}: </dt><dd className="text-gray-500 inline">{caseDetails[i].result}</dd></div>
