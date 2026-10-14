@@ -211,6 +211,18 @@ export default function Page() {
             </p>
           </div>
 
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link href="/velkoobjemova-vyroba-tetovacek" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Ceny velkých sérií tetovaček
+            </Link>
+            <Link href="/samolepky-s-logem" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Samolepky s logem podrobně
+            </Link>
+            <Link href="/tiskoviny-na-miru" className="px-4 py-2 rounded-xl border border-gray-200 text-sm text-gray-600 hover:border-brand-primary/40 hover:text-brand-primary transition-colors">
+              Tiskoviny, pohlednice a vizitky
+            </Link>
+          </div>
+
           <a href="/MakeTheMoment_B2B_Cenik.pdf" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-brand-primary hover:underline" target="_blank" rel="noopener noreferrer">
             Stáhnout kompletní ceník (PDF) <ArrowRight size={15} />
           </a>

@@ -25,8 +25,8 @@ export default function Footer() {
   const footerLinks = {
     produkty: [
       { href: localizedPath("/produkty#tetovacky"), label: lang === "en" ? "Temporary Tattoos" : lang === "sk" ? "Dočasné tetovačky" : "Dočasné tetovačky" },
-      { href: localizedPath("/produkty#samolepky"), label: lang === "en" ? "Custom Stickers" : lang === "sk" ? "Samolepky na mieru" : "Samolepky na míru" },
-      { href: localizedPath("/produkty#pohlednice"), label: lang === "en" ? "Postcards & Cards" : lang === "sk" ? "Pohľadnice a priania" : "Pohlednice a přání" },
+      { href: "/samolepky-s-logem", label: lang === "en" ? "Custom Stickers" : lang === "sk" ? "Samolepky na mieru" : "Samolepky na míru" },
+      { href: "/tiskoviny-na-miru", label: lang === "en" ? "Postcards & Cards" : lang === "sk" ? "Pohľadnice a priania" : "Pohlednice a přání" },
       { href: localizedPath("/produkty#kompletni"), label: lang === "en" ? "Complete Solution" : lang === "sk" ? "Kompletné riešenie" : "Kompletní řešení" },
     ],
     sluzby: [
@@ -45,6 +45,7 @@ export default function Footer() {
       { href: "/tetovacky-na-festival", label: lang === "en" ? "Festivals & events" : lang === "sk" ? "Festivaly a akcie" : "Festivaly a akce" },
       { href: "/tetovacky-pro-skoly", label: lang === "en" ? "Schools & children" : lang === "sk" ? "Školy a deti" : "Školy a děti" },
       { href: localizedPath("/produkty#obchody"), label: lang === "en" ? "Wholesale" : lang === "sk" ? "Veľkoobchod" : "Velkoobchod" },
+      { href: "/velkoobjemova-vyroba-tetovacek", label: lang === "en" ? "High volume production" : lang === "sk" ? "Veľkoobjemová výroba" : "Velkoobjemová výroba" },
     ],
   };
 

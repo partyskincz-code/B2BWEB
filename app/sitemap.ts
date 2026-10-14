@@ -16,6 +16,7 @@ const D = {
   reference: "2026-09-08",
   prilezitosti: "2026-09-15",
   poradna: "2026-09-15",
+  noveLandingy: "2026-10-14",
   kontakt: "2026-09-08",
 };
 
@@ -31,6 +32,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/tetovacky-na-festival`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/tetovacky-pro-skoly`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/tetovacky-na-firemni-vecirek`, lastModified: D.prilezitosti, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/velkoobjemova-vyroba-tetovacek`, lastModified: D.noveLandingy, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE}/samolepky-s-logem`, lastModified: D.noveLandingy, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE}/tiskoviny-na-miru`, lastModified: D.noveLandingy, changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE}/poradna`, lastModified: D.poradna, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/poradna/jak-pripravit-podklady-pro-tisk-tetovacek`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE}/poradna/jaky-format-tetovacek-zvolit`, lastModified: D.poradna, changeFrequency: "yearly", priority: 0.6 },
