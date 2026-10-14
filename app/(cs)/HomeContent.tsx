@@ -258,12 +258,44 @@ export default function HomePage() {
     ? ["Firemný event", "Teambuilding", "Festival", "Veľtrh", "Konferencia", "Svadba", "Brand launch", "Detská párty", "Športová akcia"]
     : ["Firemní event", "Teambuilding", "Festival", "Veletrh", "Konference", "Svatba", "Brand launch", "Dětská party", "Sportovní akce"];
 
+  // Běhy, které podporujeme. Až budou k dispozici loga, stačí doplnit cestu
+  // do pole logo a místo textového zápisu se vykreslí obrázek.
+  const behy = [
+    {
+      name: "Li.t.r. Lipno.trail.run",
+      wordmark: "Li.t.r.",
+      barva: "#8E58FF",
+      logo: "",
+      url: "https://www.lipnotrailrun.cz",
+      popis:
+        lang === "en"
+          ? "Trail festival around Lipno, 111 km"
+          : lang === "sk"
+          ? "Trailový festival okolo Lipna, 111 km"
+          : "Trailový festival kolem Lipna, 111 km",
+    },
+    {
+      name: "Běh pro Kleofáše",
+      wordmark: "Běh pro Kleofáše",
+      barva: "#F2EBE9",
+      logo: "",
+      url: "https://behyprohospice.cz",
+      popis:
+        lang === "en"
+          ? "Charity run for the sv. Kleofáš hospice"
+          : lang === "sk"
+          ? "Charitatívny beh pre hospic sv. Kleofáša"
+          : "Charitativní běh pro Hospicovou péči sv. Kleofáše",
+    },
+  ];
+
   const clientLogos = [
     { name: "Gepard Express", url: "https://uzkokolejky.cz" },
     { name: "HK Mladí Draci Šumperk", url: "https://www.hkmdsumperk.cz" },
     { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
     { name: "NaZemi", url: "https://nazemi.cz" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
+    { name: "Hospicová péče sv. Kleofáše", url: "https://behyprohospice.cz" },
   ];
 
   return (
@@ -374,6 +406,55 @@ export default function HomePage() {
           <span className="text-brand-secondary/30 text-xs uppercase tracking-widest">{t("hero.scroll")}</span>
           <div className="w-px h-8 bg-gradient-to-b from-brand-secondary/30 to-transparent animate-pulse" />
         </motion.div>
+      </section>
+
+      {/* ═══ PODZIMNÍ BĚHY ═══ */}
+      <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-16 md:py-20">
+        <div className="container-pad">
+          <div className="flex flex-wrap items-center gap-x-16 gap-y-10">
+            <div className="flex-[999_1_300px] min-w-0">
+              <p className="text-[12px] font-medium uppercase tracking-[0.18em] opacity-60 mb-5">
+                {lang === "en" ? "Right now" : lang === "sk" ? "Práve teraz" : "Zrovna teď"}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-display font-extrabold max-w-[16ch] mb-5">
+                {lang === "en" ? "Autumn races. And we are there." : lang === "sk" ? "Jesenné behy. A my pri tom." : "Podzimní běhy. A my u toho."}
+              </h2>
+              <p className="text-lg font-light leading-relaxed opacity-80 max-w-[48ch]">
+                {lang === "en"
+                  ? "Two races we supply tattoos for, and take part in."
+                  : lang === "sk"
+                  ? "Dva behy, na ktoré dodávame tetovačky a sme pri tom."
+                  : "Dva běhy, na které dodáváme tetovačky a jsme u toho."}
+              </p>
+            </div>
+
+            <div className="flex-[1_1_320px] min-w-0 flex flex-wrap gap-5">
+              {behy.map((b, i) => (
+                <motion.a
+                  key={b.name}
+                  href={b.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex-1 min-w-[150px] border border-brand-light/20 px-6 py-7 hover:border-brand-light/60 transition-colors"
+                  animate={{ y: [0, -9, 0] }}
+                  transition={{ duration: 5.5 + i * 0.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: i * 0.5 }}
+                >
+                  {b.logo ? (
+                    <Image src={b.logo} alt={b.name} width={320} height={120} className="h-10 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity mb-4" />
+                  ) : (
+                    <span
+                      className="block font-display font-extrabold text-2xl leading-tight mb-4"
+                      style={{ color: b.barva }}
+                    >
+                      {b.wordmark}
+                    </span>
+                  )}
+                  <span className="block text-xs opacity-60 leading-relaxed">{b.popis}</span>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* ═══ USP ═══ */}
@@ -752,11 +833,11 @@ export default function HomePage() {
           </div>
 
           <FadeUp>
-            <div className="border-t border-gray-100 pt-10">
-              <p className="text-center text-gray-400 text-sm uppercase tracking-widest mb-8">
-                {lang === "en" ? "Trusted by" : lang === "sk" ? "Dôverujú nám" : "Důvěřují nám"}
+            <div className="border-t border-brand-secondary/20 pt-12">
+              <p className="tag mb-9 block">
+                {lang === "en" ? "We have worked with" : lang === "sk" ? "Spolupracovali sme s" : "Spolupracovali jsme s"}
               </p>
-              <div className="flex flex-wrap justify-center items-center gap-8">
+              <div className="flex flex-wrap items-center gap-x-10 gap-y-5">
                 {clientLogos.map((logo) =>
                   logo.url ? (
                     <a
@@ -764,14 +845,14 @@ export default function HomePage() {
                       href={logo.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm hover:border-brand-primary/30 hover:text-brand-primary transition-all duration-200"
+                      className="font-display font-bold text-lg text-brand-secondary/35 hover:text-brand-primary transition-colors"
                     >
                       {logo.name}
                     </a>
                   ) : (
                     <div
                       key={logo.name}
-                      className="px-6 py-3 bg-gray-50 rounded-xl border border-gray-100 text-gray-400 font-semibold text-sm"
+                      className="font-display font-bold text-lg text-brand-secondary/35"
                     >
                       {logo.name}
                     </div>
