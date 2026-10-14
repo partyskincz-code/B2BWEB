@@ -399,11 +399,13 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-14 md:py-20">
         <div className="container-pad">
           <div className="flex items-center justify-center gap-4 sm:gap-8 md:gap-12">
-            {/* Vyříznutá běžecká tetovačka, levá strana. Plave nahoru a dolů. */}
+            {/* Vyříznutá běžecká tetovačka, levá strana. Běží doleva, pryč od claimu.
+                Zrcadlení musí být na vnitřním divu, animace framer-motion totiž
+                přepisuje inline transform a třídu scale-x by přebila. */}
             <motion.div
               className="flex-shrink-0 w-16 sm:w-24 md:w-32"
-              animate={{ y: [0, -14, 0], rotate: [-7, -3, -7] }}
-              transition={{ duration: 6, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+              animate={{ y: [0, -13, -2, -16, 0], x: [0, -6, 0, -3, 0], rotate: [-6, -11, -4, -9, -6] }}
+              transition={{ duration: 3.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] }}
               aria-hidden="true"
             >
               <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
@@ -417,14 +419,17 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Druhá tetovačka, zrcadlově, aby běžci mířili k claimu z obou stran. */}
+            {/* Druhá tetovačka, opravdu zrcadlená, běží doprava. Jiný rytmus,
+                aby to nevypadalo jako jedna animace puštěná dvakrát. */}
             <motion.div
-              className="flex-shrink-0 w-16 sm:w-24 md:w-32 scale-x-[-1]"
-              animate={{ y: [0, -14, 0], rotate: [7, 3, 7] }}
-              transition={{ duration: 6.8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: 0.7 }}
+              className="flex-shrink-0 w-16 sm:w-24 md:w-32"
+              animate={{ y: [0, -16, -3, -11, 0], x: [0, 6, 0, 3, 0], rotate: [6, 10, 3, 12, 6] }}
+              transition={{ duration: 3.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1], delay: 0.45 }}
               aria-hidden="true"
             >
-              <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
+              <div className="scale-x-[-1]">
+                <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
+              </div>
             </motion.div>
           </div>
 
