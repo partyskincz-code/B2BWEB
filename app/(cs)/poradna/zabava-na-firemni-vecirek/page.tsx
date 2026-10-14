@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 const data: Clanek = {
   "nadpis": "Zábava na firemní večírek, která opravdu funguje",
   "perex": "Nejhorší věta na firemním večírku je: a teď se všichni postavte, budeme hrát hru. Zábava, která funguje, je ta, do které se člověk může zapojit sám a kdykoli z ní odejít.",
-  "datum": "10. 9. 2026",
-  "ctenaMinut": 6,
+  "datum": "14. 10. 2026",
+  "ctenaMinut": 8,
   "foto": {
     "src": "/realizace-papirovy-prebal.jpg",
     "alt": "Tetovačky s firemním motivem připravené jako zábava na firemní večírek"
@@ -72,6 +72,62 @@ const data: Clanek = {
         "Program natlačený do doby, kdy lidé chtějí jíst."
       ]
     },
+          {
+      "typ": "h2",
+      "text": "Přehled programů podle rozpočtu a velikosti firmy"
+      },
+      {
+      "typ": "p",
+      "text": "Ať je jasné, s čím tetovačky srovnáváme. Tohle jsou varianty, které se na českých firemních večírcích objevují nejčastěji, s tím, co stojí a kdy se hodí."
+      },
+      {
+      "typ": "h3",
+      "text": "Kapela nebo DJ, 15 000 až 60 000 Kč"
+      },
+      {
+      "typ": "p",
+      "text": "Nejjistější volba na velký večírek, protože vyplní celý večer bez vaší práce. Nevýhoda je cena a to, že se u kapely špatně mluví. Na firmu, kde se lidé navzájem neznají, to problém neřeší, jen ho přehluší."
+      },
+      {
+      "typ": "h3",
+      "text": "Moderátor nebo komik, 10 000 až 50 000 Kč"
+      },
+      {
+      "typ": "p",
+      "text": "Stojí a padá s tím, jestli si sedne s publikem. Když ano, je to nejlepší investice večera. Když ne, je to nejtrapnější. U firem pod padesát lidí se spíš nevyplatí riziko."
+      },
+      {
+      "typ": "h3",
+      "text": "Fotokoutek, 6 000 až 15 000 Kč"
+      },
+      {
+      "typ": "p",
+      "text": "Funguje spolehlivě, protože dává lidem důvod se potkat a pak mají fotky. Potřebuje ale místo, obsluhu a lidi musí přijít sami. V první hodině bývá prázdný."
+      },
+      {
+      "typ": "h3",
+      "text": "Degustace, barista nebo míchání drinků, 8 000 až 30 000 Kč"
+      },
+      {
+      "typ": "p",
+      "text": "Dobré na menší firmy a na večírky, kde chcete, aby se mluvilo. Omezení je kapacita: na sto lidí potřebujete víc stanovišť, jinak se čeká ve frontě."
+      },
+      {
+      "typ": "h3",
+      "text": "Týmové hry a soutěže, 0 až 20 000 Kč"
+      },
+      {
+      "typ": "p",
+      "text": "Zdarma, pokud je vymyslíte sami, ale potřebují někoho, kdo je povede, a část lidí se jich odmítne účastnit. Na večírku s alkoholem fungují hůř než na teambuildingu."
+      },
+      {
+      "typ": "h3",
+      "text": "Tetovací koutek, 1 500 až 6 000 Kč"
+      },
+      {
+      "typ": "p",
+      "text": "Nejlevnější z celého seznamu a jediný, který nepotřebuje obsluhu ani scénář. Nevyplní ale celý večer, takže to není náhrada za hudbu. Je to doplněk na první hodinu, kdy je potřeba, aby se lidé začali bavit."
+      },
     {
       "typ": "h2",
       "text": "Tetovačky jako program bez organizace"

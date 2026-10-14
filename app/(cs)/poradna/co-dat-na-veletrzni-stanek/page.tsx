@@ -25,8 +25,8 @@ export const metadata: Metadata = {
 const data: Clanek = {
   "nadpis": "Co dát na veletržní stánek, aby si to lidi vzali",
   "perex": "Návštěvník veletrhu projde za den padesát stánků a odnese si z nich tašku, kterou večer na hotelu vysype. Otázka není, co rozdat, ale co z toho přežije cestu domů.",
-  "datum": "7. 9. 2026",
-  "ctenaMinut": 5,
+  "datum": "14. 10. 2026",
+  "ctenaMinut": 7,
   "foto": {
     "src": "/hero.jpg",
     "alt": "Lidé na akci s dočasnými tetovačkami"
@@ -57,6 +57,41 @@ const data: Clanek = {
         "Něco, co vypadá jako dárek, ne jako reklama. Přebal na míru dělá překvapivě velký rozdíl."
       ]
     },
+          {
+      "typ": "h2",
+      "text": "Srovnání nejčastějších předmětů na stánek"
+      },
+      {
+      "typ": "p",
+      "text": "Co se na českých veletrzích rozdává nejčastěji, co to stojí za kus a jakou má to slabinu. Vyrábíme jen poslední položku, u ostatních nemáme důvod nic přikrášlovat."
+      },
+      {
+      "typ": "ul",
+      "polozky": [
+      "Propisky, 8 až 25 Kč: vezme si je každý, nikdo si nevzpomene od koho. Nejnižší poměr zapamatování k ceně.",
+      "Bloky a zápisníky, 40 až 120 Kč: užitečné, ale těžké. Na veletrhu, kde lidé chodí celý den, to hraje proti vám.",
+      "Plátěné tašky, 50 až 150 Kč: praktické a dobře viditelné, jenže na velkém veletrhu jich návštěvník nasbírá pět a použije jednu.",
+      "Sladkosti, 5 až 20 Kč: zastaví člověka u stánku, ale za hodinu po nich není stopa a značku si nespojí.",
+      "Powerbanky a USB, 150 až 500 Kč: zapamatovatelné, ale drahé, takže je nerozdáte, jen odměníte pár vybraných kontaktů.",
+      "Dočasné tetovačky, 9 až 33 Kč: levné, lehké, nalepí se přímo na stánku a chodí po veletrhu na lidech. Nehodí se na formální oborové akce."
+      ]
+      },
+      {
+      "typ": "h2",
+      "text": "Jak spočítat náklad na jeden kontakt"
+      },
+      {
+      "typ": "p",
+      "text": "Tohle je číslo, kterým se dá rozhodnutí obhájit před vedením. Vezměte cenu za kus a vydělte ji podílem lidí, kteří si předmět vezmou a zároveň si vás zapamatují."
+      },
+      {
+      "typ": "p",
+      "text": "U propisky je převzetí vysoké, ale zapamatování skoro nulové, takže reálný náklad na zapamatovaný kontakt vychází v řádu stokorun. U tetovačky, kterou si člověk nalepí přímo u stánku a odejde s ní na ruce, je zapamatování výrazně vyšší, protože s předmětem strávil minutu vaší pozornosti a ptají se ho na něj ostatní."
+      },
+      {
+      "typ": "p",
+      "text": "Praktické pravidlo: předmět, který se použije na místě, má řádově lepší poměr než předmět, který si návštěvník odnese do tašky."
+      },
     {
       "typ": "h2",
       "text": "Proč tetovačky"
