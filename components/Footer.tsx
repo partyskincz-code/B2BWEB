@@ -44,6 +44,7 @@ export default function Footer() {
       { href: localizedPath("/produkty#svatby"), label: lang === "en" ? "Weddings & celebrations" : lang === "sk" ? "Svadby a oslavy" : "Svatby a oslavy" },
       { href: "/tetovacky-na-festival", label: lang === "en" ? "Festivals & events" : lang === "sk" ? "Festivaly a akcie" : "Festivaly a akce" },
       { href: "/tetovacky-pro-skoly", label: lang === "en" ? "Schools & children" : lang === "sk" ? "Školy a deti" : "Školy a děti" },
+      { href: "/tetovacky-pro-muzea-a-pamatky", label: lang === "en" ? "Museums & heritage sites" : lang === "sk" ? "Múzeá a pamiatky" : "Muzea a památky" },
       { href: localizedPath("/produkty#obchody"), label: lang === "en" ? "Wholesale" : lang === "sk" ? "Veľkoobchod" : "Velkoobchod" },
       { href: "/velkoobjemova-vyroba-tetovacek", label: lang === "en" ? "High volume production" : lang === "sk" ? "Veľkoobjemová výroba" : "Velkoobjemová výroba" },
     ],

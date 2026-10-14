@@ -22,14 +22,14 @@ export default function Navigation() {
   const localizedPath = (path: string) => lang === "cs" ? path : `/${lang}${path === "/" ? "" : path}`;
   const switchPath = (code: Lang) => {
     const pathWithoutLocale = pathname.replace(/^\/(sk|en)(?=\/|$)/, "") || "/";
-    const isLocalized = ["/", "/produkty", "/jak-to-funguje", "/reference", "/kontakt"].includes(pathWithoutLocale);
+    const isLocalized = ["/", "/produkty", "/cenik", "/jak-to-funguje", "/reference", "/kontakt"].includes(pathWithoutLocale);
     const target = isLocalized ? pathWithoutLocale : "/";
     return code === "cs" ? target : `/${code}${target === "/" ? "" : target}`;
   };
 
   const navLinks = [
     { href: localizedPath("/produkty"), label: t("nav.products") },
-    { href: "/cenik", label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
+    { href: localizedPath("/cenik"), label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
     { href: localizedPath("/jak-to-funguje"), label: t("nav.how") },
     { href: localizedPath("/reference"), label: t("nav.references") },
     { href: "/poradna", label: lang === "en" ? "Guides" : lang === "sk" ? "Poradňa" : "Poradna" },

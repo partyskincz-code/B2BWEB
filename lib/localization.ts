@@ -32,6 +32,11 @@ const pageMetadata = {
     sk: ["Tetovačky, samolepky a tlačoviny na mieru, cenník", "Dočasné tetovačky od 8 Kč, samolepky od 3 Kč a tlačoviny od 8 Kč za kus. Formáty A4 až A7, certifikované materiály a cenník na stiahnutie."],
     en: ["Custom tattoos, stickers and print materials, price list", "Temporary tattoos from CZK 8, stickers from CZK 3 and print materials from CZK 8 per piece. A4 to A7 formats, certified materials and downloadable price list."],
   },
+  "/cenik": {
+    cs: ["Ceník reklamních tetovaček, samolepek a tiskovin", "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 9 Kč za kus, samolepky od 3 Kč. Ceny jsou konečné."],
+    sk: ["Cenník reklamných tetovačiek, samolepiek a tlačovín", "Koľko stoja reklamné tetovačky s logom? Orientačné pásma podľa formátu a množstva, od 0,40 € za kus, samolepky od 0,15 €. Ceny sú konečné."],
+    en: ["Price list for custom tattoos, stickers and print materials", "What do promotional tattoos with your logo cost? Indicative bands by format and quantity, from 0,40 € per piece, stickers from 0,15 €. Final prices."],
+  },
   "/jak-to-funguje": {
     cs: ["Jak probíhá zakázka, od poptávky po dodání", "Pět kroků od poptávky k dodání. Odpověď do 24 hodin, grafický návrh do 48 hodin od briefu, výroba 5 až 20 pracovních dní. Časté otázky a záruky."],
     sk: ["Ako prebieha zákazka, od dopytu po dodanie", "Päť krokov od dopytu po dodanie. Odpoveď do 24 hodín, grafický návrh do 48 hodín od zadania a výroba 5 až 20 pracovných dní."],

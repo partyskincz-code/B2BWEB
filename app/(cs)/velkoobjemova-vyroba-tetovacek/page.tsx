@@ -37,6 +37,10 @@ const data: Prilezitost = {
       text: "Bílá podtisková vrstva drží barvy věrné i na tmavší pokožce. Bez ní jsou bílé plochy průhledné a motiv mění odstín.",
     },
     {
+      title: "Metalické, výsek a velké formáty",
+      text: "Zlaté a stříbrné metalické provedení, tvarový výsek přesně po obrysu motivu a formáty větší než A4. Cenu u těchto úprav počítáme podle zadání.",
+    },
+    {
       title: "Potisk rubu a balení",
       text: "Na rub archu se vejde návod, logo, QR kód nebo soutěžní mechanika. Balit umíme do papírového přebalu, do celofánu, nebo obojí.",
     },
@@ -47,6 +51,8 @@ const data: Prilezitost = {
     "Jeden dodavatel na tetovačky, samolepky i tiskoviny, takže celá akce vypadá jednotně",
     "Grafický návrh a jedno kolo úprav jsou v ceně, vizualizaci na reálném produktu vidíte před výrobou",
     "Certifikované materiály bezpečné pro děti, k dispozici je certifikát zdravotní nezávadnosti",
+    "Vzorek zdarma před zadáním velké série, ověříte si barvy i velikost motivu na kůži",
+    "Zvýhodněné ceny a přednostní výroba pro agentury a firmy, které objednávají opakovaně",
     "Výroba 5 až 20 pracovních dní podle objemu a složitosti, termín potvrdíme při objednávce",
   ],
   foto: {
@@ -89,6 +95,14 @@ const data: Prilezitost = {
       a: "Ano. Nejčastěji návod k použití, logo, věnování nebo QR kód na web či soutěž. Účtuje se 10 % z ceny zakázky a u velkých sérií se to vyplatí, protože arch pak funguje i jako reklamní nosič.",
     },
     {
+      q: "Umíte tvarový výsek a metalické provedení?",
+      a: "Ano. Tvarový výsek vede řez přesně po obrysu motivu, takže dodáme jednotlivé kusy připravené k rozdávání. Metalické zlaté a stříbrné provedení děláme také, hodí se na slavnostnější edice. U obojího počítáme cenu podle motivu a nákladu.",
+    },
+    {
+      q: "Pošlete vzorek před objednávkou?",
+      a: "Ano, před zadáním velké série posíláme vzorek zdarma. U desetitisícové zakázky je rozumné vidět barvy i to, jak motiv vypadá na kůži, dřív než se spustí výroba.",
+    },
+    {
       q: "Jsou materiály bezpečné?",
       a: "Ano, materiály jsou certifikované a bezpečné pro děti. Certifikát zdravotní nezávadnosti vám pošleme k zakázce. Tetovačky se nedoporučují na poraněnou nebo podrážděnou pokožku.",
     },
@@ -103,6 +117,7 @@ const data: Prilezitost = {
     { href: "/poradna/jak-pripravit-podklady-pro-tisk-tetovacek", label: "Jak připravit podklady pro tisk" },
     { href: "/poradna/kdy-zadat-vyrobu-promo-materialu", label: "Kdy zadat výrobu před akcí" },
     { href: "/tetovacky-na-festival", label: "Tetovačky na festival" },
+    { href: "/tetovacky-pro-muzea-a-pamatky", label: "Tetovačky pro muzea a památky" },
     { href: "/kontakt", label: "Nezávazná poptávka" },
   ],
 };
