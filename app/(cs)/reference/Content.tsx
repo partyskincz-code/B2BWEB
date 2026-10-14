@@ -75,6 +75,8 @@ export default function ReferencePage() {
   ];
 
   const klienti = [
+    { name: "Li.t.r. Lipno.trail.run", url: "https://www.lipnotrailrun.cz" },
+    { name: "Běh pro Kleofáše", url: "https://behyprohospice.cz" },
     { name: "got2b", url: "" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
     { name: "Gepard Express", url: "https://uzkokolejky.cz" },
@@ -99,22 +101,6 @@ export default function ReferencePage() {
           : lang === "sk"
           ? "Dočasná tetovačka pre trailový závod Lipno.trail.run: obrys Lipna s názvom pretekov vnútri, pre bežcov, ktorí zvládli celých 111 km."
           : "Dočasná tetovačka pro trailový závod Lipno.trail.run: obrys Lipna s názvem závodu uvnitř, pro běžce, kteří zvládli celých 111 km.",
-    },
-    {
-      src: "/realizace-litr-aplikace.jpg",
-      href: "/tetovacky-na-festival",
-      title:
-        lang === "en"
-          ? "Li.t.r., applying the tattoo at the race"
-          : lang === "sk"
-          ? "Li.t.r., nalepenie priamo na pretekoch"
-          : "Li.t.r., nalepení přímo na závodě",
-      desc:
-        lang === "en"
-          ? "Peeling off the transfer paper in the race village. Twenty seconds and the brand is on the runner's arm for the rest of the weekend."
-          : lang === "sk"
-          ? "Odstránenie prenosového papiera v zázemí pretekov. Dvadsať sekúnd a značka je na ruke po zvyšok víkendu."
-          : "Sejmutí přenosového papíru v zázemí závodu. Dvacet vteřin a značka je na ruce po zbytek víkendu.",
     },
     {
       src: "/realizace-prebal-b2b-a5.jpg",
@@ -180,7 +166,6 @@ export default function ReferencePage() {
 
   const caseDetailsCs = [
     { type: "Sportovní akce", scope: "Tetovačky s logem závodu, obrys trasy", result: "Motiv, který si běžci po doběhu nalepili sami" },
-    { type: "Event na místě", scope: "Nalepení v zázemí závodu", result: "Značka na rukou účastníků po zbytek víkendu" },
     { type: "Brand activation", scope: "A5 tetovačky + brandovaný přebal", result: "Jednotný vizuál připravený pro distribuci na akci" },
     { type: "Velkoobchod", scope: "Tematická A6 kolekce + balení", result: "Opakovatelná produktová řada pro maloobchod" },
     { type: "Sezónní kampaň", scope: "A5 motivy + kraftový přebal", result: "Kompletní limitovaná edice v jednom balení" },
@@ -188,14 +173,12 @@ export default function ReferencePage() {
   ];
   const caseDetails = lang === "cs" ? caseDetailsCs : lang === "sk" ? [
     { type: "Športová akcia", scope: "Tetovačky s logom pretekov, obrys trasy", result: "Motív, ktorý si bežci po dobehnutí nalepili sami" },
-    { type: "Event na mieste", scope: "Nalepenie v zázemí pretekov", result: "Značka na rukách účastníkov po zvyšok víkendu" },
     { type: "Brand activation", scope: "A5 tetovačky + brandovaný obal", result: "Jednotný vizuál pripravený na distribúciu na akcii" },
     { type: "Veľkoobchod", scope: "Tematická A6 kolekcia + balenie", result: "Opakovateľný produktový rad pre maloobchod" },
     { type: "Sezónna kampaň", scope: "A5 motívy + kraftový obal", result: "Kompletná limitovaná edícia v jednom balení" },
     { type: "Svadba", scope: "Tetovací kútik + inštrukcie", result: "Samoobslužná aktivita pre hostí bez obsluhy" },
   ] : [
     { type: "Sports event", scope: "Race logo tattoos, outline of the course", result: "A design runners applied themselves after finishing" },
-    { type: "On-site activation", scope: "Applied in the race village", result: "The brand on participants' arms for the rest of the weekend" },
     { type: "Brand activation", scope: "A5 tattoos + branded sleeve", result: "A consistent visual ready for event distribution" },
     { type: "Wholesale", scope: "Themed A6 collection + packaging", result: "A repeatable product line for retail" },
     { type: "Seasonal campaign", scope: "A5 designs + kraft sleeve", result: "A complete limited edition in one package" },
@@ -348,7 +331,7 @@ export default function ReferencePage() {
 
           <FadeUp>
             <p className="tag mb-4 text-center">
-              {lang === "en" ? "Some of our clients" : lang === "sk" ? "Niektorí z našich klientov" : "Někteří z našich klientů"}
+              {lang === "en" ? "Brands and events we have worked with" : lang === "sk" ? "Značky a akcie, s ktorými sme spolupracovali" : "Značky a akce, se kterými jsme spolupracovali"}
             </p>
             <div className="relative overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
               <motion.div

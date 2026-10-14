@@ -35,7 +35,8 @@ const data: Prilezitost = {
     "text": [
       "Li.t.r. je víkendový trailový festival kolem Lipna: 111 kilometrů, 2 500 metrů převýšení, trasa rozdělená na deset úseků a kus cesty vedoucí přes Rakousko. První ročník jsme podpořili jako partner a dodali jsme tetovačky s logem závodu.",
       "Motiv pro sólo běžce, tedy ty, kdo jdou celých sto jedenáct kilometrů v kuse, nebyl jen logo. Byl to obrys Lipna, tvar té samé trasy, kterou měli za sebou, s názvem závodu uvnitř. Tetovačka tím přestala být reklamním předmětem a stala se odznakem, že jsi to dal.",
-      "A právě proto tenhle formát doporučujeme pořadatelům závodů. Tetovačka není drahá položka v rozpočtu akce, ale je to jedna z mála věcí, které si účastník sám nalepí na ruku a vyfotí se s ní. Značka závodu pak chodí po Lipensku na lidech ještě několik dní po doběhu."
+      "A právě proto tenhle formát doporučujeme pořadatelům závodů. Tetovačka není drahá položka v rozpočtu akce, ale je to jedna z mála věcí, které si účastník sám nalepí na ruku a vyfotí se s ní. Značka závodu pak chodí po Lipensku na lidech ještě několik dní po doběhu.",
+      "Podporujeme i menší akce. Jednou z nich je Běh pro Kleofáše, amatérský běžecký závod ve prospěch Hospicové péče sv. Kleofáše, který se běží už třináctým rokem."
     ],
     "cisla": [
       { "hodnota": "1 000+", "popis": "dodaných tetovaček s logem závodu" },
