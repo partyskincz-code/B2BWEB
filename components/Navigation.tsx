@@ -28,6 +28,28 @@ export default function Navigation() {
     return code === "cs" ? target : `/${code}${target === "/" ? "" : target}`;
   };
 
+  const hlasky =
+    lang === "en"
+      ? [
+          "Christmas parties are planned now",
+          "Tattoos with your own punchline",
+          "Book December production by mid November",
+          "From 9 CZK a piece, no minimum",
+        ]
+      : lang === "sk"
+      ? [
+          "Vianočné večierky sa plánujú teraz",
+          "Tetovačky s vašou vlastnou hláškou",
+          "Výrobu na december zadávajte do polovice novembra",
+          "Od 9 Kč za kus, bez minima",
+        ]
+      : [
+          "Vánoční večírky se plánují teď",
+          "Tetovačky s vaší vlastní hláškou",
+          "Výrobu na prosinec zadávejte do poloviny listopadu",
+          "Od 9 Kč za kus, bez minima",
+        ];
+
   const navLinks = [
     { href: localizedPath("/produkty"), label: t("nav.products") },
     { href: localizedPath("/cenik"), label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
@@ -76,39 +98,30 @@ export default function Navigation() {
       }`}
     >
       {oznameni && (
-        <div className="bg-brand-secondary text-brand-light">
-          <div className="container-pad relative">
-            <Link
-              href="/tetovacky-na-firemni-vecirek"
-              className="group flex flex-wrap items-center justify-center gap-x-3 gap-y-1 py-2.5 pr-8 text-center"
-            >
-              <Snowflake size={15} className="text-brand-light/70 flex-shrink-0" aria-hidden="true" />
-              <span className="text-[13px] font-medium">
-                {lang === "en"
-                  ? "Christmas parties are planned now"
-                  : lang === "sk"
-                  ? "Vianočné večierky sa plánujú teraz"
-                  : "Vánoční večírky se plánují teď"}
-              </span>
-              <span className="text-[13px] text-brand-light/60">
-                {lang === "en"
-                  ? "Book December production by mid November"
-                  : lang === "sk"
-                  ? "Výrobu na december zadávajte do polovice novembra"
-                  : "Výrobu na prosinec zadávejte do poloviny listopadu"}
-              </span>
-              <span className="text-[13px] border-b border-brand-light/40 group-hover:border-brand-light transition-colors">
-                {lang === "en" ? "Tattoos for your party" : lang === "sk" ? "Tetovačky na večierok" : "Tetovačky na večírek"}
-              </span>
-            </Link>
-            <button
-              onClick={zavritOznameni}
-              className="absolute right-4 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2 p-1.5 text-brand-light/50 hover:text-brand-light transition-colors"
-              aria-label={lang === "en" ? "Close the notice" : lang === "sk" ? "Zavrieť oznámenie" : "Zavřít oznámení"}
-            >
-              <X size={15} />
-            </button>
-          </div>
+        <div className="relative bg-brand-secondary text-brand-light overflow-hidden">
+          <Link href="/tetovacky-na-firemni-vecirek" className="block py-3 group" aria-label={lang === "en" ? "Tattoos for your Christmas party" : lang === "sk" ? "Tetovačky na vianočný večierok" : "Tetovačky na vánoční večírek"}>
+            <div className="marquee-track">
+              {[0, 1].map((run) => (
+                <div key={run} className="flex items-center">
+                  {hlasky.map((h, i) => (
+                    <span key={`${run}-${i}`} className="flex items-center whitespace-nowrap">
+                      <span className="font-display font-extrabold text-sm md:text-base tracking-tight px-6">
+                        {h}
+                      </span>
+                      <Snowflake size={13} className="text-brand-light/45 flex-shrink-0" aria-hidden="true" />
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </Link>
+          <button
+            onClick={zavritOznameni}
+            className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 p-1.5 text-brand-light/50 hover:text-brand-light transition-colors bg-brand-secondary"
+            aria-label={lang === "en" ? "Close the notice" : lang === "sk" ? "Zavrieť oznámenie" : "Zavřít oznámení"}
+          >
+            <X size={15} />
+          </button>
         </div>
       )}
 

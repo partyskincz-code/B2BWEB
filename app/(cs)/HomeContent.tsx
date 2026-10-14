@@ -309,8 +309,8 @@ export default function HomePage() {
         {/* Right-side photo */}
         <div className="absolute right-0 top-0 bottom-0 hidden lg:block lg:w-[58%] pointer-events-none">
           <Image
-            src="/hero.jpg"
-            alt="Lidé na firemním eventu s dočasnými tetovačkami"
+            src="/realizace-litr-motiv.jpg"
+            alt="Dočasná tetovačka s obrysem Lipna a názvem závodu Li.t.r. na předloktí běžkyně"
             fill
             className="object-cover object-center"
             priority
@@ -409,50 +409,37 @@ export default function HomePage() {
       </section>
 
       {/* ═══ PODZIMNÍ BĚHY ═══ */}
-      <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-16 md:py-20">
+      <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-14 md:py-20">
         <div className="container-pad">
-          <div className="flex flex-wrap items-center gap-x-16 gap-y-10">
-            <div className="flex-[999_1_300px] min-w-0">
-              <p className="text-[12px] font-medium uppercase tracking-[0.18em] opacity-60 mb-5">
-                {lang === "en" ? "Right now" : lang === "sk" ? "Práve teraz" : "Zrovna teď"}
-              </p>
-              <h2 className="text-4xl md:text-5xl font-display font-extrabold max-w-[16ch] mb-5">
-                {lang === "en" ? "Autumn races. And we are there." : lang === "sk" ? "Jesenné behy. A my pri tom." : "Podzimní běhy. A my u toho."}
-              </h2>
-              <p className="text-lg font-light leading-relaxed opacity-80 max-w-[48ch]">
-                {lang === "en"
-                  ? "Two races we supply tattoos for, and take part in."
-                  : lang === "sk"
-                  ? "Dva behy, na ktoré dodávame tetovačky a sme pri tom."
-                  : "Dva běhy, na které dodáváme tetovačky a jsme u toho."}
-              </p>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-7 gap-y-5 text-center">
+            <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">Make the Moment</span>
+            <Heart size={38} className="fill-brand-primary text-brand-primary flex-shrink-0" aria-hidden="true" />
+            <span className="font-display font-extrabold text-3xl md:text-5xl leading-none">
+              {lang === "en" ? "autumn races" : lang === "sk" ? "jesenné behy" : "podzimní běhy"}
+            </span>
+          </div>
 
-            <div className="flex-[1_1_320px] min-w-0 flex flex-wrap gap-5">
-              {behy.map((b, i) => (
-                <motion.a
-                  key={b.name}
-                  href={b.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex-1 min-w-[150px] border border-brand-light/20 px-6 py-7 hover:border-brand-light/60 transition-colors"
-                  animate={{ y: [0, -9, 0] }}
-                  transition={{ duration: 5.5 + i * 0.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: i * 0.5 }}
-                >
-                  {b.logo ? (
-                    <Image src={b.logo} alt={b.name} width={320} height={120} className="h-10 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity mb-4" />
-                  ) : (
-                    <span
-                      className="block font-display font-extrabold text-2xl leading-tight mb-4"
-                      style={{ color: b.barva }}
-                    >
-                      {b.wordmark}
-                    </span>
-                  )}
-                  <span className="block text-xs opacity-60 leading-relaxed">{b.popis}</span>
-                </motion.a>
-              ))}
-            </div>
+          <div className="mt-12 flex flex-wrap items-stretch justify-center gap-5">
+            {behy.map((b, i) => (
+              <motion.a
+                key={b.name}
+                href={b.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-5 border border-brand-light/20 px-7 py-6 hover:border-brand-light/60 transition-colors"
+                animate={{ y: [0, -9, 0] }}
+                transition={{ duration: 5.5 + i * 0.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: i * 0.5 }}
+              >
+                {b.logo ? (
+                  <Image src={b.logo} alt={b.name} width={320} height={120} className="h-11 w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
+                ) : (
+                  <span className="font-display font-extrabold text-xl md:text-2xl leading-none whitespace-nowrap" style={{ color: b.barva }}>
+                    {b.wordmark}
+                  </span>
+                )}
+                <ArrowRight size={17} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              </motion.a>
+            ))}
           </div>
         </div>
       </section>

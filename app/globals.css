@@ -138,6 +138,21 @@
   }
 }
 
+@keyframes mtm-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: mtm-marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
