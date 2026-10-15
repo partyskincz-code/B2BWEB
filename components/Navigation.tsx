@@ -50,12 +50,19 @@ export default function Navigation() {
           "Kusové tetovačky od 3 Kč za kus",
         ];
 
-  const navLinks = [
+  const navLinks: { href: string; label: string; extra?: boolean }[] = [
     { href: localizedPath("/produkty"), label: t("nav.products") },
     { href: localizedPath("/cenik"), label: lang === "en" ? "Price list" : lang === "sk" ? "Cenník" : "Ceník" },
     { href: localizedPath("/jak-to-funguje"), label: t("nav.how") },
     { href: localizedPath("/reference"), label: t("nav.references") },
     { href: "/poradna", label: lang === "en" ? "Guides" : lang === "sk" ? "Poradňa" : "Poradna" },
+    // Landingy zatím existují jen česky, proto je v hlavním menu ukazujeme jen v CS verzi.
+    ...(lang === "cs"
+      ? [
+          { href: "/samolepky-s-logem", label: "Samolepky", extra: true },
+          { href: "/tiskoviny-na-miru", label: "Tiskoviny", extra: true },
+        ]
+      : []),
   ];
 
   // Zavřený pruh si pamatujeme, ať ho návštěvník nemusí zavírat na každé stránce.
@@ -146,7 +153,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm transition-colors duration-200 border-b pb-0.5 ${
+                className={`${link.extra ? "hidden lg:inline " : ""}text-sm transition-colors duration-200 border-b pb-0.5 ${
                   pathname === link.href
                     ? "text-brand-primary border-brand-primary"
                     : "text-[#3F4A55] border-transparent hover:text-brand-primary hover:border-brand-primary"
