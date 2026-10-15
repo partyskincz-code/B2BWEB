@@ -91,6 +91,10 @@ export default function ReferencePage() {
           : lang === "sk"
           ? "Trailový festival okolo Lipna, 111 km"
           : "Trailový festival kolem Lipna, 111 km",
+      fotky: [
+        { src: "/realizace-litr-motiv.jpg", alt: lang === "en" ? "Tattoo with the Lipno outline on a runner's forearm" : lang === "sk" ? "Tetovačka s obrysom Lipna na predlaktí bežkyne" : "Tetovačka s obrysem Lipna na předloktí běžkyně" },
+        { src: "/realizace-litr-aplikace.jpg", alt: lang === "en" ? "Applying the tattoo at the race base" : lang === "sk" ? "Nalepenie tetovačky v zázemí pretekov" : "Nalepení tetovačky v zázemí závodu" },
+      ],
     },
     {
       name: "Hospicová péče sv. Kleofáše",
@@ -107,6 +111,13 @@ export default function ReferencePage() {
           : lang === "sk"
           ? "Charitatívny beh, 13. ročník"
           : "Charitativní běh, 13. ročník",
+      fotky: [
+        { src: "/kleofas-strihani-archu.jpg", alt: lang === "en" ? "Cutting a sheet of tattoos at the stand" : lang === "sk" ? "Strihanie hárku tetovačiek na stanovisku" : "Stříhání archu tetovaček na stanovišti" },
+        { src: "/kleofas-nanaseni-detske.jpg", alt: lang === "en" ? "Applying a tattoo to a child's arm" : lang === "sk" ? "Nanášanie tetovačky na ruku dieťaťa" : "Nanášení tetovačky na ruku dítěte" },
+        { src: "/kleofas-tetovacka-na-tvari.jpg", alt: lang === "en" ? "A tattoo on a runner's cheek" : lang === "sk" ? "Tetovačka na tvári bežkyne" : "Tetovačka na tváři běžkyně" },
+        { src: "/kleofas-dynove-motivy.jpg", alt: lang === "en" ? "Pumpkin motifs on a forearm" : lang === "sk" ? "Tekvicové motívy na predlaktí" : "Dýňové motivy na předloktí" },
+        { src: "/kleofas-aplikace-houbickou.jpg", alt: lang === "en" ? "Applying a tattoo with a sponge" : lang === "sk" ? "Nanášanie tetovačky hubkou" : "Nanášení tetovačky houbičkou" },
+      ],
     },
     {
       name: "Když se tělo chvěje",
@@ -439,7 +450,24 @@ export default function ReferencePage() {
                   <h3 className="font-display font-extrabold text-brand-secondary text-2xl mb-4 max-w-[18ch]">
                     {o.name}
                   </h3>
-                  <p className="text-[#3F4A55] leading-relaxed flex-1 mb-7 max-w-[46ch]">{o.what}</p>
+                  <p className="text-[#3F4A55] leading-relaxed mb-7 max-w-[46ch]">{o.what}</p>
+
+                  {"fotky" in o && o.fotky && (
+                    <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-7">
+                      {o.fotky.map((f) => (
+                        <div key={f.src} className="relative aspect-square overflow-hidden">
+                          <Image
+                            src={f.src}
+                            alt={f.alt}
+                            fill
+                            className="object-cover object-center"
+                            sizes="(max-width: 640px) 30vw, 18vw"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
                     {"pribeh" in o && o.pribeh && (
                       <Link

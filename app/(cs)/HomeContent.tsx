@@ -890,15 +890,15 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              // Osm různých fotek. Dřív tu byly dětské archy dvakrát.
+              // Osm různých fotek, mix produktových záběrů a reálných akcí.
               { url: "/realizace-litr-motiv.jpg", alt: "Tetovačka s obrysem Lipna a názvem závodu Li.t.r. na předloktí běžkyně" },
               { url: "/realizace-prebal-b2b-a5.jpg", alt: "got2b brandované tetovačky A5" },
               { url: "/realizace-litr-aplikace.jpg", alt: "Nalepení tetovačky v zázemí trailového závodu" },
               { url: "/realizace-detske-prebal-a6.jpg", alt: "Dětské tetovačky A6 kolekce" },
               { url: "/svatebni-tetovaci-koutek.jpg", alt: "Svatební tetovací koutek se zrcadlem a archy tetovaček" },
-              { url: "/realizace-prebal-b2b-a5-zadni.jpg", alt: "got2b obal zadní strana" },
+              { url: "/kleofas-tetovacka-na-tvari.jpg", alt: "Tetovačka na tváři běžkyně na Běhu pro Kleofáše" },
               { url: "/nanaseni-tetovacky.jpg", alt: "Nanášení dočasné tetovačky na zápěstí" },
-              { url: "/realizace-prebal-a5.jpg", alt: "Velikonoční edice A5" },
+              { url: "/kleofas-strihani-archu.jpg", alt: "Stříhání archu tetovaček na stanovišti Běhu pro Kleofáše" },
             ].map((img, i) => (
               <FadeUp key={i} delay={i * 0.05}>
                 <div className="relative aspect-square overflow-hidden group">
