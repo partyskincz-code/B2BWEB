@@ -455,7 +455,7 @@ export default function ReferencePage() {
                   {"fotky" in o && o.fotky && (
                     <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-7">
                       {o.fotky.map((f) => (
-                        <div key={f.src} className="relative aspect-square overflow-hidden">
+                        <div key={f.src} className="nahled-zoom aspect-square overflow-hidden">
                           <Image
                             src={f.src}
                             alt={f.alt}

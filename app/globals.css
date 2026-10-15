@@ -113,6 +113,28 @@
     @apply transition-colors duration-200;
   }
 
+  /* Malý náhled, který se po najetí myší zvětší nad okolní obsah.
+     Jen na zařízeních s myší, na dotykových displejích hover nedává smysl
+     a zvětšený náhled by vyjel mimo obrazovku. */
+  .nahled-zoom {
+    @apply relative transition-transform duration-300 ease-out;
+    z-index: 0;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .nahled-zoom:hover {
+      transform: scale(2.2);
+      z-index: 40;
+      box-shadow: 0 18px 50px rgba(33, 42, 52, 0.3);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nahled-zoom {
+      transition: none;
+    }
+  }
+
   .tag {
     @apply inline-block text-[12px] font-medium text-brand-primary uppercase tracking-[0.18em];
   }
