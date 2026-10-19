@@ -32,7 +32,8 @@ export const cenikSk: CenikData = {
     { format: "A6", ceny: cenyA6 },
     { format: "A7 (najmenší)", ceny: cenyA7 },
   ],
-  poznamkaA7: "Pri formáte A7 platia konkrétne ceny za kus: 0,50 € pri 100 až 250 kusoch, 0,45 € pri 251 až 500 kusoch a 0,40 € od 501 kusov vyššie.",
+  poznamkaA7:
+    "Ceny v tabuľke platia za celý hárok daného formátu. Kusové tetovačky, teda jednotlivé motívy vyseknuté z hárku a pripravené na rozdávanie, začínajú na 0,15 € za kus; cena závisí od veľkosti motívu a nákladu a spočítame ju do 24 hodín.",
   baleniTitul: "Balenie",
   baleniPerex: "Príplatok za kus k základnej cene tetovačiek.",
   baleni: [
@@ -131,7 +132,8 @@ export const cenikEn: CenikData = {
     { format: "A6", ceny: en(cenyA6) },
     { format: "A7 (smallest)", ceny: en(cenyA7) },
   ],
-  poznamkaA7: "For the A7 format these exact per piece prices apply: 0,50 € for 100 to 250 pieces, 0,45 € for 251 to 500 pieces and 0,40 € from 501 pieces up.",
+  poznamkaA7:
+    "The prices in the table are per full sheet of the given format. Single tattoos, individual motifs die cut from the sheet and ready to hand out, start at 0,15 € per piece; the price depends on the size of the motif and the quantity and we calculate it within 24 hours.",
   baleniTitul: "Packaging",
   baleniPerex: "Surcharge per piece on top of the base tattoo price.",
   baleni: [

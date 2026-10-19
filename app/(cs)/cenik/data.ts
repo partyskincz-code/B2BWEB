@@ -4,7 +4,7 @@ export const cenikCs: CenikData = {
   tag: "Ceník",
   h1: "Kolik stojí reklamní tetovačky a promo materiály",
   perex:
-    "Každou zakázku počítáme na míru. Cena závisí na formátu archu, počtu kusů, náročnosti grafiky a způsobu balení, proto níže uvádíme orientační cenová pásma. Konkrétní cenu pro váš projekt připravíme zdarma do 24 hodin od poptávky.",
+    "Ceny za kus podle formátu a nákladu najdete hned níže. Konkrétní nabídku na váš projekt pošleme zdarma do 24 hodin.",
   tetovackyTitul: "Dočasné tetovačky",
   tetovackyPerex: "Orientační pásma za jeden kus podle formátu a velikosti nákladu. Konečnou cenu stanovíme podle konkrétního zadání.",
   sloupecFormat: "Formát",
@@ -15,7 +15,8 @@ export const cenikCs: CenikData = {
     { format: "A6", ceny: ["39 až 52 Kč", "25 až 33 Kč", "19 až 25 Kč", "17 až 22 Kč", "14 až 19 Kč"] },
     { format: "A7 (nejmenší)", ceny: ["24 až 33 Kč", "15 až 21 Kč", "10 až 12 Kč", "9 až 10 Kč", "9 Kč"] },
   ],
-  poznamkaA7: "U formátu A7 platí konkrétní ceny za kus: 12 Kč při 100 až 250 kusech, 10 Kč při 251 až 500 kusech a 9 Kč od 501 kusů výš.",
+  poznamkaA7:
+    "Ceny v tabulce platí za celý arch daného formátu. Kusové tetovačky, tedy jednotlivé motivy vyseknuté z archu a připravené k rozdávání, začínají na 3 Kč za kus; cena se odvíjí od velikosti motivu a nákladu a spočítáme ji do 24 hodin.",
   baleniTitul: "Balení",
   baleniPerex: "Příplatek za kus k základní ceně tetovaček.",
   baleni: [

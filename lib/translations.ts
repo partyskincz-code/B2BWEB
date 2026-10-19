@@ -104,6 +104,12 @@ const cs: Record<string, string> = {
   "form.message": "Popište váš záměr... (typ produktu, počet ks, termín)",
   "form.submit": "Odeslat poptávku",
   "form.note": "Ozveme se do 24 hodin. Žádný spam.",
+  "form.quantity": "Počet kusů",
+  "form.quantity.unknown": "Počet zatím nevím",
+  "form.deadline": "Termín akce",
+  "form.message.hint": "Logo posílat nemusíte, stačí napsat, o co jde. Podklady doladíme e-mailem.",
+  "form.consent": "Souhlasím se zpracováním údajů pro vyřízení poptávky.",
+  "form.consent.link": "Ochrana osobních údajů",
   "form.success": "Děkujeme! Ozveme se vám do 24 hodin.",
 
   // Stats
@@ -248,6 +254,12 @@ const en: Record<string, string> = {
   "form.message": "Describe your project... (product type, quantity, deadline)",
   "form.submit": "Send inquiry",
   "form.note": "We'll respond within 24 hours. No spam.",
+  "form.quantity": "Quantity",
+  "form.quantity.unknown": "Not sure yet",
+  "form.deadline": "Event date",
+  "form.message.hint": "No need to send a logo now, just tell us what you need. We will sort out the artwork by email.",
+  "form.consent": "I agree to my data being processed to handle this inquiry.",
+  "form.consent.link": "Privacy policy",
   "form.success": "Thank you! We'll get back to you within 24 hours.",
 
   // Stats
@@ -392,6 +404,12 @@ const sk: Record<string, string> = {
   "form.message": "Opíšte váš zámer... (typ produktu, počet ks, termín)",
   "form.submit": "Odoslať dopyt",
   "form.note": "Ozveme sa do 24 hodín. Žiadny spam.",
+  "form.quantity": "Počet kusov",
+  "form.quantity.unknown": "Počet zatiaľ neviem",
+  "form.deadline": "Termín akcie",
+  "form.message.hint": "Logo posielať nemusíte, stačí napísať, o čo ide. Podklady doladíme e-mailom.",
+  "form.consent": "Súhlasím so spracovaním údajov na vybavenie dopytu.",
+  "form.consent.link": "Ochrana osobných údajov",
   "form.success": "Ďakujeme! Ozveme sa vám do 24 hodín.",
 
   // Stats

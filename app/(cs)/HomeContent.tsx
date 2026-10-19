@@ -322,22 +322,41 @@ export default function HomePage() {
         {/* Right-side photo */}
         <div className="absolute right-0 top-0 bottom-0 hidden lg:block lg:w-[58%] pointer-events-none">
           <Image
-            src="/realizace-litr-motiv.jpg"
-            alt="Dočasná tetovačka s obrysem Lipna a názvem závodu Li.t.r. na předloktí běžkyně"
+            src="/realizace-prebal-b2b-a5.jpg"
+            alt="Archy dočasných tetovaček s potiskem značky got2b a přebal na míru"
             fill
             className="object-cover object-center"
             priority
           />
           {/* Blend left edge into brand-light */}
           <div className="absolute inset-0 bg-gradient-to-r from-brand-light via-brand-light/35 to-transparent" />
-          {/* Subtle warm tint */}
-          <div className="absolute inset-0 bg-brand-primary/10" />
+          {/* Teplý nádech jen nepatrně, ať barvy archu nezešednou */}
+          <div className="absolute inset-0 bg-brand-primary/[0.04]" />
         </div>
 
 
         {/* Left-side content */}
-        <div className="relative z-10 container-pad w-full pt-24 md:pt-28 pb-16 md:pb-20">
+        <div className="relative z-10 container-pad w-full pt-6 lg:pt-28 pb-14 md:pb-20">
           <div className="max-w-xl lg:max-w-[46%]">
+            {/* Na mobilu se fotka vykreslí nad nadpisem. Dřív byla schovaná
+                za hidden lg:block, takže první obrazovka na telefonu byla
+                jen text na béžové ploše. */}
+            <motion.div
+              initial={{ opacity: 0, scale: 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="lg:hidden relative aspect-[5/4] overflow-hidden mb-7 -mx-5 w-[calc(100%+2.5rem)] sm:-mx-6 sm:w-[calc(100%+3rem)]"
+            >
+              <Image
+                src="/realizace-prebal-b2b-a5.jpg"
+                alt="Archy dočasných tetovaček s potiskem značky got2b a přebal na míru"
+                fill
+                className="object-cover object-center"
+                sizes="100vw"
+                priority
+              />
+            </motion.div>
+
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -351,7 +370,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-[2.5rem] sm:text-4xl lg:text-5xl font-display font-extrabold text-brand-secondary mb-7 max-w-[15ch]"
+              className="text-[2rem] sm:text-4xl lg:text-5xl font-display font-extrabold text-brand-secondary mb-5 md:mb-7 max-w-[15ch]"
             >
               {t("hero.h1a")}{" "}
               <span className="text-brand-primary">{t("hero.h1b")}</span>
@@ -408,80 +427,17 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* ═══ PODZIMNÍ BĚHY ═══ */}
-      <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-10 md:py-14">
-        <div className="container-pad">
-          <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-9">
-            {/* Vyříznutá běžecká tetovačka, levá strana. Běží doleva, pryč od claimu.
-                Zrcadlení musí být na vnitřním divu, animace framer-motion totiž
-                přepisuje inline transform a třídu scale-x by přebila. */}
-            <motion.div
-              className="flex-shrink-0 w-11 sm:w-14 md:w-[72px]"
-              animate={{ y: [0, -7, -1, -9, 0], x: [0, -3, 0, -2, 0], rotate: [-5, -9, -3, -7, -5] }}
-              transition={{ duration: 3.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] }}
-              aria-hidden="true"
-            >
-              <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
-            </motion.div>
-
-            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center">
-              <span className="font-display font-extrabold text-xl md:text-[26px] leading-none">Make the Moment</span>
-              <Heart size={20} className="fill-brand-primary text-brand-primary flex-shrink-0" aria-hidden="true" />
-              <span className="font-display font-extrabold text-xl md:text-[26px] leading-none">
-                {lang === "en" ? "autumn races" : lang === "sk" ? "jesenné behy" : "podzimní běhy"}
-              </span>
-            </div>
-
-            {/* Druhá tetovačka, opravdu zrcadlená, běží doprava. Jiný rytmus,
-                aby to nevypadalo jako jedna animace puštěná dvakrát. */}
-            <motion.div
-              className="flex-shrink-0 w-11 sm:w-14 md:w-[72px]"
-              animate={{ y: [0, -9, -2, -6, 0], x: [0, 3, 0, 2, 0], rotate: [5, 8, 2, 9, 5] }}
-              transition={{ duration: 3.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1], delay: 0.45 }}
-              aria-hidden="true"
-            >
-              <div className="scale-x-[-1]">
-                <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-stretch justify-center gap-3">
-            {behy.map((b, i) => (
-              <motion.a
-                key={b.name}
-                href={b.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-3 border border-brand-light/20 px-5 py-3.5 hover:border-brand-light/60 transition-colors"
-                animate={{ y: [0, -9, 0] }}
-                transition={{ duration: 5.5 + i * 0.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: i * 0.5 }}
-              >
-                {b.logo ? (
-                  <Image src={b.logo} alt={b.name} width={320} height={120} className="h-7 w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
-                ) : (
-                  <span className="font-display font-bold text-sm md:text-base leading-none whitespace-nowrap" style={{ color: b.barva }}>
-                    {b.wordmark}
-                  </span>
-                )}
-                <ArrowRight size={14} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
-              </motion.a>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ═══ USP ═══ */}
-      <section className="py-20 bg-brand-secondary overflow-hidden relative">
+      <section className="py-14 md:py-20 bg-brand-secondary overflow-hidden relative">
         <FloatingStars variant="dark" density={0.5} />
         {/* subtle background texture */}
         <div className="absolute inset-0 opacity-5 pointer-events-none" style={{backgroundImage: "radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 20%, white 1px, transparent 1px)", backgroundSize: "60px 60px"}} />
         <div className="container-pad relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-white/10 rounded-3xl overflow-hidden">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-px bg-white/10 rounded-3xl overflow-hidden">
             {usps.map((usp, i) => (
               <FadeUp key={usp.title} delay={i * 0.1}>
-                <div className="group flex flex-col gap-5 p-8 lg:p-10 bg-brand-secondary hover:bg-brand-primary transition-colors duration-300 h-full">
-                  <div className="w-14 h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                <div className="group flex flex-col gap-4 p-6 lg:p-10 bg-brand-secondary hover:bg-brand-primary transition-colors duration-300 h-full">
+                  <div className="w-11 h-11 lg:w-14 lg:h-14 rounded-2xl bg-brand-primary/20 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
                     <usp.icon size={26} className="text-brand-primary group-hover:text-white transition-colors duration-300" />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -555,7 +511,7 @@ export default function HomePage() {
             <p className="text-gray-500 text-lg max-w-xl mx-auto">{t("products.sub")}</p>
           </FadeUp>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {products.map((product, i) => (
               <FadeUp key={product.id} delay={i * 0.1}>
                 <Link href={product.href} className="group block">
@@ -661,7 +617,7 @@ export default function HomePage() {
             <p className="text-gray-500 text-lg max-w-xl mx-auto">{t("segments.sub")}</p>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
             {segments.map((seg, i) => {
               const cardInner = (
                 <div className={`${seg.color} rounded-2xl p-7 card-hover h-full flex flex-col`}>
@@ -873,6 +829,20 @@ export default function HomePage() {
                   )
                 )}
               </div>
+
+              {/* Jediná reference s konkrétními čísly je případovka Li.t.r.
+                  Dřív se k ní dalo dostat jen přes segmentovou stránku. */}
+              <Link
+                href={href("/tetovacky-na-festival")}
+                className="inline-flex items-center gap-2 mt-8 text-sm text-brand-primary border-b border-brand-primary/40 pb-1 hover:border-brand-primary transition-colors"
+              >
+                {lang === "en"
+                  ? "Case study: over 1 000 tattoos for the Li.t.r. trail race"
+                  : lang === "sk"
+                  ? "Prípadová štúdia: vyše 1 000 tetovačiek pre trailový pretek Li.t.r."
+                  : "Případová studie: přes 1 000 tetovaček pro trailový závod Li.t.r."}
+                <ArrowRight size={14} />
+              </Link>
             </div>
           </FadeUp>
         </div>
@@ -918,6 +888,69 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══ PODZIMNÍ BĚHY ═══ */}
+      <section className="relative overflow-hidden bg-brand-secondary text-brand-light py-10 md:py-14">
+        <div className="container-pad">
+          <div className="flex items-center justify-center gap-3 sm:gap-6 md:gap-9">
+            {/* Vyříznutá běžecká tetovačka, levá strana. Běží doleva, pryč od claimu.
+                Zrcadlení musí být na vnitřním divu, animace framer-motion totiž
+                přepisuje inline transform a třídu scale-x by přebila. */}
+            <motion.div
+              className="flex-shrink-0 w-11 sm:w-14 md:w-[72px]"
+              animate={{ y: [0, -7, -1, -9, 0], x: [0, -3, 0, -2, 0], rotate: [-5, -9, -3, -7, -5] }}
+              transition={{ duration: 3.4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1] }}
+              aria-hidden="true"
+            >
+              <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
+            </motion.div>
+
+            <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-center">
+              <span className="font-display font-extrabold text-xl md:text-[26px] leading-none">Make the Moment</span>
+              <Heart size={20} className="fill-brand-primary text-brand-primary flex-shrink-0" aria-hidden="true" />
+              <span className="font-display font-extrabold text-xl md:text-[26px] leading-none">
+                {lang === "en" ? "autumn races" : lang === "sk" ? "jesenné behy" : "podzimní běhy"}
+              </span>
+            </div>
+
+            {/* Druhá tetovačka, opravdu zrcadlená, běží doprava. Jiný rytmus,
+                aby to nevypadalo jako jedna animace puštěná dvakrát. */}
+            <motion.div
+              className="flex-shrink-0 w-11 sm:w-14 md:w-[72px]"
+              animate={{ y: [0, -9, -2, -6, 0], x: [0, 3, 0, 2, 0], rotate: [5, 8, 2, 9, 5] }}
+              transition={{ duration: 3.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", times: [0, 0.25, 0.5, 0.75, 1], delay: 0.45 }}
+              aria-hidden="true"
+            >
+              <div className="scale-x-[-1]">
+                <Image src="/bezec-zirafa-light.png" alt="" width={188} height={305} className="w-full h-auto" />
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-stretch justify-center gap-3">
+            {behy.map((b, i) => (
+              <motion.a
+                key={b.name}
+                href={b.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 border border-brand-light/20 px-5 py-3.5 hover:border-brand-light/60 transition-colors"
+                animate={{ y: [0, -9, 0] }}
+                transition={{ duration: 5.5 + i * 0.9, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut", delay: i * 0.5 }}
+              >
+                {b.logo ? (
+                  <Image src={b.logo} alt={b.name} width={320} height={120} className="h-7 w-auto object-contain opacity-85 group-hover:opacity-100 transition-opacity" />
+                ) : (
+                  <span className="font-display font-bold text-sm md:text-base leading-none whitespace-nowrap" style={{ color: b.barva }}>
+                    {b.wordmark}
+                  </span>
+                )}
+                <ArrowRight size={14} className="opacity-40 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══ CTA ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
@@ -941,7 +974,7 @@ export default function HomePage() {
 
                 <div className="flex items-center gap-4 mt-8 pt-8 border-t border-white/20">
                   <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-white/40">
-                    <Image src="/jana-budinova.jpg" alt="Jana Budínová, PartySkin" fill sizes="80px" className="object-cover" />
+                    <Image src="/jana-budinova.jpg" alt="Jana Budínová, Make the Moment" fill sizes="80px" className="object-cover" />
                   </div>
                   <div>
                     <p className="text-white/90 text-sm leading-relaxed">
@@ -952,7 +985,7 @@ export default function HomePage() {
                         : "Každou poptávku vyřizujeme osobně, od prvního e-mailu po dodání."}
                     </p>
                     <p className="text-white font-display font-bold text-sm mt-1">Jana Budínová</p>
-                    <p className="text-white/60 text-xs">PartySkin</p>
+                    <p className="text-white/60 text-xs">Make the Moment</p>
                   </div>
                 </div>
               </div>
@@ -987,6 +1020,7 @@ export default function HomePage() {
 
 function QuickContactForm() {
   const { t, lang } = useLanguage();
+  const href = (path: string) => (lang === "cs" ? path : `/${lang}${path}`);
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const formStartedRef = useRef(false);
 
@@ -1031,8 +1065,52 @@ function QuickContactForm() {
       <input id="quick-email" name="email" type="email" placeholder={t("form.email")} required className="input-field text-sm" />
       <label className="sr-only" htmlFor="quick-phone">{t("form.phone")}</label>
       <input id="quick-phone" name="Telefon" type="tel" placeholder={t("form.phone")} className="input-field text-sm" />
+
+      {/* Počet kusů a termín: bez nich se na každou poptávku musí doptávat
+          e-mailem a slib nabídky do 24 hodin se protáhne na několik dní. */}
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-[11px] uppercase tracking-wider text-gray-400 mb-1" htmlFor="quick-qty">
+            {t("form.quantity")}
+          </label>
+          <select id="quick-qty" name="Pocet kusu" defaultValue="" className="input-field text-sm w-full">
+            <option value="">{t("form.quantity")}</option>
+            <option value="do 100 ks">do 100 ks</option>
+            <option value="100 az 500 ks">100 až 500 ks</option>
+            <option value="500 az 2000 ks">500 až 2 000 ks</option>
+            <option value="nad 2000 ks">nad 2 000 ks</option>
+            <option value="zatim nevim">{t("form.quantity.unknown")}</option>
+          </select>
+        </div>
+        <div>
+          {/* Datum potřebuje viditelný popisek, placeholder se u type="date" nezobrazí */}
+          <label className="block text-[11px] uppercase tracking-wider text-gray-400 mb-1" htmlFor="quick-deadline">
+            {t("form.deadline")}
+          </label>
+          <input
+            id="quick-deadline"
+            name="Termin akce"
+            type="date"
+            aria-label={t("form.deadline")}
+            placeholder={t("form.deadline")}
+            className="input-field text-sm w-full"
+          />
+        </div>
+      </div>
+
       <label className="sr-only" htmlFor="quick-message">{t("form.message")}</label>
       <textarea id="quick-message" name="Popis zameru" placeholder={t("form.message")} rows={3} required className="input-field text-sm resize-none" />
+      <p className="text-gray-400 text-xs -mt-1">{t("form.message.hint")}</p>
+
+      <label className="flex items-start gap-2 text-xs text-gray-500 leading-snug">
+        <input type="checkbox" name="Souhlas se zpracovanim" value="ano" required className="mt-0.5 shrink-0 accent-brand-primary" />
+        <span>
+          {t("form.consent")}{" "}
+          <Link href={href("/ochrana-osobnich-udaju")} className="underline hover:text-brand-primary">
+            {t("form.consent.link")}
+          </Link>
+        </span>
+      </label>
       {status === "error" && <p className="text-sm text-red-700" role="alert">{lang === "en" ? "Sending failed. Please email us at objednavky@partyskin.cz." : lang === "sk" ? "Odoslanie zlyhalo. Napíšte na objednavky@partyskin.cz." : "Odeslání se nezdařilo. Napište na objednavky@partyskin.cz."}</p>}
       <button type="submit" disabled={status === "sending"} className="btn-primary w-full mt-1 disabled:opacity-60">
         {status === "sending" ? (lang === "en" ? "Sending…" : lang === "sk" ? "Odosielam…" : "Odesílám…") : t("form.submit")}

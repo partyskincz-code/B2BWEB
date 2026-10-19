@@ -703,11 +703,11 @@ export default function KontaktPage() {
               <div className="rounded-2xl bg-brand-secondary p-6 text-white">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-primary/60">
-                    <Image src="/jana-budinova.jpg" alt="Jana Budínová, PartySkin" fill sizes="96px" className="object-cover" />
+                    <Image src="/jana-budinova.jpg" alt="Jana Budínová, Make the Moment" fill sizes="96px" className="object-cover" />
                   </div>
                   <div>
                     <p className="font-display font-bold text-base leading-tight">Jana Budínová</p>
-                    <p className="text-white/60 text-xs mt-0.5">PartySkin</p>
+                    <p className="text-white/60 text-xs mt-0.5">Make the Moment</p>
                   </div>
                 </div>
                 <p className="text-white/75 text-sm leading-relaxed mb-4">

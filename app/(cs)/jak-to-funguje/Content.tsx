@@ -136,18 +136,18 @@ export default function JakToFunguePage() {
       details:
         lang === "en"
           ? [
-              "Artwork within 24 hours of the brief",
+              "Artwork within 48 hours of the brief",
               "1 free revision round",
               "We accept AI, PDF, Illustrator and Photoshop",
             ]
           : lang === "sk"
           ? [
-              "Grafika do 24 hodín od briefu",
+              "Grafický návrh do 48 hodín od zadania",
               "1 kolo revízií zdarma",
               "Prijímame AI, PDF, Illustrator aj Photoshop",
             ]
           : [
-              "Grafika do 24 hodin od briefu",
+              "Grafický návrh do 48 hodin od zadání",
               "1 kolo revizí zdarma",
               "Přijímáme AI, PDF, Illustrator i Photoshop",
             ],
@@ -250,18 +250,18 @@ export default function JakToFunguePage() {
       details:
         lang === "en"
           ? [
-              "Delivery by PPL, DPD or freight forwarder",
+              "Delivery across Czechia for 99 CZK, larger orders by weight",
               "To your address or straight to the venue",
               "Express delivery for a surcharge",
             ]
           : lang === "sk"
           ? [
-              "Doručenie PPL, DPD alebo spedíciou",
+              "Doprava po ČR za 99 Kč, veľké zákazky podľa hmotnosti",
               "Na adresu alebo rovno na miesto akcie",
               "Express doručenie za príplatok",
             ]
           : [
-              "Doručení PPL, DPD nebo spedicí",
+              "Doprava po ČR za 99 Kč, velké zakázky podle hmotnosti",
               "Na adresu nebo rovnou na místo akce",
               "Express dodání za příplatek",
             ],
@@ -706,17 +706,17 @@ export default function JakToFunguePage() {
               {lang === "en"
                 ? "Send us a brief today and you'll have a quote within 24 hours and a design within 48 hours."
                 : lang === "sk"
-                ? "Pošlite nám zadanie ešte dnes a do 24 hodín máte kalkuláciu aj návrh."
-                : "Pošlete nám zadání ještě dnes a do 24 hodin máte kalkulaci i návrh."}
+                ? "Pošlite nám zadanie ešte dnes. Kalkuláciu máte do 24 hodín, grafický návrh do 48 hodín."
+                : "Pošlete nám zadání ještě dnes. Kalkulaci máte do 24 hodin, grafický návrh do 48 hodin."}
             </p>
 
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-primary/40">
-                <Image src="/jana-budinova.jpg" alt="Jana Budínová, PartySkin" fill sizes="80px" className="object-cover" />
+                <Image src="/jana-budinova.jpg" alt="Jana Budínová, Make the Moment" fill sizes="80px" className="object-cover" />
               </div>
               <div className="text-left">
                 <p className="font-display font-bold text-brand-secondary text-sm">Jana Budínová</p>
-                <p className="text-gray-400 text-xs">PartySkin</p>
+                <p className="text-gray-400 text-xs">Make the Moment</p>
               </div>
             </div>
             <Link href={href("/kontakt")} className="btn-primary text-base px-8 py-4">

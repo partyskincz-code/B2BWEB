@@ -41,21 +41,21 @@ export type CenikData = {
 export default function CenikView({ d }: { d: CenikData }) {
   return (
     <>
-      <section className="pt-28 pb-14 bg-brand-light relative overflow-hidden">
+      <section className="pt-24 pb-8 md:pt-28 md:pb-10 bg-brand-light relative overflow-hidden">
         <FloatingStars variant="light" density={0.5} />
         <div className="container-pad max-w-3xl">
           <Drobecky nazev={d.tag} />
           <span className="tag mb-4">{d.tag}</span>
-          <h1 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-5 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-display font-extrabold text-brand-secondary mt-3 mb-4 leading-tight">
             {d.h1}
           </h1>
-          <p className="text-gray-600 text-lg leading-relaxed">{d.perex}</p>
+          <p className="text-gray-600 text-base md:text-lg leading-relaxed">{d.perex}</p>
         </div>
       </section>
 
-      <section className="section-pad bg-white">
+      <section className="pt-10 pb-14 md:pt-14 md:pb-20 bg-white">
         <div className="container-pad">
-          <h2 className="text-3xl font-display font-extrabold text-brand-secondary mb-2">{d.tetovackyTitul}</h2>
+          <h2 className="text-2xl md:text-3xl font-display font-extrabold text-brand-secondary mb-2">{d.tetovackyTitul}</h2>
           <p className="text-gray-500 mb-8">{d.tetovackyPerex}</p>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
