@@ -37,6 +37,41 @@ export default function ReferencePage() {
 
   const reference = [
     {
+      text: "S PartySkin spolupracujeme na výrobě všech našich dočasných tetovaček a jsme moc spokojení. Výsledek je pokaždé HOT AF®. Skvělá kvalita, easy komunikace a tým, se kterým je radost spolupracovat. Těšíme se na všechno, co spolu ještě vymyslíme.",
+      author: "Tým FURIOSA®",
+      org: "FURIOSA®",
+      orgFull: "FURIOSA®, řada HOT AF®",
+      detail:
+        lang === "en"
+          ? "Working together since June 2026, repeat orders of 300, 400 and 2 000 pieces."
+          : lang === "sk"
+          ? "Spolupráca od júna 2026, opakované objednávky 300, 400 a 2 000 kusov."
+          : "Spolupráce od června 2026, opakované objednávky 300, 400 a 2 000 kusů.",
+      website: "https://furiosa.cz",
+      logo: "/logo-furiosa.png",
+      initials: "F®",
+      fotky: [
+        {
+          src: "/furiosa-hot-af-2.jpg",
+          alt:
+            lang === "en"
+              ? "HOT AF temporary tattoos by FURIOSA on a tray at an event"
+              : lang === "sk"
+              ? "Dočasné tetovačky HOT AF značky FURIOSA na podnose na akcii"
+              : "Dočasné tetovačky HOT AF značky FURIOSA na podnose na akci",
+        },
+        {
+          src: "/furiosa-hot-af-1.jpg",
+          alt:
+            lang === "en"
+              ? "A FURIOSA temporary tattoo applied on skin"
+              : lang === "sk"
+              ? "Dočasná tetovačka FURIOSA nalepená na koži"
+              : "Dočasná tetovačka FURIOSA nalepená na kůži",
+        },
+      ],
+    },
+    {
       text: "Spolupráce byla od začátku do konce naprosto profesionální – trpělivost při zapracování připomínek, ochota i rychlá komunikace. Spolehlivého partnera pro zakázková dočasná tetování můžeme s čistým svědomím doporučit.",
       author: "Mgr. Alena Dolinová",
       org: "Gepard Express, SE",
@@ -138,6 +173,7 @@ export default function ReferencePage() {
   ];
 
   const klienti = [
+    { name: "FURIOSA®", url: "https://furiosa.cz" },
     { name: "got2b", url: "" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
     { name: "Gepard Express", url: "https://uzkokolejky.cz" },
@@ -352,13 +388,42 @@ export default function ReferencePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
             {reference.map((r, i) => (
-              <FadeUp key={r.org} delay={i * 0.06}>
+              <FadeUp key={r.org} delay={i * 0.06} className="relative hover:z-50">
                 <motion.figure
                   whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 260, damping: 22 }}
-                  className="h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-7 hover:border-brand-primary/30 hover: transition-[border-color,box-shadow] duration-300"
+                  tabIndex={"fotky" in r && r.fotky ? 0 : undefined}
+                  className="group relative h-full flex flex-col bg-gray-50 border border-gray-100 rounded-2xl p-7 hover:border-brand-primary/30 hover: transition-[border-color,box-shadow] duration-300"
                 >
+                  {/* Fotky od klienta. Na myši vyjedou nad kartou po najetí
+                      kurzorem, na dotyku se ukážou rovnou v kartě. */}
+                  {"fotky" in r && r.fotky && (
+                    <div
+                      className="pointer-events-none absolute top-full left-1/2 z-40 mt-3 hidden -translate-x-1/2 items-start gap-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-focus-within:opacity-100 lg:flex"
+                      aria-hidden="true"
+                    >
+                      {r.fotky.map((f) => (
+                        <span
+                          key={f.src}
+                          className="block w-[200px] overflow-hidden rounded-xl border-4 border-white bg-white shadow-2xl"
+                        >
+                          <Image src={f.src} alt="" width={1050} height={1400} className="h-auto w-full" />
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
                   <blockquote className="text-gray-600 leading-relaxed mb-6 flex-1">&bdquo;{r.text}&ldquo;</blockquote>
+
+                  {"fotky" in r && r.fotky && (
+                    <div className="mb-6 flex gap-2 lg:hidden">
+                      {r.fotky.map((f) => (
+                        <div key={f.src} className="relative aspect-[3/4] w-24 overflow-hidden rounded-lg">
+                          <Image src={f.src} alt={f.alt} fill className="object-cover" sizes="96px" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <figcaption className="flex items-center gap-3 pt-5 border-t border-gray-100">
                     {r.logo ? (
                       <div className="h-11 min-w-[2.75rem] max-w-[8rem] rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 px-2 py-1.5">
@@ -371,6 +436,9 @@ export default function ReferencePage() {
                     )}
                     <div className="min-w-0">
                       <p className="font-display font-bold text-brand-secondary text-sm">{r.author}</p>
+                      {"detail" in r && r.detail && (
+                        <p className="text-gray-400 text-xs mt-0.5">{r.detail}</p>
+                      )}
                       {r.website ? (
                         <a
                           href={r.website}
