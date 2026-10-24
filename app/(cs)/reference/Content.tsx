@@ -43,10 +43,10 @@ export default function ReferencePage() {
       orgFull: "FURIOSA®, řada HOT AF®",
       detail:
         lang === "en"
-          ? "Working together since June 2026, repeat orders of 300, 400 and 2 000 pieces."
+          ? "Working together since June 2026, repeat orders of 300, 400 and 2 000 pieces."
           : lang === "sk"
-          ? "Spolupráca od júna 2026, opakované objednávky 300, 400 a 2 000 kusov."
-          : "Spolupráce od června 2026, opakované objednávky 300, 400 a 2 000 kusů.",
+          ? "Spolupráca od júna 2026, opakované objednávky 300, 400 a 2 000 kusov."
+          : "Spolupráce od června 2026, opakované objednávky 300, 400 a 2 000 kusů.",
       website: "https://furiosa.cz",
       logo: "/logo-furiosa.png",
       initials: "F®",
@@ -377,13 +377,6 @@ export default function ReferencePage() {
                 ? "Referencie z reálnych zákaziek"
                 : "Reference z reálných zakázek"}
             </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              {lang === "en"
-                ? "Original wording of our clients, in Czech."
-                : lang === "sk"
-                ? "Pôvodné znenie od našich klientov, v češtine."
-                : "Původní znění od našich klientů."}
-            </p>
           </FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
@@ -405,9 +398,9 @@ export default function ReferencePage() {
                       {r.fotky.map((f) => (
                         <span
                           key={f.src}
-                          className="block w-[200px] overflow-hidden rounded-xl border-4 border-white bg-white shadow-2xl"
+                          className="relative block h-[300px] w-[300px] overflow-hidden rounded-xl border-4 border-white bg-white shadow-2xl"
                         >
-                          <Image src={f.src} alt="" width={1050} height={1400} className="h-auto w-full" />
+                          <Image src={f.src} alt="" fill sizes="300px" className="object-contain" />
                         </span>
                       ))}
                     </div>
@@ -418,17 +411,29 @@ export default function ReferencePage() {
                   {"fotky" in r && r.fotky && (
                     <div className="mb-6 flex gap-2 lg:hidden">
                       {r.fotky.map((f) => (
-                        <div key={f.src} className="relative aspect-[3/4] w-24 overflow-hidden rounded-lg">
-                          <Image src={f.src} alt={f.alt} fill className="object-cover" sizes="96px" />
+                        <div key={f.src} className="relative h-28 w-28 overflow-hidden rounded-lg bg-white">
+                          <Image src={f.src} alt={f.alt} fill className="object-contain" sizes="112px" />
                         </div>
                       ))}
                     </div>
                   )}
                   <figcaption className="flex items-center gap-3 pt-5 border-t border-gray-100">
                     {r.logo ? (
-                      <div className="h-11 min-w-[2.75rem] max-w-[8rem] rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 px-2 py-1.5">
-                        <Image src={r.logo} alt={r.org} width={520} height={200} className="object-contain max-h-full w-auto" />
-                      </div>
+                      r.website ? (
+                        <a
+                          href={r.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={r.org}
+                          className="h-11 min-w-[2.75rem] max-w-[8rem] rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 px-2 py-1.5 transition-colors hover:border-brand-primary/40"
+                        >
+                          <Image src={r.logo} alt={r.org} width={520} height={200} className="object-contain max-h-full w-auto" />
+                        </a>
+                      ) : (
+                        <div className="h-11 min-w-[2.75rem] max-w-[8rem] rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 px-2 py-1.5">
+                          <Image src={r.logo} alt={r.org} width={520} height={200} className="object-contain max-h-full w-auto" />
+                        </div>
+                      )
                     ) : (
                       <div className="w-11 h-11 rounded-full bg-brand-light flex items-center justify-center flex-shrink-0">
                         <span className="font-display font-bold text-brand-primary text-sm">{r.initials}</span>
@@ -444,9 +449,10 @@ export default function ReferencePage() {
                           href={r.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-400 text-xs hover:text-brand-primary transition-colors"
+                          className="inline-flex items-center gap-1 text-xs text-brand-primary border-b border-brand-primary/40 pb-0.5 hover:border-brand-primary transition-colors"
                         >
-                          {r.orgFull} →
+                          {r.orgFull}
+                          <ArrowRight size={12} />
                         </a>
                       ) : (
                         <p className="text-gray-400 text-xs">{r.orgFull}</p>

@@ -488,8 +488,8 @@ export default function HomePage() {
               <div className="relative">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
-                    src="/realizace-prebal-b2b-a5.jpg"
-                    alt="Dočasné tetovačky s logem klienta v brandovaném přebalu A5"
+                    src="/realizace-litr-aplikace.jpg"
+                    alt="Nalepení dočasné tetovačky s logem v zázemí akce"
                     fill
                     className="object-cover"
                   />
@@ -863,7 +863,7 @@ export default function HomePage() {
               // Osm různých fotek, mix produktových záběrů a reálných akcí.
               { url: "/realizace-litr-motiv.jpg", alt: "Tetovačka s obrysem Lipna a názvem závodu Li.t.r. na předloktí běžkyně" },
               { url: "/realizace-prebal-b2b-a5.jpg", alt: "got2b brandované tetovačky A5" },
-              { url: "/realizace-litr-aplikace.jpg", alt: "Nalepení tetovačky v zázemí trailového závodu" },
+              { url: "/kleofas-aplikace-houbickou.jpg", alt: "Nanášení tetovačky houbičkou na Běhu pro Kleofáše" },
               { url: "/realizace-detske-prebal-a6.jpg", alt: "Dětské tetovačky A6 kolekce" },
               { url: "/svatebni-tetovaci-koutek.jpg", alt: "Svatební tetovací koutek se zrcadlem a archy tetovaček" },
               { url: "/kleofas-tetovacka-na-tvari.jpg", alt: "Tetovačka na tváři běžkyně na Běhu pro Kleofáše" },
