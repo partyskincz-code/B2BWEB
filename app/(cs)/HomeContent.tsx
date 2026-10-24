@@ -465,8 +465,22 @@ export default function HomePage() {
       </section>
 
       {/* ═══ STORYTELLING ═══ */}
-      <section className="section-pad bg-white">
-        <div className="container-pad">
+      <section className="section-pad bg-white relative overflow-hidden">
+        {/* Na širokých displejích fotka vyplní celou výšku pásu a sahá
+            až k pravé hraně okna. Levý okraj se rozmazává do pozadí. */}
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 lg:block">
+          <Image
+            src="/realizace-litr-aplikace.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="50vw"
+          />
+          <div className="absolute inset-y-0 left-0 w-1/3 backdrop-blur-md [mask-image:linear-gradient(to_right,black,transparent)]" />
+          <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white via-white/70 to-transparent" />
+        </div>
+
+        <div className="container-pad relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-center">
             <FadeUp delay={0.1}>
               <span className="tag mb-4">{t("story.tag")}</span>
@@ -497,22 +511,15 @@ export default function HomePage() {
               </div>
             </FadeUp>
 
-            <FadeUp delay={0.2}>
-              {/* Fotka je větší a vpravo přetéká za okraj kontejneru.
-                  Levý okraj se rozmazává do bílého pozadí, aby nestál
-                  tvrdou hranou hned vedle textu. */}
-              <div className="relative lg:-mr-[max(0px,calc((100vw-1240px)/2+2rem))]">
-                <div className="relative aspect-[4/3] lg:aspect-[5/4] overflow-hidden">
-                  <Image
-                    src="/realizace-litr-aplikace.jpg"
-                    alt="Nalepení dočasné tetovačky s logem v zázemí akce"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                  />
-                  <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 backdrop-blur-md lg:block [mask-image:linear-gradient(to_right,black,transparent)]" />
-                  <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 bg-gradient-to-r from-white via-white/70 to-transparent lg:block" />
-                </div>
+            <FadeUp delay={0.2} className="lg:hidden">
+              <div className="relative aspect-[4/3] overflow-hidden -mx-5 w-[calc(100%+2.5rem)] sm:mx-0 sm:w-full">
+                <Image
+                  src="/realizace-litr-aplikace.jpg"
+                  alt="Nalepení dočasné tetovačky s logem v zázemí akce"
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
               </div>
             </FadeUp>
           </div>
@@ -766,9 +773,16 @@ export default function HomePage() {
             </h2>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {[0, 1].map((posun) => testimonials[(recenzeOd + posun) % testimonials.length]).map((testimonial, i) => (
-              <FadeUp key={`${recenzeOd}-${testimonial.org}`} delay={i * 0.1}>
+          <div className="overflow-hidden mb-16">
+            <div
+              className="flex w-[calc(var(--pocet)*100%)] md:w-[calc(var(--pocet)*50%)] transition-transform duration-700 ease-out"
+              style={{
+                ["--pocet" as string]: testimonials.length,
+                transform: `translateX(calc(-1 * ${recenzeOd} * 100% / ${testimonials.length}))`,
+              }}
+            >
+            {testimonials.map((testimonial, i) => (
+              <div key={testimonial.org} className="w-[calc(100%/var(--pocet))] shrink-0 px-3 first:pl-0 last:pr-0">
                 <div className="bg-white rounded-2xl border border-brand-primary/20 h-full flex flex-col overflow-hidden hover: transition-shadow">
                   {/* top accent bar */}
                   <div className="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" />
@@ -817,8 +831,9 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </FadeUp>
+              </div>
             ))}
+            </div>
           </div>
 
           {/* Posun na další recenze. Reaguje na najetí kurzorem, klik je
@@ -829,8 +844,8 @@ export default function HomePage() {
             </span>
             <button
               type="button"
-              onMouseEnter={() => setRecenzeOd((n) => (n + 1) % testimonials.length)}
-              onClick={() => setRecenzeOd((n) => (n + 1) % testimonials.length)}
+              onMouseEnter={() => setRecenzeOd((n) => (n + 1 > testimonials.length - 2 ? 0 : n + 1))}
+              onClick={() => setRecenzeOd((n) => (n + 1 > testimonials.length - 2 ? 0 : n + 1))}
               aria-label={lang === "en" ? "Show more references" : lang === "sk" ? "Zobraziť ďalšie referencie" : "Zobrazit další reference"}
               className="flex h-12 w-12 items-center justify-center rounded-full border-[1.5px] border-brand-secondary/30 text-brand-secondary transition-colors hover:border-brand-primary hover:bg-brand-primary hover:text-white"
             >
