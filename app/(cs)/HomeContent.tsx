@@ -56,6 +56,8 @@ function FadeUp({
 export default function HomePage() {
   const { t, lang } = useLanguage();
   const href = (path: string) => lang === "cs" ? path : `/${lang}${path}`;
+  // Recenze na homepage se posouvají po jedné, šipka reaguje na najetí kurzorem i na klik.
+  const [recenzeOd, setRecenzeOd] = useState(0);
 
   const products = [
     {
@@ -211,6 +213,16 @@ export default function HomePage() {
 
   const testimonials = [
     {
+      text: "S PartySkin spolupracujeme na výrobě všech našich dočasných tetovaček a jsme moc spokojení. Výsledek je pokaždé HOT AF®. Skvělá kvalita, easy komunikace a tým, se kterým je radost spolupracovat. Těšíme se na všechno, co spolu ještě vymyslíme.",
+      author: "Tým FURIOSA®",
+      org: "FURIOSA®",
+      orgFull: "FURIOSA®, řada HOT AF®",
+      website: "https://furiosa.cz",
+      logo: "/logo-furiosa.png",
+      initials: "F®",
+      rating: 5,
+    },
+    {
       text: "Spolupráce byla od začátku do konce naprosto profesionální – trpělivost při zapracování připomínek, ochota i rychlá komunikace. Spolehlivého partnera pro zakázková dočasná tetování můžeme s čistým svědomím doporučit.",
       author: "Mgr. Alena Dolinová",
       org: "Gepard Express, SE",
@@ -303,6 +315,7 @@ export default function HomePage() {
   ];
 
   const clientLogos = [
+    { name: "FURIOSA®", url: "https://furiosa.cz" },
     { name: "Gepard Express", url: "https://uzkokolejky.cz" },
     { name: "HK Mladí Draci Šumperk", url: "https://www.hkmdsumperk.cz" },
     { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
@@ -454,7 +467,7 @@ export default function HomePage() {
       {/* ═══ STORYTELLING ═══ */}
       <section className="section-pad bg-white">
         <div className="container-pad">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28 items-center">
             <FadeUp delay={0.1}>
               <span className="tag mb-4">{t("story.tag")}</span>
               <h2 className="text-4xl md:text-5xl font-display font-extrabold text-brand-secondary mt-3 mb-5 leading-tight">
@@ -485,14 +498,20 @@ export default function HomePage() {
             </FadeUp>
 
             <FadeUp delay={0.2}>
-              <div className="relative">
-                <div className="relative aspect-[4/3] overflow-hidden">
+              {/* Fotka je větší a vpravo přetéká za okraj kontejneru.
+                  Levý okraj se rozmazává do bílého pozadí, aby nestál
+                  tvrdou hranou hned vedle textu. */}
+              <div className="relative lg:-mr-[max(0px,calc((100vw-1240px)/2+2rem))]">
+                <div className="relative aspect-[4/3] lg:aspect-[5/4] overflow-hidden">
                   <Image
                     src="/realizace-litr-aplikace.jpg"
                     alt="Nalepení dočasné tetovačky s logem v zázemí akce"
                     fill
                     className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 60vw"
                   />
+                  <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 backdrop-blur-md lg:block [mask-image:linear-gradient(to_right,black,transparent)]" />
+                  <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/3 bg-gradient-to-r from-white via-white/70 to-transparent lg:block" />
                 </div>
               </div>
             </FadeUp>
@@ -748,8 +767,8 @@ export default function HomePage() {
           </FadeUp>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-            {testimonials.slice(0, 2).map((testimonial, i) => (
-              <FadeUp key={i} delay={i * 0.1}>
+            {[0, 1].map((posun) => testimonials[(recenzeOd + posun) % testimonials.length]).map((testimonial, i) => (
+              <FadeUp key={`${recenzeOd}-${testimonial.org}`} delay={i * 0.1}>
                 <div className="bg-white rounded-2xl border border-brand-primary/20 h-full flex flex-col overflow-hidden hover: transition-shadow">
                   {/* top accent bar */}
                   <div className="h-1 bg-gradient-to-r from-brand-primary to-brand-secondary" />
@@ -800,6 +819,23 @@ export default function HomePage() {
                 </div>
               </FadeUp>
             ))}
+          </div>
+
+          {/* Posun na další recenze. Reaguje na najetí kurzorem, klik je
+              tu kvůli dotykovým displejům a ovládání z klávesnice. */}
+          <div className="flex items-center justify-end gap-4 -mt-10 mb-16">
+            <span className="text-brand-secondary/40 text-xs uppercase tracking-[0.18em]">
+              {lang === "en" ? "More references" : lang === "sk" ? "Ďalšie referencie" : "Další reference"}
+            </span>
+            <button
+              type="button"
+              onMouseEnter={() => setRecenzeOd((n) => (n + 1) % testimonials.length)}
+              onClick={() => setRecenzeOd((n) => (n + 1) % testimonials.length)}
+              aria-label={lang === "en" ? "Show more references" : lang === "sk" ? "Zobraziť ďalšie referencie" : "Zobrazit další reference"}
+              className="flex h-12 w-12 items-center justify-center rounded-full border-[1.5px] border-brand-secondary/30 text-brand-secondary transition-colors hover:border-brand-primary hover:bg-brand-primary hover:text-white"
+            >
+              <ArrowRight size={18} />
+            </button>
           </div>
 
           <FadeUp>
