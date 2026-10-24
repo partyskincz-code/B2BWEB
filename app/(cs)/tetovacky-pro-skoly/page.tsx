@@ -69,8 +69,8 @@ const data: Prilezitost = {
     },
     {
       "format": "Samolepky",
-      "cena": "3 až 6 Kč",
-      "pozn": "od 100 ks"
+      "cena": "od 2 Kč",
+      "pozn": "papír A4 za 24,90 Kč, 12 kusů na archu"
     }
   ],
   "faq": [

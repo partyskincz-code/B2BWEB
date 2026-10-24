@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import PrilezitostPage, { type Prilezitost } from "@/components/PrilezitostPage";
 
 export const metadata: Metadata = {
-  title: "Samolepky s logem na zakázku, od 3 Kč za kus",
+  title: "Samolepky s logem na zakázku, od 2 Kč za kus",
   description:
-    "Samolepky na míru s vaším logem. Tvarový řez, voděodolné a UV odolné materiály, od 100 kusů za 3 až 6 Kč. Konečné ceny, grafika v ceně, návrh do 24 hodin.",
+    "Samolepky na míru s vaším logem ve dvou provedeních: PVC s tvarovým ořezem za 49,90 Kč za arch A5 a papír s pravidelným tvarem od 17,90 Kč za arch. Konečné ceny, grafika v ceně, návrh do 24 hodin.",
   alternates: { canonical: "/samolepky-s-logem" },
   openGraph: {
     title: "Samolepky s logem na zakázku | Make the Moment",
     description:
-      "Samolepky na míru s vaším logem. Tvarový řez, voděodolné a UV odolné materiály, od 100 kusů za 3 až 6 Kč za kus.",
+      "Samolepky na míru s vaším logem. PVC s tvarovým ořezem, nebo levnější papír s pravidelným tvarem od 2 Kč za samolepku.",
     url: "/samolepky-s-logem",
     images: [
       {
@@ -26,15 +26,15 @@ const data: Prilezitost = {
   tag: "Samolepky",
   h1: "Samolepky s logem na zakázku",
   perex:
-    "Samolepka je nejlevnější reklamní předmět, který lidé opravdu používají. Na notebook, na láhev, na helmu. Vyrábíme je s tvarovým řezem podle vašeho motivu, na voděodolný a UV odolný materiál, od 100 kusů za 3 až 6 Kč. Ceny máme na webu, nabídku dostanete do 24 hodin.",
+    "Samolepka je nejlevnější reklamní předmět, který lidé opravdu používají. Na notebook, na láhev, na helmu. Děláme je ve dvou provedeních: PVC s ořezem přesně po obrysu motivu, nebo levnější papír s pravidelným tvarem od 2 Kč za samolepku. Ceny máme na webu, nabídku dostanete do 24 hodin.",
   produkty: [
     {
       title: "Samolepky s tvarovým řezem",
       text: "Řez přesně podle obrysu motivu, takže kolem loga nezůstane bílý obdélník. Nejčastější volba pro logo, maskota nebo ikonu produktu.",
     },
     {
-      title: "Archy a sady",
-      text: "Více motivů na jednom archu jako sada k rozdávání. Dobře funguje na veletrhu, v balíčku k objednávce nebo jako doplněk k tetovačkám.",
+      title: "Papír s pravidelným tvarem",
+      text: "Obdélníčky 80 × 47 mm s rovným ořezem, 12 kusů na archu A4. Kolem motivu zůstává okraj, zato je to nejlevnější varianta a vyrobí se rychleji.",
     },
     {
       title: "Venkovní a odolné",
@@ -47,7 +47,7 @@ const data: Prilezitost = {
     "Tvarový řez podle vašeho motivu, nejen kulaté a hranaté tvary",
     "Grafická úprava loga a jedno kolo úprav jsou v ceně zakázky",
     "Dají se objednat zároveň s tetovačkami a tiskovinami v jednom stylu",
-    "Výroba 5 až 20 pracovních dní podle objemu a složitosti",
+    "Výroba 4 až 5 pracovních dní u PVC, 3 až 4 dny u papíru",
   ],
   foto: {
     src: "/realizace-prebal-b2b-a5.jpg",
@@ -56,15 +56,15 @@ const data: Prilezitost = {
   fotoPopis:
     "Ukázka plnobarevného tisku z naší zakázky pro značku got2b. Samolepky tiskneme stejnou technologií, jen na jiný materiál a s tvarovým řezem kolem motivu. Fotky konkrétních samolepkových realizací doplňujeme průběžně.",
   ceny: [
-    { format: "Samolepky na míru", cena: "3 až 6 Kč / ks", pozn: "od 100 ks, podle velikosti a materiálu" },
-    { format: "Arch s více motivy", cena: "8 až 15 Kč / ks", pozn: "cena za celý arch, od 100 ks" },
-    { format: "Venkovní UV odolné", cena: "individuální", pozn: "podle materiálu a rozměru" },
+    { format: "PVC s tvarovým ořezem", cena: "49,90 Kč / arch A5", pozn: "od 100 archů, ořez po obrysu motivu, UV odolné" },
+    { format: "Papír, pravidelný tvar A4", cena: "24,90 Kč / arch", pozn: "12 kusů 80 × 47 mm na archu, tedy od 2 Kč za samolepku" },
+    { format: "Papír, pravidelný tvar A5", cena: "17,90 Kč / arch", pozn: "6 kusů na archu, od 100 archů" },
     { format: "Kompletní řešení pro akci", cena: "individuální", pozn: "samolepky, tetovačky a tiskoviny v jednom stylu" },
   ],
   faq: [
     {
       q: "Kolik stojí samolepky s logem?",
-      a: "Od 100 kusů se cena pohybuje mezi 3 a 6 Kč za kus podle velikosti, materiálu a složitosti řezu. Jsou to konečné ceny za kus. Přesnou kalkulaci pro váš rozměr a náklad připravíme zdarma do 24 hodin.",
+      a: "Záleží na provedení. PVC s tvarovým ořezem stojí 49,90 Kč za arch A5, papír s pravidelným tvarem 24,90 Kč za arch A4 nebo 17,90 Kč za A5. Na archu A4 je 12 samolepek 80 × 47 mm, vychází to tedy od 2 Kč za kus. Jsou to konečné ceny, platí od 100 archů. Kalkulaci na váš rozměr a náklad připravíme zdarma do 24 hodin.",
     },
     {
       q: "Jaké je minimální množství?",

@@ -37,14 +37,15 @@ export const cenikCs: CenikData = {
   ],
   dalsiTitul: "Samolepky a tiskoviny",
   dalsi: [
-    { produkt: "Samolepky na míru", cena: "3 až 6 Kč / ks", minimum: "od 100 ks", pozn: "Tvarový řez, voděodolné a UV odolné materiály." },
+    { produkt: "Samolepky, PVC s tvarovým ořezem", cena: "49,90 Kč / arch A5", minimum: "od 100 archů", pozn: "Ořez kopíruje přesný obrys motivu, odolná plastová fólie, voděodolná a UV stálá. Vyberte si ji, když má samolepka vypadat prémiově a vydržet na lahvi, notebooku nebo helmě. Výroba 4 až 5 pracovních dní od odsouhlasení podkladů." },
+    { produkt: "Samolepky, papír s pravidelným tvarem", cena: "24,90 Kč / arch A4", minimum: "A5 za 17,90 Kč, od 100 archů", pozn: "Rovný ořez na obdélníčky 80 × 47 mm, 12 kusů na archu A4 a 6 na A5, tedy od 2 Kč za samolepku. Vyberte si ji, když jde hlavně o počet kusů a cenu a nevadí vám okraj kolem motivu. Výroba 3 až 4 pracovní dny." },
     { produkt: "Tiskoviny, pohlednice, pozvánky, vizitky", cena: "8 až 15 Kč / ks", minimum: "od 1 ks", pozn: "Profesionální papír, plnobarevný tisk." },
     { produkt: "Kompletní řešení pro akci", cena: "individuální", minimum: "dle rozsahu", pozn: "Balíček tetovaček, samolepek a tiskovin v jednom stylu." },
   ],
   infoBox: {
     pred: "Všechny ceny jsou",
     zvyraznene: "konečné",
-    po: " a platí za jeden kus bez balení. U tetovaček nemáme minimální množství, vyrobíme i jeden arch. Pro objednávky nad 5 000 ks připravíme kalkulaci na míru.",
+    po: " a platí za jeden kus bez balení, u samolepek za jeden arch. U tetovaček nemáme minimální množství, vyrobíme i jeden arch. Pro objednávky nad 5 000 ks připravíme kalkulaci na míru.",
   },
   odkazyPod: [
     { href: "/velkoobjemova-vyroba-tetovacek", label: "Ceny velkých sérií tetovaček" },

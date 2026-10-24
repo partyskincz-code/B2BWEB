@@ -6,12 +6,12 @@ import { cenikCs } from "./data";
 export const metadata: Metadata = {
   title: "Ceník reklamních tetovaček, samolepek a tiskovin",
   description:
-    "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 9 Kč za kus, samolepky od 3 Kč. Ceny jsou konečné.",
+    "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 9 Kč za kus, samolepky od 2 Kč. Ceny jsou konečné.",
   alternates: { canonical: "/cenik", languages: languageAlternates("/cenik") },
   openGraph: {
     title: "Ceník reklamních tetovaček, samolepek a tiskovin | Make the Moment",
     description:
-      "Orientační cenová pásma tetovaček s logem podle formátu a množství, ceny jsou konečné. Samolepky od 3 Kč, tiskoviny od 8 Kč za kus.",
+      "Orientační cenová pásma tetovaček s logem podle formátu a množství, ceny jsou konečné. Samolepky od 2 Kč, tiskoviny od 8 Kč za kus.",
     url: "/cenik",
     images: [
       {

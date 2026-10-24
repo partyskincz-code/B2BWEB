@@ -116,7 +116,7 @@ export default function CenikView({ d }: { d: CenikData }) {
           )}
 
           <h2 className="text-3xl font-display font-extrabold text-brand-secondary mt-14 mb-8">{d.dalsiTitul}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
             {d.dalsi.map((x) => (
               <div key={x.produkt} className="border-t border-brand-secondary/15 pt-7">
                 <h3 className="font-display font-bold text-brand-secondary mb-1">{x.produkt}</h3>

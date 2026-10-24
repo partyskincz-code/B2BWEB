@@ -28,12 +28,12 @@ const pageMetadata = {
     en: ["Custom promotional tattoos for companies and events | Make the Moment", "Temporary tattoos with your logo, custom stickers and print materials for companies, agencies and events. No minimum quantity, quote within 24 hours."],
   },
   "/produkty": {
-    cs: ["Tetovačky, samolepky a tiskoviny na míru, ceník", "Dočasné tetovačky od 8 Kč, samolepky od 3 Kč, tiskoviny od 8 Kč za kus. Orientační pásma, formáty A4 až A7, certifikované materiály, ceník ke stažení."],
-    sk: ["Tetovačky, samolepky a tlačoviny na mieru, cenník", "Dočasné tetovačky od 8 Kč, samolepky od 3 Kč a tlačoviny od 8 Kč za kus. Formáty A4 až A7, certifikované materiály a cenník na stiahnutie."],
+    cs: ["Tetovačky, samolepky a tiskoviny na míru, ceník", "Dočasné tetovačky od 8 Kč, samolepky od 2 Kč, tiskoviny od 8 Kč za kus. Orientační pásma, formáty A4 až A7, certifikované materiály, ceník ke stažení."],
+    sk: ["Tetovačky, samolepky a tlačoviny na mieru, cenník", "Dočasné tetovačky od 8 Kč, samolepky od 2 Kč a tlačoviny od 8 Kč za kus. Formáty A4 až A7, certifikované materiály a cenník na stiahnutie."],
     en: ["Custom tattoos, stickers and print materials, price list", "Temporary tattoos from CZK 8, stickers from CZK 3 and print materials from CZK 8 per piece. A4 to A7 formats, certified materials and downloadable price list."],
   },
   "/cenik": {
-    cs: ["Ceník reklamních tetovaček, samolepek a tiskovin", "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 9 Kč za kus, samolepky od 3 Kč. Ceny jsou konečné."],
+    cs: ["Ceník reklamních tetovaček, samolepek a tiskovin", "Kolik stojí reklamní tetovačky s logem? Orientační pásma podle formátu a množství, od 9 Kč za kus, samolepky od 2 Kč. Ceny jsou konečné."],
     sk: ["Cenník reklamných tetovačiek, samolepiek a tlačovín", "Koľko stoja reklamné tetovačky s logom? Orientačné pásma podľa formátu a množstva, od 0,40 € za kus, samolepky od 0,15 €. Ceny sú konečné."],
     en: ["Price list for custom tattoos, stickers and print materials", "What do promotional tattoos with your logo cost? Indicative bands by format and quantity, from 0,40 € per piece, stickers from 0,15 €. Final prices."],
   },

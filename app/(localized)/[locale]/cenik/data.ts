@@ -54,14 +54,15 @@ export const cenikSk: CenikData = {
   ],
   dalsiTitul: "Samolepky a tlačoviny",
   dalsi: [
-    { produkt: "Samolepky na mieru", cena: "0,15 až 0,25 € / ks", minimum: "od 100 ks", pozn: "Tvarový rez, vodeodolné a UV odolné materiály." },
+    { produkt: "Samolepky, PVC s tvarovým orezom", cena: "2,05 € / hárok A5", minimum: "od 100 hárkov", pozn: "Rez kopíruje presný obrys motívu, odolná plastová fólia, vodeodolná a UV stála. Vyberte si ju, keď má samolepka vyzerať prémiovo a vydržať na fľaši, notebooku alebo helme. Výroba 4 až 5 pracovných dní od odsúhlasenia podkladov." },
+    { produkt: "Samolepky, papier s pravidelným tvarom", cena: "1,05 € / hárok A4", minimum: "A5 za 0,75 €, od 100 hárkov", pozn: "Rovný rez na obdĺžničky 80 × 47 mm, 12 kusov na hárku A4 a 6 na A5, teda od 0,09 € za samolepku. Vyberte si ju, keď ide hlavne o počet kusov a cenu a neprekáža vám okraj okolo motívu. Výroba 3 až 4 pracovné dni." },
     { produkt: "Tlačoviny, pohľadnice, pozvánky, vizitky", cena: "0,35 až 0,65 € / ks", minimum: "od 1 ks", pozn: "Profesionálny papier, plnofarebná tlač." },
     { produkt: "Kompletné riešenie pre akciu", cena: "individuálne", minimum: "podľa rozsahu", pozn: "Balík tetovačiek, samolepiek a tlačovín v jednom štýle." },
   ],
   infoBox: {
     pred: "Všetky ceny sú",
     zvyraznene: "konečné",
-    po: " a platia za jeden kus bez balenia. Pri tetovačkách nemáme minimálne množstvo, vyrobíme aj jeden arch. Pri objednávkach nad 5 000 ks pripravíme kalkuláciu na mieru.",
+    po: " a platia za jeden kus bez balenia, pri samolepkách za jeden hárok. Pri tetovačkách nemáme minimálne množstvo, vyrobíme aj jeden arch. Pri objednávkach nad 5 000 ks pripravíme kalkuláciu na mieru.",
   },
   odkazyPod: [
     { href: "/velkoobjemova-vyroba-tetovacek", label: "Ceny veľkých sérií tetovačiek" },
@@ -154,14 +155,15 @@ export const cenikEn: CenikData = {
   ],
   dalsiTitul: "Stickers and print materials",
   dalsi: [
-    { produkt: "Custom stickers", cena: "0,15 to 0,25 € / pc", minimum: "from 100 pcs", pozn: "Die cut to shape, waterproof and UV resistant materials." },
+    { produkt: "Stickers, PVC die cut to shape", cena: "2,05 € / A5 sheet", minimum: "from 100 sheets", pozn: "The cut follows the exact outline of the motif on durable plastic film, waterproof and UV stable. Choose this when the sticker has to look premium and survive on a bottle, a laptop or a helmet. Production 4 to 5 working days from artwork approval." },
+    { produkt: "Stickers, paper in a regular shape", cena: "1,05 € / A4 sheet", minimum: "A5 at 0,75 €, from 100 sheets", pozn: "Straight cut into 80 × 47 mm rectangles, 12 pieces per A4 sheet and 6 per A5, so from 0,09 € per sticker. Choose this when quantity and price matter most and a margin around the motif is fine. Production 3 to 4 working days." },
     { produkt: "Print materials, postcards, invitations, business cards", cena: "0,35 to 0,65 € / pc", minimum: "from 1 pc", pozn: "Professional paper stock, full colour printing." },
     { produkt: "Complete solution for an event", cena: "individual", minimum: "by scope", pozn: "Tattoos, stickers and print materials in one consistent style." },
   ],
   infoBox: {
     pred: "All prices are",
     zvyraznene: "final",
-    po: " and apply per piece without packaging. There is no minimum quantity on tattoos, we will produce a single sheet. For orders above 5,000 pieces we prepare an individual calculation.",
+    po: " and apply per piece without packaging, per sheet for stickers. There is no minimum quantity on tattoos, we will produce a single sheet. For orders above 5,000 pieces we prepare an individual calculation.",
   },
   odkazyPod: [
     { href: "/velkoobjemova-vyroba-tetovacek", label: "High volume tattoo production" },
