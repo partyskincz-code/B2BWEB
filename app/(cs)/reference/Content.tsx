@@ -41,12 +41,6 @@ export default function ReferencePage() {
       author: "Tým FURIOSA®",
       org: "FURIOSA®",
       orgFull: "FURIOSA®, řada HOT AF®",
-      detail:
-        lang === "en"
-          ? "Working together since June 2026, repeat orders of 300, 400 and 2 000 pieces."
-          : lang === "sk"
-          ? "Spolupráca od júna 2026, opakované objednávky 300, 400 a 2 000 kusov."
-          : "Spolupráce od června 2026, opakované objednávky 300, 400 a 2 000 kusů.",
       website: "https://furiosa.cz",
       logo: "/logo-furiosa.png",
       initials: "F®",
@@ -367,15 +361,8 @@ export default function ReferencePage() {
       <section className="section-pad bg-white">
         <div className="container-pad">
           <FadeUp className="text-center mb-12">
-            <span className="tag mb-4">
-              {lang === "en" ? "What clients say" : lang === "sk" ? "Čo hovoria klienti" : "Co říkají klienti"}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-secondary mt-3 mb-3">
-              {lang === "en"
-                ? "References from real orders"
-                : lang === "sk"
-                ? "Referencie z reálnych zákaziek"
-                : "Reference z reálných zakázek"}
+            <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-secondary mb-3">
+              {lang === "en" ? "References" : lang === "sk" ? "Referencie" : "Reference"}
             </h2>
           </FadeUp>
 
@@ -392,15 +379,15 @@ export default function ReferencePage() {
                       kurzorem, na dotyku se ukážou rovnou v kartě. */}
                   {"fotky" in r && r.fotky && (
                     <div
-                      className="pointer-events-none absolute top-full left-1/2 z-40 mt-3 hidden -translate-x-1/2 items-start gap-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-focus-within:opacity-100 lg:flex"
+                      className="pointer-events-none absolute top-full left-0 z-40 mt-3 hidden gap-3 opacity-0 transition-all duration-200 group-hover:opacity-100 group-focus-within:opacity-100 lg:flex"
                       aria-hidden="true"
                     >
                       {r.fotky.map((f) => (
                         <span
                           key={f.src}
-                          className="relative block h-[300px] w-[300px] overflow-hidden rounded-xl border-4 border-white bg-white shadow-2xl"
+                          className="relative block h-[380px] w-[380px] overflow-hidden rounded-xl shadow-2xl"
                         >
-                          <Image src={f.src} alt="" fill sizes="300px" className="object-contain" />
+                          <Image src={f.src} alt="" fill sizes="380px" className="object-cover" />
                         </span>
                       ))}
                     </div>
@@ -411,8 +398,8 @@ export default function ReferencePage() {
                   {"fotky" in r && r.fotky && (
                     <div className="mb-6 flex gap-2 lg:hidden">
                       {r.fotky.map((f) => (
-                        <div key={f.src} className="relative h-28 w-28 overflow-hidden rounded-lg bg-white">
-                          <Image src={f.src} alt={f.alt} fill className="object-contain" sizes="112px" />
+                        <div key={f.src} className="relative h-32 w-32 overflow-hidden rounded-lg">
+                          <Image src={f.src} alt={f.alt} fill className="object-cover" sizes="128px" />
                         </div>
                       ))}
                     </div>
@@ -425,12 +412,12 @@ export default function ReferencePage() {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={r.org}
-                          className="h-11 min-w-[2.75rem] max-w-[8rem] rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 px-2 py-1.5 transition-colors hover:border-brand-primary/40"
+                          className="h-11 max-w-[8rem] flex items-center flex-shrink-0 opacity-90 transition-opacity hover:opacity-100"
                         >
                           <Image src={r.logo} alt={r.org} width={520} height={200} className="object-contain max-h-full w-auto" />
                         </a>
                       ) : (
-                        <div className="h-11 min-w-[2.75rem] max-w-[8rem] rounded-xl bg-white border border-gray-100 flex items-center justify-center flex-shrink-0 px-2 py-1.5">
+                        <div className="h-11 max-w-[8rem] flex items-center flex-shrink-0">
                           <Image src={r.logo} alt={r.org} width={520} height={200} className="object-contain max-h-full w-auto" />
                         </div>
                       )
@@ -441,9 +428,6 @@ export default function ReferencePage() {
                     )}
                     <div className="min-w-0">
                       <p className="font-display font-bold text-brand-secondary text-sm">{r.author}</p>
-                      {"detail" in r && r.detail && (
-                        <p className="text-gray-400 text-xs mt-0.5">{r.detail}</p>
-                      )}
                       {r.website ? (
                         <a
                           href={r.website}
