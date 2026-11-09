@@ -37,15 +37,15 @@ export const cenikCs: CenikData = {
   ],
   dalsiTitul: "Samolepky a tiskoviny",
   dalsi: [
-    { produkt: "Samolepky, PVC s tvarovým ořezem", cena: "49,90 Kč / arch A5", minimum: "od 100 archů", pozn: "Ořez kopíruje přesný obrys motivu, odolná plastová fólie, voděodolná a UV stálá. Vyberte si ji, když má samolepka vypadat prémiově a vydržet na lahvi, notebooku nebo helmě. Výroba 4 až 5 pracovních dní od odsouhlasení podkladů." },
-    { produkt: "Samolepky, papír s pravidelným tvarem", cena: "24,90 Kč / arch A4", minimum: "A5 za 17,90 Kč, od 100 archů", pozn: "Rovný ořez na obdélníčky 80 × 47 mm, 12 kusů na archu A4 a 6 na A5, tedy od 2 Kč za samolepku. Vyberte si ji, když jde hlavně o počet kusů a cenu a nevadí vám okraj kolem motivu. Výroba 3 až 4 pracovní dny." },
+    { produkt: "Samolepky, PVC s tvarovým ořezem", cena: "57 Kč / arch A4", minimum: "při 200 arších, A5 za 49,90 Kč", pozn: "Bílá samolepicí PVC fólie, jednostranný plnobarevný tisk CMYK, ořez kopíruje přesný obrys každého motivu. Cena za arch klesá s rostoucím nákladem, protože příprava výřezových cest se rozpustí do většího počtu archů. Grafická příprava v ceně. Výroba 6 až 7 pracovních dní od odsouhlasení podkladů." },
+    { produkt: "Samolepky, papír s pravidelným tvarem", cena: "24,90 Kč / arch A4", minimum: "A5 za 17,90 Kč", pozn: "Rovný ořez na obdélníčky 80 × 47 mm, 12 kusů na archu A4 a 6 na A5, tedy od 2 Kč za samolepku. Levnější varianta, kolem motivu zůstává okraj. Cena za arch klesá s rostoucím nákladem. Výroba 3 až 4 pracovní dny." },
     { produkt: "Tiskoviny, pohlednice, pozvánky, vizitky", cena: "8 až 15 Kč / ks", minimum: "od 1 ks", pozn: "Profesionální papír, plnobarevný tisk." },
     { produkt: "Kompletní řešení pro akci", cena: "individuální", minimum: "dle rozsahu", pozn: "Balíček tetovaček, samolepek a tiskovin v jednom stylu." },
   ],
   infoBox: {
     pred: "Všechny ceny jsou",
     zvyraznene: "konečné",
-    po: " a platí za jeden kus bez balení, u samolepek za jeden arch. U tetovaček nemáme minimální množství, vyrobíme i jeden arch. Pro objednávky nad 5 000 ks připravíme kalkulaci na míru.",
+    po: " a platí za jeden kus bez balení, u samolepek za jeden arch. Nemáme minimální odběrové množství, vyrobíme i jediný arch; cena za kus i za arch klesá s rostoucím nákladem. Pro objednávky nad 5 000 ks připravíme kalkulaci na míru.",
   },
   odkazyPod: [
     { href: "/velkoobjemova-vyroba-tetovacek", label: "Ceny velkých sérií tetovaček" },
