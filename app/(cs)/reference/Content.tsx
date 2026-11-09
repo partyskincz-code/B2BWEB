@@ -66,6 +66,15 @@ export default function ReferencePage() {
       ],
     },
     {
+      text: "Teď jsme zkoušeli tetovačky na kůži a vypadají fakt naprosto skvěle!",
+      author: "Tereza Johnová",
+      org: "Ababu",
+      orgFull: "Ababu, tetovačky Kamarádové",
+      website: "https://www.ababu.cz",
+      logo: "/logo-ababu.png",
+      initials: "AB",
+    },
+    {
       text: "Spolupráce byla od začátku do konce naprosto profesionální – trpělivost při zapracování připomínek, ochota i rychlá komunikace. Spolehlivého partnera pro zakázková dočasná tetování můžeme s čistým svědomím doporučit.",
       author: "Mgr. Alena Dolinová",
       org: "Gepard Express, SE",
@@ -168,6 +177,7 @@ export default function ReferencePage() {
 
   const klienti = [
     { name: "FURIOSA®", url: "https://furiosa.cz" },
+    { name: "Ababu", url: "https://www.ababu.cz" },
     { name: "got2b", url: "" },
     { name: "MOREAU AGRI", url: "https://www.moreauagri.cz" },
     { name: "Gepard Express", url: "https://uzkokolejky.cz" },
