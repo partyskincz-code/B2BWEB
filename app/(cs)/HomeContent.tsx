@@ -233,6 +233,16 @@ export default function HomePage() {
       rating: 5,
     },
     {
+      text: "S dočasnými tetováními jsme opravdu moc spokojení. Jsou krásná, skvěle vypadají a jejich aplikace je naprosto jednoduchá. Děti z nich mají radost a nás těší, že nejen krásně drží, ale také vydrží opravdu dlouho. Za nás super produkt a skvělá zkušenost.",
+      author: "Dominika Viltová",
+      org: "Aquacentrum Teplice",
+      orgFull: "Aquacentrum Teplice, tetovačky pro děti na akcích",
+      website: "https://www.aquacentrum-teplice.cz",
+      logo: "/logo-aquacentrum.png",
+      initials: "AT",
+      rating: 5,
+    },
+    {
       text: "Spolupráce byla od začátku do konce naprosto profesionální – trpělivost při zapracování připomínek, ochota i rychlá komunikace. Spolehlivého partnera pro zakázková dočasná tetování můžeme s čistým svědomím doporučit.",
       author: "Mgr. Alena Dolinová",
       org: "Gepard Express, SE",
@@ -327,6 +337,7 @@ export default function HomePage() {
   const clientLogos = [
     { name: "FURIOSA®", url: "https://furiosa.cz" },
     { name: "Ababu", url: "https://www.ababu.cz" },
+    { name: "Aquacentrum Teplice", url: "https://www.aquacentrum-teplice.cz" },
     { name: "Gepard Express", url: "https://uzkokolejky.cz" },
     { name: "HK Mladí Draci Šumperk", url: "https://www.hkmdsumperk.cz" },
     { name: "Záchranná stanice Vydra", url: "https://www.ekocentrumvydra.cz" },
