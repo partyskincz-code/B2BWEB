@@ -601,7 +601,7 @@ export default function ReferencePage() {
                 rel="noopener noreferrer"
                 className="group block overflow-hidden border border-gray-100 bg-white card-hover"
               >
-                <div className="relative h-64 grid grid-cols-3 grid-rows-2 gap-0.5 bg-white">
+                <div className="relative h-64 grid grid-cols-3 grid-rows-2 gap-0.5 bg-brand-light">
                   {[
                     "/realizace-prebal-b2b-a5.jpg",
                     "/realizace-detske-prebal-a6.jpg",

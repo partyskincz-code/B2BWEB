@@ -33,20 +33,20 @@ export default function Navigation() {
       ? [
           "Christmas parties are planned now",
           "Tattoos with your own punchline",
-          "Book December production by mid November",
+          "Book December production by the end of November",
           "Single tattoos from 3 CZK a piece",
         ]
       : lang === "sk"
       ? [
           "Vianočné večierky sa plánujú teraz",
           "Tetovačky s vašou vlastnou hláškou",
-          "Výrobu na december zadávajte do polovice novembra",
+          "Výrobu na december zadávajte do konca novembra",
           "Kusové tetovačky od 0,15 € za kus",
         ]
       : [
           "Vánoční večírky se plánují teď",
           "Tetovačky s vaší vlastní hláškou",
-          "Výrobu na prosinec zadávejte do poloviny listopadu",
+          "Výrobu na prosinec zadávejte do konce listopadu",
           "Kusové tetovačky od 3 Kč za kus",
         ];
 
