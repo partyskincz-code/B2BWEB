@@ -103,6 +103,20 @@ export default function HomePage() {
       href: "/produkty#pohlednice",
     },
     {
+      id: "pexeso",
+      title: lang === "cs" ? "Pexeso na míru" : lang === "en" ? "Custom Memory Game" : "Pexeso na mieru",
+      subtitle: lang === "cs" ? "Firemní merch s vašimi fotkami" : lang === "en" ? "Branded merch with your photos" : "Firemný merch s vašimi fotkami",
+      description: lang === "cs"
+        ? "Vaše produkty, tým nebo značka na kartičkách 6 × 6 cm v krabičce. Dárek, který si lidé nechají a vrací se k němu."
+        : lang === "en"
+        ? "Your products, team or brand on 6 × 6 cm cards in a box. A gift people keep and come back to."
+        : "Vaše produkty, tím alebo značka na kartičkách 6 × 6 cm v krabičke. Darček, ktorý si ľudia nechajú a vracajú sa k nemu.",
+      price: lang === "en" ? "from €18.50 / set" : lang === "sk" ? "od 18,50 € / sada" : "od 449 Kč / sada",
+      minQty: lang === "cs" ? "Už od 1 sady" : lang === "en" ? "From 1 set" : "Už od 1 sady",
+      image: "/pexeso-karticky.jpg",
+      href: "/produkty#pexeso",
+    },
+    {
       id: "kompletni",
       title: lang === "cs" ? "Kompletní řešení" : lang === "en" ? "Complete Solution" : "Kompletné riešenie",
       subtitle: lang === "cs" ? "Na klíč pro váš event" : lang === "en" ? "Turnkey for your event" : "Na kľúč pre váš event",

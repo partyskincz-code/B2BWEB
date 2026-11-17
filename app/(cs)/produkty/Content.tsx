@@ -279,6 +279,85 @@ export default function ProduktyPage() {
           : ["Vánoční přání", "Pozvánky", "Promo kampaně", "Dárky", "Firemní dárky", "Svatby"],
     },
     {
+      id: "pexeso",
+      title:
+        lang === "en"
+          ? "Custom Memory Game (Pexeso)"
+          : lang === "sk"
+          ? "Pexeso na mieru"
+          : "Pexeso na míru",
+      subtitle:
+        lang === "en"
+          ? "Branded merch your clients actually keep"
+          : lang === "sk"
+          ? "Firemný merch, ktorý si klienti naozaj nechajú"
+          : "Firemní merch, který si klienti opravdu nechají",
+      description:
+        lang === "en"
+          ? "A memory game made from your own photos: products, the team, branches, machines or brand visuals. The back side carries your logo and colours. Unlike a pen or a tote bag, a memory game gets played with, so your brand stays on the table instead of in a drawer."
+          : lang === "sk"
+          ? "Pexeso z vašich vlastných fotiek: produkty, tím, pobočky, stroje alebo vizuály značky. Zadná strana nesie vaše logo a farby. Na rozdiel od pera alebo plátenky sa pexeso naozaj hrá, takže značka zostáva na stole a nie v šuplíku."
+          : "Pexeso z vašich vlastních fotek: produkty, tým, pobočky, stroje nebo vizuály značky. Zadní strana nese vaše logo a barvy. Na rozdíl od propisky nebo plátěnky se pexeso opravdu hraje, takže značka zůstane na stole a ne v šuplíku.",
+      price:
+        lang === "en"
+          ? "from €18.50 / set"
+          : lang === "sk"
+          ? "od 18,50 € / sada"
+          : "od 449 Kč / sada",
+      minQty:
+        lang === "en"
+          ? "From 1 set"
+          : lang === "sk"
+          ? "Už od 1 sady"
+          : "Už od 1 sady",
+      deliveryTime:
+        lang === "en"
+          ? "2 to 3 working days"
+          : lang === "sk"
+          ? "2 až 3 pracovné dni"
+          : "2 až 3 pracovní dny",
+      image: "/pexeso-karticky.jpg",
+      cta:
+        lang === "en"
+          ? "Request a custom memory game →"
+          : lang === "sk"
+          ? "Nezáväzne dopytovať pexeso →"
+          : "Nezávazně poptat pexeso na míru →",
+      features:
+        lang === "en"
+          ? [
+              "36, 50 or 72 cards, 6 × 6 cm, in a box",
+              "18, 25 or 36 of your photos, each on two cards",
+              "Optional caption on every card",
+              "Back side in your colours, with your logo",
+              "Online configurator, the design is ready in minutes",
+              "Production 2 to 3 working days",
+            ]
+          : lang === "sk"
+          ? [
+              "36, 50 alebo 72 kartičiek 6 × 6 cm v krabičke",
+              "18, 25 alebo 36 vašich fotiek, každá na dvoch kartičkách",
+              "Voliteľne popisok na každej kartičke",
+              "Zadná strana vo vašich farbách, s vaším logom",
+              "Online konfigurátor, návrh je hotový za pár minút",
+              "Výroba 2 až 3 pracovné dni",
+            ]
+          : [
+              "36, 50 nebo 72 kartiček 6 × 6 cm v krabičce",
+              "18, 25 nebo 36 vašich fotek, každá na dvou kartičkách",
+              "Volitelně popisek na každé kartičce",
+              "Zadní strana ve vašich barvách, s vaším logem",
+              "Online konfigurátor, návrh je hotový za pár minut",
+              "Výroba 2 až 3 pracovní dny",
+            ],
+      useCases:
+        lang === "en"
+          ? ["Corporate gifts", "Trade fairs", "Conferences", "Family days", "Onboarding", "Anniversaries"]
+          : lang === "sk"
+          ? ["Firemné darčeky", "Veľtrhy", "Konferencie", "Family days", "Onboarding", "Výročia"]
+          : ["Firemní dárky", "Veletrhy", "Konference", "Family days", "Onboarding", "Výročí firmy"],
+    },
+    {
       id: "kompletni",
       title:
         lang === "en"
@@ -394,17 +473,20 @@ export default function ProduktyPage() {
               "Logo tattoos, the fastest way onto people's skin",
               "Packaging stickers, let the parcel speak before it's opened",
               "Postcards for clients, a thank-you that arrives by post",
+              "A custom memory game, branded merch that gets played with, not stored away",
             ]
           : lang === "sk"
           ? [
               "Tetovačky s logom, najrýchlejšia cesta ľuďom na kožu",
               "Samolepky na packaging, nech balíček niečo povie ešte pred otvorením",
               "Pohľadnice a priania pre klientov, poďakovanie, ktoré príde poštou",
+              "Pexeso na mieru, merch, ktorý sa hrá, nie odkladá",
             ]
           : [
               "Tetovačky s logem, nejrychlejší cesta lidem na kůži",
               "Samolepky na packaging, ať balíček něco řekne ještě před otevřením",
               "Pohlednice a přání pro klienty, poděkování, které přijde poštou",
+              "Pexeso na míru, merch, který se hraje, ne odkládá",
             ],
       image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80",
     },
